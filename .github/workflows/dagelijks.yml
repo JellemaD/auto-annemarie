@@ -1,0 +1,60 @@
+name: Dagelijkse update
+
+on:
+  # GitHub rekent in UTC en kent geen zomertijd. Twee tijden zodat 8:00 in Nederland altijd klopt;
+  # het script wacht tot 8:00 en slaat een tweede run op dezelfde dag over.
+  schedule:
+    - cron: '40 5 * * *'
+    - cron: '40 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wacht tot 8:00 Nederlandse tijd
+        if: github.event_name == 'schedule'
+        id: tijd
+        run: |
+          vandaag=$(TZ=Europe/Amsterdam date +%F)
+          uur=$(TZ=Europe/Amsterdam date +%-H)
+          if grep -q "\"bijgewerkt\": \"$vandaag" docs/data.json; then
+            echo "Vandaag al bijgewerkt."; echo "skip=1" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ "$uur" -lt 7 ]; then
+            echo "Te vroeg (winter-run in zomertijd of andersom)."; echo "skip=1" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          doel=$(TZ=Europe/Amsterdam date -d "$vandaag 08:00" +%s)
+          nu=$(date +%s)
+          if [ "$nu" -lt "$doel" ]; then sleep $((doel - nu)); fi
+
+      - uses: actions/setup-python@v5
+        if: steps.tijd.outputs.skip != '1'
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Zoeken
+        if: steps.tijd.outputs.skip != '1'
+        run: |
+          pip install -r requirements.txt
+          python zoek.py
+
+      - name: Opslaan
+        if: steps.tijd.outputs.skip != '1'
+        run: |
+          git config user.name "auto-zoeker"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data.json docs/gezien.json
+          git diff --cached --quiet || git commit -m "Update $(TZ=Europe/Amsterdam date '+%F %H:%M')"
+          git push

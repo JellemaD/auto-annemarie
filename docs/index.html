@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f766e">
+<title>Auto voor Annemarie</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+<style>
+:root{--bg:#f6f7f5;--card:#fff;--ink:#1c2321;--muted:#5f6b67;--line:#e3e7e4;--accent:#0f766e;--accent-soft:#e3f3f0;--warn:#a15c07;--warn-soft:#fdf1dc;--new:#be185d}
+@media (prefers-color-scheme:dark){:root{--bg:#121615;--card:#1b2120;--ink:#e8ecea;--muted:#9aa6a2;--line:#2c3532;--accent:#2dd4bf;--accent-soft:#16312d;--warn:#f0b04a;--warn-soft:#33270f;--new:#f472b6}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.6rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 18px;font-size:.95rem}
+h2{font-size:1.15rem;margin:28px 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:14px;display:block;color:inherit;text-decoration:none}
+.card:active{transform:scale(.995)}
+.top .foto{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--line);display:block}
+.body{padding:12px 14px 14px}
+.rij{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.titel{font-weight:650;font-size:1.05rem;margin:0}
+.prijs{font-weight:700;font-size:1.15rem;white-space:nowrap}
+.feiten{color:var(--muted);font-size:.92rem;margin:4px 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.78rem;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.new{background:var(--new);color:#fff}
+.rang{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-weight:700;border-radius:10px;padding:4px 10px;font-size:.95rem}
+.score{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:#fff;border-radius:10px;padding:4px 9px;font-size:.85rem}
+.fotowrap{position:relative}
+.uitleg{font-size:.88rem;color:var(--muted);margin:8px 0 0}
+.lijst .card{display:flex;gap:12px;align-items:stretch}
+.lijst .foto{width:110px;min-height:84px;object-fit:cover;background:var(--line);flex:none}
+.lijst .body{padding:10px 12px 10px 0;flex:1;min-width:0}
+.lijst .titel{font-size:.95rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:24px}
+summary{font-weight:600;cursor:pointer}
+details p,details li{color:var(--muted);font-size:.92rem}
+.leeg{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>🔌 Auto voor Annemarie</h1>
+<p class="sub">Elektrisch of plug-in hybride · max € 8.000 · heel Nederland<br><span id="stand">Laden…</span></p>
+
+<h2>Top 5 van vandaag</h2>
+<div id="top" class="top"></div>
+
+<h2>Alle andere kandidaten</h2>
+<div class="filters" role="group" aria-label="Filter">
+  <button data-f="alle" aria-pressed="true">Alle</button>
+  <button data-f="Elektrisch" aria-pressed="false">Elektrisch</button>
+  <button data-f="Plug-in hybride" aria-pressed="false">Plug-in hybride</button>
+  <button data-f="nieuw" aria-pressed="false">Nieuw vandaag</button>
+</div>
+<div id="lijst" class="lijst"></div>
+
+<details>
+  <summary>Hoe wordt de top 5 bepaald?</summary>
+  <p>Elke dag om 8:00 worden AutoScout24 en Marktplaats doorzocht. Elke auto krijgt een score van 0 tot 100:</p>
+  <ul>
+    <li><b>45% betrouwbaarheid</b> van het model (bijv. Toyota Prius plug-in en Hyundai Ioniq hoog, Volvo D6 en Tesla laag vanwege dure reparaties)</li>
+    <li><b>30% bouwjaar</b>: 2010 telt als 0, 2020 en nieuwer als het maximum</li>
+    <li><b>25% kilometerstand</b>: 0 km is het maximum, 250.000 km telt als 0</li>
+  </ul>
+  <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, Smart fortwo, i-MiEV/C-Zero/iOn), bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra).</p>
+  <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
+</details>
+</main>
+<script>
+const eur = n => '€ ' + n.toLocaleString('nl-NL');
+const km = n => n.toLocaleString('nl-NL') + ' km';
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let autos = [];
+
+function chips(a) {
+  let h = `<span class="chip">${esc(a.soort)}</span>`;
+  if (a.nieuw) h = `<span class="chip new">Nieuw</span>` + h;
+  for (const w of a.let_op || []) h += `<span class="chip warn">${esc(w)}</span>`;
+  return h;
+}
+function feiten(a) {
+  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')} · ${esc(a.bron)}`;
+}
+function topKaart(a, i) {
+  return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
+    <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy">` : '<div class="foto"></div>'}
+      <span class="rang">#${i + 1}</span><span class="score">score ${a.score}</span></div>
+    <div class="body">
+      <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
+      <div class="feiten">${feiten(a)}</div>
+      <div class="chips">${chips(a)}</div>
+      ${a.toelichting ? `<p class="uitleg">${esc(a.toelichting)}</p>` : ''}
+    </div></a>`;
+}
+function lijstKaart(a) {
+  return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
+    ${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy">` : '<div class="foto"></div>'}
+    <div class="body">
+      <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
+      <div class="feiten">${feiten(a)} · score ${a.score}</div>
+      <div class="chips">${chips(a)}</div>
+    </div></a>`;
+}
+function toonLijst(f) {
+  const rest = autos.slice(5).filter(a => f === 'alle' || (f === 'nieuw' ? a.nieuw : a.soort === f));
+  document.getElementById('lijst').innerHTML = rest.length ? rest.map(lijstKaart).join('') : '<p class="leeg">Geen auto\'s in deze selectie.</p>';
+}
+document.querySelectorAll('.filters button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  toonLijst(b.dataset.f);
+});
+fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
+  autos = d.autos;
+  const [dag, tijd] = d.bijgewerkt.split(' ');
+  const datum = new Date(dag).toLocaleDateString('nl-NL', {weekday: 'long', day: 'numeric', month: 'long'});
+  const nieuw = autos.filter(a => a.nieuw).length;
+  document.getElementById('stand').textContent =
+    `Bijgewerkt ${datum} om ${tijd} · ${d.aantal_bekeken} advertenties bekeken, ${d.aantal} geschikt` + (nieuw ? ` · ${nieuw} nieuw` : '');
+  document.getElementById('top').innerHTML = autos.slice(0, 5).map(topKaart).join('');
+  toonLijst('alle');
+}).catch(() => { document.getElementById('stand').textContent = 'Kon de gegevens niet laden. Probeer het later opnieuw.'; });
+</script>
+</body>
+</html>
