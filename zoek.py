@@ -48,6 +48,10 @@ ELLENDE = [
     'schade', 'defect', 'export', 'opknapper', 'niet rijdend', 'starten niet', 'motor kapot',
     'huren', 'renting', 'onderdelen', 'sloop', 'accupakket moet',
 ]
+# Handelaren in schadeauto's die schade niet altijd in de advertentie zetten. Aanvullen als er
+# een kapotte auto in de lijst opduikt.
+SCHADE_VERKOPERS = ['mettler', 'schade', 'damage', 'bdw', 'export', 'demontage', 'sloperij']
+
 # Woorden die zeggen dat de accu wél gekocht is (heft "accu" in ELLENDE niet op, wel informatief).
 KOOPACCU = ['koopaccu', 'koop accu', 'incl accu', 'incl. accu', 'inclusief accu', 'accu in eigendom']
 
@@ -160,7 +164,7 @@ def autoscout24():
     for fuel in ['E', '2', '3']:
         for pagina in range(1, 21):
             url = (f'https://www.autoscout24.nl/lst?atype=C&cy=NL&fuel={fuel}&priceto={MAX_PRIJS}'
-                   f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}&sort=age&desc=1&page={pagina}')
+                   f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}&damaged_listing=exclude&sort=age&desc=1&page={pagina}')
             try:
                 r = requests.get(url, headers=HEADERS, timeout=30)
                 r.raise_for_status()
@@ -265,6 +269,8 @@ def beoordeel(a):
         return None
     if bevat(titel, UITSLUITEN) or bevat(tekst, ELLENDE):
         return None
+    if any(w in norm(a.get('verkoper')) for w in SCHADE_VERKOPERS):
+        return None
 
     # Goedkope ZOE's hebben bijna altijd een huuraccu ("ex accu", "(ex)"): alleen met koopaccu.
     if re.search(r'\bzoe\b', titel) and not bevat(tekst, KOOPACCU):
@@ -311,6 +317,51 @@ def beoordeel(a):
     return a
 
 
+# Schadetaal in de volledige advertentietekst. Geen los "schade": veel dealers hebben een
+# disclaimer met dat woord. "Verrijdbaar/movable" is typische taal van schadehandelaren.
+DETAIL_SCHADE = [
+    'schadeauto', 'schadevoertuig', 'schade aan', 'met schade', 'lichte schade', 'lichte voorschade',
+    'voorschade', 'achterschade', 'zijschade', 'flankschade', 'hagelschade', 'waterschade',
+    'brandschade', 'stormschade', 'accuschade', 'motorschade', 'aanrijding', 'ongeval', 'verrijdbaar',
+    'movable', 'damaged', 'total loss', 'niet rijdend', 'niet rijdbaar', 'opknapper', 'defect',
+    'airbag eruit', 'airbags eruit', 'airbag uit', 'gerepareerde schade', 'schadehistorie',
+]
+DETAIL_AANTAL = 40
+
+
+def detail_tekst(a):
+    r = requests.get(a['url'], headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, 'html.parser')
+    if a['bron'] == 'AutoScout24':
+        L = json.loads(soup.find('script', id='__NEXT_DATA__').string)['props']['pageProps']['listingDetails']
+        schade = (L.get('vehicle') or {}).get('condition', {}).get('damage') or {}
+        if schade.get('isCurrentlyDamaged') or schade.get('hadAccident') or schade.get('accidentFree') is False:
+            return 'schadeauto'
+        return BeautifulSoup(L.get('description') or '', 'html.parser').get_text(' ')
+    blok = soup.find(attrs={'data-collapsable': 'description'})
+    return blok.get_text(' ') if blok else ''
+
+
+def controleer_details(autos):
+    """Leest de volledige advertentie van de beste kandidaten en gooit schadeauto's eruit."""
+    goed = []
+    for a in autos[:DETAIL_AANTAL]:
+        try:
+            woord = bevat(norm(detail_tekst(a)), DETAIL_SCHADE)
+        except requests.HTTPError as e:
+            woord = 'verkocht' if e.response.status_code in (404, 410) else None
+        except Exception as e:
+            print(f"  detail {a['id']}: {e}")
+            woord = None
+        if woord:
+            print(f"  weg (schade: '{woord}'): {a['titel'][:60]}")
+        else:
+            goed.append(a)
+        time.sleep(0.7)
+    return goed + autos[DETAIL_AANTAL:]
+
+
 def ontdubbel(autos):
     """Zelfde auto op AutoScout24 en Marktplaats: houd de eerste."""
     gezien, uit = set(), []
@@ -332,6 +383,7 @@ def main():
 
     autos = ontdubbel([a for a in (beoordeel(a) for a in ruw) if a])
     autos.sort(key=lambda a: (-a['score'], a['prijs']))
+    autos = controleer_details(autos)
 
     gezien = json.loads(GEZIEN.read_text('utf-8')) if GEZIEN.exists() else {}
     vandaag = nu.date().isoformat()
@@ -349,7 +401,7 @@ def main():
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'aantal_bekeken': len(ruw),
         'aantal': len(autos),
-        'autos': autos[:60],
+        'autos': autos[:DETAIL_AANTAL - 5],  # alleen auto's die de detailcontrole hebben gehad
     }, ensure_ascii=False, indent=1), 'utf-8')
     GEZIEN.write_text(json.dumps(gezien, indent=0, sort_keys=True), 'utf-8')
 

@@ -91,7 +91,7 @@ function feiten(a) {
 }
 function topKaart(a, i) {
   return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
-    <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy">` : '<div class="foto"></div>'}
+    <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<div class="foto"></div>'}
       <span class="rang">#${i + 1}</span><span class="score">score ${a.score}</span></div>
     <div class="body">
       <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
@@ -102,7 +102,7 @@ function topKaart(a, i) {
 }
 function lijstKaart(a) {
   return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
-    ${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy">` : '<div class="foto"></div>'}
+    ${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<div class="foto"></div>'}
     <div class="body">
       <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
       <div class="feiten">${feiten(a)} · score ${a.score}</div>
