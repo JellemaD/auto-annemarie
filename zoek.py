@@ -150,10 +150,59 @@ def zoek_model(merk, tekst):
     merk = norm(merk)
     for m, model, score, soort, uitleg in MODELLEN:
         if m == merk and re.search(r'(?<![a-z0-9])' + re.escape(model) + r'(?![a-z0-9])', tekst):
-            return score, soort, uitleg
+            return score, soort, uitleg, GEWICHT.get(model)
     if merk in GANGBARE_MERKEN:
-        return 5.5, None, 'Model niet in de lijst: neutrale betrouwbaarheid'
+        return 5.5, None, 'Model niet in de lijst: neutrale betrouwbaarheid', None
     return None  # onbekend merk: bijna altijd een microcar of brommobiel
+
+
+# ---------------------------------------------------------------- vaste lasten
+
+# Gewicht leeg voertuig (kg, kentekenbewijs) per model, typische uitvoering. Bepaalt de wegenbelasting.
+GEWICHT = {
+    'ioniq': 1420, 'niro': 1600, 'kona': 1610, 'e-golf': 1510, 'golf': 1540, 'e-up': 1140, 'up': 1140,
+    'citigo': 1160, 'mii': 1160, 'soul': 1490, 'ampera-e': 1625, 'leaf': 1450, 'i3': 1250, 'zoe': 1450,
+    'spring': 970, '500e': 1265, 'e-208': 1455, 'b 250e': 1650, 'focus': 1645, 'model s': 2100,
+    'forfour': 1095, 'twingo': 1110, 'mx-30': 1645, 'prius': 1450, 'outlander': 1810, 'volt': 1715,
+    'ampera': 1715, 'c-max': 1720, 'optima': 1720, 'sonata': 1700, 'passat': 1700, 'a3': 1540,
+    '225xe': 1660, '330e': 1660, '2-serie': 1660, '3-serie': 1660, 'x5': 2230, 'countryman': 1735,
+    'v60': 1980, 'xc90': 2300, 'v90': 2000, 's90': 2000, 'c 350': 1780, 'cayenne': 2350,
+    'panamera': 2170, '3008': 1900, '508': 1800,
+}
+GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700}
+
+# Wegenbelasting per kwartaal, provincie Utrecht, 2026, uit de rekenhulp van de Belastingdienst
+# (opgehaald 12-10-2026). Klasse vanaf gewicht -> (benzine, diesel). Elektrisch = 70% van benzine
+# (2026-2028); plug-in hybride betaalt sinds 2026 het volle tarief van zijn brandstof.
+# Woont Annemarie in een andere provincie, dan scheelt dat tot ca. 10%.
+MRB_UTRECHT = [
+    (1, 33, 117), (651, 44, 143), (751, 54, 169), (851, 71, 202), (951, 93, 246),
+    (1051, 121, 290), (1151, 148, 334), (1251, 175, 378), (1351, 203, 422), (1451, 230, 466),
+    (1551, 257, 510), (1651, 285, 554), (1751, 312, 598), (1851, 339, 642), (1951, 367, 686),
+    (2051, 394, 729), (2151, 422, 773), (2251, 449, 817), (2351, 476, 861), (2451, 504, 905),
+]
+PREMIUM_MERKEN = {'bmw', 'mercedes', 'mercedes-benz', 'audi', 'volvo', 'mini', 'lexus', 'jaguar', 'land rover'}
+DURE_MERKEN = {'tesla', 'porsche'}
+
+
+def wegenbelasting(gewicht, soort, diesel):
+    """Wegenbelasting per maand in euro."""
+    benzine, dieseltarief = next(t[1:] for t in reversed(MRB_UTRECHT) if gewicht >= t[0])
+    if soort == 'Elektrisch':
+        kwartaal = benzine * 0.7
+    else:
+        kwartaal = dieseltarief if diesel else benzine
+    return round(kwartaal / 3)
+
+
+def verzekering(gewicht, prijs, merk):
+    """Grove inschatting WA + beperkt casco per maand, 10 schadevrije jaren, bestuurder 30+.
+    Zwaardere auto = hogere WA-premie; beperkt casco groeit met de waarde; premiummerken zijn duurder
+    om te repareren."""
+    wa = 14 + 6 * max(0, gewicht - 1000) / 500
+    bc = 5 + prijs / 1000
+    factor = 1.5 if norm(merk) in DURE_MERKEN else 1.25 if norm(merk) in PREMIUM_MERKEN else 1.0
+    return round((wa + bc) * factor)
 
 
 # ---------------------------------------------------------------- AutoScout24
@@ -280,7 +329,7 @@ def beoordeel(a):
     model = zoek_model(a['merk'], titel)
     if not model:
         return None
-    betrouwbaar, soort, uitleg = model
+    betrouwbaar, soort, uitleg, gewicht = model
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     if elektrisch:
         a['soort'] = 'Elektrisch'
@@ -289,13 +338,21 @@ def beoordeel(a):
     else:
         return None  # gewone hybride, niet stekkerbaar
 
-    # Score 0-100: betrouwbaarheid 45%, bouwjaar 30%, kilometerstand 25%.
+    # Vaste lasten per maand.
+    a['gewicht'] = gewicht or GEWICHT_ONBEKEND[a['soort']]
+    diesel = 'diesel' in norm(a['brandstof']) or bool(re.search(r'\bd6\b', titel))
+    a['mrb'] = wegenbelasting(a['gewicht'], a['soort'], diesel)
+    a['verzekering'] = verzekering(a['gewicht'], a['prijs'], a['merk'])
+    a['vaste_lasten'] = a['mrb'] + a['verzekering']
+
+    # Score 0-100: betrouwbaarheid 35%, bouwjaar 28%, kilometerstand 22%, vaste lasten 15%.
     jaar_s = max(0.0, min(10.0, (a['jaar'] - 2010) / 1.0))       # 2010 = 0, 2020+ = 10
     km_s = max(0.0, 10.0 - a['km'] / 25000)                      # 0 km = 10, 250.000 km = 0
-    a['score'] = 4.5 * betrouwbaar + 3.0 * jaar_s + 2.5 * km_s
+    kosten_s = max(0.0, min(10.0, (160 - a['vaste_lasten']) / 11.5))  # <= 45/mnd = 10, >= 160/mnd = 0
+    a['score'] = 3.5 * betrouwbaar + 2.8 * jaar_s + 2.2 * km_s + 1.5 * kosten_s
     # Opbouw van de score, voor de uitleg bij de score op de website.
-    a['punten'] = {'betrouwbaarheid': round(4.5 * betrouwbaar, 1), 'bouwjaar': round(3.0 * jaar_s, 1),
-                   'km': round(2.5 * km_s, 1)}
+    a['punten'] = {'betrouwbaarheid': round(3.5 * betrouwbaar, 1), 'bouwjaar': round(2.8 * jaar_s, 1),
+                   'km': round(2.2 * km_s, 1), 'kosten': round(1.5 * kosten_s, 1)}
     a['betrouwbaarheid'] = betrouwbaar
     a['toelichting'] = uitleg
 
