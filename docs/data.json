@@ -1,7 +1,7 @@
 {
- "bijgewerkt": "2026-10-12 12:28",
- "aantal_bekeken": 1014,
- "aantal": 186,
+ "bijgewerkt": "2026-10-12 13:34",
+ "aantal_bekeken": 1012,
+ "aantal": 182,
  "autos": [
   {
    "id": "mp_m2451307489",
@@ -197,35 +197,6 @@
     "betrouwbaarheid": 33.8,
     "bouwjaar": 18.0,
     "km": 14.5
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "Betrouwbaar, ruim instappen; 27 kWh-accu veroudert sneller",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2448577008",
-   "bron": "Marktplaats",
-   "merk": "Kia",
-   "model": "Soul",
-   "titel": "Kia Soul EV ExecutiveLine 27 kWh CLIMA CRUISE CAMERA CARPLAY",
-   "prijs": 5999,
-   "km": 136733,
-   "jaar": 2017,
-   "brandstof": "Elektrisch",
-   "plaats": "'s-Gravenhage",
-   "verkoper": "Neologistics",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2448577008-kia-soul-ev-executiveline-27-kwh-clima-cruise-camera-carplay",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/38691f9f-eded-475a-9073-cfaed6016a73?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "score": 66.1,
-   "punten": {
-    "betrouwbaarheid": 33.8,
-    "bouwjaar": 21.0,
-    "km": 11.3
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Betrouwbaar, ruim instappen; 27 kWh-accu veroudert sneller",
@@ -589,35 +560,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2440049059",
-   "bron": "Marktplaats",
-   "merk": "Fiat",
-   "model": "500E",
-   "titel": "Fiat 500e Sport / Zwart / mooi / SoH 94,9%! lage km’s 55.950",
-   "prijs": 7975,
-   "km": 55950,
-   "jaar": 2015,
-   "brandstof": "Elektrisch",
-   "plaats": "Soest",
-   "verkoper": "Daan",
-   "url": "https://www.marktplaats.nl/v/auto-s/fiat/m2440049059-fiat-500e-sport-zwart-mooi-soh-94-9-lage-km-s-55-950",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/cb53875d-19fb-4a3a-9f06-10e2efa091f6?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "score": 59.2,
-   "punten": {
-    "betrouwbaarheid": 24.8,
-    "bouwjaar": 15.0,
-    "km": 19.4
-   },
-   "betrouwbaarheid": 5.5,
-   "toelichting": "Meestal Amerikaanse import; onderdelen lastig",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "as24_6be10220-22ed-46b8-a007-a7c01aa20351",
    "bron": "AutoScout24",
    "merk": "Fiat",
@@ -671,36 +613,6 @@
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
     "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2446642914",
-   "bron": "Marktplaats",
-   "merk": "Volkswagen",
-   "model": "Golf",
-   "titel": "Volkswagen E-Golf E-Golf Automaat|Sensor|Ecc",
-   "prijs": 5750,
-   "km": 200901,
-   "jaar": 2015,
-   "brandstof": "Elektrisch",
-   "plaats": "Boxtel",
-   "verkoper": "A2 Auto's",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2446642914-volkswagen-e-golf-e-golf-automaat-sensor-ecc",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/49c6a3bc-ec48-45dd-bc24-40a26526d763?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "score": 58.2,
-   "punten": {
-    "betrouwbaarheid": 38.2,
-    "bouwjaar": 15.0,
-    "km": 4.9
-   },
-   "betrouwbaarheid": 8.5,
-   "toelichting": "Degelijk, geen bekende accuproblemen",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-12",
    "nieuw": false
@@ -876,36 +788,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2450778063",
-   "bron": "Marktplaats",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh Koop Accu",
-   "prijs": 7950,
-   "km": 75718,
-   "jaar": 2013,
-   "brandstof": "Elektrisch",
-   "plaats": "Veghel",
-   "verkoper": "Van Stuivenberg Automotive",
-   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2450778063-renault-zoe-q210-zen-quickcharge-22-kwh-koop-accu",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/84e8ca39-ae06-494d-a374-e0ed926b43ba?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "score": 55.7,
-   "punten": {
-    "betrouwbaarheid": 29.2,
-    "bouwjaar": 9.0,
-    "km": 17.4
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Koopaccu"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "as24_4322812b-d21f-44ad-b6fa-62b887ef239c",
    "bron": "AutoScout24",
    "merk": "Ford",
@@ -1013,6 +895,118 @@
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
     "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_f7b9c0ea-5948-4d5d-9d15-cd0446ca4cd0",
+   "bron": "AutoScout24",
+   "merk": "Opel",
+   "model": "Ampera",
+   "titel": "Opel Ampera 1.4 | CAMERA | CRUISE | STOELVERW. |",
+   "prijs": 7990,
+   "km": 140637,
+   "jaar": 2013,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Nijverdal",
+   "verkoper": "Autobedrijf Jan Olthof",
+   "url": "https://www.autoscout24.nl/aanbod/opel-ampera-1-4-camera-cruise-stoelverw-elektro-benzine-grijs-cat_ma54mo19749-f7b9c0ea-5948-4d5d-9d15-cd0446ca4cd0",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/f7b9c0ea-5948-4d5d-9d15-cd0446ca4cd0_2cc2e8f0-344b-4cb8-9588-983e093a5c43.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "score": 53.7,
+   "punten": {
+    "betrouwbaarheid": 33.8,
+    "bouwjaar": 9.0,
+    "km": 10.9
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "let_op": [],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2451519634",
+   "bron": "Marktplaats",
+   "merk": "Mitsubishi",
+   "model": "Outlander",
+   "titel": "Mitsubishi Outlander 2.0 PHEV Business Edition",
+   "prijs": 7950,
+   "km": 150703,
+   "jaar": 2014,
+   "brandstof": "Hybride",
+   "plaats": "Bunnik",
+   "verkoper": "Auto's van Engel",
+   "url": "https://www.marktplaats.nl/v/auto-s/mitsubishi/m2451519634-mitsubishi-outlander-2-0-phev-business-edition",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/883095ef-7d8f-4392-b973-70a1247e02a6?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Plug-in hybride",
+   "score": 53.4,
+   "punten": {
+    "betrouwbaarheid": 31.5,
+    "bouwjaar": 12.0,
+    "km": 9.9
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
+   "let_op": [],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_8ebe5628-d45a-4672-ad37-79bf399d8bdf",
+   "bron": "AutoScout24",
+   "merk": "Volkswagen",
+   "model": "Golf GTE",
+   "titel": "Volkswagen Golf GTE 1.4 TSI",
+   "prijs": 7500,
+   "km": 226760,
+   "jaar": 2015,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Hoogeveen",
+   "verkoper": "JS Auto's",
+   "url": "https://www.autoscout24.nl/aanbod/volkswagen-golf-gte-1-4-tsi-elektro-benzine-zwart-cat_ma74mo75655-8ebe5628-d45a-4672-ad37-79bf399d8bdf",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/8ebe5628-d45a-4672-ad37-79bf399d8bdf_d4bf3e47-ed4e-4202-a167-25f6dec021cf.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "score": 53.3,
+   "punten": {
+    "betrouwbaarheid": 36.0,
+    "bouwjaar": 15.0,
+    "km": 2.3
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2452782715",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Prius",
+   "titel": "Toyota Prius 1.8 Plug-in Hybrid 136PK Aut 2013 Grijs",
+   "prijs": 7850,
+   "km": 236835,
+   "jaar": 2013,
+   "brandstof": "Hybride",
+   "plaats": "Eindhoven",
+   "verkoper": "Anton K",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2452782715-toyota-prius-1-8-plug-in-hybrid-136pk-aut-2013-grijs",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fd5758a7-c50c-4bed-b148-185f2cfae9fe?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Plug-in hybride",
+   "score": 53.1,
+   "punten": {
+    "betrouwbaarheid": 42.8,
+    "bouwjaar": 9.0,
+    "km": 1.3
+   },
+   "betrouwbaarheid": 9.5,
+   "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
+   "let_op": [
+    "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-12",
    "nieuw": false

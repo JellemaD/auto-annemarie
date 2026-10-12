@@ -269,6 +269,8 @@ def beoordeel(a):
         return None
     if bevat(titel, UITSLUITEN) or bevat(tekst, ELLENDE):
         return None
+    if bevat(titel, ['verkocht', 'gereserveerd', 'sold', 'reserved']):
+        return None
     if any(w in norm(a.get('verkoper')) for w in SCHADE_VERKOPERS):
         return None
 
@@ -340,10 +342,15 @@ def detail_tekst(a):
     soup = BeautifulSoup(r.text, 'html.parser')
     if a['bron'] == 'AutoScout24':
         L = json.loads(soup.find('script', id='__NEXT_DATA__').string)['props']['pageProps']['listingDetails']
+        if str(L.get('status', 'Active')).lower() != 'active':
+            return 'verkocht'
         schade = (L.get('vehicle') or {}).get('condition', {}).get('damage') or {}
         if schade.get('isCurrentlyDamaged') or schade.get('hadAccident') or schade.get('accidentFree') is False:
             return 'schadeauto'
         return BeautifulSoup(L.get('description') or '', 'html.parser').get_text(' ')
+    # Marktplaats: verkoper heeft de auto op gereserveerd/verkocht gezet.
+    if re.search(r'"is(?:Reserved|Sold)":\s*true', r.text):
+        return 'verkocht'
     blok = soup.find(attrs={'data-collapsable': 'description'})
     return blok.get_text(' ') if blok else ''
 
@@ -353,7 +360,8 @@ def controleer_details(autos):
     goed = []
     for a in autos[:DETAIL_AANTAL]:
         try:
-            woord = bevat(norm(detail_tekst(a)), DETAIL_SCHADE)
+            tekst = detail_tekst(a)
+            woord = 'verkocht' if tekst == 'verkocht' else bevat(norm(tekst), DETAIL_SCHADE)
         except requests.HTTPError as e:
             woord = 'verkocht' if e.response.status_code in (404, 410) else None
         except Exception as e:
