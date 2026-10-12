@@ -66,6 +66,19 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .lijst .titel{font-size:.95rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
 .filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+.merkkeuze{position:relative}
+.merkkeuze summary{list-style:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;font-size:.9rem;cursor:pointer;user-select:none}
+.merkkeuze summary::-webkit-details-marker{display:none}
+.merkkeuze summary::after{content:" ▾"}
+.merkkeuze.actief summary{background:var(--accent);border-color:var(--accent);color:#fff}
+.merkkeuze .merkpaneel{position:absolute;z-index:30;top:calc(100% + 6px);left:0;width:230px;max-width:calc(100vw - 32px);max-height:60vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:8px}
+.merkpaneel label{display:flex;align-items:center;gap:10px;padding:7px 6px;border-radius:8px;cursor:pointer;font-size:.95rem}
+.merkpaneel label:hover{background:var(--accent-soft)}
+.merkpaneel input{width:18px;height:18px;accent-color:var(--accent)}
+.merkpaneel .aantal{margin-left:auto;color:var(--muted);font-size:.85rem}
+.merkknoppen{display:flex;gap:8px;justify-content:space-between;border-top:1px solid var(--line);margin-top:6px;padding-top:8px}
+.merkknoppen button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.merkknoppen #merkklaar{background:var(--accent);border-color:var(--accent);color:#fff}
 .filters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:24px}
 summary{font-weight:600;cursor:pointer}
@@ -78,17 +91,25 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <h1>🔌 Auto voor Annemarie</h1>
 <p class="sub">Elektrisch of plug-in hybride · max € 8.000 · heel Nederland<br><span id="stand">Laden…</span></p>
 
-<h2>Top 5 van vandaag</h2>
-<div class="legenda"><span><i style="background:#15803d"></i>70+ goed</span><span><i style="background:#ea7a0c"></i>60–70 redelijk</span><span><i style="background:#c81e1e"></i>onder 60 matig</span></div>
-<div id="top" class="top"></div>
-
-<h2>Alle andere kandidaten</h2>
 <div class="filters" role="group" aria-label="Filter">
   <button data-f="alle" aria-pressed="true">Alle</button>
   <button data-f="Elektrisch" aria-pressed="false">Elektrisch</button>
   <button data-f="Plug-in hybride" aria-pressed="false">Plug-in hybride</button>
   <button data-f="nieuw" aria-pressed="false">Nieuw vandaag</button>
+  <details class="merkkeuze" id="merkkeuze">
+    <summary id="merklabel">Alle merken</summary>
+    <div class="merkpaneel">
+      <div id="merklijst"></div>
+      <div class="merkknoppen"><button type="button" id="merkwis">Alle merken</button><button type="button" id="merkklaar">Klaar</button></div>
+    </div>
+  </details>
 </div>
+
+<h2 id="topkop">Top 5 van vandaag</h2>
+<div class="legenda"><span><i style="background:#15803d"></i>70+ goed</span><span><i style="background:#ea7a0c"></i>60–70 redelijk</span><span><i style="background:#c81e1e"></i>onder 60 matig</span></div>
+<div id="top" class="top"></div>
+
+<h2>Alle andere kandidaten</h2>
 <div id="lijst" class="lijst"></div>
 
 <details>
@@ -101,7 +122,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
     <li><b>15% vaste lasten per maand</b> (wegenbelasting + verzekering): € 45 of minder is het maximum, € 160 of meer telt als 0</li>
   </ul>
   <p><b>Vaste lasten:</b> de wegenbelasting komt uit de rekenhulp van de Belastingdienst (2026, provincie Utrecht, op basis van het gewicht van het model). Elektrisch betaalt 70% van het benzinetarief; een plug-in hybride betaalt sinds 2026 het volle tarief. De verzekering is een grove inschatting voor WA + beperkt casco met 10 schadevrije jaren; vraag voor een echte prijs een offerte aan.</p>
-  <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, Smart fortwo, i-MiEV/C-Zero/iOn), bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra).</p>
+  <p>Weggefilterd: brommobielen en microcars (Opel Rocks-e, Twizy, i-MiEV/C-Zero/iOn; de Citroën Ami mag wel, maar staat hoogstens één keer in de top 5), alle Smarts, bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra).</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
 </main>
@@ -165,19 +186,51 @@ function lijstKaart(a) {
       <div class="chips">${chips(a)}</div>
     </div></a>`;
 }
-function toonLijst(f) {
-  const rest = autos.slice(5).filter(a => f === 'alle' || (f === 'nieuw' ? a.nieuw : a.soort === f));
-  document.getElementById('lijst').innerHTML = rest.length ? rest.map(lijstKaart).join('') : '<p class="leeg">Geen auto\'s in deze selectie.</p>';
+let soortFilter = 'alle';
+let merken = new Set();          // leeg = alle merken
+const merkVan = a => {
+  const m = (a.merk || 'Overig').trim();
+  return m.length <= 3 ? m.toUpperCase() : m.charAt(0).toUpperCase() + m.slice(1).toLowerCase().replace('-benz', '-Benz');
+};
+function toon() {
+  const sel = autos.filter(a =>
+    (soortFilter === 'alle' || (soortFilter === 'nieuw' ? a.nieuw : a.soort === soortFilter)) &&
+    (!merken.size || merken.has(merkVan(a))));
+  const gefilterd = soortFilter !== 'alle' || merken.size;
+  document.getElementById('topkop').textContent = gefilterd ? 'Top 5 in jouw selectie' : 'Top 5 van vandaag';
+  document.getElementById('top').innerHTML = sel.length ? sel.slice(0, 5).map(topKaart).join('') : '<p class="leeg">Geen auto’s in deze selectie.</p>';
+  const rest = sel.slice(5);
+  document.getElementById('lijst').innerHTML = rest.length ? rest.map(lijstKaart).join('') : '<p class="leeg">Geen andere auto’s in deze selectie.</p>';
+  document.getElementById('merklabel').textContent = !merken.size ? 'Alle merken' : merken.size === 1 ? [...merken][0] : `${merken.size} merken`;
+  document.getElementById('merkkeuze').classList.toggle('actief', merken.size > 0);
+  try { localStorage.setItem('merken', JSON.stringify([...merken])); } catch (e) {}
 }
+function bouwMerklijst() {
+  const tel = {};
+  autos.forEach(a => tel[merkVan(a)] = (tel[merkVan(a)] || 0) + 1);
+  document.getElementById('merklijst').innerHTML = Object.keys(tel).sort((x, y) => x.localeCompare(y, 'nl')).map(m =>
+    `<label><input type="checkbox" value="${esc(m)}" ${merken.has(m) ? 'checked' : ''}> ${esc(m)} <span class="aantal">${tel[m]}</span></label>`).join('');
+  document.querySelectorAll('#merklijst input').forEach(cb => cb.onchange = () => {
+    cb.checked ? merken.add(cb.value) : merken.delete(cb.value);
+    toon();
+  });
+}
+document.getElementById('merkwis').onclick = () => { merken.clear(); bouwMerklijst(); toon(); };
+document.getElementById('merkklaar').onclick = () => document.getElementById('merkkeuze').open = false;
+document.addEventListener('click', e => {
+  const dd = document.getElementById('merkkeuze');
+  if (dd.open && !dd.contains(e.target)) dd.open = false;
+});
 // Telefoon heeft geen mouse-over: tik op de score opent de uitleg (en opent niet de advertentie).
 document.addEventListener('click', e => {
   const badge = e.target.closest('.score');
   document.querySelectorAll('.score.open').forEach(b => { if (b !== badge) b.classList.remove('open'); });
   if (badge) { e.preventDefault(); e.stopPropagation(); if (!e.target.closest('.tip')) badge.classList.toggle('open'); }
 });
-document.querySelectorAll('.filters button').forEach(b => b.onclick = () => {
-  document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
-  toonLijst(b.dataset.f);
+document.querySelectorAll('.filters button[data-f]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.filters button[data-f]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  soortFilter = b.dataset.f;
+  toon();
 });
 fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   autos = d.autos;
@@ -186,8 +239,12 @@ fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   const nieuw = autos.filter(a => a.nieuw).length;
   document.getElementById('stand').textContent =
     `Bijgewerkt ${datum} om ${tijd} · ${d.aantal_bekeken} advertenties bekeken, ${d.aantal} geschikt` + (nieuw ? ` · ${nieuw} nieuw` : '');
-  document.getElementById('top').innerHTML = autos.slice(0, 5).map(topKaart).join('');
-  toonLijst('alle');
+  try {
+    const bekend = new Set(autos.map(merkVan));
+    merken = new Set(JSON.parse(localStorage.getItem('merken') || '[]').filter(m => bekend.has(m)));
+  } catch (e) { merken = new Set(); }
+  bouwMerklijst();
+  toon();
 }).catch(() => { document.getElementById('stand').textContent = 'Kon de gegevens niet laden. Probeer het later opnieuw.'; });
 </script>
 </body>

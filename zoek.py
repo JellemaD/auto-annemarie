@@ -396,7 +396,7 @@ DETAIL_SCHADE = [
     'movable', 'damaged', 'total loss', 'niet rijdend', 'niet rijdbaar', 'opknapper', 'defect',
     'airbag eruit', 'airbags eruit', 'airbag uit', 'gerepareerde schade', 'schadehistorie',
 ]
-DETAIL_AANTAL = 40
+DETAIL_AANTAL = 100
 
 
 def detail_tekst(a):
