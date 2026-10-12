@@ -190,7 +190,7 @@ let soortFilter = 'alle';
 let merken = new Set();          // leeg = alle merken
 const merkVan = a => {
   const m = (a.merk || 'Overig').trim();
-  return m.length <= 3 ? m.toUpperCase() : m.charAt(0).toUpperCase() + m.slice(1).toLowerCase().replace('-benz', '-Benz');
+  return ['bmw', 'ds', 'mg', 'byd'].includes(m.toLowerCase()) ? m.toUpperCase() : m.charAt(0).toUpperCase() + m.slice(1).toLowerCase().replace('-benz', '-Benz');
 };
 function toon() {
   const sel = autos.filter(a =>
