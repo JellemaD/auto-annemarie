@@ -29,8 +29,14 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .chip.warn{background:var(--warn-soft);color:var(--warn)}
 .chip.new{background:var(--new);color:#fff}
 .rang{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-weight:700;border-radius:10px;padding:4px 10px;font-size:.95rem}
-.score{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:#fff;border-radius:10px;padding:4px 9px;font-size:.85rem;cursor:help;z-index:5}
-.score::after{content:" ⓘ";opacity:.8}
+.score{position:absolute;top:10px;right:10px;background:#555;color:#fff;border:2px solid #fff;border-radius:12px;padding:5px 12px;font-size:1.35rem;font-weight:800;line-height:1.1;cursor:help;z-index:5;box-shadow:0 2px 10px rgba(0,0,0,.35);text-align:center}
+.score small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;opacity:.95}
+.score small::after{content:" ⓘ"}
+.score.groen{background:#15803d}
+.score.oranje{background:#ea7a0c}
+.score.rood{background:#c81e1e}
+.legenda{display:flex;gap:12px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin:-4px 0 12px}
+.legenda i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:5px;vertical-align:-1px}
 .tip{display:none;position:absolute;top:calc(100% + 6px);right:0;width:270px;max-width:calc(100vw - 40px);background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.85rem;line-height:1.4;cursor:default;white-space:normal}
 .score.open .tip{display:block}
 .score.open,.score:hover{z-index:20}
@@ -46,7 +52,7 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .lijst .card{display:flex;gap:12px;align-items:stretch}
 .lijst .fotowrap{width:110px;flex:none}
 .lijst .foto{width:110px;height:100%;min-height:84px;object-fit:cover;background:var(--line);display:block;border-radius:13px 0 0 13px}
-.lijst .score{left:6px;right:auto;top:6px;font-size:.78rem;padding:3px 7px}
+.lijst .score{left:6px;right:auto;top:6px;font-size:1.05rem;padding:3px 8px;border-radius:10px}
 .lijst .tip{left:0;right:auto}
 .lijst .body{padding:10px 12px 10px 0;flex:1;min-width:0}
 .lijst .titel{font-size:.95rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
@@ -65,6 +71,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <p class="sub">Elektrisch of plug-in hybride · max € 8.000 · heel Nederland<br><span id="stand">Laden…</span></p>
 
 <h2>Top 5 van vandaag</h2>
+<div class="legenda"><span><i style="background:#15803d"></i>70+ goed</span><span><i style="background:#ea7a0c"></i>60–70 redelijk</span><span><i style="background:#c81e1e"></i>onder 60 matig</span></div>
 <div id="top" class="top"></div>
 
 <h2>Alle andere kandidaten</h2>
@@ -121,7 +128,8 @@ function scoreTip(a) {
     <table>${rijen}<tr class="som"><td><b>Totaal</b></td><td>${nl(a.score)} / 100</td></tr></table>
     <span class="klein">Prijs telt niet mee: alles is al onder € 8.000.</span></span>`;
 }
-const scoreBadge = a => `<span class="score" tabindex="0" aria-label="Score ${a.score}, tik voor uitleg">score ${a.score}${scoreTip(a)}</span>`;
+const kleur = s => s >= 70 ? 'groen' : s >= 60 ? 'oranje' : 'rood';
+const scoreBadge = a => `<span class="score ${kleur(a.score)}" tabindex="0" aria-label="Score ${a.score} van 100, tik voor uitleg"><small>score</small>${nl(a.score)}${scoreTip(a)}</span>`;
 
 function topKaart(a, i) {
   return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
