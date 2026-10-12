@@ -355,7 +355,7 @@ def controleer_details(autos):
             print(f"  detail {a['id']}: {e}")
             woord = None
         if woord:
-            print(f"  weg (schade: '{woord}'): {a['titel'][:60]}")
+            print(f"  weg ({woord}): {a['titel'][:60]}")
         else:
             goed.append(a)
         time.sleep(0.7)
@@ -387,10 +387,11 @@ def main():
 
     gezien = json.loads(GEZIEN.read_text('utf-8')) if GEZIEN.exists() else {}
     vandaag = nu.date().isoformat()
+    eerste_dag = not gezien or min(gezien.values()) >= vandaag   # dan is alles "nieuw": geen label
     for a in autos:
         gezien.setdefault(a['id'], vandaag)
         a['eerst_gezien'] = gezien[a['id']]
-        a['nieuw'] = gezien[a['id']] == vandaag and bool(GEZIEN.exists())
+        a['nieuw'] = gezien[a['id']] == vandaag and not eerste_dag
     # Alleen ids bewaren die nog online staan of korter dan 60 dagen geleden gezien zijn.
     actief = {a['id'] for a in autos}
     gezien = {k: v for k, v in gezien.items()
