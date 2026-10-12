@@ -33,6 +33,12 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .score .tip small{display:inline}
 .score>small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;opacity:.95}
 .score>small::after{content:" ⓘ"}
+.badges{position:absolute;top:10px;right:10px;display:flex;gap:8px;align-items:flex-start;z-index:5}
+.badges .score{position:relative;top:auto;right:auto;left:auto}
+.badges:has(.score.open),.badges:hover{z-index:20}
+.sticker{background:#111;color:#facc15;border:2px dashed #facc15;border-radius:8px;padding:5px 9px;font-weight:900;font-size:.95rem;text-transform:uppercase;letter-spacing:.03em;transform:rotate(-8deg);box-shadow:0 3px 10px rgba(0,0,0,.45);white-space:nowrap;font-family:Impact,"Arial Black",system-ui,sans-serif}
+.lijst .badges{left:4px;right:auto;top:4px;flex-direction:column;gap:6px}
+.lijst .sticker{font-size:.62rem;padding:2px 5px;border-width:1.5px}
 .score.groen{background:#15803d}
 .score.oranje{background:#ea7a0c}
 .score.rood{background:#c81e1e}
@@ -135,12 +141,14 @@ function scoreTip(a) {
     <span class="klein">Aanschafprijs telt niet mee: alles is al onder € 8.000.</span></span>`;
 }
 const kleur = s => s >= 70 ? 'groen' : s >= 60 ? 'oranje' : 'rood';
+const stoer = a => /^bmw$/i.test(a.merk) && /\bi3\b/i.test(a.titel) ? '<span class="sticker">I ben stoer 😎</span>' : '';
+const badges = a => `<span class="badges">${stoer(a)}${scoreBadge(a)}</span>`;
 const scoreBadge = a => `<span class="score ${kleur(a.score)}" tabindex="0" aria-label="Score ${a.score} van 100, tik voor uitleg"><small>score</small>${nl(a.score)}${scoreTip(a)}</span>`;
 
 function topKaart(a, i) {
   return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
     <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<div class="foto"></div>'}
-      <span class="rang">#${i + 1}</span>${scoreBadge(a)}</div>
+      <span class="rang">#${i + 1}</span>${badges(a)}</div>
     <div class="body">
       <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
       <div class="feiten">${feiten(a)}</div>
@@ -150,7 +158,7 @@ function topKaart(a, i) {
 }
 function lijstKaart(a) {
   return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
-    <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<div class="foto"></div>'}${scoreBadge(a)}</div>
+    <div class="fotowrap">${a.foto ? `<img class="foto" src="${esc(a.foto)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : '<div class="foto"></div>'}${badges(a)}</div>
     <div class="body">
       <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
       <div class="feiten">${feiten(a)}</div>

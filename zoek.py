@@ -32,9 +32,10 @@ HEADERS = {
     'Accept-Language': 'nl-NL,nl;q=0.9',
 }
 
-# Microcars, brommobielen, quadricycles en bestelbussen: nooit tonen.
+# Microcars, brommobielen, quadricycles en bestelbussen: nooit tonen. Uitzondering: Citroën Ami
+# (op verzoek van Durk, 12-10-2026). Smart helemaal niet.
 UITSLUITEN = [
-    'ami', 'rocks-e', 'rocks e', 'twizy', 'biro', 'estrima', 'aixam', 'ligier', 'microcar',
+    'smart', 'rocks-e', 'rocks e', 'twizy', 'biro', 'estrima', 'aixam', 'ligier', 'microcar',
     'chatenet', 'microlino', 'tazzari', 'topolino', 'brommobiel', '45 km', '45km', 'bellier',
     'jdm', 'casalini', 'kewet', 'buddy', 'reva', 'think city', 'goupil', 'club car',
     'streetscooter', 'c-zero', 'czero', 'ion', 'i-miev', 'imiev', 'fortwo', 'for two',
@@ -81,7 +82,8 @@ MODELLEN = [
     ('mercedes-benz', 'b 250e', 5.5, 'EV', 'Tesla-aandrijving; reparaties duur'),
     ('ford', 'focus', 5.5, None, 'Weinig verkocht, onderdelen lastig'),
     ('tesla', 'model s', 5.0, 'EV', 'Prachtig, maar reparaties (scherm, aandrijving) zeer duur'),
-    ('smart', 'forfour', 5.5, 'EV', 'Klein, 4 zitplaatsen'),
+    ('citroen', 'ami', 7.0, 'EV', 'Brommobiel: max 45 km/u, 2 personen, geen snelweg; rijbewijs AM of B'),
+    ('citroën', 'ami', 7.0, 'EV', 'Brommobiel: max 45 km/u, 2 personen, geen snelweg; rijbewijs AM of B'),
     ('renault', 'twingo', 6.5, 'EV', ''),
     ('mazda', 'mx-30', 7.5, 'EV', ''),
     # Plug-in hybride
@@ -118,7 +120,7 @@ GANGBARE_MERKEN = {
     'alfa romeo', 'audi', 'bmw', 'byd', 'chevrolet', 'citroen', 'citroën', 'cupra', 'dacia', 'ds',
     'fiat', 'ford', 'honda', 'hyundai', 'jaguar', 'jeep', 'kia', 'land rover', 'lexus', 'lynk & co',
     'mazda', 'mercedes', 'mercedes-benz', 'mg', 'mini', 'mitsubishi', 'nissan', 'opel', 'peugeot',
-    'polestar', 'porsche', 'renault', 'seat', 'skoda', 'smart', 'subaru', 'suzuki', 'tesla',
+    'polestar', 'porsche', 'renault', 'seat', 'skoda', 'subaru', 'suzuki', 'tesla',
     'toyota', 'volkswagen', 'volvo',
 }
 
@@ -163,7 +165,7 @@ GEWICHT = {
     'ioniq': 1420, 'niro': 1600, 'kona': 1610, 'e-golf': 1510, 'golf': 1540, 'e-up': 1140, 'up': 1140,
     'citigo': 1160, 'mii': 1160, 'soul': 1490, 'ampera-e': 1625, 'leaf': 1450, 'i3': 1250, 'zoe': 1450,
     'spring': 970, '500e': 1265, 'e-208': 1455, 'b 250e': 1650, 'focus': 1645, 'model s': 2100,
-    'forfour': 1095, 'twingo': 1110, 'mx-30': 1645, 'prius': 1450, 'outlander': 1810, 'volt': 1715,
+ 'ami': 485, 'twingo': 1110, 'mx-30': 1645, 'prius': 1450, 'outlander': 1810, 'volt': 1715,
     'ampera': 1715, 'c-max': 1720, 'optima': 1720, 'sonata': 1700, 'passat': 1700, 'a3': 1540,
     '225xe': 1660, '330e': 1660, '2-serie': 1660, '3-serie': 1660, 'x5': 2230, 'countryman': 1735,
     'v60': 1980, 'xc90': 2300, 'v90': 2000, 's90': 2000, 'c 350': 1780, 'cayenne': 2350,
@@ -316,7 +318,9 @@ def beoordeel(a):
         return None
     if not a['jaar'] or a['jaar'] < MIN_JAAR or a['km'] is None or a['km'] > MAX_KM:
         return None
-    if bevat(titel, UITSLUITEN) or bevat(tekst, ELLENDE):
+    ami = bool(re.search(r'\bami\b', titel)) and norm(a['merk']).startswith('citro')
+    uitsluiten = [w for w in UITSLUITEN if not (ami and w in ('brommobiel', '45 km', '45km'))]
+    if bevat(titel, uitsluiten) or bevat(tekst, ELLENDE):
         return None
     if bevat(titel, ['verkocht', 'gereserveerd', 'sold', 'reserved']):
         return None
@@ -341,7 +345,7 @@ def beoordeel(a):
     # Vaste lasten per maand.
     a['gewicht'] = gewicht or GEWICHT_ONBEKEND[a['soort']]
     diesel = 'diesel' in norm(a['brandstof']) or bool(re.search(r'\bd6\b', titel))
-    a['mrb'] = wegenbelasting(a['gewicht'], a['soort'], diesel)
+    a['mrb'] = 0 if ami else wegenbelasting(a['gewicht'], a['soort'], diesel)  # brommobiel: geen MRB
     a['verzekering'] = verzekering(a['gewicht'], a['prijs'], a['merk'])
     a['vaste_lasten'] = a['mrb'] + a['verzekering']
 
@@ -373,6 +377,8 @@ def beoordeel(a):
             let_op.append('Vraag accurapport (SoH)')
         if bevat(tekst, KOOPACCU):
             let_op.append('Koopaccu')
+    if ami:
+        let_op.insert(0, 'Brommobiel 45 km/u')
     if a['km'] > 180000:
         let_op.append('Hoge kilometerstand')
     a['let_op'] = let_op
@@ -454,6 +460,11 @@ def main():
     autos = ontdubbel([a for a in (beoordeel(a) for a in ruw) if a])
     autos.sort(key=lambda a: (-a['score'], a['prijs']))
     autos = controleer_details(autos)
+    # Hoogstens één Ami in de top 5 (nieuw + geen wegenbelasting = altijd hoge score); de rest erna.
+    ami = [a for a in autos if 'Brommobiel 45 km/u' in a['let_op']]
+    if len(ami) > 1:
+        rest = [a for a in autos if a not in ami[1:]]
+        autos = rest[:5] + ami[1:] + rest[5:]
 
     gezien = json.loads(GEZIEN.read_text('utf-8')) if GEZIEN.exists() else {}
     vandaag = nu.date().isoformat()
