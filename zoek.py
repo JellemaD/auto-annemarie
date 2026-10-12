@@ -291,11 +291,15 @@ def beoordeel(a):
     jaar_s = max(0.0, min(10.0, (a['jaar'] - 2010) / 1.0))       # 2010 = 0, 2020+ = 10
     km_s = max(0.0, 10.0 - a['km'] / 25000)                      # 0 km = 10, 250.000 km = 0
     a['score'] = 4.5 * betrouwbaar + 3.0 * jaar_s + 2.5 * km_s
+    # Opbouw van de score, voor de uitleg bij de score op de website.
+    a['punten'] = {'betrouwbaarheid': round(4.5 * betrouwbaar, 1), 'bouwjaar': round(3.0 * jaar_s, 1),
+                   'km': round(2.5 * km_s, 1)}
     a['betrouwbaarheid'] = betrouwbaar
     a['toelichting'] = uitleg
 
     if norm(a['merk']) in {norm(m) for m in MERK_VOORKEUR}:
         a['score'] += MERK_BONUS
+        a['punten']['merk'] = MERK_BONUS
 
     let_op = []
     soh = re.search(r'soh\D{0,3}(\d{2,3})\s*%', tekst)
@@ -303,6 +307,7 @@ def beoordeel(a):
         a['soh'] = int(soh.group(1))
         if a['soh'] < 80:
             a['score'] -= (80 - a['soh']) * 0.5
+            a['punten']['accu'] = -round((80 - a['soh']) * 0.5, 1)
             let_op.append(f"Accu versleten (SoH {a['soh']}%)")
     if a['soort'] == 'Elektrisch':
         if not soh:
