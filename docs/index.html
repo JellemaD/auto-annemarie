@@ -33,6 +33,7 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .score::after{content:" ⓘ";opacity:.8}
 .tip{display:none;position:absolute;top:calc(100% + 6px);right:0;width:270px;max-width:calc(100vw - 40px);background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.85rem;line-height:1.4;cursor:default;white-space:normal}
 .score.open .tip{display:block}
+.score.open,.score:hover{z-index:20}
 @media (hover:hover){.score:hover .tip{display:block}}
 .tip table{width:100%;border-collapse:collapse;margin:6px 0 4px}
 .tip td{padding:3px 0;vertical-align:top}
