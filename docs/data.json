@@ -1,32 +1,32 @@
 {
- "bijgewerkt": "2026-10-14 12:32",
- "aantal_bekeken": 1009,
+ "bijgewerkt": "2026-10-15 12:15",
+ "aantal_bekeken": 1026,
  "aantal": 162,
  "autos": [
   {
-   "id": "mp_m2451307489",
+   "id": "mp_m2450566979",
    "bron": "Marktplaats",
    "merk": "Volkswagen",
    "model": "Up!",
-   "titel": "Volkswagen E-up! 82pk | Parkeersenso | Stoelverwarm | Cruise",
-   "prijs": 7950,
-   "km": 43915,
+   "titel": "Volkswagen E-up - 2016 - 5 deurs - slechts 40.605km",
+   "prijs": 7850,
+   "km": 40605,
    "jaar": 2016,
    "brandstof": "Elektrisch",
-   "plaats": "Amsterdam",
-   "verkoper": "Kevin",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2451307489-volkswagen-e-up-82pk-parkeersenso-stoelverwarm-cruise",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/944e5377-a083-4545-afd2-35c6d6e8dcd2?rule=ecg_mp_eps$_84.jpg",
+   "plaats": "Haarlem",
+   "verkoper": "Tom",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2450566979-volkswagen-e-up-2016-5-deurs-slechts-40-605km",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4bab235e-0a1e-4e5c-beb8-bc0d360f966f?rule=ecg_mp_eps$_84.jpg",
    "soort": "Elektrisch",
    "gewicht": 1140,
    "mrb": 28,
    "verzekering": 29,
    "vaste_lasten": 57,
-   "score": 76.4,
+   "score": 76.7,
    "punten": {
     "betrouwbaarheid": 28.0,
     "bouwjaar": 16.8,
-    "km": 18.1,
+    "km": 18.4,
     "kosten": 13.4
    },
    "betrouwbaarheid": 8.0,
@@ -34,8 +34,8 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
   },
   {
    "id": "as24_64011050-d083-4616-a218-66606ac6a1d4",
@@ -65,40 +65,6 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Meestal Amerikaanse import; onderdelen lastig",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2445487648",
-   "bron": "Marktplaats",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan LEAF 30kwh, Airco, bluetooth, achteruitrij camera",
-   "prijs": 6499,
-   "km": 62990,
-   "jaar": 2018,
-   "brandstof": "Elektrisch",
-   "plaats": "Breda",
-   "verkoper": "Click2drive",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2445487648-nissan-leaf-30kwh-airco-bluetooth-achteruitrij-camera",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e3f83709-cc01-41d7-9fd7-c4b37b66390d?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 31,
-   "vaste_lasten": 78,
-   "score": 74.1,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bouwjaar": 22.4,
-    "km": 16.5,
-    "kosten": 10.7
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -206,7 +172,7 @@
     "Koopaccu"
    ],
    "eerst_gezien": "2026-10-14",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_f161eb5a-0bce-4fe0-ac7e-bdc1332e2771",
@@ -379,6 +345,41 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2453795534",
+   "bron": "Marktplaats",
+   "merk": "Renault",
+   "model": "ZOE",
+   "titel": "Renault ZOE Q210 Zen QC 22 | 2016 | Koopaccu | Origineel NL",
+   "prijs": 6500,
+   "km": 97000,
+   "jaar": 2016,
+   "brandstof": "Elektrisch",
+   "plaats": "Groningen",
+   "verkoper": "WM",
+   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2453795534-renault-zoe-q210-zen-qc-22-2016-koopaccu-origineel-nl",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1e5c79d2-844b-4f93-8f10-5ffb9368c44b?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 31,
+   "vaste_lasten": 78,
+   "score": 63.7,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bouwjaar": 16.8,
+    "km": 13.5,
+    "kosten": 10.7
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
+   "let_op": [
+    "Vraag accurapport (SoH)",
+    "Koopaccu"
+   ],
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
+  },
+  {
    "id": "mp_m2443364640",
    "bron": "Marktplaats",
    "merk": "Nissan",
@@ -408,41 +409,6 @@
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
     "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2451898686",
-   "bron": "Marktplaats",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE E 2015 Wit (Koopaccu)",
-   "prijs": 5900,
-   "km": 89000,
-   "jaar": 2015,
-   "brandstof": "Elektrisch",
-   "plaats": "Winsum",
-   "verkoper": "H Dam",
-   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2451898686-renault-zoe-e-2015-wit-koopaccu",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0747beed-9532-45e2-8f58-92dc4cac82cf?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 30,
-   "vaste_lasten": 77,
-   "score": 61.7,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bouwjaar": 14.0,
-    "km": 14.2,
-    "kosten": 10.8
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Koopaccu"
    ],
    "eerst_gezien": "2026-10-12",
    "nieuw": false
@@ -688,38 +654,74 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2450726615",
+   "id": "mp_m2453816761",
    "bron": "Marktplaats",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan Leaf 2012 Zwart",
-   "prijs": 4000,
-   "km": 54000,
-   "jaar": 2012,
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf E-golf 5D 2015 Grijs",
+   "prijs": 6850,
+   "km": 186229,
+   "jaar": 2015,
    "brandstof": "Elektrisch",
-   "plaats": "Oss",
-   "verkoper": "gerny1",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2450726615-nissan-leaf-2012-zwart",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a9928bca-f95b-4076-8941-6e61bff686ff?rule=ecg_mp_eps$_84.jpg",
+   "plaats": "Barendrecht",
+   "verkoper": "AH",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2453816761-volkswagen-golf-e-golf-5d-2015-grijs",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0f27d09f-c28d-4052-927f-83b74367300d?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Elektrisch",
+   "gewicht": 1510,
+   "mrb": 54,
+   "verzekering": 32,
+   "vaste_lasten": 86,
+   "score": 59.0,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bouwjaar": 14.0,
+    "km": 5.6,
+    "kosten": 9.7
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Degelijk, geen bekende accuproblemen",
+   "let_op": [
+    "Vraag accurapport (SoH)",
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
+  },
+  {
+   "id": "mp_m2453661280",
+   "bron": "Marktplaats",
+   "merk": "Renault",
+   "model": "ZOE",
+   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh Koop accu - RIJKLAAR",
+   "prijs": 7250,
+   "km": 85075,
+   "jaar": 2014,
+   "brandstof": "Elektrisch",
+   "plaats": "Enschede",
+   "verkoper": "Munsterhuis Occasion Center",
+   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2453661280-renault-zoe-q210-zen-quickcharge-22-kwh-koop-accu-rijklaar",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/165d507f-ae36-40fb-96ba-6dc09cd58d85?rule=ecg_mp_eps$_84.jpg",
    "soort": "Elektrisch",
    "gewicht": 1450,
    "mrb": 47,
-   "verzekering": 28,
-   "vaste_lasten": 75,
-   "score": 58.4,
+   "verzekering": 32,
+   "vaste_lasten": 79,
+   "score": 59.0,
    "punten": {
-    "betrouwbaarheid": 24.5,
-    "bouwjaar": 5.6,
-    "km": 17.2,
-    "kosten": 11.1
+    "betrouwbaarheid": 22.8,
+    "bouwjaar": 11.2,
+    "km": 14.5,
+    "kosten": 10.6
    },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
    "let_op": [
-    "Vraag accurapport (SoH)"
+    "Vraag accurapport (SoH)",
+    "Koopaccu"
    ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
   },
   {
    "id": "mp_m2450010385",
@@ -822,6 +824,41 @@
    ],
    "eerst_gezien": "2026-10-12",
    "nieuw": false
+  },
+  {
+   "id": "as24_eb860be2-d694-495d-9c45-1ae67d892e56",
+   "bron": "AutoScout24",
+   "merk": "Renault",
+   "model": "ZOE",
+   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh GARANTIE/KOOPACCU SOH",
+   "prijs": 5950,
+   "km": 89000,
+   "jaar": 2013,
+   "brandstof": "Elektrisch",
+   "plaats": "Krimpen A/D Ijssel",
+   "verkoper": "Autobedrijf de Pee",
+   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-garantie-koopaccu-soh-elektrisch-zwart-cat_ma60mo20228-eb860be2-d694-495d-9c45-1ae67d892e56",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/eb860be2-d694-495d-9c45-1ae67d892e56_a426db0b-8ba8-4dd4-89eb-edd4492f3c81.jpg/480x360.webp",
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 30,
+   "vaste_lasten": 77,
+   "score": 56.1,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bouwjaar": 8.4,
+    "km": 14.2,
+    "kosten": 10.8
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
+   "let_op": [
+    "Vraag accurapport (SoH)",
+    "Koopaccu"
+   ],
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
   },
   {
    "id": "mp_m2449015673",
@@ -1032,37 +1069,35 @@
    "nieuw": false
   },
   {
-   "id": "as24_64f48370-52ca-419d-90ae-2551dda4e2cc",
+   "id": "as24_389ccdbc-714f-44ae-a43f-ee45407e539a",
    "bron": "AutoScout24",
-   "merk": "Toyota",
-   "model": "Prius",
-   "titel": "Toyota Prius 1.8 Plug-in Aspiration",
-   "prijs": 7600,
-   "km": 236167,
-   "jaar": 2013,
+   "merk": "Ford",
+   "model": "C-Max",
+   "titel": "Ford C-Max C-Max 2.0 Plug-in H.TitPl.",
+   "prijs": 6499,
+   "km": 152900,
+   "jaar": 2015,
    "brandstof": "Elektro/Benzine",
-   "plaats": "Baexem",
-   "verkoper": "Ouchan Auto's",
-   "url": "https://www.autoscout24.nl/aanbod/toyota-prius-1-8-plug-in-aspiration-elektro-benzine-wit-cat_ma70mo16516-64f48370-52ca-419d-90ae-2551dda4e2cc",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/64f48370-52ca-419d-90ae-2551dda4e2cc_0e1c633a-b390-4253-849c-c6580cee2204.jpg/480x360.webp",
+   "plaats": "Boxtel",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/ford-c-max-c-max-2-0-plug-in-h-titpl-elektro-benzine-wit-cat_ma29mo19089-389ccdbc-714f-44ae-a43f-ee45407e539a",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/389ccdbc-714f-44ae-a43f-ee45407e539a_648bf2f8-f82d-4d2e-9e3f-ab88012394ea.jpg/480x360.webp",
    "soort": "Plug-in hybride",
-   "gewicht": 1450,
-   "mrb": 68,
-   "verzekering": 32,
-   "vaste_lasten": 100,
-   "score": 50.7,
+   "gewicht": 1720,
+   "mrb": 95,
+   "verzekering": 34,
+   "vaste_lasten": 129,
+   "score": 51.1,
    "punten": {
-    "betrouwbaarheid": 33.2,
-    "bouwjaar": 8.4,
-    "km": 1.2,
-    "kosten": 7.8
+    "betrouwbaarheid": 24.5,
+    "bouwjaar": 14.0,
+    "km": 8.5,
+    "kosten": 4.0
    },
-   "betrouwbaarheid": 9.5,
-   "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-13",
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "let_op": [],
+   "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
   {
@@ -1071,7 +1106,7 @@
    "merk": "Toyota",
    "model": "Prius",
    "titel": "Toyota Prius 1.8 Plug-in Hybrid 136PK Aut 2013 Grijs",
-   "prijs": 7850,
+   "prijs": 7550,
    "km": 236835,
    "jaar": 2013,
    "brandstof": "Hybride",
@@ -1362,40 +1397,6 @@
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
    "let_op": [
     "Vraag accurapport (SoH)",
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "as24_6a810f8b-7e3b-40fe-8517-57232217ad60",
-   "bron": "AutoScout24",
-   "merk": "Volkswagen",
-   "model": "Golf GTE",
-   "titel": "Volkswagen Golf GTE 1.4 Plug-In-Hybrid DSG",
-   "prijs": 7500,
-   "km": 250943,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Amsterdam",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/volkswagen-golf-gte-1-4-plug-in-hybrid-dsg-elektro-benzine-cat_ma74mo75655-6a810f8b-7e3b-40fe-8517-57232217ad60",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/6a810f8b-7e3b-40fe-8517-57232217ad60_001a73cc-cbda-46c7-96be-0c10daaba671.jpg/480x360.webp",
-   "soort": "Plug-in hybride",
-   "gewicht": 1540,
-   "mrb": 77,
-   "verzekering": 33,
-   "vaste_lasten": 110,
-   "score": 48.5,
-   "punten": {
-    "betrouwbaarheid": 28.0,
-    "bouwjaar": 14.0,
-    "km": 0.0,
-    "kosten": 6.5
-   },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "",
-   "let_op": [
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-12",
@@ -1868,6 +1869,40 @@
    "nieuw": false
   },
   {
+   "id": "as24_0c9b4494-5b5c-4c2e-b55f-4bf342014cde",
+   "bron": "AutoScout24",
+   "merk": "Volkswagen",
+   "model": "Golf GTE",
+   "titel": "Volkswagen Golf GTE | 2014 | 1.4 TSI Plug-in Hybride | Automaat | Expo",
+   "prijs": 5995,
+   "km": 247880,
+   "jaar": 2014,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Nieuwerkerk Ad Ijssel",
+   "verkoper": "Nationale Autopark B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/volkswagen-golf-gte-2014-1-4-tsi-plug-in-hybride-automaat-expo-elektro-benzine-grijs-cat_ma74mo75655-0c9b4494-5b5c-4c2e-b55f-4bf342014cde",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/0c9b4494-5b5c-4c2e-b55f-4bf342014cde_9831a1bc-8121-472c-8d2e-7fb4aa0e6698.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 31,
+   "vaste_lasten": 108,
+   "score": 46.2,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bouwjaar": 11.2,
+    "km": 0.2,
+    "kosten": 6.8
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-15",
+   "nieuw": true
+  },
+  {
    "id": "mp_m2446477400",
    "bron": "Marktplaats",
    "merk": "Chevrolet",
@@ -2096,74 +2131,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_01953457-a6b8-4b09-9bef-c75581cd0c62",
-   "bron": "AutoScout24",
-   "merk": "Audi",
-   "model": "A3",
-   "titel": "Audi A3 Sportback 1.4 e-tron PHEV Ambition Pro Line plus |",
-   "prijs": 7950,
-   "km": 211622,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Echt",
-   "verkoper": "Oelers Automotive B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/audi-a3-sportback-1-4-e-tron-phev-ambition-pro-line-plus-elektro-benzine-zwart-cat_ma9mo1624-01953457-a6b8-4b09-9bef-c75581cd0c62",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/01953457-a6b8-4b09-9bef-c75581cd0c62_92ce6fb5-0913-4779-8b5d-048604abd8f2.jpg/480x360.webp",
-   "soort": "Plug-in hybride",
-   "gewicht": 1540,
-   "mrb": 77,
-   "verzekering": 42,
-   "vaste_lasten": 119,
-   "score": 43.7,
-   "punten": {
-    "betrouwbaarheid": 21.0,
-    "bouwjaar": 14.0,
-    "km": 3.4,
-    "kosten": 5.3
-   },
-   "betrouwbaarheid": 6.0,
-   "toelichting": "e-tron: complexe techniek (S tronic + accu)",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "as24_6cc1f785-5018-44ae-8d05-daacfdb137ba",
-   "bron": "AutoScout24",
-   "merk": "Ford",
-   "model": "C-Max",
-   "titel": "Ford C-Max 2.0 Plug-in Hybrid Automaat Titanium Plus Leer",
-   "prijs": 5700,
-   "km": 242211,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Ermelo",
-   "verkoper": "Groevenbeek Auto",
-   "url": "https://www.autoscout24.nl/aanbod/ford-c-max-2-0-plug-in-hybrid-automaat-titanium-plus-leer-elektro-benzine-grijs-cat_ma29mo19089-6cc1f785-5018-44ae-8d05-daacfdb137ba",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/6cc1f785-5018-44ae-8d05-daacfdb137ba_6dcb609d-5d9e-4b76-9e2b-0aaea3571f71.jpg/480x360.webp",
-   "soort": "Plug-in hybride",
-   "gewicht": 1720,
-   "mrb": 95,
-   "verzekering": 33,
-   "vaste_lasten": 128,
-   "score": 43.4,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bouwjaar": 14.0,
-    "km": 0.7,
-    "kosten": 4.2
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2451453630",
    "bron": "Marktplaats",
    "merk": "Toyota",
@@ -2337,40 +2304,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2447769015",
-   "bron": "Marktplaats",
-   "merk": "Audi",
-   "model": "A3",
-   "titel": "Audi a3 e-tron",
-   "prijs": 7500,
-   "km": 228111,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Zwolle",
-   "verkoper": "jeroen",
-   "url": "https://www.marktplaats.nl/v/auto-s/audi/m2447769015-audi-a3-e-tron",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/247ceb1e-1f2a-4e8f-94d1-631568b25631?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Plug-in hybride",
-   "gewicht": 1540,
-   "mrb": 77,
-   "verzekering": 41,
-   "vaste_lasten": 118,
-   "score": 42.4,
-   "punten": {
-    "betrouwbaarheid": 21.0,
-    "bouwjaar": 14.0,
-    "km": 1.9,
-    "kosten": 5.5
-   },
-   "betrouwbaarheid": 6.0,
-   "toelichting": "e-tron: complexe techniek (S tronic + accu)",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "as24_3a949694-f6c5-470f-82c5-297930d4cdea",
    "bron": "AutoScout24",
    "merk": "Audi",
@@ -2417,7 +2350,7 @@
    "plaats": "Gouda",
    "verkoper": "Van Den Boog Automotive",
    "url": "https://www.autoscout24.nl/aanbod/chevrolet-volt-1-4-ltz-bose-cruise-clima-stoelverwarming-elektro-benzine-wit-cat_ma19mo19180-802d5a30-a115-49c4-8039-6d7e4438acc3",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/802d5a30-a115-49c4-8039-6d7e4438acc3_35ce988d-e75a-451b-9e04-16a9b2922afb.jpg/480x360.webp",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/802d5a30-a115-49c4-8039-6d7e4438acc3_8ad07f6a-f864-449a-9895-b4a1af506d10.jpg/480x360.webp",
    "soort": "Plug-in hybride",
    "gewicht": 1715,
    "mrb": 95,
@@ -2546,7 +2479,7 @@
    "merk": "Mitsubishi",
    "model": "Outlander",
    "titel": "Mitsubishi Outlander 2.0 PHEV Executive X-Line 100% Onderhouden Trekhaa",
-   "prijs": 7894,
+   "prijs": 7844,
    "km": 242338,
    "jaar": 2015,
    "brandstof": "Elektro/Benzine",
@@ -2881,40 +2814,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2439788377",
-   "bron": "Marktplaats",
-   "merk": "Mitsubishi",
-   "model": "Outlander",
-   "titel": "Mitsubishi Outlander 2.0 Dohc Mivec Phev 203pk 4WD CVT 5P",
-   "prijs": 6799,
-   "km": 255520,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Heerhugowaard",
-   "verkoper": "Sander Willemse",
-   "url": "https://www.marktplaats.nl/v/auto-s/mitsubishi/m2439788377-mitsubishi-outlander-2-0-dohc-mivec-phev-203pk-4wd-cvt-5p",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d219d8d4-015d-4b16-b471-0dac70bd0d22?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Plug-in hybride",
-   "gewicht": 1810,
-   "mrb": 104,
-   "verzekering": 36,
-   "vaste_lasten": 140,
-   "score": 41.1,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bouwjaar": 14.0,
-    "km": 0.0,
-    "kosten": 2.6
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "as24_24771877-9d3d-4954-89ba-9e64e7212b25",
    "bron": "AutoScout24",
    "merk": "Mitsubishi",
@@ -3214,6 +3113,108 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2448200024",
+   "bron": "Marktplaats",
+   "merk": "Chevrolet",
+   "model": "Volt",
+   "titel": "Chevrolet Volt LZT Trekhaak",
+   "prijs": 6290,
+   "km": 237550,
+   "jaar": 2013,
+   "brandstof": "Hybride",
+   "plaats": "Hilvarenbeek",
+   "verkoper": "Jeroen",
+   "url": "https://www.marktplaats.nl/v/auto-s/chevrolet/m2448200024-chevrolet-volt-lzt-trekhaak",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a2003220-ca60-4ab5-ae8c-c900c54d6186?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Plug-in hybride",
+   "gewicht": 1715,
+   "mrb": 95,
+   "verzekering": 34,
+   "vaste_lasten": 129,
+   "score": 39.8,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bouwjaar": 8.4,
+    "km": 1.1,
+    "kosten": 4.0
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "Aandrijving zeer betrouwbaar, accu houdt goed stand",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_5203b3d3-3c29-466f-8fd9-f1fedd5b1e32",
+   "bron": "AutoScout24",
+   "merk": "Mitsubishi",
+   "model": "Outlander",
+   "titel": "Mitsubishi Outlander 2.0 PHEV Instyle DAK AUTOMAAT APK LEER AUTOMAAT",
+   "prijs": 7950,
+   "km": 200604,
+   "jaar": 2013,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Ridderkerk",
+   "verkoper": "Autobedrijf Cheap",
+   "url": "https://www.autoscout24.nl/aanbod/mitsubishi-outlander-2-0-phev-instyle-dak-automaat-apk-leer-automaat-elektro-benzine-blauw-cat_ma50mo18355-5203b3d3-3c29-466f-8fd9-f1fedd5b1e32",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/5203b3d3-3c29-466f-8fd9-f1fedd5b1e32_5d4c8379-6f27-4c99-9583-3788ecf877f7.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "gewicht": 1810,
+   "mrb": 104,
+   "verzekering": 37,
+   "vaste_lasten": 141,
+   "score": 39.7,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bouwjaar": 8.4,
+    "km": 4.3,
+    "kosten": 2.5
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_9f13142a-ae99-4244-a5a8-5c4f9080e205",
+   "bron": "AutoScout24",
+   "merk": "Mitsubishi",
+   "model": "Outlander",
+   "titel": "Mitsubishi Outlander 2.0 PHEV INTENSE+/THAAK/HLEER/XENON/NAV/APK",
+   "prijs": 7400,
+   "km": 235942,
+   "jaar": 2014,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Vaassen",
+   "verkoper": "Autobedrijf Favoriet",
+   "url": "https://www.autoscout24.nl/aanbod/mitsubishi-outlander-2-0-phev-intense+-thaak-hleer-xenon-nav-apk-elektro-benzine-zwart-cat_ma50mo18355-9f13142a-ae99-4244-a5a8-5c4f9080e205",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/9f13142a-ae99-4244-a5a8-5c4f9080e205_10309fb5-5f2b-4927-a9bf-66b93d999941.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "gewicht": 1810,
+   "mrb": 104,
+   "verzekering": 36,
+   "vaste_lasten": 140,
+   "score": 39.5,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bouwjaar": 11.2,
+    "km": 1.2,
+    "kosten": 2.6
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
    "let_op": [
     "Hoge kilometerstand"
    ],
