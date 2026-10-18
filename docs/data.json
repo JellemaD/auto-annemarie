@@ -1,42 +1,8 @@
 {
  "bijgewerkt": "2026-10-18 11:50",
  "aantal_bekeken": 999,
- "aantal": 166,
+ "aantal": 165,
  "autos": [
-  {
-   "id": "mp_m2454462977",
-   "bron": "Marktplaats",
-   "merk": "Opel",
-   "model": "",
-   "titel": "Opel Rocks Tekno",
-   "prijs": 7950,
-   "km": 10950,
-   "jaar": 2023,
-   "brandstof": "Elektrisch",
-   "plaats": "Amsterdam",
-   "verkoper": "Titus",
-   "url": "https://www.marktplaats.nl/v/auto-s/opel/m2454462977-opel-rocks-tekno",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/aea7a374-0321-45a7-99ab-f429a42459ac?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Elektrisch",
-   "gewicht": 1500,
-   "mrb": 54,
-   "verzekering": 33,
-   "vaste_lasten": 87,
-   "score": 77.8,
-   "punten": {
-    "betrouwbaarheid": 19.2,
-    "bouwjaar": 28.0,
-    "km": 21.0,
-    "kosten": 9.5
-   },
-   "betrouwbaarheid": 5.5,
-   "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-17",
-   "nieuw": false
-  },
   {
    "id": "mp_m2450566979",
    "bron": "Marktplaats",

@@ -34,7 +34,7 @@ HEADERS = {
 
 # Microcars, brommobielen (ook Citroën Ami), quadricycles, Smarts en bestelbussen: nooit tonen.
 UITSLUITEN = [
-    'ami', 'smart', 'rocks-e', 'rocks e', 'twizy', 'biro', 'estrima', 'aixam', 'ligier', 'microcar',
+    'ami', 'smart', 'rocks', 'twizy', 'biro', 'estrima', 'aixam', 'ligier', 'microcar',
     'chatenet', 'microlino', 'tazzari', 'topolino', 'brommobiel', '45 km', '45km', 'bellier',
     'jdm', 'casalini', 'kewet', 'buddy', 'reva', 'think city', 'goupil', 'club car',
     'streetscooter', 'c-zero', 'czero', 'ion', 'i-miev', 'imiev', 'fortwo', 'for two',
