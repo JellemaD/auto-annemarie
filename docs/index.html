@@ -117,10 +117,12 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p>Elke dag om 8:00 worden AutoScout24 en Marktplaats doorzocht. Elke auto krijgt een score van 0 tot 100. Wijs de score aan (of tik erop) om de berekening van die auto te zien.</p>
   <ul>
     <li><b>35% betrouwbaarheid</b> van het model (bijv. Toyota Prius plug-in en Hyundai Ioniq hoog, Volvo D6 en Tesla laag vanwege dure reparaties)</li>
-    <li><b>28% bouwjaar</b>: 2010 telt als 0, 2020 en nieuwer als het maximum</li>
-    <li><b>22% kilometerstand</b>: 0 km is het maximum, 250.000 km telt als 0</li>
-    <li><b>15% vaste lasten per maand</b> (wegenbelasting + verzekering): € 45 of minder is het maximum, € 160 of meer telt als 0</li>
+    <li><b>20% bereik</b> in de winter: 50 km telt als 0, 200 km als het maximum</li>
+    <li><b>18% bouwjaar</b>: 2010 telt als 0, 2020 en nieuwer als het maximum</li>
+    <li><b>17% kilometerstand</b>: 0 km is het maximum, 250.000 km telt als 0</li>
+    <li><b>10% vaste lasten per maand</b> (wegenbelasting + verzekering): € 45 of minder is het maximum, € 160 of meer telt als 0</li>
   </ul>
+  <p><b>Bereik:</b> een schatting, geen fabriekscijfer. Het is de accumaat van die uitvoering, maal de accustaat, gedeeld door het werkelijke verbruik van dat model. Noemt de advertentie een SoH, dan wordt die gebruikt; zo niet, dan wordt de accustaat geschat op de leeftijd (de Nissan Leaf en de 27 kWh-Kia Soul hebben geen accukoeling en lopen sneller terug). In de winter gaat er ongeveer een kwart af door kou en verwarming. Bij een plug-in hybride is dit het elektrische bereik: daarna rijdt hij op benzine, dus stranden doe je niet.</p>
   <p><b>Vaste lasten:</b> de wegenbelasting komt uit de rekenhulp van de Belastingdienst (2026, provincie Utrecht, op basis van het gewicht van het model). Elektrisch betaalt 70% van het benzinetarief; een plug-in hybride betaalt sinds 2026 het volle tarief. De verzekering is een grove inschatting voor WA + beperkt casco met 10 schadevrije jaren; vraag voor een echte prijs een offerte aan.</p>
   <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, i-MiEV/C-Zero/iOn), alle Smarts, bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra).</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
@@ -138,23 +140,39 @@ function chips(a) {
   for (const w of a.let_op || []) h += `<span class="chip warn">${esc(w)}</span>`;
   return h;
 }
+function bereikTekst(a) {
+  if (!a.bereik_zomer) return '';
+  if (a.soort === 'Plug-in hybride')
+    return `<br>Elektrisch <b>± ${a.bereik_zomer} km</b> <span class="klein">(winter ± ${a.bereik_winter} km), daarna op benzine</span>`;
+  return `<br>Bereik <b>± ${a.bereik_zomer} km</b> <span class="klein">zomer, ± ${a.bereik_winter} km winter</span>`;
+}
 function feiten(a) {
   const lasten = a.vaste_lasten ? `<br>Vaste lasten <b>± € ${a.vaste_lasten} p/m</b>` : '';
-  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')} · ${esc(a.bron)}${lasten}`;
+  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')} · ${esc(a.bron)}${bereikTekst(a)}${lasten}`;
 }
 const nl = n => n.toLocaleString('nl-NL', {maximumFractionDigits: 1});
+function bereikUitleg(a) {
+  if (a.soort === 'Plug-in hybride')
+    return `± ${a.bereik_winter} km elektrisch in de winter<br><span class="klein">met benzine erbij kom je overal: ondergrens 5 van 10</span>`;
+  const accu = a.accu_kwh ? `${nl(a.accu_kwh)} kWh` : 'accumaat onbekend';
+  const staat = a.soh ? `SoH ${a.soh}% uit de advertentie`
+                      : a.soh_schatting ? `accustaat geschat op ${a.soh_schatting}% (leeftijd)` : '';
+  return `± ${a.bereik_winter} km in de winter<br><span class="klein">${accu}, ${staat}; 50 km = 0, 200 km = max</span>`;
+}
 function scoreTip(a) {
   // Oudere data zonder opbouw: zelf narekenen met dezelfde formule als zoek.py.
   const p = a.punten || {
     betrouwbaarheid: 3.5 * a.betrouwbaarheid,
-    bouwjaar: 2.8 * Math.max(0, Math.min(10, a.jaar - 2010)),
-    km: 2.2 * Math.max(0, 10 - a.km / 25000),
+    bouwjaar: 1.8 * Math.max(0, Math.min(10, a.jaar - 2010)),
+    km: 1.7 * Math.max(0, 10 - a.km / 25000),
   };
   let rijen = `
-    <tr><td>Betrouwbaarheid model<br><span class="klein">${nl(a.betrouwbaarheid)} van 10</span></td><td>${nl(p.betrouwbaarheid)} / 35</td></tr>
-    <tr><td>Bouwjaar ${a.jaar}<br><span class="klein">2010 = 0, 2020 of nieuwer = max</span></td><td>${nl(p.bouwjaar)} / 28</td></tr>
-    <tr><td>Kilometerstand ${km(a.km)}<br><span class="klein">0 km = max, 250.000 km = 0</span></td><td>${nl(p.km)} / 22</td></tr>`;
-  if (p.kosten !== undefined) rijen += `<tr><td>Vaste lasten € ${a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}; ≤ € 45 = max, ≥ € 160 = 0</span></td><td>${nl(p.kosten)} / 15</td></tr>`;
+    <tr><td>Betrouwbaarheid model<br><span class="klein">${nl(a.betrouwbaarheid)} van 10</span></td><td>${nl(p.betrouwbaarheid)} / 35</td></tr>`;
+  if (p.bereik !== undefined) rijen += `<tr><td>Bereik ${bereikUitleg(a)}</td><td>${nl(p.bereik)} / 20</td></tr>`;
+  rijen += `
+    <tr><td>Bouwjaar ${a.jaar}<br><span class="klein">2010 = 0, 2020 of nieuwer = max</span></td><td>${nl(p.bouwjaar)} / 18</td></tr>
+    <tr><td>Kilometerstand ${km(a.km)}<br><span class="klein">0 km = max, 250.000 km = 0</span></td><td>${nl(p.km)} / 17</td></tr>`;
+  if (p.kosten !== undefined) rijen += `<tr><td>Vaste lasten € ${a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}; ≤ € 45 = max, ≥ € 160 = 0</span></td><td>${nl(p.kosten)} / 10</td></tr>`;
   if (p.accu) rijen += `<tr><td>Versleten accu (SoH ${a.soh}%)<br><span class="klein">halve punt per % onder 80%</span></td><td>${nl(p.accu)}</td></tr>`;
   if (p.merk) rijen += `<tr><td>Merkvoorkeur</td><td>+${nl(p.merk)}</td></tr>`;
   return `<span class="tip" role="tooltip"><b>Zo is deze score berekend</b>

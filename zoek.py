@@ -149,9 +149,9 @@ def zoek_model(merk, tekst):
     merk = norm(merk)
     for m, model, score, soort, uitleg in MODELLEN:
         if m == merk and re.search(r'(?<![a-z0-9])' + re.escape(model) + r'(?![a-z0-9])', tekst):
-            return score, soort, uitleg, GEWICHT.get(model)
+            return score, soort, uitleg, GEWICHT.get(model), model
     if merk in GANGBARE_MERKEN:
-        return 5.5, None, 'Model niet in de lijst: neutrale betrouwbaarheid', None
+        return 5.5, None, 'Model niet in de lijst: neutrale betrouwbaarheid', None, None
     return None  # onbekend merk: bijna altijd een microcar of brommobiel
 
 
@@ -305,6 +305,88 @@ def marktplaats():
     return uit
 
 
+# ---------------------------------------------------------------- bereik
+
+# Netto bruikbare accucapaciteit (kWh) per model, per uitvoering van klein naar groot. De
+# uitvoering wordt gekozen op de kWh in de titel; staat die er niet, dan de kleinste, want in
+# dit prijssegment is dat bijna altijd de juiste.
+ACCU = {
+    'ioniq': [28, 38], 'niro': [39, 64], 'kona': [39, 64], 'e-golf': [21, 32], 'golf': [21, 32],
+    'e-up': [16, 32], 'up': [16, 32], 'citigo': [32], 'mii': [32],
+    'soul': [27, 30, 39, 64], 'ampera-e': [60], 'leaf': [22, 28, 39, 59], 'i3': [19, 27, 38],
+    'zoe': [22, 41, 52], 'spring': [27], '500e': [24, 37], 'e-208': [45], 'b 250e': [28],
+    'focus': [23, 33], 'model s': [85], 'twingo': [22], 'mx-30': [30],
+}
+ACCU_ONBEKEND = 24
+
+# Werkelijk verbruik in de zomer (Wh/km), gemengd stad en buitenweg.
+VERBRUIK = {
+    'ioniq': 135, 'niro': 165, 'kona': 160, 'e-golf': 155, 'golf': 155, 'e-up': 140, 'up': 140,
+    'citigo': 140, 'mii': 140, 'soul': 175, 'ampera-e': 175, 'leaf': 165, 'i3': 145, 'zoe': 165,
+    'spring': 145, '500e': 165, 'e-208': 160, 'b 250e': 200, 'focus': 180, 'model s': 200,
+    'twingo': 150, 'mx-30': 170,
+}
+VERBRUIK_ONBEKEND = 170
+WINTERFACTOR = 1.35   # kou plus verwarming kosten ruwweg een kwart van het bereik
+
+# Accuslijtage per jaar in procenten, voor als de advertentie geen SoH noemt. De Leaf en de
+# 27 kWh-Soul hebben geen accukoeling en lopen sneller terug.
+SLIJTAGE = {'leaf': 1.9, 'soul': 1.7, '500e': 1.5}
+SLIJTAGE_STANDAARD = 1.2
+SOH_MINIMUM = 65
+
+# Elektrisch bereik van een volle accu bij een plug-in hybride (km, zomer, accu met slijtage).
+PHEV_BEREIK = {
+    'prius': 20, 'outlander': 35, 'volt': 55, 'ampera': 55, 'c-max': 30, 'optima': 40,
+    'sonata': 40, 'passat': 40, 'a3': 35, '225xe': 30, '330e': 30, '2-serie': 30, '3-serie': 30,
+    'x5': 25, 'countryman': 30, 'v60': 30, 'xc90': 35, 'v90': 35, 's90': 35, 'c 350': 25,
+    'cayenne': 25, 'panamera': 30, '3008': 40, '508': 40,
+}
+PHEV_BEREIK_ONBEKEND = 30
+
+NU_JAAR = datetime.now(TZ).year
+
+
+def accu_kwh(model, titel):
+    """Netto accucapaciteit: de uitvoering die het dichtst bij de kWh in de titel ligt."""
+    varianten = ACCU.get(model) or [ACCU_ONBEKEND]
+    uit_titel = re.search(r'(\d{2}(?:[.,]\d)?)\s*kwh', titel)
+    if not uit_titel:
+        return varianten[0]
+    genoemd = float(uit_titel.group(1).replace(',', '.'))
+    beste = min(varianten, key=lambda k: abs(k - genoemd))
+    # Advertenties schrijven ook het vermogen als "83kwh". Ligt het genoemde getal nergens in de
+    # buurt van een bestaande uitvoering, dan is het geen accumaat.
+    return beste if abs(beste - genoemd) <= 0.25 * beste else varianten[0]
+
+
+def accustaat(model, jaar, soh):
+    """SoH in procenten, en of dat een schatting is. Uit de advertentie als die het noemt."""
+    if soh:
+        return soh, False
+    per_jaar = SLIJTAGE.get(model, SLIJTAGE_STANDAARD)
+    return max(SOH_MINIMUM, round(100 - per_jaar * max(0, NU_JAAR - jaar))), True
+
+
+def zet_bereik(a, model):
+    """Zet de bereikvelden op de auto en geeft een cijfer 1-10 voor de score."""
+    if a['soort'] == 'Plug-in hybride':
+        zomer = PHEV_BEREIK.get(model, PHEV_BEREIK_ONBEKEND)
+        a['bereik_zomer'] = zomer
+        a['bereik_winter'] = round(zomer / WINTERFACTOR / 5) * 5
+        # Met de benzinemotor erbij kom je overal: bodem van 5, het elektrische deel doet de rest.
+        return min(10.0, 5.0 + a['bereik_winter'] / 10)
+    kwh = accu_kwh(model, norm(f"{a['merk']} {a['model']} {a['titel']}"))
+    soh, geschat = accustaat(model, a['jaar'], a.get('soh'))
+    zomer = kwh * (soh / 100) * 1000 / VERBRUIK.get(model, VERBRUIK_ONBEKEND)
+    a['accu_kwh'] = kwh
+    a['soh_schatting'] = soh if geschat else None
+    a['bereik_zomer'] = round(zomer / 5) * 5
+    a['bereik_winter'] = round(zomer / WINTERFACTOR / 5) * 5
+    # 50 km winterbereik telt als 0, 200 km als 10.
+    return max(0.0, min(10.0, (a['bereik_winter'] - 50) / 15))
+
+
 # ---------------------------------------------------------------- filter en score
 
 def beoordeel(a):
@@ -328,7 +410,7 @@ def beoordeel(a):
     model = zoek_model(a['merk'], titel)
     if not model:
         return None
-    betrouwbaar, soort, uitleg, gewicht = model
+    betrouwbaar, soort, uitleg, gewicht, modelwoord = model
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     if elektrisch:
         a['soort'] = 'Elektrisch'
@@ -344,14 +426,21 @@ def beoordeel(a):
     a['verzekering'] = verzekering(a['gewicht'], a['prijs'], a['merk'])
     a['vaste_lasten'] = a['mrb'] + a['verzekering']
 
-    # Score 0-100: betrouwbaarheid 35%, bouwjaar 28%, kilometerstand 22%, vaste lasten 15%.
+    # Accustaat uit de advertentie: nodig voor het bereik en voor de score.
+    gemeld = re.search(r'soh\D{0,3}(\d{2,3})\s*%', tekst)
+    if gemeld:
+        a['soh'] = int(gemeld.group(1))
+    bereik_s = zet_bereik(a, modelwoord)
+
+    # Score 0-100: betrouwbaarheid 35%, bereik 20%, bouwjaar 18%, kilometerstand 17%, lasten 10%.
     jaar_s = max(0.0, min(10.0, (a['jaar'] - 2010) / 1.0))       # 2010 = 0, 2020+ = 10
     km_s = max(0.0, 10.0 - a['km'] / 25000)                      # 0 km = 10, 250.000 km = 0
     kosten_s = max(0.0, min(10.0, (160 - a['vaste_lasten']) / 11.5))  # <= 45/mnd = 10, >= 160/mnd = 0
-    a['score'] = 3.5 * betrouwbaar + 2.8 * jaar_s + 2.2 * km_s + 1.5 * kosten_s
+    a['score'] = (3.5 * betrouwbaar + 2.0 * bereik_s + 1.8 * jaar_s + 1.7 * km_s + 1.0 * kosten_s)
     # Opbouw van de score, voor de uitleg bij de score op de website.
-    a['punten'] = {'betrouwbaarheid': round(3.5 * betrouwbaar, 1), 'bouwjaar': round(2.8 * jaar_s, 1),
-                   'km': round(2.2 * km_s, 1), 'kosten': round(1.5 * kosten_s, 1)}
+    a['punten'] = {'betrouwbaarheid': round(3.5 * betrouwbaar, 1), 'bereik': round(2.0 * bereik_s, 1),
+                   'bouwjaar': round(1.8 * jaar_s, 1), 'km': round(1.7 * km_s, 1),
+                   'kosten': round(1.0 * kosten_s, 1)}
     a['betrouwbaarheid'] = betrouwbaar
     a['toelichting'] = uitleg
 
@@ -360,15 +449,14 @@ def beoordeel(a):
         a['punten']['merk'] = MERK_BONUS
 
     let_op = []
-    soh = re.search(r'soh\D{0,3}(\d{2,3})\s*%', tekst)
-    if soh:
-        a['soh'] = int(soh.group(1))
-        if a['soh'] < 80:
-            a['score'] -= (80 - a['soh']) * 0.5
-            a['punten']['accu'] = -round((80 - a['soh']) * 0.5, 1)
-            let_op.append(f"Accu versleten (SoH {a['soh']}%)")
+    if a.get('soh') and a['soh'] < 80:
+        a['score'] -= (80 - a['soh']) * 0.5
+        a['punten']['accu'] = -round((80 - a['soh']) * 0.5, 1)
+        let_op.append(f"Accu versleten (SoH {a['soh']}%)")
     if a['soort'] == 'Elektrisch':
-        if not soh:
+        if a['bereik_winter'] < 80:
+            let_op.append(f"Klein winterbereik (± {a['bereik_winter']} km)")
+        if not a.get('soh'):
             let_op.append('Vraag accurapport (SoH)')
         if bevat(tekst, KOOPACCU):
             let_op.append('Koopaccu')
