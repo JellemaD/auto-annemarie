@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.2.2 — 18-10-2026
+
+- **Advertenties waarin de genoemde prijs niet de hele prijs is, vallen af.** "ACTIE! BETAAL NU 50% 7950, DE REST LATER" stond voor € 7.950 in de lijst terwijl de auto € 16.000 kost. Herkend worden: betalen in procenten of "de helft", en een restbedrag dat later, bij aflevering of in termijnen komt. Een advertentie die alleen "aanbetaling mogelijk" of "100% onderhouden" zegt, blijft gewoon staan.
+
 ## 1.2.1 — 18-10-2026
 
 - **BMW i3 Range Extender krijgt zijn eigen elektrische bereik** (90 km). Hij telt als plug-in hybride en kreeg daardoor de standaardwaarde van 30 km, terwijl hij de gewone i3-accu van ruim 20 kWh heeft.

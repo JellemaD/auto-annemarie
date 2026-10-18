@@ -50,6 +50,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| — | **Halve-prijs-advertenties eruit** ("betaal nu 50%, de rest later": € 7.950 in de lijst, € 16.000 in het echt) (v1.2.2) | 18-10-2026 |
 | — | **Bereik per auto** op de kaart en voor 20% in de score, met accumaat per uitvoering, verbruik per model en een geschatte accustaat (v1.2.0); i3 Range Extender eigen bereik (v1.2.1) | 18-10-2026 |
 | — | **Opel Rocks uitgefilterd**, ook zonder "-e" in de naam (v1.1.0) | 18-10-2026 |
 | — | Eerste versie: dagelijkse zoekactie, score met uitleg, site met top 5 en filters (v1.0.0) | 12-10-2026 |

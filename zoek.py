@@ -21,7 +21,7 @@ MIN_PRIJS = 1500          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.2.1'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.2.2'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -49,6 +49,13 @@ ELLENDE = [
     'schade', 'defect', 'export', 'opknapper', 'niet rijdend', 'starten niet', 'motor kapot',
     'huren', 'renting', 'onderdelen', 'sloop', 'accupakket moet',
 ]
+# Advertenties waarin de genoemde prijs niet de hele prijs is: "ACTIE! BETAAL NU 50% 7950, DE REST
+# LATER" staat voor 7.950 in de lijst terwijl de auto 16.000 kost. Altijd weg.
+PRIJS_TRUC = re.compile(
+    r'betaal\w*\s*(je\s*|u\s*)?(nu\s*)?(de\s*helft|\d{1,2}\s*%)|\d{1,2}\s*%\s*(aan|voor)?betal|'
+    r'rest(erend)?\s*(bedrag|deel)|rest\s*(betaal|later|bij\s*aflevering|na\s*aflevering|in\s*termijnen)',
+    re.I)
+
 # Handelaren in schadeauto's die schade niet altijd in de advertentie zetten. Aanvullen als er
 # een kapotte auto in de lijst opduikt.
 SCHADE_VERKOPERS = ['mettler', 'schade', 'damage', 'bdw', 'export', 'demontage', 'sloperij']
@@ -403,6 +410,8 @@ def beoordeel(a):
         return None
     if bevat(titel, ['verkocht', 'gereserveerd', 'sold', 'reserved']):
         return None
+    if PRIJS_TRUC.search(tekst):
+        return None  # de genoemde prijs is maar een deel van de prijs
     if any(w in norm(a.get('verkoper')) for w in SCHADE_VERKOPERS):
         return None
 
