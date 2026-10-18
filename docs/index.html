@@ -127,6 +127,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, i-MiEV/C-Zero/iOn), alle Smarts, bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra).</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
+<p class="klein" id="versie">Versie 1.2.1</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -266,6 +267,7 @@ fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   const nieuw = autos.filter(a => a.nieuw).length;
   document.getElementById('stand').textContent =
     `Bijgewerkt ${datum} om ${tijd} · ${d.aantal_bekeken} advertenties bekeken, ${d.aantal} geschikt` + (nieuw ? ` · ${nieuw} nieuw` : '');
+  if (d.versie) document.getElementById('versie').textContent = `Versie ${d.versie}`;
   try {
     const bekend = new Set(autos.map(merkVan));
     merken = new Set(JSON.parse(localStorage.getItem('merken') || '[]').filter(m => bekend.has(m)));

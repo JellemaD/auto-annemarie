@@ -21,6 +21,7 @@ MIN_PRIJS = 1500          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
 TZ = ZoneInfo('Europe/Amsterdam')
+VERSIE = '1.2.1'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -558,6 +559,7 @@ def main():
     DATA.parent.mkdir(exist_ok=True)
     DATA.write_text(json.dumps({
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
+        'versie': VERSIE,
         'aantal_bekeken': len(ruw),
         'aantal': len(autos),
         'autos': autos[:DETAIL_AANTAL - 5],  # alleen auto's die de detailcontrole hebben gehad
