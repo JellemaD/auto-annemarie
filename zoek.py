@@ -336,8 +336,9 @@ SLIJTAGE_STANDAARD = 1.2
 SOH_MINIMUM = 65
 
 # Elektrisch bereik van een volle accu bij een plug-in hybride (km, zomer, accu met slijtage).
+# De i3 REx staat hier ook in: die heeft de gewone i3-accu plus een kleine benzinemotor.
 PHEV_BEREIK = {
-    'prius': 20, 'outlander': 35, 'volt': 55, 'ampera': 55, 'c-max': 30, 'optima': 40,
+    'prius': 20, 'outlander': 35, 'volt': 55, 'ampera': 55, 'i3': 90, 'c-max': 30, 'optima': 40,
     'sonata': 40, 'passat': 40, 'a3': 35, '225xe': 30, '330e': 30, '2-serie': 30, '3-serie': 30,
     'x5': 25, 'countryman': 30, 'v60': 30, 'xc90': 35, 'v90': 35, 's90': 35, 'c 350': 25,
     'cayenne': 25, 'panamera': 30, '3008': 40, '508': 40,

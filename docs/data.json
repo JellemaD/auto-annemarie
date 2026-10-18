@@ -1235,6 +1235,46 @@
    "bereik_winter": 20
   },
   {
+   "id": "as24_1e5bb447-9952-43ea-a578-e8e7c3549bc0",
+   "bron": "AutoScout24",
+   "merk": "BMW",
+   "model": "i3",
+   "titel": "BMW i3 Range Extender SOH 78%",
+   "prijs": 6950,
+   "km": 256637,
+   "jaar": 2014,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Soest",
+   "verkoper": "Ad van der Meer Auto's",
+   "url": "https://www.autoscout24.nl/aanbod/bmw-i3-range-extender-soh-78-elektro-benzine-wit-cat_ma13mo20319-1e5bb447-9952-43ea-a578-e8e7c3549bc0",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/1e5bb447-9952-43ea-a578-e8e7c3549bc0_6e65f697-0536-4f90-86f4-5f33377e41b8.jpg/480x360.webp",
+   "soort": "Plug-in hybride",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 36,
+   "vaste_lasten": 85,
+   "score": 55.5,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 20.0,
+    "bouwjaar": 7.2,
+    "km": 0.0,
+    "kosten": 6.5,
+    "accu": -1.0
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "soh": 78,
+   "let_op": [
+    "Accu versleten (SoH 78%)",
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false,
+   "bereik_zomer": 90,
+   "bereik_winter": 65
+  },
+  {
    "id": "as24_802d5a30-a115-49c4-8039-6d7e4438acc3",
    "bron": "AutoScout24",
    "merk": "Chevrolet",
@@ -2888,46 +2928,6 @@
    "nieuw": false,
    "bereik_zomer": 35,
    "bereik_winter": 25
-  },
-  {
-   "id": "as24_1e5bb447-9952-43ea-a578-e8e7c3549bc0",
-   "bron": "AutoScout24",
-   "merk": "BMW",
-   "model": "i3",
-   "titel": "BMW i3 Range Extender SOH 78%",
-   "prijs": 6950,
-   "km": 256637,
-   "jaar": 2014,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Soest",
-   "verkoper": "Ad van der Meer Auto's",
-   "url": "https://www.autoscout24.nl/aanbod/bmw-i3-range-extender-soh-78-elektro-benzine-wit-cat_ma13mo20319-1e5bb447-9952-43ea-a578-e8e7c3549bc0",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/1e5bb447-9952-43ea-a578-e8e7c3549bc0_6e65f697-0536-4f90-86f4-5f33377e41b8.jpg/480x360.webp",
-   "soort": "Plug-in hybride",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 36,
-   "vaste_lasten": 85,
-   "score": 49.5,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 14.0,
-    "bouwjaar": 7.2,
-    "km": 0.0,
-    "kosten": 6.5,
-    "accu": -1.0
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
-   "soh": 78,
-   "let_op": [
-    "Accu versleten (SoH 78%)",
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false,
-   "bereik_zomer": 30,
-   "bereik_winter": 20
   },
   {
    "id": "mp_m2449015673",
