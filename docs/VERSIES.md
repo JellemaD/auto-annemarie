@@ -2,6 +2,20 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.3.1 — 18-10-2026
+
+- **LPG eruit en handelaarsadvertenties met meerdere auto's eruit.** Bij de eerste benzineronde kwam "4X TOYOTA AYGO 1.0 BENZINE LPG BOUWJAAR 2018-2021" voor € 3.750 in de lijst: vier auto's in één advertentie, dus prijs en kilometerstand horen bij geen van allen.
+
+## 1.3.0 — 18-10-2026
+
+- **Benzine en gewone hybride doen mee** (wens Durk). Alleen modellen met een bewezen reputatie: Aygo, 108, C1, Yaris, Auris, Prius, Jazz, Civic, Lexus CT, Swift, Picanto, Rio, Cee'd, i10, i20, i30, Mazda 2 en 3, Fabia, Polo, Ibiza. Diesel en LPG doen niet mee.
+- **Strengere eisen zonder stekker**: bouwjaar 2015 of nieuwer, hoogstens 150.000 km, minstens € 3.000. Een elektrische auto heeft geen distributieriem, koppeling of uitlaat, dus daar blijven 2010, 260.000 km en € 1.500 staan.
+- **Benzine wordt per model opgehaald.** De hele benzinemarkt tot € 8.000 is te groot om te doorzoeken; elektrisch en plug-in blijven in één keer op brandstof opgehaald, want per model werkt daar averechts (de e-Golf en e-up bestaan niet als eigen model op AutoScout24).
+- **"Vaste lasten" heet nu "totale kosten bij 12.000 km per jaar"** (besluit Durk) en telt ook brandstof of stroom mee: € 2,10 per liter benzine, € 0,28 per kWh thuis laden. De schaal in de score loopt nu van € 100 (maximum) tot € 300 (nul).
+- **Bereik bij benzine en hybride**: vast 8 van 10, met "± 600 km per tank" op de kaart. Geen 10, want tanken is duurder dan thuis laden en dat verschil zit al in de kosten.
+- **Per soort hoogstens 25 auto's op de site.** Zonder die grens verdringt het jonge benzineaanbod alle elektrische auto's en is er onder "Elektrisch" niets meer te zien.
+- Filterknoppen **Hybride** en **Benzine** erbij, en de uitleg onderaan vertelt welke eisen per brandstof gelden.
+
 ## 1.2.3 — 18-10-2026
 
 - **Op de site staat nu ook wat er bewust níét op de modellenlijst komt** (wens Durk): Renault, Fiat en Alfa Romeo met benzinemotor, de Opel 1.4 Turbo, de Ford 1.0 EcoBoost (koelvloeistof en distributieriem) en elke auto met een DSG- of CVT-automaat van vóór 2015. Goedkoop in aanschaf, duur in onderhoud.

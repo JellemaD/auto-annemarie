@@ -20,8 +20,14 @@ MAX_PRIJS = 8000
 MIN_PRIJS = 1500          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
+# Zonder stekker gelden strengere grenzen: een benzinemotor met 200.000 km staat aan de vooravond
+# van distributieriem, koppeling en ophanging, en onder EUR 3.000 is het een APK-gok. Een
+# elektrische auto heeft die slijtagedelen niet, dus daar blijven de ruime grenzen staan.
+MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, maar wel oudere auto's
+MAX_KM_BRANDSTOF = 150000
+MIN_PRIJS_BRANDSTOF = 3000
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.2.3'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.3.1'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -38,6 +44,7 @@ UITSLUITEN = [
     'ami', 'smart', 'rocks', 'twizy', 'biro', 'estrima', 'aixam', 'ligier', 'microcar',
     'chatenet', 'microlino', 'tazzari', 'topolino', 'brommobiel', '45 km', '45km', 'bellier',
     'jdm', 'casalini', 'kewet', 'buddy', 'reva', 'think city', 'goupil', 'club car',
+    'lpg', 'autogas', 'lpg-g3', 'g3',
     'streetscooter', 'c-zero', 'czero', 'ion', 'i-miev', 'imiev', 'fortwo', 'for two',
     'kangoo', 'ducato', 'e-nv200', 'env200', 'bestel', 'express', 'maxi', 'cargo', 'vito',
     'e-ducato', 'master', 'transit', 'golfkar', 'quad', 'renault fluence',
@@ -51,6 +58,10 @@ ELLENDE = [
 ]
 # Advertenties waarin de genoemde prijs niet de hele prijs is: "ACTIE! BETAAL NU 50% 7950, DE REST
 # LATER" staat voor 7.950 in de lijst terwijl de auto 16.000 kost. Altijd weg.
+# Handelaren die meerdere auto's in een advertentie zetten ("4X TOYOTA AYGO"): de prijs en de
+# kilometerstand horen dan bij geen enkele auto in het bijzonder.
+PARTIJ = re.compile(r'^\s*\d{1,2}\s*x', re.I)
+
 PRIJS_TRUC = re.compile(
     r'betaal\w*\s*(je\s*|u\s*)?(nu\s*)?(de\s*helft|\d{1,2}\s*%)|\d{1,2}\s*%\s*(aan|voor)?betal|'
     r'rest(erend)?\s*(bedrag|deel)|rest\s*(betaal|later|bij\s*aflevering|na\s*aflevering|in\s*termijnen)',
@@ -117,7 +128,53 @@ MODELLEN = [
     ('porsche', 'panamera', 4.0, None, 'Reparaties extreem duur'),
     ('peugeot', '3008', 6.0, None, ''),
     ('peugeot', '508', 5.0, None, ''),
+    # Benzine en gewone hybride. Alleen modellen met een bewezen reputatie; zie ZONDER_STEKKER.
+    ('toyota', 'aygo', 9.0, None, 'Simpel en zuinig, er gaat vrijwel niets kapot'),
+    ('toyota', 'yaris', 9.0, None, 'Toyota-betrouwbaarheid; de hybride is nog zuiniger'),
+    ('toyota', 'auris', 8.5, None, 'Ruimer dan de Yaris, zelfde techniek'),
+    ('honda', 'jazz', 8.5, None, 'Ruim, hoge instap, zeer betrouwbaar'),
+    ('honda', 'civic', 8.0, None, ''),
+    ('lexus', 'ct', 8.5, None, 'Prius-techniek in een nettere jas'),
+    ('suzuki', 'swift', 8.0, None, 'Licht en eenvoudig'),
+    ('kia', 'picanto', 8.0, None, 'Goedkoop in onderhoud, 7 jaar fabrieksgarantie'),
+    ('kia', 'rio', 7.5, None, ''),
+    ('kia', 'ceed', 7.5, None, ''),
+    ('kia', "cee'd", 7.5, None, ''),
+    ('hyundai', 'i10', 8.0, None, 'Zelfde techniek als de Kia Picanto'),
+    ('hyundai', 'i20', 7.5, None, ''),
+    ('hyundai', 'i30', 7.5, None, ''),
+    ('mazda', '3', 8.0, None, 'Geen turbo, geen distributieriem: weinig dure verrassingen'),
+    ('mazda', '2', 8.0, None, 'Geen turbo, geen distributieriem: weinig dure verrassingen'),
+    ('skoda', 'fabia', 7.5, None, ''),
+    ('volkswagen', 'polo', 7.5, None, ''),
+    ('seat', 'ibiza', 7.0, None, 'Zelfde techniek als de VW Polo'),
+    ('peugeot', '108', 8.0, None, 'Zelfde auto als de Toyota Aygo'),
+    ('citroen', 'c1', 8.0, None, 'Zelfde auto als de Toyota Aygo'),
+    ('citroën', 'c1', 8.0, None, 'Zelfde auto als de Toyota Aygo'),
 ]
+
+# Modellen die ook zonder stekker mogen meedoen: modelwoord -> (pad op AutoScout24, liter per 100 km).
+# Alleen wat hier staat, komt als benzine of gewone hybride op de site. Bewust niet: Renault, Fiat
+# en Alfa met benzinemotor, de Opel 1.4 Turbo, de Ford 1.0 EcoBoost (koelvloeistof, distributieriem)
+# en alles met een DSG- of CVT-automaat van voor 2015.
+ZONDER_STEKKER = {
+    'aygo': ('toyota/aygo', 4.8), 'yaris': ('toyota/yaris', 5.3), 'auris': ('toyota/auris', 6.0),
+    'prius': ('toyota/prius', 4.5), 'jazz': ('honda/jazz', 5.6), 'civic': ('honda/civic', 6.2),
+    'ct': ('lexus/ct', 4.6), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
+    'rio': ('kia/rio', 5.5), 'ceed': ('kia/ceed', 6.0), "cee'd": (None, 6.0),
+    'i10': ('hyundai/i10', 5.0), 'i20': ('hyundai/i20', 5.5), 'i30': ('hyundai/i30', 6.2),
+    '3': ('mazda/3', 6.0), '2': ('mazda/2', 5.2), 'fabia': ('skoda/fabia', 5.3),
+    'polo': ('volkswagen/polo', 5.4), 'ibiza': ('seat/ibiza', 5.5), '108': ('peugeot/108', 4.8),
+    'c1': ('citroen/c1', 4.8),
+}
+# Zuiniger als het een hybride is (dezelfde auto, andere aandrijving).
+HYBRIDE_VERBRUIK = {'yaris': 4.2, 'auris': 4.5, 'jazz': 4.8, 'prius': 4.5, 'ct': 4.6}
+
+# (merk, modelwoord) voor de zoekopdrachten per model op Marktplaats.
+BENZINE_PAREN = []
+for _merk, _model, *_rest in MODELLEN:
+    if _model in ZONDER_STEKKER and _model not in {x[1] for x in BENZINE_PAREN}:
+        BENZINE_PAREN.append((_merk, _model))
 
 # Echte automerken. Model onbekend maar merk hier = neutrale score; merk niet hier = weg
 # (vangt de vele Chinese microcars en brommobielen af).
@@ -176,7 +233,13 @@ GEWICHT = {
     'v60': 1980, 'xc90': 2300, 'v90': 2000, 's90': 2000, 'c 350': 1780, 'cayenne': 2350,
     'panamera': 2170, '3008': 1900, '508': 1800,
 }
-GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700}
+GEWICHT.update({
+    'aygo': 900, 'yaris': 1050, 'auris': 1250, 'jazz': 1100, 'civic': 1300, 'ct': 1400,
+    'swift': 950, 'picanto': 900, 'rio': 1100, 'ceed': 1250, "cee'd": 1250, 'i10': 950,
+    'i20': 1050, 'i30': 1250, '3': 1250, '2': 1050, 'fabia': 1050, 'polo': 1100, 'ibiza': 1100,
+    '108': 900, 'c1': 900,
+})
+GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700, 'Hybride': 1300, 'Benzine': 1200}
 
 # Wegenbelasting per kwartaal, provincie Utrecht, 2026, uit de rekenhulp van de Belastingdienst
 # (opgehaald 12-10-2026). Klasse vanaf gewicht -> (benzine, diesel). Elektrisch = 70% van benzine
@@ -202,6 +265,27 @@ def wegenbelasting(gewicht, soort, diesel):
     return round(kwartaal / 3)
 
 
+BENZINEPRIJS = 2.10          # euro per liter aan de pomp
+STROOMPRIJS = 0.28           # euro per kWh, thuis laden
+KM_PER_JAAR = 12000
+PHEV_BENZINEVERBRUIK = 7.0   # liter per 100 km zodra de accu leeg is
+PHEV_DEEL_ELEKTRISCH = 0.5   # een plug-in rijdt ongeveer de helft van de kilometers op stroom
+
+
+def brandstofkosten(a, model):
+    """Benzine en stroom per maand, gerekend op KM_PER_JAAR kilometer per jaar."""
+    km = KM_PER_JAAR / 12
+    if a['soort'] == 'Elektrisch':
+        return round(km * VERBRUIK.get(model, VERBRUIK_ONBEKEND) / 1000 * STROOMPRIJS)
+    if a['soort'] == 'Plug-in hybride':
+        stroom = km * PHEV_DEEL_ELEKTRISCH * VERBRUIK.get(model, VERBRUIK_ONBEKEND) / 1000 * STROOMPRIJS
+        return round(stroom + km * (1 - PHEV_DEEL_ELEKTRISCH) * PHEV_BENZINEVERBRUIK / 100 * BENZINEPRIJS)
+    liter = HYBRIDE_VERBRUIK.get(model) if a['soort'] == 'Hybride' else None
+    if liter is None:
+        liter = (ZONDER_STEKKER.get(model) or (None, 6.0))[1]
+    return round(km * liter / 100 * BENZINEPRIJS)
+
+
 def verzekering(gewicht, prijs, merk):
     """Grove inschatting WA + beperkt casco per maand, 10 schadevrije jaren, bestuurder 30+.
     Zwaardere auto = hogere WA-premie; beperkt casco groeit met de waarde; premiummerken zijn duurder
@@ -214,44 +298,82 @@ def verzekering(gewicht, prijs, merk):
 
 # ---------------------------------------------------------------- AutoScout24
 
-def autoscout24():
+MAX_PAGINAS = 20        # brede zoekopdracht op brandstof (elektrisch, plug-in)
+MAX_PAGINAS_MODEL = 4   # per model (benzine); gesorteerd op nieuwste, dus dit houdt de beste over
+
+
+def as24_auto(L):
+    v, t = L.get('vehicle', {}), L.get('tracking', {})
+    jaar = re.search(r'(\d{4})', t.get('firstRegistration') or '')
+    imgs = L.get('images') or []
+    return {
+        'id': 'as24_' + L['id'],
+        'bron': 'AutoScout24',
+        'merk': v.get('make') or '',
+        'model': v.get('model') or '',
+        'titel': f"{v.get('make', '')} {v.get('model', '')} {v.get('modelVersionInput') or ''}".strip(),
+        'prijs': int(t.get('price') or L.get('price', {}).get('priceRaw') or 0),
+        'km': int(t['mileage']) if str(t.get('mileage', '')).isdigit() else None,
+        'jaar': int(jaar.group(1)) if jaar else None,
+        'brandstof': v.get('fuel') or '',
+        'plaats': (L.get('location') or {}).get('city', '').title(),
+        'verkoper': (L.get('seller') or {}).get('companyName') or 'Particulier',
+        'url': 'https://www.autoscout24.nl' + L.get('url', ''),
+        'foto': imgs[0].replace('/250x188.webp', '/480x360.webp') if imgs else '',
+    }
+
+
+def as24_pagina(url):
+    """Een zoekpagina: geeft de advertenties en het totale aantal pagina's."""
+    r = requests.get(url, headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    tag = BeautifulSoup(r.text, 'html.parser').find('script', id='__NEXT_DATA__')
+    pp = json.loads(tag.string)['props']['pageProps']
+    return [as24_auto(L) for L in pp.get('listings', [])], (pp.get('numberOfPages') or 1)
+
+
+def as24_zoek(naam, basis, maxpaginas):
     uit = []
-    # E = elektrisch, 2 = elektro/benzine, 3 = elektro/diesel
+    for pagina in range(1, maxpaginas + 1):
+        try:
+            autos, paginas = as24_pagina(f'{basis}&page={pagina}')
+        except Exception as e:
+            print(f'  AS24 {naam} p{pagina}: {e}')
+            break
+        uit += autos
+        if pagina >= paginas:
+            break
+        time.sleep(1)
+    return uit
+
+
+def autoscout24():
+    """Elektrisch en plug-in: in een keer op brandstof. E = elektrisch, 2 = elektro/benzine,
+    3 = elektro/diesel. Dat zijn kleine markten, dus de hele lijst past in een paar pagina's."""
+    uit = []
     for fuel in ['E', '2', '3']:
-        for pagina in range(1, 21):
-            url = (f'https://www.autoscout24.nl/lst?atype=C&cy=NL&fuel={fuel}&priceto={MAX_PRIJS}'
-                   f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}&damaged_listing=exclude&sort=age&desc=1&page={pagina}')
-            try:
-                r = requests.get(url, headers=HEADERS, timeout=30)
-                r.raise_for_status()
-                tag = BeautifulSoup(r.text, 'html.parser').find('script', id='__NEXT_DATA__')
-                pp = json.loads(tag.string)['props']['pageProps']
-            except Exception as e:
-                print(f'  AS24 fuel={fuel} p{pagina}: {e}')
-                break
-            for L in pp.get('listings', []):
-                v, t = L.get('vehicle', {}), L.get('tracking', {})
-                jaar = re.search(r'(\d{4})', t.get('firstRegistration') or '')
-                imgs = L.get('images') or []
-                uit.append({
-                    'id': 'as24_' + L['id'],
-                    'bron': 'AutoScout24',
-                    'merk': v.get('make') or '',
-                    'model': v.get('model') or '',
-                    'titel': f"{v.get('make', '')} {v.get('model', '')} {v.get('modelVersionInput') or ''}".strip(),
-                    'prijs': int(t.get('price') or L.get('price', {}).get('priceRaw') or 0),
-                    'km': int(t['mileage']) if str(t.get('mileage', '')).isdigit() else None,
-                    'jaar': int(jaar.group(1)) if jaar else None,
-                    'brandstof': v.get('fuel') or '',
-                    'plaats': (L.get('location') or {}).get('city', '').title(),
-                    'verkoper': (L.get('seller') or {}).get('companyName') or 'Particulier',
-                    'url': 'https://www.autoscout24.nl' + L.get('url', ''),
-                    'foto': imgs[0].replace('/250x188.webp', '/480x360.webp') if imgs else '',
-                })
-            if pagina >= (pp.get('numberOfPages') or 1):
-                break
-            time.sleep(1)
-    print(f'AutoScout24: {len(uit)} advertenties')
+        basis = (f'https://www.autoscout24.nl/lst?atype=C&cy=NL&fuel={fuel}&priceto={MAX_PRIJS}'
+                 f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}'
+                 f'&damaged_listing=exclude&sort=age&desc=1')
+        uit += as24_zoek(f'fuel={fuel}', basis, MAX_PAGINAS)
+    print(f'AutoScout24 stekker: {len(uit)} advertenties')
+    return uit
+
+
+def autoscout24_benzine():
+    """Benzine per model. De hele benzinemarkt tot EUR 8.000 is te groot om te doorzoeken, maar
+    alleen de modellen uit ZONDER_STEKKER komen er toch doorheen. Dus vragen we er meteen om."""
+    uit = []
+    for pad in sorted({pad for pad, _ in ZONDER_STEKKER.values() if pad}):
+        basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={MAX_PRIJS}'
+                 f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={MIN_JAAR_BRANDSTOF}'
+                 f'&kmto={MAX_KM_BRANDSTOF}&damaged_listing=exclude&sort=age&desc=1')
+        gevonden = as24_zoek(pad, basis, MAX_PAGINAS_MODEL)
+        if not gevonden:
+            print(f'  let op: {pad} gaf niets terug')
+        uit += gevonden
+        time.sleep(1)
+    print(f'AutoScout24 benzine: {len(uit)} advertenties')
     return uit
 
 
@@ -259,57 +381,84 @@ def autoscout24():
 
 MERK_SLUG = {'volkswagen': 'Volkswagen', 'mercedes-benz': 'Mercedes-Benz', 'bmw': 'BMW',
              'mini': 'MINI', 'kia': 'Kia', 'ds': 'DS'}
+NIET_PERSONENAUTO = ('bestelauto-s', 'vrachtwagens', 'campers', 'oldtimers', 'aanhangers')
+
+
+def mp_auto(x, brandstof):
+    attr = {a['key']: a.get('value') for a in x.get('attributes', [])}
+    if (x.get('priceInfo') or {}).get('priceType') not in ('FIXED', 'MIN_BID', 'NEGOTIABLE', None):
+        return None
+    vip = x.get('vipUrl') or ''
+    delen = vip.split('/')              # /v/auto-s/<merk>/m123-titel
+    slug = delen[3] if len(delen) > 3 else ''
+    if slug in NIET_PERSONENAUTO:
+        return None
+    imgs = x.get('imageUrls') or []
+    return {
+        'id': 'mp_' + x['itemId'],
+        'bron': 'Marktplaats',
+        'merk': MERK_SLUG.get(slug, slug.replace('-', ' ').title()),
+        'model': attr.get('model') or '',
+        'titel': x.get('title', ''),
+        'beschrijving': x.get('categorySpecificDescription', ''),
+        'prijs': ((x.get('priceInfo') or {}).get('priceCents') or 0) // 100,
+        'km': int(attr['mileage']) if str(attr.get('mileage', '')).isdigit() else None,
+        'jaar': int(attr['constructionYear']) if str(attr.get('constructionYear', '')).isdigit() else None,
+        'brandstof': brandstof,
+        'plaats': (x.get('location') or {}).get('cityName', ''),
+        'verkoper': (x.get('sellerInformation') or {}).get('sellerName', ''),
+        'url': 'https://www.marktplaats.nl' + vip if vip.startswith('/') else vip,
+        'foto': ('https:' + imgs[0].replace('$_82', '$_84')) if imgs else '',
+    }
+
+
+def mp_zoek(naam, basis, brandstof, maxoffset):
+    uit, offset = [], 0
+    while offset < maxoffset:
+        try:
+            r = requests.get(f'{basis}&offset={offset}', headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            lijst = r.json().get('listings') or []
+        except Exception as e:
+            print(f'  Marktplaats {naam} offset {offset}: {e}')
+            break
+        uit += [a for a in (mp_auto(x, brandstof) for x in lijst) if a]
+        if len(lijst) < 100:
+            break
+        offset += 100
+        time.sleep(1)
+    return uit
+
 
 def marktplaats():
+    """Elektrisch en plug-in: in een keer op brandstof."""
     uit = []
-    for brandstof in ['Elektrisch', 'Hybride ElektrischBenzine', 'Hybride ElektrischDiesel']:
-        offset = 0
-        while offset < 1000:
-            url = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
-                   f'&offset={offset}&attributeRanges[]=PriceCents:{MIN_PRIJS * 100}:{MAX_PRIJS * 100}'
-                   f'&attributeRanges[]=constructionYear:{MIN_JAAR}:null'
-                   f'&attributesByKey[]=fuel:{brandstof}&viewOptions=list-view&sortBy=SORT_INDEX&sortOrder=DECREASING')
-            try:
-                r = requests.get(url, headers=HEADERS, timeout=30)
-                r.raise_for_status()
-                j = r.json()
-            except Exception as e:
-                print(f'  Marktplaats {brandstof} offset {offset}: {e}')
-                break
-            lijst = j.get('listings') or []
-            for x in lijst:
-                attr = {a['key']: a.get('value') for a in x.get('attributes', [])}
-                prijs = (x.get('priceInfo') or {}).get('priceCents') or 0
-                if (x.get('priceInfo') or {}).get('priceType') not in ('FIXED', 'MIN_BID', 'NEGOTIABLE', None):
-                    continue
-                vip = x.get('vipUrl') or ''
-                delen = vip.split('/')          # /v/auto-s/<merk>/m123-titel
-                slug = delen[3] if len(delen) > 3 else ''
-                if slug in ('bestelauto-s', 'vrachtwagens', 'campers', 'oldtimers', 'aanhangers'):
-                    continue
-                merk = MERK_SLUG.get(slug, slug.replace('-', ' ').title())
-                imgs = x.get('imageUrls') or []
-                uit.append({
-                    'id': 'mp_' + x['itemId'],
-                    'bron': 'Marktplaats',
-                    'merk': merk,
-                    'model': attr.get('model') or '',
-                    'titel': x.get('title', ''),
-                    'beschrijving': x.get('categorySpecificDescription', ''),
-                    'prijs': prijs // 100,
-                    'km': int(attr['mileage']) if str(attr.get('mileage', '')).isdigit() else None,
-                    'jaar': int(attr['constructionYear']) if str(attr.get('constructionYear', '')).isdigit() else None,
-                    'brandstof': {'Elektrisch': 'Elektrisch'}.get(brandstof, 'Hybride'),
-                    'plaats': (x.get('location') or {}).get('cityName', ''),
-                    'verkoper': (x.get('sellerInformation') or {}).get('sellerName', ''),
-                    'url': 'https://www.marktplaats.nl' + vip if vip.startswith('/') else vip,
-                    'foto': ('https:' + imgs[0].replace('$_82', '$_84')) if imgs else '',
-                })
-            if len(lijst) < 100:
-                break
-            offset += 100
-            time.sleep(1)
-    print(f'Marktplaats: {len(uit)} advertenties')
+    for soort in ['Elektrisch', 'Hybride ElektrischBenzine', 'Hybride ElektrischDiesel']:
+        basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
+                 f'&attributeRanges[]=PriceCents:{MIN_PRIJS * 100}:{MAX_PRIJS * 100}'
+                 f'&attributeRanges[]=constructionYear:{MIN_JAAR}:null'
+                 f'&attributesByKey[]=fuel:{soort}&viewOptions=list-view'
+                 '&sortBy=SORT_INDEX&sortOrder=DECREASING')
+        uit += mp_zoek(soort, basis, 'Elektrisch' if soort == 'Elektrisch' else 'Hybride', 1000)
+    print(f'Marktplaats stekker: {len(uit)} advertenties')
+    return uit
+
+
+def marktplaats_benzine():
+    """Benzine per model, om dezelfde reden als bij AutoScout24."""
+    uit = []
+    for merk, model in BENZINE_PAREN:
+        zoekterm = requests.utils.quote(f'{merk} {model}')
+        basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
+                 f'&query={zoekterm}'
+                 f'&attributeRanges[]=PriceCents:{MIN_PRIJS_BRANDSTOF * 100}:{MAX_PRIJS * 100}'
+                 f'&attributeRanges[]=constructionYear:{MIN_JAAR_BRANDSTOF}:null'
+                 f'&attributeRanges[]=mileage:null:{MAX_KM_BRANDSTOF}'
+                 '&attributesByKey[]=fuel:Benzine&viewOptions=list-view'
+                 '&sortBy=SORT_INDEX&sortOrder=DECREASING')
+        uit += mp_zoek(f'{merk} {model}', basis, 'Benzine', 200)
+        time.sleep(1)
+    print(f'Marktplaats benzine: {len(uit)} advertenties')
     return uit
 
 
@@ -379,6 +528,12 @@ def accustaat(model, jaar, soh):
 
 def zet_bereik(a, model):
     """Zet de bereikvelden op de auto en geeft een cijfer 1-10 voor de score."""
+    if a['soort'] in ('Benzine', 'Hybride'):
+        # Een tank is genoeg voor een dag rijden en overal bij te vullen. Geen 10 van 10: tanken is
+        # duurder dan thuis laden, en dat verschil zit in de kosten, niet hier.
+        a['bereik_zomer'] = 800 if a['soort'] == 'Hybride' else 600
+        a['bereik_winter'] = a['bereik_zomer']
+        return 8.0
     if a['soort'] == 'Plug-in hybride':
         zomer = PHEV_BEREIK.get(model, PHEV_BEREIK_ONBEKEND)
         a['bereik_zomer'] = zomer
@@ -410,6 +565,8 @@ def beoordeel(a):
         return None
     if bevat(titel, ['verkocht', 'gereserveerd', 'sold', 'reserved']):
         return None
+    if PARTIJ.search(a['titel']):
+        return None  # meerdere auto's in een advertentie
     if PRIJS_TRUC.search(tekst):
         return None  # de genoemde prijs is maar een deel van de prijs
     if any(w in norm(a.get('verkoper')) for w in SCHADE_VERKOPERS):
@@ -427,15 +584,27 @@ def beoordeel(a):
         a['soort'] = 'Elektrisch'
     elif soort == 'PHEV' or PHEV_WOORDEN.search(titel):
         a['soort'] = 'Plug-in hybride'
+    elif modelwoord in ZONDER_STEKKER:
+        brandstof = norm(a['brandstof'])
+        if 'hybride' in brandstof or 'elektro' in brandstof:
+            a['soort'] = 'Hybride'
+        elif 'benzine' in brandstof:
+            a['soort'] = 'Benzine'
+        else:
+            return None  # diesel, lpg of onbekend
+        if (a['jaar'] < MIN_JAAR_BRANDSTOF or a['km'] > MAX_KM_BRANDSTOF
+                or a['prijs'] < MIN_PRIJS_BRANDSTOF):
+            return None
     else:
-        return None  # gewone hybride, niet stekkerbaar
+        return None  # model doet niet mee zonder stekker
 
-    # Vaste lasten per maand.
+    # Totale kosten per maand: wegenbelasting, verzekering en brandstof of stroom.
     a['gewicht'] = gewicht or GEWICHT_ONBEKEND[a['soort']]
     diesel = 'diesel' in norm(a['brandstof']) or bool(re.search(r'\bd6\b', titel))
     a['mrb'] = wegenbelasting(a['gewicht'], a['soort'], diesel)
     a['verzekering'] = verzekering(a['gewicht'], a['prijs'], a['merk'])
-    a['vaste_lasten'] = a['mrb'] + a['verzekering']
+    a['brandstofkosten'] = brandstofkosten(a, modelwoord)
+    a['totale_kosten'] = a['mrb'] + a['verzekering'] + a['brandstofkosten']
 
     # Accustaat uit de advertentie: nodig voor het bereik en voor de score.
     gemeld = re.search(r'soh\D{0,3}(\d{2,3})\s*%', tekst)
@@ -446,7 +615,7 @@ def beoordeel(a):
     # Score 0-100: betrouwbaarheid 35%, bereik 20%, bouwjaar 18%, kilometerstand 17%, lasten 10%.
     jaar_s = max(0.0, min(10.0, (a['jaar'] - 2010) / 1.0))       # 2010 = 0, 2020+ = 10
     km_s = max(0.0, 10.0 - a['km'] / 25000)                      # 0 km = 10, 250.000 km = 0
-    kosten_s = max(0.0, min(10.0, (160 - a['vaste_lasten']) / 11.5))  # <= 45/mnd = 10, >= 160/mnd = 0
+    kosten_s = max(0.0, min(10.0, (300 - a['totale_kosten']) / 20))   # <= 100/mnd = 10, >= 300/mnd = 0
     a['score'] = (3.5 * betrouwbaar + 2.0 * bereik_s + 1.8 * jaar_s + 1.7 * km_s + 1.0 * kosten_s)
     # Opbouw van de score, voor de uitleg bij de score op de website.
     a['punten'] = {'betrouwbaarheid': round(3.5 * betrouwbaar, 1), 'bereik': round(2.0 * bereik_s, 1),
@@ -489,6 +658,18 @@ DETAIL_SCHADE = [
     'airbag eruit', 'airbags eruit', 'airbag uit', 'gerepareerde schade', 'schadehistorie',
 ]
 DETAIL_AANTAL = 100
+PER_SOORT = 25        # hoeveel kandidaten per soort de detailcontrole in gaan en op de site komen
+
+
+def beste_per_soort(autos, per_soort=PER_SOORT):
+    """Per soort de beste kandidaten. Zonder dit verdringt een soort met veel jong aanbod
+    (benzine) alle andere, en is er op de site geen elektrische auto meer te zien."""
+    geteld, uit = {}, []
+    for a in autos:                       # al op score gesorteerd
+        if geteld.get(a['soort'], 0) < per_soort:
+            geteld[a['soort']] = geteld.get(a['soort'], 0) + 1
+            uit.append(a)
+    return uit
 
 
 def detail_tekst(a):
@@ -544,14 +725,15 @@ def ontdubbel(autos):
 
 def main():
     nu = datetime.now(TZ)
-    ruw = autoscout24() + marktplaats()
+    ruw = autoscout24() + marktplaats() + autoscout24_benzine() + marktplaats_benzine()
     if not ruw:
         print('Geen enkele advertentie opgehaald, oude data blijft staan.')
         sys.exit(1)
 
     autos = ontdubbel([a for a in (beoordeel(a) for a in ruw) if a])
     autos.sort(key=lambda a: (-a['score'], a['prijs']))
-    autos = controleer_details(autos)
+    passen = len(autos)
+    autos = controleer_details(beste_per_soort(autos))
 
     gezien = json.loads(GEZIEN.read_text('utf-8')) if GEZIEN.exists() else {}
     vandaag = nu.date().isoformat()
@@ -570,12 +752,15 @@ def main():
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'versie': VERSIE,
         'aantal_bekeken': len(ruw),
-        'aantal': len(autos),
-        'autos': autos[:DETAIL_AANTAL - 5],  # alleen auto's die de detailcontrole hebben gehad
+        'aantal': passen,
+        'autos': autos,
     }, ensure_ascii=False, indent=1), 'utf-8')
     GEZIEN.write_text(json.dumps(gezien, indent=0, sort_keys=True), 'utf-8')
 
-    print(f'{len(ruw)} bekeken, {len(autos)} passen. Top 5:')
+    per = {}
+    for a in autos:
+        per[a['soort']] = per.get(a['soort'], 0) + 1
+    print(f'{len(ruw)} bekeken, {passen} passen, {len(autos)} op de site: {per}. Top 5:')
     for a in autos[:5]:
         print(f"  {a['score']:5}  {a['titel'][:55]:55} {a['jaar']} {a['km']:>7} km  EUR {a['prijs']}  {a['bron']}")
 
