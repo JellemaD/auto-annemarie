@@ -44,9 +44,7 @@
 
 ## Nee-lijst (bewust niet)
 
-Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één
-keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij
-de marktplaatsen · auto's boven € 8.000 · gewone hybrides zonder stekker.
+Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 8.000 · gewone hybrides zonder stekker.
 
 ## Af
 
