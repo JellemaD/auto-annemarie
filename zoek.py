@@ -21,7 +21,7 @@ MIN_PRIJS = 1500          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.2.2'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.2.3'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'

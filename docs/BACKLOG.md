@@ -22,12 +22,13 @@
 
 | # | Item | Af als… |
 |---|---|---|
-| B1 | **Accumaat begrenzen op wat in dat bouwjaar leverbaar was.** Er staat een Renault Zoe uit 2013 in de lijst met "41 kWh" in de titel; die accu bestond pas vanaf 2017. De app rekent nu met 41 kWh en geeft hem ± 210 km, bijna het dubbele van wat hij echt haalt. Per uitvoering in `ACCU` een eerste bouwjaar meegeven, en een kWh uit de titel alleen gebruiken als die uitvoering in dat jaar bestond. | De Zoe uit 2013 krijgt 22 kWh en ± 110 km; een Leaf uit 2018 met "40 kWh" in de titel houdt zijn 39 kWh; geen enkele auto in de lijst heeft een accu die in zijn bouwjaar niet bestond |
+| B7 | **Benzine en gewone hybride erbij** (wens Durk 18-10). Besluiten die al vastliggen: benzine én hybride zonder stekker, geen diesel; benzine en hybride krijgen vast 8 van 10 op bereik, stekkerauto's houden hun berekende bereik; brandstof- en stroomkosten tellen mee, gerekend op 12.000 km per jaar. **Het kengetal heet dan geen "vaste lasten" meer maar "totale kosten bij 12.000 km per jaar"** (besluit Durk 18-10), overal: op de kaart, in de score-uitleg en in de uitleg onderaan. Drempels verschillen per brandstof: stekker blijft 2010 / 260.000 km / € 1.500, benzine en hybride worden 2015 / 150.000 km / € 3.000. Benzine en hybride worden **per model opgehaald** (de markt is te groot om in zijn geheel te doorzoeken); elektrisch en plug-in blijven op brandstof opgehaald, want per model werkt daar averechts (zie stand hieronder). Start met ongeveer 18 modellen met een bewezen reputatie. | Benzine en hybride staan in dezelfde lijst met een eigen filterknop; de app haalt minder dan 2.000 advertenties per dag op; het kengetal heet overal "totale kosten"; de modellen van de nee-lijst komen er niet in |
 
 ## Volgende (op volgorde)
 
 | # | Item | Af als… |
 |---|---|---|
+| B1 | **Accumaat begrenzen op wat in dat bouwjaar leverbaar was** (stond op Nu tot 18-10, zie de tekst bij Nu). | De Zoe uit 2013 krijgt 22 kWh en ± 110 km; een Leaf uit 2018 met "40 kWh" in de titel houdt zijn 39 kWh |
 | B2 | **Nieuwe modellen in de modellenlijst.** `MODELLEN` is ook de toelatingslijst: een model dat er niet in staat, krijgt een neutrale betrouwbaarheid van 5,5 en een standaard-accumaat van 24 kWh. Modellen die inmiddels onder de € 8.000 kunnen komen, staan er nog niet in (o.a. Citroën ë-C3, Opel Corsa-e, Peugeot e-2008, Mini Cooper SE, MG ZS EV, VW ID.3, Renault Captur plug-in). Per model ook de accumaat en het verbruik invullen. | Elk model dat in de uitslag voorkomt heeft een eigen betrouwbaarheidscijfer, accumaat en verbruik; geen auto in de top 20 draait meer op de standaardwaarden |
 | B3 | **Ondergrens voor plug-in hybrides heroverwegen.** Een plug-in krijgt nu minimaal 5 van 10 op bereik, omdat je met benzine erbij nooit strandt. Daardoor klimmen plug-ins ten opzichte van de kleine elektrische auto's. Kijken of dat klopt met wat Annemarie wil: een goedkope stadsauto of een auto die ook de lange rit doet. | Durk heeft gekozen; de ondergrens staat op de gekozen waarde en de top 5 is één keer met beide instellingen vergeleken |
 | B4 | **Accustaat ruimer herkennen.** Nu wordt alleen "SoH 82%" gevonden. Verkopers schrijven ook "accu 85%", "batterij nog 90%", "SOH: 78". Alles wat daar niet op lijkt, valt terug op de schatting op leeftijd. | Op de huidige lijst wordt minstens de helft meer accustaten uit de advertenties gehaald, zonder valse treffers (een percentage dat over iets anders gaat) |
@@ -43,6 +44,8 @@
 - **Laadmogelijkheid thuis** meewegen zodra bekend is of Annemarie een laadpunt heeft.
 
 ## Nee-lijst (bewust niet)
+
+**Modellen die bewust niet op de toelatingslijst komen:** Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (koelvloeistof, distributieriem) · elke auto met een DSG- of CVT-automaat van vóór 2015. Goedkoop in aanschaf, duur in onderhoud.
 
 Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 8.000 · gewone hybrides zonder stekker.
 
