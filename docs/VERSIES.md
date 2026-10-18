@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.3.2 — 18-10-2026
+
+- **Een accu die in dat bouwjaar nog niet bestond, wordt niet meer gebruikt** (B1). Een ZOE uit 2013 met "41 kWh" in de titel kreeg 41 kWh en daarmee ± 210 km bereik, bijna het dubbele van wat hij haalt; de 41 kWh-accu zit er pas in vanaf 2017. Elke uitvoering in de tabel `ACCU` heeft nu een eerste bouwjaar. Een maat uit de titel wordt alleen gebruikt als die uitvoering er toen al was; zo niet, dan de grootste accu die er in dat bouwjaar wel in zat. Die ZOE staat nu op 22 kWh en ± 110 km, en zakt in de score van 57,7 naar 48,3. Verder veranderde er geen enkele auto in de lijst.
+
 ## 1.3.1 — 18-10-2026
 
 - **LPG eruit en handelaarsadvertenties met meerdere auto's eruit.** Bij de eerste benzineronde kwam "4X TOYOTA AYGO 1.0 BENZINE LPG BOUWJAAR 2018-2021" voor € 3.750 in de lijst: vier auto's in één advertentie, dus prijs en kilometerstand horen bij geen van allen.

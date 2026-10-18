@@ -22,13 +22,12 @@
 
 | # | Item | Af als… |
 |---|---|---|
-| B1 | **Accumaat begrenzen op wat in dat bouwjaar leverbaar was** Er staat een Renault Zoe uit 2013 in de lijst met "41 kWh" in de titel; die accu bestond pas vanaf 2017. Per uitvoering in `ACCU` een eerste bouwjaar meegeven. | De Zoe uit 2013 krijgt 22 kWh en ± 110 km; een Leaf uit 2018 met "40 kWh" in de titel houdt zijn 39 kWh |
+| B2 | **Nieuwe modellen in de modellenlijst.** `MODELLEN` is ook de toelatingslijst: een model dat er niet in staat, krijgt een neutrale betrouwbaarheid van 5,5 en een standaard-accumaat van 24 kWh. Modellen die inmiddels onder de € 8.000 kunnen komen, staan er nog niet in (o.a. Citroën ë-C3, Opel Corsa-e, Peugeot e-2008, Mini Cooper SE, MG ZS EV, VW ID.3, Renault Captur plug-in). Per model ook de accumaat en het verbruik invullen. | Elk model dat in de uitslag voorkomt heeft een eigen betrouwbaarheidscijfer, accumaat en verbruik; geen auto in de top 20 draait meer op de standaardwaarden |
 
 ## Volgende (op volgorde)
 
 | # | Item | Af als… |
 |---|---|---|
-| B2 | **Nieuwe modellen in de modellenlijst.** `MODELLEN` is ook de toelatingslijst: een model dat er niet in staat, krijgt een neutrale betrouwbaarheid van 5,5 en een standaard-accumaat van 24 kWh. Modellen die inmiddels onder de € 8.000 kunnen komen, staan er nog niet in (o.a. Citroën ë-C3, Opel Corsa-e, Peugeot e-2008, Mini Cooper SE, MG ZS EV, VW ID.3, Renault Captur plug-in). Per model ook de accumaat en het verbruik invullen. | Elk model dat in de uitslag voorkomt heeft een eigen betrouwbaarheidscijfer, accumaat en verbruik; geen auto in de top 20 draait meer op de standaardwaarden |
 | B3 | **Ondergrens voor plug-in hybrides heroverwegen.** Een plug-in krijgt nu minimaal 5 van 10 op bereik, omdat je met benzine erbij nooit strandt. Daardoor klimmen plug-ins ten opzichte van de kleine elektrische auto's. Kijken of dat klopt met wat Annemarie wil: een goedkope stadsauto of een auto die ook de lange rit doet. | Durk heeft gekozen; de ondergrens staat op de gekozen waarde en de top 5 is één keer met beide instellingen vergeleken |
 | B4 | **Accustaat ruimer herkennen.** Nu wordt alleen "SoH 82%" gevonden. Verkopers schrijven ook "accu 85%", "batterij nog 90%", "SOH: 78". Alles wat daar niet op lijkt, valt terug op de schatting op leeftijd. | Op de huidige lijst wordt minstens de helft meer accustaten uit de advertenties gehaald, zonder valse treffers (een percentage dat over iets anders gaat) |
 | B5 | **Merkvoorkeur van Annemarie invullen.** `MERK_VOORKEUR` staat leeg; de bonus van 5 punten doet dus niets. Eerst aan Annemarie vragen welke merken ze wel en niet wil. | De merken die Annemarie noemt staan in de lijst, en die auto's staan zichtbaar hoger |
@@ -52,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B1 | **Accumaat begrensd op wat in dat bouwjaar leverbaar was** (v1.3.2): elke uitvoering in `ACCU` heeft een eerste bouwjaar; een kWh-maat uit de titel geldt alleen als die accu er toen al was, anders de grootste van dat jaar. De ZOE uit 2013 ging van 41 kWh / ± 210 km naar 22 kWh / ± 110 km | 18-10-2026 |
 | B7 | **Benzine en gewone hybride erbij** (v1.3.0): 22 modellen met een bewezen reputatie, strengere eisen zonder stekker (2015 / 150.000 km / € 3.000), benzine per model opgehaald, "totale kosten bij 12.000 km per jaar" in plaats van vaste lasten, bereik vast 8 van 10, hoogstens 25 auto's per soort op de site | 18-10-2026 |
 | — | **Halve-prijs-advertenties eruit** ("betaal nu 50%, de rest later": € 7.950 in de lijst, € 16.000 in het echt) (v1.2.2) | 18-10-2026 |
 | — | **Bereik per auto** op de kaart en voor 20% in de score, met accumaat per uitvoering, verbruik per model en een geschatte accustaat (v1.2.0); i3 Range Extender eigen bereik (v1.2.1) | 18-10-2026 |

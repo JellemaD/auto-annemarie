@@ -1,6 +1,6 @@
 {
  "bijgewerkt": "2026-10-18 20:25",
- "versie": "1.3.1",
+ "versie": "1.3.2",
  "aantal_bekeken": 2591,
  "aantal": 1404,
  "autos": [
@@ -1681,47 +1681,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_139bc9eb-2746-40eb-a590-b0d428dee1f1",
-   "bron": "AutoScout24",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE ZOE Q210 Zen QC koopaccu 41 kWh 200 km actieradius",
-   "prijs": 5750,
-   "km": 152000,
-   "jaar": 2013,
-   "brandstof": "Elektrisch",
-   "plaats": "Sittard-Geleen",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-zoe-q210-zen-qc-koopaccu-41-kwh-200-km-actieradius-elektrisch-wit-cat_ma60mo20228-139bc9eb-2746-40eb-a590-b0d428dee1f1",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/139bc9eb-2746-40eb-a590-b0d428dee1f1_82436579-dc69-4afb-8bca-4dbdc3489ac6.jpg/480x360.webp",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 30,
-   "brandstofkosten": 46,
-   "totale_kosten": 123,
-   "accu_kwh": 41,
-   "soh_schatting": 84,
-   "bereik_zomer": 210,
-   "bereik_winter": 155,
-   "score": 57.7,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 14.0,
-    "bouwjaar": 5.4,
-    "km": 6.7,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Koopaccu"
-   ],
-   "eerst_gezien": "2026-10-17",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2452782715",
    "bron": "Marktplaats",
    "merk": "Toyota",
@@ -2376,6 +2335,47 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_139bc9eb-2746-40eb-a590-b0d428dee1f1",
+   "bron": "AutoScout24",
+   "merk": "Renault",
+   "model": "ZOE",
+   "titel": "Renault ZOE ZOE Q210 Zen QC koopaccu 41 kWh 200 km actieradius",
+   "prijs": 5750,
+   "km": 152000,
+   "jaar": 2013,
+   "brandstof": "Elektrisch",
+   "plaats": "Sittard-Geleen",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-zoe-q210-zen-qc-koopaccu-41-kwh-200-km-actieradius-elektrisch-wit-cat_ma60mo20228-139bc9eb-2746-40eb-a590-b0d428dee1f1",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/139bc9eb-2746-40eb-a590-b0d428dee1f1_82436579-dc69-4afb-8bca-4dbdc3489ac6.jpg/480x360.webp",
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 30,
+   "brandstofkosten": 46,
+   "totale_kosten": 123,
+   "accu_kwh": 22,
+   "soh_schatting": 84,
+   "bereik_zomer": 110,
+   "bereik_winter": 85,
+   "score": 48.3,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 4.7,
+    "bouwjaar": 5.4,
+    "km": 6.7,
+    "kosten": 8.8
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
+   "let_op": [
+    "Vraag accurapport (SoH)",
+    "Koopaccu"
+   ],
+   "eerst_gezien": "2026-10-17",
    "nieuw": false
   }
  ]

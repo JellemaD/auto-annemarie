@@ -27,7 +27,7 @@ MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, m
 MAX_KM_BRANDSTOF = 150000
 MIN_PRIJS_BRANDSTOF = 3000
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.3.1'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.3.2'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -464,15 +464,33 @@ def marktplaats_benzine():
 
 # ---------------------------------------------------------------- bereik
 
-# Netto bruikbare accucapaciteit (kWh) per model, per uitvoering van klein naar groot. De
-# uitvoering wordt gekozen op de kWh in de titel; staat die er niet, dan de kleinste, want in
-# dit prijssegment is dat bijna altijd de juiste.
+# Netto bruikbare accucapaciteit (kWh) per model, per uitvoering van klein naar groot, met het
+# eerste bouwjaar waarin die uitvoering te koop was. De uitvoering wordt gekozen op de kWh in de
+# titel, maar alleen als die in het bouwjaar van de advertentie al bestond; staat er geen maat in
+# de titel, dan de kleinste, want in dit prijssegment is dat bijna altijd de juiste.
 ACCU = {
-    'ioniq': [28, 38], 'niro': [39, 64], 'kona': [39, 64], 'e-golf': [21, 32], 'golf': [21, 32],
-    'e-up': [16, 32], 'up': [16, 32], 'citigo': [32], 'mii': [32],
-    'soul': [27, 30, 39, 64], 'ampera-e': [60], 'leaf': [22, 28, 39, 59], 'i3': [19, 27, 38],
-    'zoe': [22, 41, 52], 'spring': [27], '500e': [24, 37], 'e-208': [45], 'b 250e': [28],
-    'focus': [23, 33], 'model s': [85], 'twingo': [22], 'mx-30': [30],
+    'ioniq': [(28, 2016), (38, 2020)],
+    'niro': [(39, 2019), (64, 2019)],
+    'kona': [(39, 2018), (64, 2018)],
+    'e-golf': [(21, 2014), (32, 2017)],
+    'golf': [(21, 2014), (32, 2017)],
+    'e-up': [(16, 2013), (32, 2020)],
+    'up': [(16, 2013), (32, 2020)],
+    'citigo': [(32, 2020)],
+    'mii': [(32, 2020)],
+    'soul': [(27, 2014), (30, 2018), (39, 2020), (64, 2020)],
+    'ampera-e': [(60, 2017)],
+    'leaf': [(22, 2011), (28, 2016), (39, 2018), (59, 2019)],
+    'i3': [(19, 2013), (27, 2016), (38, 2019)],
+    'zoe': [(22, 2012), (41, 2017), (52, 2020)],
+    'spring': [(27, 2021)],
+    '500e': [(24, 2013), (37, 2021)],
+    'e-208': [(45, 2019)],
+    'b 250e': [(28, 2014)],
+    'focus': [(23, 2012), (33, 2017)],
+    'model s': [(85, 2012)],
+    'twingo': [(22, 2020)],
+    'mx-30': [(30, 2020)],
 }
 ACCU_ONBEKEND = 24
 
@@ -505,17 +523,25 @@ PHEV_BEREIK_ONBEKEND = 30
 NU_JAAR = datetime.now(TZ).year
 
 
-def accu_kwh(model, titel):
-    """Netto accucapaciteit: de uitvoering die het dichtst bij de kWh in de titel ligt."""
-    varianten = ACCU.get(model) or [ACCU_ONBEKEND]
+def accu_kwh(model, titel, jaar=0):
+    """Netto accucapaciteit: de uitvoering die het dichtst bij de kWh in de titel ligt, en die in
+    het bouwjaar al leverbaar was."""
+    varianten = ACCU.get(model) or [(ACCU_ONBEKEND, 0)]
+    leverbaar = [kwh for kwh, vanaf in varianten if not jaar or jaar >= vanaf]
+    if not leverbaar:
+        leverbaar = [varianten[0][0]]       # ouder dan het model zelf: de kleinste uitvoering
     uit_titel = re.search(r'(\d{2}(?:[.,]\d)?)\s*kwh', titel)
     if not uit_titel:
-        return varianten[0]
+        return leverbaar[0]
     genoemd = float(uit_titel.group(1).replace(',', '.'))
-    beste = min(varianten, key=lambda k: abs(k - genoemd))
+    beste = min((kwh for kwh, _ in varianten), key=lambda k: abs(k - genoemd))
     # Advertenties schrijven ook het vermogen als "83kwh". Ligt het genoemde getal nergens in de
     # buurt van een bestaande uitvoering, dan is het geen accumaat.
-    return beste if abs(beste - genoemd) <= 0.25 * beste else varianten[0]
+    if abs(beste - genoemd) > 0.25 * beste:
+        return leverbaar[0]
+    # Een uitvoering die er in dat bouwjaar nog niet was ("ZOE uit 2013 met 41 kWh") kan niet
+    # kloppen; dan de grootste accu die er toen wel in zat.
+    return beste if beste in leverbaar else max(leverbaar)
 
 
 def accustaat(model, jaar, soh):
@@ -540,7 +566,7 @@ def zet_bereik(a, model):
         a['bereik_winter'] = round(zomer / WINTERFACTOR / 5) * 5
         # Met de benzinemotor erbij kom je overal: bodem van 5, het elektrische deel doet de rest.
         return min(10.0, 5.0 + a['bereik_winter'] / 10)
-    kwh = accu_kwh(model, norm(f"{a['merk']} {a['model']} {a['titel']}"))
+    kwh = accu_kwh(model, norm(f"{a['merk']} {a['model']} {a['titel']}"), a['jaar'])
     soh, geschat = accustaat(model, a['jaar'], a.get('soh'))
     zomer = kwh * (soh / 100) * 1000 / VERBRUIK.get(model, VERBRUIK_ONBEKEND)
     a['accu_kwh'] = kwh
