@@ -1,8 +1,8 @@
 {
- "bijgewerkt": "2026-10-18 20:25",
+ "bijgewerkt": "2026-10-19 13:10",
  "versie": "1.3.2",
- "aantal_bekeken": 2591,
- "aantal": 1404,
+ "aantal_bekeken": 2598,
+ "aantal": 1400,
  "autos": [
   {
    "id": "mp_m2447705643",
@@ -38,6 +38,42 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
+   "nieuw": false
+  },
+  {
+   "id": "as24_4da4724e-6ce3-4abb-930f-3dceb0d39931",
+   "bron": "AutoScout24",
+   "merk": "Toyota",
+   "model": "Aygo",
+   "titel": "Toyota Aygo 1.0 VVT-i x",
+   "prijs": 7950,
+   "km": 26604,
+   "jaar": 2020,
+   "brandstof": "Benzine",
+   "plaats": "Sittard",
+   "verkoper": "Mengelers Toyota Sittard",
+   "url": "https://www.autoscout24.nl/aanbod/toyota-aygo-1-0-vvt-i-x-benzine-wit-cat_ma70mo18655-4da4724e-6ce3-4abb-930f-3dceb0d39931",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/4da4724e-6ce3-4abb-930f-3dceb0d39931_013cd984-8aed-4089-9cf8-02a8088531e4.jpg/480x360.webp",
+   "soort": "Benzine",
+   "gewicht": 900,
+   "mrb": 24,
+   "verzekering": 27,
+   "brandstofkosten": 101,
+   "totale_kosten": 152,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 88.1,
+   "punten": {
+    "betrouwbaarheid": 31.5,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 15.2,
+    "kosten": 7.4
+   },
+   "betrouwbaarheid": 9.0,
+   "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
+   "let_op": [],
+   "eerst_gezien": "2026-10-19",
    "nieuw": true
   },
   {
@@ -74,7 +110,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_87c2643c-59a3-43dc-a113-7c7a38c49100",
@@ -110,7 +146,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_06425162-b037-4e69-b77f-2b123bcbbc2c",
@@ -146,7 +182,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2429001052",
@@ -182,43 +218,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2451643494",
-   "bron": "Marktplaats",
-   "merk": "Hyundai",
-   "model": "I10",
-   "titel": "Hyundai i10 1.0i 67pk Aut 2021 Blauw",
-   "prijs": 6700,
-   "km": 31300,
-   "jaar": 2021,
-   "brandstof": "Benzine",
-   "plaats": "Rotterdam",
-   "verkoper": "Irakli Kand",
-   "url": "https://www.marktplaats.nl/v/auto-s/hyundai/m2451643494-hyundai-i10-1-0i-67pk-aut-2021-blauw",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a5f77a52-bf71-45ec-8375-438cbc64ccd2?rule=ecg_mp_eps$_84.jpg",
-   "soort": "Benzine",
-   "gewicht": 950,
-   "mrb": 24,
-   "verzekering": 26,
-   "brandstofkosten": 105,
-   "totale_kosten": 155,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 84.1,
-   "punten": {
-    "betrouwbaarheid": 28.0,
-    "bereik": 16.0,
-    "bouwjaar": 18.0,
-    "km": 14.9,
-    "kosten": 7.2
-   },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "Zelfde techniek als de Kia Picanto",
-   "let_op": [],
-   "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2439748663",
@@ -254,7 +254,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2454441209",
@@ -290,7 +290,7 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2454035277",
@@ -326,43 +326,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
-  },
-  {
-   "id": "as24_dab1ad3e-c2b6-4f77-8581-4320ba3f6d91",
-   "bron": "AutoScout24",
-   "merk": "Peugeot",
-   "model": "108",
-   "titel": "Peugeot 108 1.0 e-VTi Active | AC | € 7499 RIJKLAARPRIJS",
-   "prijs": 7499,
-   "km": 49798,
-   "jaar": 2020,
-   "brandstof": "Benzine",
-   "plaats": "Waverveen",
-   "verkoper": "Arvlad Cars",
-   "url": "https://www.autoscout24.nl/aanbod/peugeot-108-1-0-e-vti-active-ac-e-7499-rijklaarprijs-benzine-wit-cat_ma55mo20374-dab1ad3e-c2b6-4f77-8581-4320ba3f6d91",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/dab1ad3e-c2b6-4f77-8581-4320ba3f6d91_7e318896-7a45-465d-a728-bdd1d9498e59.jpg/480x360.webp",
-   "soort": "Benzine",
-   "gewicht": 900,
-   "mrb": 24,
-   "verzekering": 26,
-   "brandstofkosten": 101,
-   "totale_kosten": 151,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 83.1,
-   "punten": {
-    "betrouwbaarheid": 28.0,
-    "bereik": 16.0,
-    "bouwjaar": 18.0,
-    "km": 13.6,
-    "kosten": 7.5
-   },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "Zelfde auto als de Toyota Aygo",
-   "let_op": [],
-   "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2444218513",
@@ -398,7 +362,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2454401518",
@@ -434,7 +398,7 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_57c761d5-4832-4bd0-b455-4163808456d0",
@@ -470,7 +434,7 @@
    "toelichting": "Goedkoop in onderhoud, 7 jaar fabrieksgarantie",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_953ece41-d695-40d0-9f75-f551c35baa21",
@@ -506,7 +470,7 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_eab0b634-e390-4798-a6aa-ac77b0db1876",
@@ -542,7 +506,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2450569544",
@@ -578,7 +542,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b05ee841-71aa-42e6-ba8f-189a08af4fdf",
@@ -614,7 +578,7 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2450315501",
@@ -650,7 +614,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449414547",
@@ -686,7 +650,7 @@
    "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_7c06f5b0-567f-4fc6-89dd-e2aec71a0076",
@@ -722,7 +686,7 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2452448072",
@@ -758,7 +722,79 @@
    "toelichting": "Zelfde auto als de Toyota Aygo",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
+  },
+  {
+   "id": "as24_411fe311-b382-4bfd-b016-448659d03637",
+   "bron": "AutoScout24",
+   "merk": "Toyota",
+   "model": "Aygo",
+   "titel": "Toyota Aygo Aygo 1.0 VVT-i x-fun",
+   "prijs": 7399,
+   "km": 113000,
+   "jaar": 2022,
+   "brandstof": "Benzine",
+   "plaats": "Maassluis",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/toyota-aygo-aygo-1-0-vvt-i-x-fun-benzine-zwart-cat_ma70mo18655-411fe311-b382-4bfd-b016-448659d03637",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/411fe311-b382-4bfd-b016-448659d03637_f44d747e-8207-4e85-a5d1-d37cd13df358.jpg/480x360.webp",
+   "soort": "Benzine",
+   "gewicht": 900,
+   "mrb": 24,
+   "verzekering": 26,
+   "brandstofkosten": 101,
+   "totale_kosten": 151,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 82.3,
+   "punten": {
+    "betrouwbaarheid": 31.5,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 9.3,
+    "kosten": 7.5
+   },
+   "betrouwbaarheid": 9.0,
+   "toelichting": "Simpel en zuinig, er gaat vrijwel niets kapot",
+   "let_op": [],
+   "eerst_gezien": "2026-10-18",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2449498155",
+   "bron": "Marktplaats",
+   "merk": "Citroen",
+   "model": "C1",
+   "titel": "Citroen C1 1.0 VTi Feel",
+   "prijs": 7795,
+   "km": 60422,
+   "jaar": 2020,
+   "brandstof": "Benzine",
+   "plaats": "Hommerts",
+   "verkoper": "Nauta Auto's",
+   "url": "https://www.marktplaats.nl/v/auto-s/citroen/m2449498155-citroen-c1-1-0-vti-feel",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fdcd8469-2972-41a3-a3c6-ea711a4a6bab?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Benzine",
+   "gewicht": 900,
+   "mrb": 24,
+   "verzekering": 27,
+   "brandstofkosten": 101,
+   "totale_kosten": 152,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 82.3,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 12.9,
+    "kosten": 7.4
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "Zelfde auto als de Toyota Aygo",
+   "let_op": [],
+   "eerst_gezien": "2026-10-18",
+   "nieuw": false
   },
   {
    "id": "mp_m2450566979",
@@ -799,46 +835,6 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-15",
-   "nieuw": false
-  },
-  {
-   "id": "as24_4f7c7bcf-10c8-418f-b714-fdbb4ea79317",
-   "bron": "AutoScout24",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan Leaf Tekna 30 kWh",
-   "prijs": 6950,
-   "km": 61525,
-   "jaar": 2017,
-   "brandstof": "Elektrisch",
-   "plaats": "Vlaardingen",
-   "verkoper": "Moes Cars",
-   "url": "https://www.autoscout24.nl/aanbod/nissan-leaf-tekna-30-kwh-elektrisch-grijs-cat_ma52mo19733-4f7c7bcf-10c8-418f-b714-fdbb4ea79317",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/4f7c7bcf-10c8-418f-b714-fdbb4ea79317_bd4654e2-7ecd-4582-9ab9-92c0890e2b1e.jpg/480x360.webp",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 31,
-   "brandstofkosten": 46,
-   "totale_kosten": 124,
-   "accu_kwh": 28,
-   "soh_schatting": 83,
-   "bereik_zomer": 140,
-   "bereik_winter": 105,
-   "score": 66.0,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 7.3,
-    "bouwjaar": 12.6,
-    "km": 12.8,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
   {
@@ -1226,42 +1222,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_b05dd461-efc4-4422-87c1-5faaa3c31810",
-   "bron": "AutoScout24",
-   "merk": "Chevrolet",
-   "model": "Volt",
-   "titel": "Chevrolet Volt Hybride 1.4 LTZ Hybrid Benzine/Elektriciteit",
-   "prijs": 7599,
-   "km": 161200,
-   "jaar": 2013,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Raamsdonksveer ",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/chevrolet-volt-hybride-1-4-ltz-hybrid-benzine-elektriciteit-elektro-benzine-cat_ma19mo19180-b05dd461-efc4-4422-87c1-5faaa3c31810",
-   "foto": "",
-   "soort": "Plug-in hybride",
-   "gewicht": 1715,
-   "mrb": 95,
-   "verzekering": 35,
-   "brandstofkosten": 97,
-   "totale_kosten": 227,
-   "bereik_zomer": 55,
-   "bereik_winter": 40,
-   "score": 59.3,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 18.0,
-    "bouwjaar": 5.4,
-    "km": 6.0,
-    "kosten": 3.6
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "Aandrijving zeer betrouwbaar, accu houdt goed stand",
-   "let_op": [],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2445102890",
    "bron": "Marktplaats",
    "merk": "Nissan",
@@ -1449,7 +1409,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453795534",
@@ -1566,7 +1526,7 @@
    "toelichting": "Aandrijving zeer betrouwbaar, accu houdt goed stand",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_366bbb1a-e4ef-4d0b-985a-4e5382a2fce6",
@@ -1606,7 +1566,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2455048483",
@@ -1642,7 +1602,7 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_389ccdbc-714f-44ae-a43f-ee45407e539a",
@@ -1831,7 +1791,7 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-10-18",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_8ebe5628-d45a-4672-ad37-79bf399d8bdf",
@@ -2176,6 +2136,44 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2445763763",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI Phev 150KW GTE 5D 2015 Zwart",
+   "prijs": 7899,
+   "km": 247000,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Veendam",
+   "verkoper": "mk",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2445763763-volkswagen-golf-1-4-tsi-phev-150kw-gte-5d-2015-zwart",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a1ccfecc-8b7b-4989-bde9-29fb1ff12635?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 33,
+   "brandstofkosten": 95,
+   "totale_kosten": 205,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 56.0,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 0.2,
+    "kosten": 4.8
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-18",
+   "nieuw": false
+  },
+  {
    "id": "mp_m2450010385",
    "bron": "Marktplaats",
    "merk": "Nissan",
@@ -2338,19 +2336,60 @@
    "nieuw": false
   },
   {
-   "id": "as24_139bc9eb-2746-40eb-a590-b0d428dee1f1",
+   "id": "mp_m2447737069",
+   "bron": "Marktplaats",
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan Leaf Base 24 kWh (bj 2012, automaat)",
+   "prijs": 3999,
+   "km": 44068,
+   "jaar": 2012,
+   "brandstof": "Elektrisch",
+   "plaats": "Geesteren",
+   "verkoper": "GM Automotive",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2447737069-nissan-leaf-base-24-kwh-bj-2012-automaat",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6fb5b1a2-ac61-4b7b-82ba-dd21f7c06912?rule=ecg_mp_eps$_84.jpg",
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 28,
+   "brandstofkosten": 46,
+   "totale_kosten": 121,
+   "accu_kwh": 22,
+   "soh_schatting": 73,
+   "bereik_zomer": 95,
+   "bereik_winter": 70,
+   "score": 53.7,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 2.7,
+    "bouwjaar": 3.6,
+    "km": 14.0,
+    "kosten": 8.9
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "let_op": [
+    "Klein winterbereik (± 70 km)",
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "as24_eb860be2-d694-495d-9c45-1ae67d892e56",
    "bron": "AutoScout24",
    "merk": "Renault",
    "model": "ZOE",
-   "titel": "Renault ZOE ZOE Q210 Zen QC koopaccu 41 kWh 200 km actieradius",
-   "prijs": 5750,
-   "km": 152000,
+   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh GARANTIE/KOOPACCU SOH",
+   "prijs": 5950,
+   "km": 87231,
    "jaar": 2013,
    "brandstof": "Elektrisch",
-   "plaats": "Sittard-Geleen",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-zoe-q210-zen-qc-koopaccu-41-kwh-200-km-actieradius-elektrisch-wit-cat_ma60mo20228-139bc9eb-2746-40eb-a590-b0d428dee1f1",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/139bc9eb-2746-40eb-a590-b0d428dee1f1_82436579-dc69-4afb-8bca-4dbdc3489ac6.jpg/480x360.webp",
+   "plaats": "Krimpen A/D Ijssel",
+   "verkoper": "Autobedrijf de Pee",
+   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-garantie-koopaccu-soh-elektrisch-zwart-cat_ma60mo20228-eb860be2-d694-495d-9c45-1ae67d892e56",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/eb860be2-d694-495d-9c45-1ae67d892e56_9e215535-d854-4b21-9432-69974d99d577.jpg/480x360.webp",
    "soort": "Elektrisch",
    "gewicht": 1450,
    "mrb": 47,
@@ -2361,12 +2400,12 @@
    "soh_schatting": 84,
    "bereik_zomer": 110,
    "bereik_winter": 85,
-   "score": 48.3,
+   "score": 52.7,
    "punten": {
     "betrouwbaarheid": 22.8,
     "bereik": 4.7,
     "bouwjaar": 5.4,
-    "km": 6.7,
+    "km": 11.1,
     "kosten": 8.8
    },
    "betrouwbaarheid": 6.5,
@@ -2375,7 +2414,7 @@
     "Vraag accurapport (SoH)",
     "Koopaccu"
    ],
-   "eerst_gezien": "2026-10-17",
+   "eerst_gezien": "2026-10-15",
    "nieuw": false
   }
  ]
