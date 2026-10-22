@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.5.0 — 22-10-2026
+
+- **Ondergrens prijs van € 1.500 naar € 1.200**, voor elk soort auto (besluit Durk).
+- **Benzine en gewone hybride mogen ook tot 260.000 km** en vanaf € 1.200, gelijk aan elektrisch (besluit Durk). De enige strengere eis die blijft, is bouwjaar 2015 of nieuwer. De uitleg op de site is aangepast: niet meer "strengere eisen", maar één strengere eis, met de waarschuwing dat distributieriem, koppeling en uitlaat bij een hoge stand dure posten zijn die een elektrische auto niet heeft.
+- **Meer aanbod bekeken**: 2.102 advertenties in plaats van 1.297, waarvan er 940 door de filters komen (was 377). Op de site staan er 66: 25 benzine (de limiet per soort), 21 plug-in, 19 elektrisch en 1 gewone hybride. De benzinelijst is nu Yaris (12), Fabia (9), Ibiza (2), Mazda 3, i20 (2), met standen tot 243.000 km.
+
 ## 1.4.1 — 22-10-2026
 
 - **Criteria staan nu op de site** (wens Durk). Uitklapbaar blok bovenaan met alle harde eisen: prijs € 1.500–€ 8.000, lengte minstens 3.934 mm, elektrisch en plug-in vanaf 2010 met hoogstens 260.000 km, benzine en gewone hybride vanaf 2015 met hoogstens 150.000 km en minstens € 3.000, geen diesel of LPG, alleen Nederland, alleen modellen van de toelatingslijst, en hoogstens 25 auto's per soort. De getallen komen uit `data.json` (nieuw veld `criteria`), dus site en `zoek.py` kunnen niet uit elkaar gaan lopen.

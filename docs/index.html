@@ -136,11 +136,11 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Totale kosten excl. onderhoud:</b> gerekend op 12.000 km per jaar, met € 2,10 per liter benzine en € 0,28 per kWh thuis laden. De wegenbelasting komt uit de rekenhulp van de Belastingdienst (2026, provincie Utrecht, op basis van het gewicht van het model). Elektrisch betaalt 70% van het benzinetarief; een plug-in hybride betaalt sinds 2026 het volle tarief. De verzekering is een grove inschatting voor WA + beperkt casco met 10 schadevrije jaren; vraag voor een echte prijs een offerte aan.</p>
   <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, i-MiEV/C-Zero/iOn), alle Smarts, bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra). Ook weg: advertenties waarin de genoemde prijs maar een deel van de prijs is ("betaal nu 50%, de rest later").</p>
   <p><b>Niet kleiner dan de Citroën C3 Pluriel.</b> Annemarie rijdt nu een C3 Pluriel en die is <b>3.934 mm (393 cm) lang</b>. Een auto moet even lang of langer zijn, anders komt hij niet op de site. Daardoor doen deze modellen niet mee, hoe betrouwbaar ze ook zijn: VW up en e-up, Škoda Citigo, Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto, Hyundai i10, Peugeot 108 en Citroën C1. Staat de lengte van een model niet in de lijst, dan valt hij niet af: dan weten we het niet.</p>
-  <p><b>Benzine en hybride: strengere eisen.</b> Een elektrische auto heeft geen distributieriem, koppeling of uitlaat, dus daar mag een hoge kilometerstand. Voor benzine en hybride geldt: bouwjaar <b>2015 of nieuwer</b>, hoogstens <b>150.000 km</b> en minstens <b>€ 3.000</b>. Daaronder koop je meestal het onderhoud van iemand anders. Diesel en LPG doen helemaal niet mee, en advertenties waarin een handelaar meerdere auto's tegelijk aanbiedt ("4X Toyota Aygo") ook niet.</p>
+  <p><b>Benzine en hybride: één strengere eis.</b> Voor benzine en gewone hybride geldt bouwjaar <b>2015 of nieuwer</b>; op prijs en kilometerstand gelden dezelfde grenzen als bij elektrisch (<b>€ 1.200 tot € 8.000</b>, hoogstens <b>260.000 km</b>). Let bij een hoge stand wel op onderhoud: distributieriem, koppeling en uitlaat zijn bij een benzineauto dure posten die een elektrische auto niet heeft. Diesel en LPG doen helemaal niet mee, en advertenties waarin een handelaar meerdere auto's tegelijk aanbiedt ("4X Toyota Aygo") ook niet.</p>
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.4.1</p>
+<p class="klein" id="versie">Versie 1.5.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -290,7 +290,7 @@ function criteriaTonen(c) {
     <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
     <li><b>Lengte</b>: minstens ${lengte} mm (${Math.round(lengte / 10)} cm), de lengte van de Citro&euml;n C3 Pluriel die Annemarie nu rijdt. Kleiner komt er niet in.</li>
     <li><b>Elektrisch en plug-in hybride</b>: bouwjaar ${jaar} of nieuwer, hoogstens ${km.toLocaleString('nl-NL')} km.</li>
-    <li><b>Benzine en gewone hybride</b>: strenger, want die hebben distributieriem, koppeling en uitlaat &mdash; bouwjaar ${bjaar} of nieuwer, hoogstens ${bkm.toLocaleString('nl-NL')} km en minstens ${eur(bprijs)}.</li>
+    <li><b>Benzine en gewone hybride</b>: bouwjaar ${bjaar} of nieuwer${bkm !== km || bprijs !== pmin ? `, hoogstens ${bkm.toLocaleString('nl-NL')} km en minstens ${eur(bprijs)}` : ' (verder dezelfde eisen als hierboven)'}.</li>
     <li><b>Brandstof</b>: elektrisch, plug-in hybride, gewone hybride of benzine. Diesel en LPG doen niet mee.</li>
     <li><b>Land</b>: heel Nederland, geen import of export.</li>
     <li><b>Model</b>: alleen modellen van de toelatingslijst, met een eigen betrouwbaarheidscijfer.</li>

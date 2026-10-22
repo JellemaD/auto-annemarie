@@ -18,21 +18,21 @@ import requests
 from bs4 import BeautifulSoup
 
 MAX_PRIJS = 8000
-MIN_PRIJS = 1500          # lager = lease, huur, bod of nep
+MIN_PRIJS = 1200          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
-# Zonder stekker gelden strengere grenzen: een benzinemotor met 200.000 km staat aan de vooravond
-# van distributieriem, koppeling en ophanging, en onder EUR 3.000 is het een APK-gok. Een
-# elektrische auto heeft die slijtagedelen niet, dus daar blijven de ruime grenzen staan.
+# Zonder stekker geldt alleen nog een strengere eis op bouwjaar (besluit Durk 22-10-2026: de
+# grenzen op prijs en kilometerstand zijn gelijkgetrokken met die van elektrisch, want anders
+# vielen goedkope maar prima auto's buiten beeld).
 MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, maar wel oudere auto's
-MAX_KM_BRANDSTOF = 150000
-MIN_PRIJS_BRANDSTOF = 3000
+MAX_KM_BRANDSTOF = 260000
+MIN_PRIJS_BRANDSTOF = 1200
 # Niet kleiner dan de Citroen C3 Pluriel die Annemarie nu heeft: die is 3.934 mm lang (bron:
 # Citroenet/angurten, 2004-2010). Alles wat korter is, valt af. Staat de lengte van een model niet
 # in LENGTE, dan valt de auto niet af; dan weten we het simpelweg niet.
 MIN_LENGTE = 3934
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.4.1'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.5.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'

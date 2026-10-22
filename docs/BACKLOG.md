@@ -51,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B10 | **Ruimere grenzen** (v1.5.0): ondergrens prijs € 1.200 voor alles; benzine en gewone hybride ook tot 260.000 km en vanaf € 1.200, alleen bouwjaar 2015+ blijft strenger | 22-10-2026 |
 | B9 | **Criteria zichtbaar op de site + bestelbussen eruit** (v1.4.1): uitklapbaar criteria-blok bovenaan, gevuld vanuit `data.json`; Partner, Berlingo, Caddy en andere bestelbussen toegevoegd aan `UITSLUITEN` | 22-10-2026 |
 | B8 | **Minimumlengte: niet kleiner dan de Citroën C3 Pluriel** (v1.4.0): tabel `LENGTE` per model, grens `MIN_LENGTE = 3934` mm. up/e-up, Citigo, Mii, Spring, 500e, Twingo, Aygo, Swift, Picanto, i10, 108 en C1 vallen af (26 van de 63 auto's op de lijst van 18-10); lengte staat op de kaart en als criterium in de uitleg. Ook: "totale kosten" heet nu "totale kosten excl. onderhoud" | 22-10-2026 |
 | B1 | **Accumaat begrensd op wat in dat bouwjaar leverbaar was** (v1.3.2): elke uitvoering in `ACCU` heeft een eerste bouwjaar; een kWh-maat uit de titel geldt alleen als die accu er toen al was, anders de grootste van dat jaar. De ZOE uit 2013 ging van 41 kWh / ± 210 km naar 22 kWh / ± 110 km | 18-10-2026 |
