@@ -1,6 +1,6 @@
 # Backlog — Auto voor Annemarie
 
-*Bijgewerkt 18-10-2026*
+*Bijgewerkt 22-10-2026*
 
 > **Nog door Durk te bevestigen:** de verdeling over Nu / Volgende / Later hieronder is een voorstel.
 > Wat er op "Nu" staat, bepaalt Durk.
@@ -51,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B8 | **Minimumlengte: niet kleiner dan de Citroën C3 Pluriel** (v1.4.0): tabel `LENGTE` per model, grens `MIN_LENGTE = 3934` mm. up/e-up, Citigo, Mii, Spring, 500e, Twingo, Aygo, Swift, Picanto, i10, 108 en C1 vallen af (26 van de 63 auto's op de lijst van 18-10); lengte staat op de kaart en als criterium in de uitleg. Ook: "totale kosten" heet nu "totale kosten excl. onderhoud" | 22-10-2026 |
 | B1 | **Accumaat begrensd op wat in dat bouwjaar leverbaar was** (v1.3.2): elke uitvoering in `ACCU` heeft een eerste bouwjaar; een kWh-maat uit de titel geldt alleen als die accu er toen al was, anders de grootste van dat jaar. De ZOE uit 2013 ging van 41 kWh / ± 210 km naar 22 kWh / ± 110 km | 18-10-2026 |
 | B7 | **Benzine en gewone hybride erbij** (v1.3.0): 22 modellen met een bewezen reputatie, strengere eisen zonder stekker (2015 / 150.000 km / € 3.000), benzine per model opgehaald, "totale kosten bij 12.000 km per jaar" in plaats van vaste lasten, bereik vast 8 van 10, hoogstens 25 auto's per soort op de site | 18-10-2026 |
 | — | **Halve-prijs-advertenties eruit** ("betaal nu 50%, de rest later": € 7.950 in de lijst, € 16.000 in het echt) (v1.2.2) | 18-10-2026 |

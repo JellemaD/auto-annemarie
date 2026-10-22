@@ -89,7 +89,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <body>
 <main>
 <h1>🔌 Auto voor Annemarie</h1>
-<p class="sub">Elektrisch, plug-in, hybride of benzine · max € 8.000 · heel Nederland<br><span id="stand">Laden…</span></p>
+<p class="sub">Elektrisch, plug-in, hybride of benzine · max € 8.000 · minstens zo lang als de C3 Pluriel (393 cm) · heel Nederland<br><span id="stand">Laden…</span></p>
 
 <div class="filters" role="group" aria-label="Filter">
   <button data-f="alle" aria-pressed="true">Alle</button>
@@ -122,16 +122,17 @@ details p,details li{color:var(--muted);font-size:.92rem}
     <li><b>20% bereik</b> in de winter: 50 km telt als 0, 200 km als het maximum</li>
     <li><b>18% bouwjaar</b>: 2010 telt als 0, 2020 en nieuwer als het maximum</li>
     <li><b>17% kilometerstand</b>: 0 km is het maximum, 250.000 km telt als 0</li>
-    <li><b>10% totale kosten per maand</b> (wegenbelasting + verzekering + brandstof of stroom, bij 12.000 km per jaar): € 100 of minder is het maximum, € 300 of meer telt als 0</li>
+    <li><b>10% totale kosten per maand excl. onderhoud</b> (wegenbelasting + verzekering + brandstof of stroom, bij 12.000 km per jaar): € 100 of minder is het maximum, € 300 of meer telt als 0</li>
   </ul>
   <p><b>Bereik:</b> een schatting, geen fabriekscijfer. Het is de accumaat van die uitvoering, maal de accustaat, gedeeld door het werkelijke verbruik van dat model. Noemt de advertentie een SoH, dan wordt die gebruikt; zo niet, dan wordt de accustaat geschat op de leeftijd (de Nissan Leaf en de 27 kWh-Kia Soul hebben geen accukoeling en lopen sneller terug). In de winter gaat er ongeveer een kwart af door kou en verwarming. Bij een plug-in hybride is dit het elektrische bereik: daarna rijdt hij op benzine, dus stranden doe je niet.</p>
-  <p><b>Totale kosten:</b> gerekend op 12.000 km per jaar, met € 2,10 per liter benzine en € 0,28 per kWh thuis laden. De wegenbelasting komt uit de rekenhulp van de Belastingdienst (2026, provincie Utrecht, op basis van het gewicht van het model). Elektrisch betaalt 70% van het benzinetarief; een plug-in hybride betaalt sinds 2026 het volle tarief. De verzekering is een grove inschatting voor WA + beperkt casco met 10 schadevrije jaren; vraag voor een echte prijs een offerte aan.</p>
+  <p><b>Totale kosten excl. onderhoud:</b> gerekend op 12.000 km per jaar, met € 2,10 per liter benzine en € 0,28 per kWh thuis laden. De wegenbelasting komt uit de rekenhulp van de Belastingdienst (2026, provincie Utrecht, op basis van het gewicht van het model). Elektrisch betaalt 70% van het benzinetarief; een plug-in hybride betaalt sinds 2026 het volle tarief. De verzekering is een grove inschatting voor WA + beperkt casco met 10 schadevrije jaren; vraag voor een echte prijs een offerte aan.</p>
   <p>Weggefilterd: brommobielen en microcars (Citroën Ami, Opel Rocks-e, Twizy, i-MiEV/C-Zero/iOn), alle Smarts, bestelbussen, schadeauto's, gewone hybrides zonder stekker en elektrische auto's met een huuraccu (bijv. Renault ZOE "ex accu" — die kost elke maand extra). Ook weg: advertenties waarin de genoemde prijs maar een deel van de prijs is ("betaal nu 50%, de rest later").</p>
+  <p><b>Niet kleiner dan de Citroën C3 Pluriel.</b> Annemarie rijdt nu een C3 Pluriel en die is <b>3.934 mm (393 cm) lang</b>. Een auto moet even lang of langer zijn, anders komt hij niet op de site. Daardoor doen deze modellen niet mee, hoe betrouwbaar ze ook zijn: VW up en e-up, Škoda Citigo, Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto, Hyundai i10, Peugeot 108 en Citroën C1. Staat de lengte van een model niet in de lijst, dan valt hij niet af: dan weten we het niet.</p>
   <p><b>Benzine en hybride: strengere eisen.</b> Een elektrische auto heeft geen distributieriem, koppeling of uitlaat, dus daar mag een hoge kilometerstand. Voor benzine en hybride geldt: bouwjaar <b>2015 of nieuwer</b>, hoogstens <b>150.000 km</b> en minstens <b>€ 3.000</b>. Daaronder koop je meestal het onderhoud van iemand anders. Diesel en LPG doen helemaal niet mee, en advertenties waarin een handelaar meerdere auto's tegelijk aanbiedt ("4X Toyota Aygo") ook niet.</p>
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.3.2</p>
+<p class="klein" id="versie">Versie 1.4.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -155,8 +156,9 @@ function bereikTekst(a) {
 }
 function feiten(a) {
   const kosten = a.totale_kosten ?? a.vaste_lasten;
-  const lasten = kosten ? `<br>Totale kosten <b>± € ${kosten} p/m</b> <span class="klein">bij 12.000 km/jaar</span>` : '';
-  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')} · ${esc(a.bron)}${bereikTekst(a)}${lasten}`;
+  const lasten = kosten ? `<br>Totale kosten excl. onderhoud <b>± € ${kosten} p/m</b> <span class="klein">bij 12.000 km/jaar</span>` : '';
+  const lang = a.lengte ? ` · ${Math.round(a.lengte / 10)} cm lang` : '';
+  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')}${lang} · ${esc(a.bron)}${bereikTekst(a)}${lasten}`;
 }
 const nl = n => n.toLocaleString('nl-NL', {maximumFractionDigits: 1});
 function bereikUitleg(a) {
@@ -182,7 +184,7 @@ function scoreTip(a) {
   rijen += `
     <tr><td>Bouwjaar ${a.jaar}<br><span class="klein">2010 = 0, 2020 of nieuwer = max</span></td><td>${nl(p.bouwjaar)} / 18</td></tr>
     <tr><td>Kilometerstand ${km(a.km)}<br><span class="klein">0 km = max, 250.000 km = 0</span></td><td>${nl(p.km)} / 17</td></tr>`;
-  if (p.kosten !== undefined) rijen += `<tr><td>Totale kosten € ${a.totale_kosten ?? a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}${a.brandstofkosten ? ` + ${a.soort === 'Elektrisch' ? 'stroom' : 'brandstof'} € ${a.brandstofkosten}` : ''}; ≤ € 100 = max, ≥ € 300 = 0</span></td><td>${nl(p.kosten)} / 10</td></tr>`;
+  if (p.kosten !== undefined) rijen += `<tr><td>Totale kosten excl. onderhoud € ${a.totale_kosten ?? a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}${a.brandstofkosten ? ` + ${a.soort === 'Elektrisch' ? 'stroom' : 'brandstof'} € ${a.brandstofkosten}` : ''}; ≤ € 100 = max, ≥ € 300 = 0</span></td><td>${nl(p.kosten)} / 10</td></tr>`;
   if (p.accu) rijen += `<tr><td>Versleten accu (SoH ${a.soh}%)<br><span class="klein">halve punt per % onder 80%</span></td><td>${nl(p.accu)}</td></tr>`;
   if (p.merk) rijen += `<tr><td>Merkvoorkeur</td><td>+${nl(p.merk)}</td></tr>`;
   return `<span class="tip" role="tooltip"><b>Zo is deze score berekend</b>

@@ -1,7 +1,8 @@
 """Auto voor Annemarie: elektrisch of plug-in hybride, max EUR 8.000, Nederland.
 
 Haalt aanbod op van AutoScout24.nl en Marktplaats, filtert microcars, accuhuur,
-schade en gewone (niet-plug-in) hybrides eruit, geeft elke auto een score op
+schade, gewone (niet-plug-in) hybrides en auto's die korter zijn dan een Citroen C3 Pluriel
+(3.934 mm) eruit, geeft elke auto een score op
 betrouwbaarheid model + bouwjaar + kilometerstand en schrijft docs/data.json.
 Draait dagelijks via GitHub Actions (zie .github/workflows/dagelijks.yml).
 """
@@ -26,8 +27,12 @@ MIN_JAAR = 2010
 MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, maar wel oudere auto's
 MAX_KM_BRANDSTOF = 150000
 MIN_PRIJS_BRANDSTOF = 3000
+# Niet kleiner dan de Citroen C3 Pluriel die Annemarie nu heeft: die is 3.934 mm lang (bron:
+# Citroenet/angurten, 2004-2010). Alles wat korter is, valt af. Staat de lengte van een model niet
+# in LENGTE, dan valt de auto niet af; dan weten we het simpelweg niet.
+MIN_LENGTE = 3934
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.3.2'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.4.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -241,6 +246,35 @@ GEWICHT.update({
 })
 GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700, 'Hybride': 1300, 'Benzine': 1200}
 
+# Lengte in mm per model, typische uitvoering (5-deurs hatchback of sedan waar dat de gangbare is).
+# Annemarie wil geen auto die kleiner is dan haar Citroen C3 Pluriel (3.934 mm), dus alles onder
+# MIN_LENGTE valt af. Daardoor doen deze modellen niet meer mee: VW up/e-up, Skoda Citigo,
+# Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto,
+# Hyundai i10, Peugeot 108 en Citroen C1. Ze staan er bewust nog in: zet MIN_LENGTE lager en ze
+# komen terug.
+LENGTE = {
+    'ioniq': 4470, 'niro': 4355, 'kona': 4180, 'e-golf': 4270, 'golf': 4258, 'e-up': 3600,
+    'up': 3540, 'citigo': 3597, 'mii': 3557, 'soul': 4140, 'ampera-e': 4166, 'leaf': 4445,
+    'i3': 3999, 'zoe': 4084, 'spring': 3734, '500e': 3571, 'e-208': 4055, 'b 250e': 4359,
+    'focus': 4358, 'model s': 4979, 'twingo': 3615, 'mx-30': 4395, 'prius': 4460,
+    'outlander': 4695, 'volt': 4498, 'ampera': 4498, 'c-max': 4380, 'optima': 4855,
+    'sonata': 4855, 'passat': 4767, 'a3': 4313, '225xe': 4342, '330e': 4633, '2-serie': 4342,
+    '3-serie': 4633, 'x5': 4886, 'countryman': 4299, 'v60': 4628, 'xc90': 4950, 'v90': 4936,
+    's90': 4963, 'c 350': 4686, 'cayenne': 4918, 'panamera': 5049, '3008': 4447, '508': 4750,
+}
+LENGTE.update({
+    'aygo': 3465, 'yaris': 3945, 'auris': 4330, 'jazz': 3955, 'civic': 4300, 'ct': 4350,
+    'swift': 3850, 'picanto': 3595, 'rio': 4045, 'ceed': 4310, "cee'd": 4310, 'i10': 3665,
+    'i20': 4035, 'i30': 4300, '3': 4580, '2': 4060, 'fabia': 3992, 'polo': 3972, 'ibiza': 4061,
+    '108': 3475, 'c1': 3466,
+})
+
+
+def te_klein(model):
+    """Waar als we van dit model weten dat het korter is dan de C3 Pluriel."""
+    lengte = LENGTE.get(model)
+    return lengte is not None and lengte < MIN_LENGTE
+
 # Wegenbelasting per kwartaal, provincie Utrecht, 2026, uit de rekenhulp van de Belastingdienst
 # (opgehaald 12-10-2026). Klasse vanaf gewicht -> (benzine, diesel). Elektrisch = 70% van benzine
 # (2026-2028); plug-in hybride betaalt sinds 2026 het volle tarief van zijn brandstof.
@@ -364,7 +398,8 @@ def autoscout24_benzine():
     """Benzine per model. De hele benzinemarkt tot EUR 8.000 is te groot om te doorzoeken, maar
     alleen de modellen uit ZONDER_STEKKER komen er toch doorheen. Dus vragen we er meteen om."""
     uit = []
-    for pad in sorted({pad for pad, _ in ZONDER_STEKKER.values() if pad}):
+    for pad in sorted({pad for m, (pad, _) in ZONDER_STEKKER.items()
+                       if pad and not te_klein(m)}):
         basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={MAX_PRIJS}'
                  f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={MIN_JAAR_BRANDSTOF}'
                  f'&kmto={MAX_KM_BRANDSTOF}&damaged_listing=exclude&sort=age&desc=1')
@@ -448,6 +483,8 @@ def marktplaats_benzine():
     """Benzine per model, om dezelfde reden als bij AutoScout24."""
     uit = []
     for merk, model in BENZINE_PAREN:
+        if te_klein(model):
+            continue
         zoekterm = requests.utils.quote(f'{merk} {model}')
         basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
                  f'&query={zoekterm}'
@@ -605,6 +642,9 @@ def beoordeel(a):
     if not model:
         return None
     betrouwbaar, soort, uitleg, gewicht, modelwoord = model
+    if te_klein(modelwoord):
+        return None  # kleiner dan de Citroen C3 Pluriel van Annemarie
+    a['lengte'] = LENGTE.get(modelwoord)
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     if elektrisch:
         a['soort'] = 'Elektrisch'
@@ -777,6 +817,7 @@ def main():
     DATA.write_text(json.dumps({
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'versie': VERSIE,
+        'min_lengte': MIN_LENGTE,
         'aantal_bekeken': len(ruw),
         'aantal': passen,
         'autos': autos,
