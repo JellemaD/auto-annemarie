@@ -81,6 +81,9 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .merkknoppen #merkklaar{background:var(--accent);border-color:var(--accent);color:#fff}
 .filters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:24px}
+.criteria{margin:0 0 16px}
+.criteria ul{margin:8px 0 0;padding-left:20px}
+.criteria li{margin:3px 0}
 summary{font-weight:600;cursor:pointer}
 details p,details li{color:var(--muted);font-size:.92rem}
 .leeg{color:var(--muted)}
@@ -90,6 +93,11 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <main>
 <h1>🔌 Auto voor Annemarie</h1>
 <p class="sub">Elektrisch, plug-in, hybride of benzine · max € 8.000 · minstens zo lang als de C3 Pluriel (393 cm) · heel Nederland<br><span id="stand">Laden…</span></p>
+
+<details id="criteria" class="criteria">
+  <summary>Welke criteria gelden?</summary>
+  <div id="criteriatekst"></div>
+</details>
 
 <div class="filters" role="group" aria-label="Filter">
   <button data-f="alle" aria-pressed="true">Alle</button>
@@ -132,7 +140,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.4.0</p>
+<p class="klein" id="versie">Versie 1.4.1</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -271,6 +279,26 @@ document.querySelectorAll('.filters button[data-f]').forEach(b => b.onclick = ()
   soortFilter = b.dataset.f;
   toon();
 });
+function criteriaTonen(c) {
+  const el = document.getElementById('criteriatekst');
+  if (!el) return;
+  const jaar = c.jaar_min ?? 2010, km = c.km_max ?? 260000, pmin = c.prijs_min ?? 1500;
+  const pmax = c.prijs_max ?? 8000, bjaar = c.jaar_min_brandstof ?? 2015;
+  const bkm = c.km_max_brandstof ?? 150000, bprijs = c.prijs_min_brandstof ?? 3000;
+  const lengte = c.lengte_min ?? 3934, per = c.per_soort ?? 25;
+  el.innerHTML = `<ul>
+    <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
+    <li><b>Lengte</b>: minstens ${lengte} mm (${Math.round(lengte / 10)} cm), de lengte van de Citro&euml;n C3 Pluriel die Annemarie nu rijdt. Kleiner komt er niet in.</li>
+    <li><b>Elektrisch en plug-in hybride</b>: bouwjaar ${jaar} of nieuwer, hoogstens ${km.toLocaleString('nl-NL')} km.</li>
+    <li><b>Benzine en gewone hybride</b>: strenger, want die hebben distributieriem, koppeling en uitlaat &mdash; bouwjaar ${bjaar} of nieuwer, hoogstens ${bkm.toLocaleString('nl-NL')} km en minstens ${eur(bprijs)}.</li>
+    <li><b>Brandstof</b>: elektrisch, plug-in hybride, gewone hybride of benzine. Diesel en LPG doen niet mee.</li>
+    <li><b>Land</b>: heel Nederland, geen import of export.</li>
+    <li><b>Model</b>: alleen modellen van de toelatingslijst, met een eigen betrouwbaarheidscijfer.</li>
+    <li><b>Staat</b>: geen schade, geen opknapper, geen huuraccu, geen brommobiel, microcar of bestelbus, en geen advertentie met meerdere auto's of een halve prijs.</li>
+    <li><b>Op de site</b>: hoogstens ${per} auto's per soort, de hoogste scores eerst.</li>
+  </ul>`;
+}
+criteriaTonen({});   // meteen zichtbaar; de echte waarden komen uit data.json
 fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   autos = d.autos;
   const [dag, tijd] = d.bijgewerkt.split(' ');
@@ -279,6 +307,7 @@ fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   document.getElementById('stand').textContent =
     `Bijgewerkt ${datum} om ${tijd} · ${d.aantal_bekeken} advertenties bekeken, ${d.aantal} geschikt` + (nieuw ? ` · ${nieuw} nieuw` : '');
   if (d.versie) document.getElementById('versie').textContent = `Versie ${d.versie}`;
+  criteriaTonen(d.criteria || {});
   try {
     const bekend = new Set(autos.map(merkVan));
     merken = new Set(JSON.parse(localStorage.getItem('merken') || '[]').filter(m => bekend.has(m)));

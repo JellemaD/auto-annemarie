@@ -32,7 +32,7 @@ MIN_PRIJS_BRANDSTOF = 3000
 # in LENGTE, dan valt de auto niet af; dan weten we het simpelweg niet.
 MIN_LENGTE = 3934
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.4.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.4.1'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -53,6 +53,9 @@ UITSLUITEN = [
     'streetscooter', 'c-zero', 'czero', 'ion', 'i-miev', 'imiev', 'fortwo', 'for two',
     'kangoo', 'ducato', 'e-nv200', 'env200', 'bestel', 'express', 'maxi', 'cargo', 'vito',
     'e-ducato', 'master', 'transit', 'golfkar', 'quad', 'renault fluence',
+    # Bestelbussen die er nog doorheen kwamen (een Peugeot Partner Electric haalde de lijst).
+    'partner', 'berlingo', 'caddy', 'combo', 'doblo', 'nv200', 'proace', 'vivaro',
+    'transporter', 'boxer', 'jumper', 'jumpy', 'expert', 'scudo', 'bipper', 'nemo',
 ]
 # Accu niet bij de koop inbegrepen (maandelijkse huur) of overige ellende.
 ELLENDE = [
@@ -818,6 +821,14 @@ def main():
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'versie': VERSIE,
         'min_lengte': MIN_LENGTE,
+        # Harde eisen, zodat de site ze kan tonen zonder dat ze uit elkaar gaan lopen.
+        'criteria': {
+            'prijs_min': MIN_PRIJS, 'prijs_max': MAX_PRIJS,
+            'jaar_min': MIN_JAAR, 'km_max': MAX_KM,
+            'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
+            'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
+            'lengte_min': MIN_LENGTE, 'per_soort': PER_SOORT,
+        },
         'aantal_bekeken': len(ruw),
         'aantal': passen,
         'autos': autos,

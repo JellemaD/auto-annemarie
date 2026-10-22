@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.4.1 — 22-10-2026
+
+- **Criteria staan nu op de site** (wens Durk). Uitklapbaar blok bovenaan met alle harde eisen: prijs € 1.500–€ 8.000, lengte minstens 3.934 mm, elektrisch en plug-in vanaf 2010 met hoogstens 260.000 km, benzine en gewone hybride vanaf 2015 met hoogstens 150.000 km en minstens € 3.000, geen diesel of LPG, alleen Nederland, alleen modellen van de toelatingslijst, en hoogstens 25 auto's per soort. De getallen komen uit `data.json` (nieuw veld `criteria`), dus site en `zoek.py` kunnen niet uit elkaar gaan lopen.
+- **Bestelbussen die er nog doorheen kwamen eruit**: een Peugeot Partner Electric stond gewoon in de lijst. `UITSLUITEN` kent nu ook Partner, Berlingo, Caddy, Combo, Doblo, NV200, Proace, Vivaro, Transporter, Boxer, Jumper, Jumpy, Expert, Scudo, Bipper en Nemo.
+- **Lijst opnieuw opgehaald** met de nieuwe regels: 1.297 advertenties bekeken, 63 op de site (24 benzine, 21 plug-in, 19 elektrisch, één bestelbus eruit). De benzinelijst is nu Yaris, Fabia, Polo, i20, Rio, Mazda 3 en Ibiza in plaats van alleen Aygo's, 108's en C1's: die vulden met 24 stuks de hele limiet van 25 per soort, waardoor grotere auto's er niet eens in kwamen.
+
 ## 1.4.0 — 22-10-2026
 
 - **Niet kleiner dan de Citroën C3 Pluriel** (wens Durk). De C3 Pluriel die Annemarie nu rijdt is 3.934 mm (393 cm) lang; alles wat korter is, komt niet meer op de site. Nieuwe tabel `LENGTE` met de lengte per model en grens `MIN_LENGTE = 3934` in `zoek.py`. Daardoor vallen af: VW up en e-up, Škoda Citigo, Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto, Hyundai i10, Peugeot 108 en Citroën C1. Op de lijst van 18-10 ging het om 26 van de 63 auto's (12 Aygo's, 4 Peugeot 108, 3 C1, 3 Fiat 500e, Twingo, e-up, i10, Picanto); 37 blijven over. Modellen die het niet halen worden ook niet meer opgehaald bij AutoScout24 en Marktplaats, dus de dagelijkse ronde is korter. Staat de lengte van een model niet in de tabel, dan valt de auto niet af: dan weten we het niet.
