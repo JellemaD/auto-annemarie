@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-10-22 09:56",
+ "bijgewerkt": "2026-10-23 12:27",
  "versie": "1.5.0",
  "min_lengte": 3934,
  "criteria": {
@@ -13,8 +13,8 @@
   "lengte_min": 3934,
   "per_soort": 25
  },
- "aantal_bekeken": 2102,
- "aantal": 940,
+ "aantal_bekeken": 2120,
+ "aantal": 942,
  "autos": [
   {
    "id": "as24_3e60aa27-e008-46c6-bdd3-300a82225405",
@@ -199,7 +199,7 @@
    "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2390849058",
@@ -273,22 +273,22 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
-   "id": "as24_0a0dbe92-6609-40ab-9feb-665197663bc2",
+   "id": "as24_113fcc44-dcaa-4b97-9867-e65d94ce1853",
    "bron": "AutoScout24",
    "merk": "Skoda",
    "model": "Fabia",
-   "titel": "Skoda Fabia Combi 1.0 TSI NIEUW MODEL / NAP / TOP DEAL ! ! !",
+   "titel": "Skoda Fabia 1.0 TSI Drive | Navi | Cruise | PDC |",
    "prijs": 7950,
-   "km": 165473,
-   "jaar": 2020,
+   "km": 85612,
+   "jaar": 2017,
    "brandstof": "Benzine",
-   "plaats": "Alphen Aan Den Rijn",
-   "verkoper": "R.B. Autoplaza B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-combi-1-0-tsi-nieuw-model-nap-top-deal-benzine-grijs-cat_ma65mo15878-0a0dbe92-6609-40ab-9feb-665197663bc2",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/0a0dbe92-6609-40ab-9feb-665197663bc2_db5c0d55-895f-40ef-9568-4208d2b1a8d4.jpg/480x360.webp",
+   "plaats": "Den Ham (Ov)",
+   "verkoper": "Bestdeal Automotive B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-1-0-tsi-drive-navi-cruise-pdc-benzine-wit-cat_ma65mo15878-113fcc44-dcaa-4b97-9867-e65d94ce1853",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/113fcc44-dcaa-4b97-9867-e65d94ce1853_0d20237a-2986-4559-b6a5-6bb76d48a6cb.jpg/480x360.webp",
    "lengte": 3992,
    "soort": "Benzine",
    "gewicht": 1050,
@@ -302,14 +302,14 @@
    "punten": {
     "betrouwbaarheid": 26.2,
     "bereik": 16.0,
-    "bouwjaar": 18.0,
-    "km": 5.7,
+    "bouwjaar": 12.6,
+    "km": 11.2,
     "kosten": 6.5
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
    "let_op": [],
-   "eerst_gezien": "2026-10-22",
+   "eerst_gezien": "2026-10-23",
    "nieuw": true
   },
   {
@@ -384,7 +384,7 @@
    "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449105028",
@@ -421,7 +421,7 @@
    "toelichting": "Zelfde techniek als de VW Polo",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2446177952",
@@ -547,7 +547,7 @@
    "plaats": "Lemmer",
    "verkoper": "A6.nl",
    "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-combi-1-0-tsi-ambition-95pk-trekhaak-navigatie-car-benzine-wit-cat_ma65mo15878-71173931-71d2-4ffb-8e83-ed952a5b0ed6",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/71173931-71d2-4ffb-8e83-ed952a5b0ed6_c29c3180-40dd-447c-b35c-fe8074838054.jpg/480x360.webp",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/71173931-71d2-4ffb-8e83-ed952a5b0ed6_8c79596b-16ef-4901-ad87-74619be2bb4c.jpg/480x360.webp",
    "lengte": 3992,
    "soort": "Benzine",
    "gewicht": 1050,
@@ -569,7 +569,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_6729e26e-8a5f-4387-ac83-c2fc6714b4d9",
@@ -606,7 +606,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_db4192ed-b2ab-4426-baa1-7579f5f4545f",
@@ -643,7 +643,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453016134",
@@ -680,7 +680,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2454625690",
@@ -717,7 +717,7 @@
    "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b4342ad1-1832-4384-9dae-5e93a2aa4cd1",
@@ -756,7 +756,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456312824",
@@ -793,7 +793,7 @@
    "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_47d36aa2-a2c5-492a-90e5-d7ff3168e14b",
@@ -832,7 +832,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_2ff38bb8-d7fc-4303-9f73-8f2b5c4bb7d9",
@@ -869,6 +869,45 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-22",
+   "nieuw": false
+  },
+  {
+   "id": "as24_83fafe23-09d1-4d74-a83d-41d1d33a6432",
+   "bron": "AutoScout24",
+   "merk": "Skoda",
+   "model": "Fabia",
+   "titel": "Skoda Fabia Combi 1.0 TSI Business Edition/1STE EIG/APP-CONNEC",
+   "prijs": 7999,
+   "km": 182351,
+   "jaar": 2021,
+   "brandstof": "Benzine",
+   "plaats": "Waddinxveen",
+   "verkoper": "Groene Boom Auto's",
+   "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-combi-1-0-tsi-business-edition-1ste-eig-app-connec-benzine-wit-cat_ma65mo15878-83fafe23-09d1-4d74-a83d-41d1d33a6432",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/83fafe23-09d1-4d74-a83d-41d1d33a6432_e206369b-eeae-4eb9-8a41-2ee08aafcaaa.jpg/480x360.webp",
+   "lengte": 3992,
+   "soort": "Benzine",
+   "gewicht": 1050,
+   "mrb": 31,
+   "verzekering": 28,
+   "brandstofkosten": 111,
+   "totale_kosten": 170,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 71.4,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 4.6,
+    "kosten": 6.5
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-23",
    "nieuw": true
   },
   {
@@ -908,45 +947,47 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
-   "id": "as24_29f38047-ba51-4987-83c8-164690d65058",
+   "id": "as24_3750dc45-78fd-4fb1-a071-c7ab0b1fc4d1",
    "bron": "AutoScout24",
-   "merk": "Skoda",
-   "model": "Fabia",
-   "titel": "Skoda Fabia Combi 1.0 TSI Business Edition | CarPlay | Trekhaa",
-   "prijs": 7885,
-   "km": 184118,
-   "jaar": 2021,
-   "brandstof": "Benzine",
-   "plaats": "Nieuwleusen",
-   "verkoper": "van der Kolk auto's",
-   "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-combi-1-0-tsi-business-edition-carplay-trekhaa-benzine-zwart-cat_ma65mo15878-29f38047-ba51-4987-83c8-164690d65058",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/29f38047-ba51-4987-83c8-164690d65058_46df6994-8224-4566-9b0f-2ae434a91d60.jpg/480x360.webp",
-   "lengte": 3992,
-   "soort": "Benzine",
-   "gewicht": 1050,
-   "mrb": 31,
-   "verzekering": 27,
-   "brandstofkosten": 111,
-   "totale_kosten": 169,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 71.3,
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan Leaf N-CONNECTA 40 kWh HV ACCU PROBLEEM | 360 CAMERA |",
+   "prijs": 6500,
+   "km": 149480,
+   "jaar": 2018,
+   "brandstof": "Elektrisch",
+   "plaats": "Ochten",
+   "verkoper": "Autobedrijf Hazet Ochten B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/nissan-leaf-n-connecta-40-kwh-hv-accu-probleem-360-camera-elektrisch-wit-cat_ma52mo19733-3750dc45-78fd-4fb1-a071-c7ab0b1fc4d1",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/3750dc45-78fd-4fb1-a071-c7ab0b1fc4d1_585a0722-a28e-45f8-9d7b-bc6ffa39ded7.jpg/480x360.webp",
+   "lengte": 4445,
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 31,
+   "brandstofkosten": 46,
+   "totale_kosten": 124,
+   "accu_kwh": 39,
+   "soh_schatting": 85,
+   "bereik_zomer": 200,
+   "bereik_winter": 150,
+   "score": 67.9,
    "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 18.0,
-    "km": 4.5,
-    "kosten": 6.5
+    "betrouwbaarheid": 24.5,
+    "bereik": 13.3,
+    "bouwjaar": 14.4,
+    "km": 6.8,
+    "kosten": 8.8
    },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
-    "Hoge kilometerstand"
+    "Vraag accurapport (SoH)"
    ],
-   "eerst_gezien": "2026-10-22",
+   "eerst_gezien": "2026-10-23",
    "nieuw": true
   },
   {
@@ -986,7 +1027,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_f161eb5a-0bce-4fe0-ac7e-bdc1332e2771",
@@ -1227,6 +1268,43 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2456842426",
+   "bron": "Marktplaats",
+   "merk": "Opel",
+   "model": "Ampera",
+   "titel": "Opel Ampera 1.4 50+km Elektrisch Zeer Zuinig Auto Leer Stoel",
+   "prijs": 6745,
+   "km": 155709,
+   "jaar": 2013,
+   "brandstof": "Hybride",
+   "plaats": "Berkel en Rodenrijs",
+   "verkoper": "Groen Automotive B.V.",
+   "url": "https://www.marktplaats.nl/v/auto-s/opel/m2456842426-opel-ampera-1-4-50-km-elektrisch-zeer-zuinig-auto-leer-stoel",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/4117b6e3-eec5-4eb1-9435-12d8a1939bbd?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4498,
+   "soort": "Plug-in hybride",
+   "gewicht": 1715,
+   "mrb": 95,
+   "verzekering": 34,
+   "brandstofkosten": 97,
+   "totale_kosten": 226,
+   "bereik_zomer": 55,
+   "bereik_winter": 40,
+   "score": 59.8,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 18.0,
+    "bouwjaar": 5.4,
+    "km": 6.4,
+    "kosten": 3.7
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "let_op": [],
+   "eerst_gezien": "2026-10-23",
+   "nieuw": true
+  },
+  {
    "id": "mp_m2445854086",
    "bron": "Marktplaats",
    "merk": "Opel",
@@ -1264,7 +1342,7 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2445102890",
+   "id": "mp_m2456800351",
    "bron": "Marktplaats",
    "merk": "Nissan",
    "model": "Leaf",
@@ -1275,8 +1353,8 @@
    "brandstof": "Elektrisch",
    "plaats": "Maurik",
    "verkoper": "Autobedrijf A&H",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2445102890-nissan-leaf-visia-24-kwh-lage-km-stand",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1981463e-f2bb-44e0-830d-dc7931567c37?rule=ecg_mp_eps$_84.jpg",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2456800351-nissan-leaf-visia-24-kwh-lage-km-stand",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a73ed8e0-1bcd-4488-abac-5c586ee69dfb?rule=ecg_mp_eps$_84.jpg",
    "lengte": 4445,
    "soort": "Elektrisch",
    "gewicht": 1450,
@@ -1301,8 +1379,47 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
+   "eerst_gezien": "2026-10-23",
+   "nieuw": true
+  },
+  {
+   "id": "mp_m2456260802",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI GTE Zwart 2016 | Carplay | Acc | Nap",
+   "prijs": 7950,
+   "km": 227609,
+   "jaar": 2016,
+   "brandstof": "Hybride",
+   "plaats": "De Meern",
+   "verkoper": "Autobedrijf 't Hoefijzer",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2456260802-volkswagen-golf-1-4-tsi-gte-zwart-2016-carplay-acc-nap",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e8d205ab-87f8-4130-98c8-daf2d0a8bc78?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4258,
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 33,
+   "brandstofkosten": 95,
+   "totale_kosten": 205,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 59.1,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 10.8,
+    "km": 1.5,
+    "kosten": 4.8
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-23",
+   "nieuw": true
   },
   {
    "id": "as24_7c43aad5-5833-4519-aa95-adf00ee9b8f4",
@@ -1466,14 +1583,14 @@
    "bron": "Marktplaats",
    "merk": "Volkswagen",
    "model": "Golf",
-   "titel": "Volkswagen Golf 1.4 TSI GTE XENON/NAVI/CLIMA/PDC",
+   "titel": "Volkswagen Golf 1.4 TSI GTE HYBRIDE/BENZIN EURO 6",
    "prijs": 6950,
    "km": 215870,
    "jaar": 2015,
    "brandstof": "Hybride",
    "plaats": "Beverwijk",
    "verkoper": "Autobedrijf HUS",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2455876488-volkswagen-golf-1-4-tsi-gte-xenon-navi-clima-pdc",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2455876488-volkswagen-golf-1-4-tsi-gte-hybride-benzin-euro-6",
    "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7b2fdc5e-90d6-4c90-946b-45648b3903af?rule=ecg_mp_eps$_84.jpg",
    "lengte": 4258,
    "soort": "Plug-in hybride",
@@ -1539,7 +1656,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451342379",
@@ -2249,45 +2366,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2448211210",
-   "bron": "Marktplaats",
-   "merk": "Ford",
-   "model": "C-Max",
-   "titel": "Ford C-MAX Energi PHEV | Premium | Pano | Camera",
-   "prijs": 7995,
-   "km": 184952,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Hoogeveen",
-   "verkoper": "Hamstra & Herbers",
-   "url": "https://www.marktplaats.nl/v/auto-s/ford/m2448211210-ford-c-max-energi-phev-premium-pano-camera",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2688e626-3aae-431b-8f54-65e793dc3b6f?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4380,
-   "soort": "Plug-in hybride",
-   "gewicht": 1720,
-   "mrb": 95,
-   "verzekering": 36,
-   "brandstofkosten": 97,
-   "totale_kosten": 228,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 55.5,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 14.0,
-    "bouwjaar": 9.0,
-    "km": 4.4,
-    "kosten": 3.6
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "as24_8929fe5d-d90b-482a-beb1-f55b11ff4ef1",
    "bron": "AutoScout24",
    "merk": "Renault",
@@ -2327,7 +2405,7 @@
     "Koopaccu"
    ],
    "eerst_gezien": "2026-10-22",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2450461502",
@@ -2414,6 +2492,51 @@
    "nieuw": false
   },
   {
+   "id": "as24_8ee03e79-5f87-4996-ad01-aad43fd50e39",
+   "bron": "AutoScout24",
+   "merk": "Renault",
+   "model": "ZOE",
+   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh | SOH 78% | Koopaccu |",
+   "prijs": 6400,
+   "km": 102999,
+   "jaar": 2015,
+   "brandstof": "Elektrisch",
+   "plaats": "Rijnsaterwoude",
+   "verkoper": "EV Car Company",
+   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-soh-78-koopaccu-elektrisch-wit-cat_ma60mo20228-8ee03e79-5f87-4996-ad01-aad43fd50e39",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/8ee03e79-5f87-4996-ad01-aad43fd50e39_0baadf91-216c-48d5-bf77-3cdf621abf0c.jpg/480x360.webp",
+   "lengte": 4084,
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 31,
+   "brandstofkosten": 46,
+   "totale_kosten": 124,
+   "soh": 78,
+   "accu_kwh": 22,
+   "soh_schatting": null,
+   "bereik_zomer": 105,
+   "bereik_winter": 75,
+   "score": 52.9,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 3.3,
+    "bouwjaar": 9.0,
+    "km": 10.0,
+    "kosten": 8.8,
+    "accu": -1.0
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
+   "let_op": [
+    "Accu versleten (SoH 78%)",
+    "Klein winterbereik (± 75 km)",
+    "Koopaccu"
+   ],
+   "eerst_gezien": "2026-10-23",
+   "nieuw": true
+  },
+  {
    "id": "as24_411fa533-56cb-40b6-b75b-ec171e03785d",
    "bron": "AutoScout24",
    "merk": "Nissan",
@@ -2450,135 +2573,6 @@
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
    "let_op": [
     "Klein winterbereik (± 75 km)",
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "as24_63cb527d-667a-43ff-a91f-65766ce945e3",
-   "bron": "AutoScout24",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE R240 Intens 22 kWh GARANTIE/KOOPACCU SOH 67%/CLIMA",
-   "prijs": 7450,
-   "km": 43975,
-   "jaar": 2016,
-   "brandstof": "Elektrisch",
-   "plaats": "Krimpen A/D Ijssel",
-   "verkoper": "Autobedrijf de Pee",
-   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-r240-intens-22-kwh-garantie-koopaccu-soh-67-clima-elektrisch-zwart-cat_ma60mo20228-63cb527d-667a-43ff-a91f-65766ce945e3",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/63cb527d-667a-43ff-a91f-65766ce945e3_5e75c0a2-8a28-4e71-ae8f-a6dfe3182a22.jpg/480x360.webp",
-   "lengte": 4084,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 32,
-   "brandstofkosten": 46,
-   "totale_kosten": 125,
-   "soh": 67,
-   "accu_kwh": 22,
-   "soh_schatting": null,
-   "bereik_zomer": 90,
-   "bereik_winter": 65,
-   "score": 51.8,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 2.0,
-    "bouwjaar": 10.8,
-    "km": 14.0,
-    "kosten": 8.8,
-    "accu": -6.5
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Accu versleten (SoH 67%)",
-    "Klein winterbereik (± 65 km)",
-    "Koopaccu"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "as24_21cbfb99-d95a-4e58-8226-49eff8b6ea33",
-   "bron": "AutoScout24",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh GARANTIE/KOOPACCU/CRUI",
-   "prijs": 5750,
-   "km": 105526,
-   "jaar": 2013,
-   "brandstof": "Elektrisch",
-   "plaats": "Krimpen A/D Ijssel",
-   "verkoper": "Autobedrijf de Pee",
-   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-garantie-koopaccu-crui-elektrisch-zwart-cat_ma60mo20228-21cbfb99-d95a-4e58-8226-49eff8b6ea33",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/21cbfb99-d95a-4e58-8226-49eff8b6ea33_b180de25-6d17-4894-8a7b-30dc0de5cd45.jpg/480x360.webp",
-   "lengte": 4084,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 30,
-   "brandstofkosten": 46,
-   "totale_kosten": 123,
-   "accu_kwh": 22,
-   "soh_schatting": 84,
-   "bereik_zomer": 110,
-   "bereik_winter": 85,
-   "score": 51.5,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 4.7,
-    "bouwjaar": 5.4,
-    "km": 9.8,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Koopaccu"
-   ],
-   "eerst_gezien": "2026-10-22",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2449015673",
-   "bron": "Marktplaats",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan LEAF Base 24 kWh",
-   "prijs": 5499,
-   "km": 56601,
-   "jaar": 2011,
-   "brandstof": "Elektrisch",
-   "plaats": "Lelystad",
-   "verkoper": "V&O CARS BV",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2449015673-nissan-leaf-base-24-kwh",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/81a01379-cdfc-4254-860e-0b3ca10a9429?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4445,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 30,
-   "brandstofkosten": 46,
-   "totale_kosten": 123,
-   "accu_kwh": 22,
-   "soh_schatting": 72,
-   "bereik_zomer": 95,
-   "bereik_winter": 70,
-   "score": 51.0,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 2.7,
-    "bouwjaar": 1.8,
-    "km": 13.2,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
-   "let_op": [
-    "Klein winterbereik (± 70 km)",
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-12",
