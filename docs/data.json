@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-10-24 11:45",
+ "bijgewerkt": "2026-10-25 11:05",
  "versie": "1.5.0",
  "min_lengte": 3934,
  "criteria": {
@@ -13,8 +13,8 @@
   "lengte_min": 3934,
   "per_soort": 25
  },
- "aantal_bekeken": 2136,
- "aantal": 957,
+ "aantal_bekeken": 2141,
+ "aantal": 965,
  "autos": [
   {
    "id": "as24_537eef24-fabd-4426-8b7f-446881ce0505",
@@ -22,7 +22,7 @@
    "merk": "Mazda",
    "model": "3",
    "titel": "Mazda 3 5",
-   "prijs": 5300,
+   "prijs": 5200,
    "km": 315,
    "jaar": 2015,
    "brandstof": "Benzine",
@@ -200,6 +200,43 @@
    "let_op": [],
    "eerst_gezien": "2026-10-18",
    "nieuw": false
+  },
+  {
+   "id": "mp_m2407786533",
+   "bron": "Marktplaats",
+   "merk": "Seat",
+   "model": "Ibiza",
+   "titel": "Seat Ibiza 1.0 MPI 75pk 2018 Zwart met nieuwe APK",
+   "prijs": 7950,
+   "km": 72153,
+   "jaar": 2018,
+   "brandstof": "Benzine",
+   "plaats": "Westerhoven",
+   "verkoper": "A3Cars",
+   "url": "https://www.marktplaats.nl/v/auto-s/seat/m2407786533-seat-ibiza-1-0-mpi-75pk-2018-zwart-met-nieuwe-apk",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ac586399-11b5-4542-8907-8bad02b06d84?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4061,
+   "soort": "Benzine",
+   "gewicht": 1100,
+   "mrb": 40,
+   "verzekering": 28,
+   "brandstofkosten": 116,
+   "totale_kosten": 184,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 72.8,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 16.0,
+    "bouwjaar": 14.4,
+    "km": 12.1,
+    "kosten": 5.8
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Zelfde techniek als de VW Polo",
+   "let_op": [],
+   "eerst_gezien": "2026-10-25",
+   "nieuw": true
   },
   {
    "id": "mp_m2455430277",
@@ -458,7 +495,7 @@
    "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
    "let_op": [],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2448522391",
@@ -796,45 +833,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_47d36aa2-a2c5-492a-90e5-d7ff3168e14b",
-   "bron": "AutoScout24",
-   "merk": "Skoda",
-   "model": "Fabia",
-   "titel": "Skoda Fabia Combi 1.0 TSI Ambition BJ2021 Led | Pdc | App-Conn",
-   "prijs": 6950,
-   "km": 181804,
-   "jaar": 2021,
-   "brandstof": "Benzine",
-   "plaats": "Damwoude",
-   "verkoper": "Minnema auto's B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/skoda-fabia-combi-1-0-tsi-ambition-bj2021-led-pdc-app-conn-benzine-blauw-cat_ma65mo15878-47d36aa2-a2c5-492a-90e5-d7ff3168e14b",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/47d36aa2-a2c5-492a-90e5-d7ff3168e14b_6ee4c628-f811-4ab6-bd10-ec9c78b1eafa.jpg/480x360.webp",
-   "lengte": 3992,
-   "soort": "Benzine",
-   "gewicht": 1050,
-   "mrb": 31,
-   "verzekering": 27,
-   "brandstofkosten": 111,
-   "totale_kosten": 169,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 71.4,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 18.0,
-    "km": 4.6,
-    "kosten": 6.5
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-22",
-   "nieuw": false
-  },
-  {
    "id": "as24_2ff38bb8-d7fc-4303-9f73-8f2b5c4bb7d9",
    "bron": "AutoScout24",
    "merk": "Skoda",
@@ -991,6 +989,45 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2457352982",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Yaris",
+   "titel": "Toyota Yaris 1.5 Hybrid Business Plus | Camera | Carplay | N",
+   "prijs": 7950,
+   "km": 250713,
+   "jaar": 2016,
+   "brandstof": "Hybride",
+   "plaats": "Heemskerk",
+   "verkoper": "Van Gulik Auto's",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2457352982-toyota-yaris-1-5-hybrid-business-plus-camera-carplay-n",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/30abe479-ecaf-49b2-9459-ae0321e0da65?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 3945,
+   "soort": "Hybride",
+   "gewicht": 1050,
+   "mrb": 31,
+   "verzekering": 28,
+   "brandstofkosten": 88,
+   "totale_kosten": 147,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 66.0,
+   "punten": {
+    "betrouwbaarheid": 31.5,
+    "bereik": 16.0,
+    "bouwjaar": 10.8,
+    "km": 0.0,
+    "kosten": 7.7
+   },
+   "betrouwbaarheid": 9.0,
+   "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-25",
+   "nieuw": true
+  },
+  {
    "id": "mp_m2448823029",
    "bron": "Marktplaats",
    "merk": "Renault",
@@ -1030,7 +1067,7 @@
     "Koopaccu"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_e2edf870-3bc2-43be-af90-df5121b9edcb",
@@ -1310,41 +1347,45 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2445854086",
+   "id": "mp_m2457437671",
    "bron": "Marktplaats",
-   "merk": "Opel",
-   "model": "Ampera",
-   "titel": "Opel Ampera 1.4 New Apk Navi full map Cruise Pdc Comforseats",
-   "prijs": 7444,
-   "km": 154934,
-   "jaar": 2013,
-   "brandstof": "Hybride",
-   "plaats": "Drunen",
-   "verkoper": "Ultimate Auto's B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/opel/m2445854086-opel-ampera-1-4-new-apk-navi-full-map-cruise-pdc-comforseats",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5146da4b-5f6b-4427-9395-ca7ca8dcd5c1?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4498,
-   "soort": "Plug-in hybride",
-   "gewicht": 1715,
-   "mrb": 95,
-   "verzekering": 35,
-   "brandstofkosten": 97,
-   "totale_kosten": 227,
-   "bereik_zomer": 55,
-   "bereik_winter": 40,
-   "score": 59.8,
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan LEAF Visia Automaat, Climate, 5deurs, lage km",
+   "prijs": 6950,
+   "km": 82722,
+   "jaar": 2016,
+   "brandstof": "Elektrisch",
+   "plaats": "Breda",
+   "verkoper": "Click2drive",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2457437671-nissan-leaf-visia-automaat-climate-5deurs-lage-km",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9981fa9c-1167-421b-bf84-6ac3ac4c992c?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4445,
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 31,
+   "brandstofkosten": 46,
+   "totale_kosten": 124,
+   "accu_kwh": 22,
+   "soh_schatting": 81,
+   "bereik_zomer": 110,
+   "bereik_winter": 80,
+   "score": 59.5,
    "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 18.0,
-    "bouwjaar": 5.4,
-    "km": 6.5,
-    "kosten": 3.6
+    "betrouwbaarheid": 24.5,
+    "bereik": 4.0,
+    "bouwjaar": 10.8,
+    "km": 11.4,
+    "kosten": 8.8
    },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "Zelfde techniek als Chevrolet Volt",
-   "let_op": [],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-25",
+   "nieuw": true
   },
   {
    "id": "mp_m2456800351",
@@ -1584,47 +1625,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_b46f3aa4-5689-411d-bb6c-00e36713d070",
-   "bron": "AutoScout24",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan Leaf 30kWh TEKNA/ TREKHAAK/ LEER/ 360° CAMERA/ BOSE AUD",
-   "prijs": 7950,
-   "km": 179124,
-   "jaar": 2017,
-   "brandstof": "Elektrisch",
-   "plaats": "Utrecht",
-   "verkoper": "Kwinkelenberg Automotive B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/nissan-leaf-30kwh-tekna-trekhaak-leer-360-camera-bose-aud-elektrisch-wit-cat_ma52mo19733-b46f3aa4-5689-411d-bb6c-00e36713d070",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/b46f3aa4-5689-411d-bb6c-00e36713d070_2bdcae1f-c53f-41c4-8110-430ba7ba152c.jpg/480x360.webp",
-   "lengte": 4445,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 32,
-   "brandstofkosten": 46,
-   "totale_kosten": 125,
-   "accu_kwh": 28,
-   "soh_schatting": 83,
-   "bereik_zomer": 140,
-   "bereik_winter": 105,
-   "score": 58.0,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 7.3,
-    "bouwjaar": 12.6,
-    "km": 4.8,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-22",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2451342379",
    "bron": "Marktplaats",
    "merk": "Volkswagen",
@@ -1859,7 +1859,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_4322812b-d21f-44ad-b6fa-62b887ef239c",
@@ -1899,19 +1899,19 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2457243657",
-   "bron": "Marktplaats",
+   "id": "as24_3cf023b8-5b41-4a2a-9ae4-bd8ff9ded907",
+   "bron": "AutoScout24",
    "merk": "Renault",
    "model": "ZOE",
-   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh Koopaccu - SOH 88% C",
+   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh Koopaccu - SOH 88% Cam",
    "prijs": 6450,
    "km": 80880,
    "jaar": 2015,
    "brandstof": "Elektrisch",
    "plaats": "Zaandam",
-   "verkoper": "AutohuysJager B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2457243657-renault-zoe-q210-zen-quickcharge-22-kwh-koopaccu-soh-88-c",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/575cc678-db1f-4070-93ca-1fece6710e05?rule=ecg_mp_eps$_84.jpg",
+   "verkoper": "Autohuys Jager B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-koopaccu-soh-88-cam-elektrisch-blauw-cat_ma60mo20228-3cf023b8-5b41-4a2a-9ae4-bd8ff9ded907",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/3cf023b8-5b41-4a2a-9ae4-bd8ff9ded907_982921e0-2a10-4563-83ae-eb853664d080.jpg/480x360.webp",
    "lengte": 4084,
    "soort": "Elektrisch",
    "gewicht": 1450,
@@ -1937,7 +1937,7 @@
    "let_op": [
     "Koopaccu"
    ],
-   "eerst_gezien": "2026-10-24",
+   "eerst_gezien": "2026-10-25",
    "nieuw": true
   },
   {
@@ -2174,7 +2174,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451342040",
@@ -2374,7 +2374,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456968660",
@@ -2416,7 +2416,7 @@
     "Koopaccu"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2448211210",
@@ -2458,45 +2458,42 @@
    "nieuw": false
   },
   {
-   "id": "as24_8929fe5d-d90b-482a-beb1-f55b11ff4ef1",
-   "bron": "AutoScout24",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE Q210 Zen Quickcharge 22 kWh | SOH 81% | Koopaccu |",
-   "prijs": 6900,
-   "km": 65120,
-   "jaar": 2014,
-   "brandstof": "Elektrisch",
-   "plaats": "Rijnsaterwoude",
-   "verkoper": "EV Car Company",
-   "url": "https://www.autoscout24.nl/aanbod/renault-zoe-q210-zen-quickcharge-22-kwh-soh-81-koopaccu-elektrisch-wit-cat_ma60mo20228-8929fe5d-d90b-482a-beb1-f55b11ff4ef1",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/8929fe5d-d90b-482a-beb1-f55b11ff4ef1_30149c9d-c282-466b-a77c-0b046f78bb61.jpg/480x360.webp",
-   "lengte": 4084,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 31,
-   "brandstofkosten": 46,
-   "totale_kosten": 124,
-   "soh": 81,
-   "accu_kwh": 22,
-   "soh_schatting": null,
-   "bereik_zomer": 110,
-   "bereik_winter": 80,
-   "score": 55.3,
+   "id": "mp_m2451180607",
+   "bron": "Marktplaats",
+   "merk": "Ford",
+   "model": "C-Max",
+   "titel": "Ford C-Max 2.0 Plug-in Hybrid Titanium Plus Camera Leder Air",
+   "prijs": 7999,
+   "km": 185984,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Koedijk",
+   "verkoper": "Zine Automotive",
+   "url": "https://www.marktplaats.nl/v/auto-s/ford/m2451180607-ford-c-max-2-0-plug-in-hybrid-titanium-plus-camera-leder-air",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/30df5021-7813-4580-8870-d8749e43d53b?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4380,
+   "soort": "Plug-in hybride",
+   "gewicht": 1720,
+   "mrb": 95,
+   "verzekering": 36,
+   "brandstofkosten": 97,
+   "totale_kosten": 228,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 55.5,
    "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 4.0,
-    "bouwjaar": 7.2,
-    "km": 12.6,
-    "kosten": 8.8
+    "betrouwbaarheid": 24.5,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 4.4,
+    "kosten": 3.6
    },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [
-    "Koopaccu"
+    "Hoge kilometerstand"
    ],
-   "eerst_gezien": "2026-10-22",
+   "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
   {
@@ -2538,7 +2535,88 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-24",
-   "nieuw": true
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2449898633",
+   "bron": "Marktplaats",
+   "merk": "Ford",
+   "model": "C-Max",
+   "titel": "Ford C-MAX 2.0 Hybrid Titanium Plus ( Plug-In ) Aut. *PANO |",
+   "prijs": 6945,
+   "km": 190924,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Teuge",
+   "verkoper": "Haverkamp Auto's B.V.",
+   "url": "https://www.marktplaats.nl/v/auto-s/ford/m2449898633-ford-c-max-2-0-hybrid-titanium-plus-plug-in-aut-pano",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/89c3b61b-bed6-4769-8786-79e346b09bc6?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4380,
+   "soort": "Plug-in hybride",
+   "gewicht": 1720,
+   "mrb": 95,
+   "verzekering": 35,
+   "brandstofkosten": 97,
+   "totale_kosten": 227,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 55.2,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 4.0,
+    "kosten": 3.6
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2450461502",
+   "bron": "Marktplaats",
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan Leaf 2012 Grijs",
+   "prijs": 3900,
+   "km": 42414,
+   "jaar": 2012,
+   "brandstof": "Elektrisch",
+   "plaats": "Deventer",
+   "verkoper": "Mühlenkord Automotive",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2450461502-nissan-leaf-2012-grijs",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/45f44e4e-34bb-482e-b383-b6d0b1cb46fe?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4445,
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 28,
+   "brandstofkosten": 46,
+   "totale_kosten": 121,
+   "accu_kwh": 22,
+   "soh_schatting": 73,
+   "bereik_zomer": 95,
+   "bereik_winter": 70,
+   "score": 53.8,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 2.7,
+    "bouwjaar": 3.6,
+    "km": 14.1,
+    "kosten": 8.9
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "let_op": [
+    "Klein winterbereik (± 70 km)",
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
   }
  ]
 }
