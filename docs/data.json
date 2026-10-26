@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-10-25 11:05",
+ "bijgewerkt": "2026-10-26 12:29",
  "versie": "1.5.0",
  "min_lengte": 3934,
  "criteria": {
@@ -13,8 +13,8 @@
   "lengte_min": 3934,
   "per_soort": 25
  },
- "aantal_bekeken": 2141,
- "aantal": 965,
+ "aantal_bekeken": 2121,
+ "aantal": 963,
  "autos": [
   {
    "id": "as24_537eef24-fabd-4426-8b7f-446881ce0505",
@@ -236,7 +236,7 @@
    "toelichting": "Zelfde techniek als de VW Polo",
    "let_op": [],
    "eerst_gezien": "2026-10-25",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2455430277",
@@ -526,43 +526,6 @@
     "bereik": 16.0,
     "bouwjaar": 10.8,
     "km": 7.0,
-    "kosten": 6.5
-   },
-   "betrouwbaarheid": 9.0,
-   "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
-   "let_op": [],
-   "eerst_gezien": "2026-10-18",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2448252171",
-   "bron": "Marktplaats",
-   "merk": "Toyota",
-   "model": "Yaris",
-   "titel": "Toyota Yaris 1.0 VVT-i Aspiration AIRCO MULTIMEDIA APK NAP",
-   "prijs": 7499,
-   "km": 148272,
-   "jaar": 2016,
-   "brandstof": "Benzine",
-   "plaats": "'s-Gravenhage",
-   "verkoper": "Neologistics",
-   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2448252171-toyota-yaris-1-0-vvt-i-aspiration-airco-multimedia-apk-nap",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/75cacda3-e772-47d3-a939-8e575643e27e?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 3945,
-   "soort": "Benzine",
-   "gewicht": 1050,
-   "mrb": 31,
-   "verzekering": 27,
-   "brandstofkosten": 111,
-   "totale_kosten": 169,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 71.8,
-   "punten": {
-    "betrouwbaarheid": 31.5,
-    "bereik": 16.0,
-    "bouwjaar": 10.8,
-    "km": 6.9,
     "kosten": 6.5
    },
    "betrouwbaarheid": 9.0,
@@ -948,6 +911,43 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2458067480",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Yaris",
+   "titel": "Toyota Yaris Hybrid 1.5 | 2015 | 163 000 km",
+   "prijs": 7950,
+   "km": 163000,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Grou",
+   "verkoper": "Marco",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2458067480-toyota-yaris-hybrid-1-5-2015-163-000-km",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/244b1acd-b5a9-4dd0-b282-3d9d582612ed?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 3945,
+   "soort": "Hybride",
+   "gewicht": 1050,
+   "mrb": 31,
+   "verzekering": 28,
+   "brandstofkosten": 88,
+   "totale_kosten": 147,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 70.1,
+   "punten": {
+    "betrouwbaarheid": 31.5,
+    "bereik": 16.0,
+    "bouwjaar": 9.0,
+    "km": 5.9,
+    "kosten": 7.7
+   },
+   "betrouwbaarheid": 9.0,
+   "toelichting": "Toyota-betrouwbaarheid; de hybride is nog zuiniger",
+   "let_op": [],
+   "eerst_gezien": "2026-10-26",
+   "nieuw": true
+  },
+  {
    "id": "as24_3750dc45-78fd-4fb1-a071-c7ab0b1fc4d1",
    "bron": "AutoScout24",
    "merk": "Nissan",
@@ -1025,7 +1025,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-25",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2448823029",
@@ -1385,7 +1385,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-25",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456800351",
@@ -1703,6 +1703,45 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2457436336",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI Phev 150KW GTE 5D 2015 Wit",
+   "prijs": 7999,
+   "km": 220000,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Noordwijk",
+   "verkoper": "Ayoub El haddouchi",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2457436336-volkswagen-golf-1-4-tsi-phev-150kw-gte-5d-2015-wit",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1fb1fdf5-a7e9-4efc-ae40-75420e76bb3d?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4258,
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 33,
+   "brandstofkosten": 95,
+   "totale_kosten": 205,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 57.8,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 2.0,
+    "kosten": 4.8
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-26",
+   "nieuw": true
+  },
+  {
    "id": "as24_e70ed355-dd00-4169-82a4-604b79b81120",
    "bron": "AutoScout24",
    "merk": "Toyota",
@@ -1938,7 +1977,7 @@
     "Koopaccu"
    ],
    "eerst_gezien": "2026-10-25",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451519634",
@@ -2051,48 +2090,6 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2453816761",
-   "bron": "Marktplaats",
-   "merk": "Volkswagen",
-   "model": "Golf",
-   "titel": "Volkswagen Golf E-golf 5D 2015 Grijs",
-   "prijs": 6850,
-   "km": 186229,
-   "jaar": 2015,
-   "brandstof": "Elektrisch",
-   "plaats": "Barendrecht",
-   "verkoper": "AH",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2453816761-volkswagen-golf-e-golf-5d-2015-grijs",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0f27d09f-c28d-4052-927f-83b74367300d?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4270,
-   "soort": "Elektrisch",
-   "gewicht": 1510,
-   "mrb": 54,
-   "verzekering": 32,
-   "brandstofkosten": 43,
-   "totale_kosten": 129,
-   "accu_kwh": 21,
-   "soh_schatting": 87,
-   "bereik_zomer": 120,
-   "bereik_winter": 85,
-   "score": 56.3,
-   "punten": {
-    "betrouwbaarheid": 29.8,
-    "bereik": 4.7,
-    "bouwjaar": 9.0,
-    "km": 4.3,
-    "kosten": 8.6
-   },
-   "betrouwbaarheid": 8.5,
-   "toelichting": "Degelijk, geen bekende accuproblemen",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-15",
    "nieuw": false
   },
   {
@@ -2377,48 +2374,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2456968660",
-   "bron": "Marktplaats",
-   "merk": "Renault",
-   "model": "ZOE",
-   "titel": "Renault ZOE E 2014 Grijs, 41Kwh accu eigendom",
-   "prijs": 7250,
-   "km": 71272,
-   "jaar": 2014,
-   "brandstof": "Elektrisch",
-   "plaats": "Laren",
-   "verkoper": "Bert",
-   "url": "https://www.marktplaats.nl/v/auto-s/renault/m2456968660-renault-zoe-e-2014-grijs-41kwh-accu-eigendom",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f87de0d2-4932-4cd2-b555-402ca113fbc8?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4084,
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 32,
-   "brandstofkosten": 46,
-   "totale_kosten": 125,
-   "accu_kwh": 22,
-   "soh_schatting": 86,
-   "bereik_zomer": 115,
-   "bereik_winter": 85,
-   "score": 55.5,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 4.7,
-    "bouwjaar": 7.2,
-    "km": 12.2,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Alleen met koopaccu tonen; check laadsysteem",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Koopaccu"
-   ],
-   "eerst_gezien": "2026-10-24",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2448211210",
    "bron": "Marktplaats",
    "merk": "Ford",
@@ -2467,7 +2422,7 @@
    "km": 185984,
    "jaar": 2015,
    "brandstof": "Hybride",
-   "plaats": "Koedijk",
+   "plaats": "Heerhugowaard",
    "verkoper": "Zine Automotive",
    "url": "https://www.marktplaats.nl/v/auto-s/ford/m2451180607-ford-c-max-2-0-plug-in-hybrid-titanium-plus-camera-leder-air",
    "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/30df5021-7813-4580-8870-d8749e43d53b?rule=ecg_mp_eps$_84.jpg",
@@ -2538,51 +2493,12 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2449898633",
-   "bron": "Marktplaats",
-   "merk": "Ford",
-   "model": "C-Max",
-   "titel": "Ford C-MAX 2.0 Hybrid Titanium Plus ( Plug-In ) Aut. *PANO |",
-   "prijs": 6945,
-   "km": 190924,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Teuge",
-   "verkoper": "Haverkamp Auto's B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/ford/m2449898633-ford-c-max-2-0-hybrid-titanium-plus-plug-in-aut-pano",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/89c3b61b-bed6-4769-8786-79e346b09bc6?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4380,
-   "soort": "Plug-in hybride",
-   "gewicht": 1720,
-   "mrb": 95,
-   "verzekering": 35,
-   "brandstofkosten": 97,
-   "totale_kosten": 227,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 55.2,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 14.0,
-    "bouwjaar": 9.0,
-    "km": 4.0,
-    "kosten": 3.6
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-12",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2450461502",
    "bron": "Marktplaats",
    "merk": "Nissan",
    "model": "Leaf",
    "titel": "Nissan Leaf 2012 Grijs",
-   "prijs": 3900,
+   "prijs": 3899,
    "km": 42414,
    "jaar": 2012,
    "brandstof": "Elektrisch",
@@ -2607,6 +2523,48 @@
     "bereik": 2.7,
     "bouwjaar": 3.6,
     "km": 14.1,
+    "kosten": 8.9
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "let_op": [
+    "Klein winterbereik (± 70 km)",
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-12",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2447737069",
+   "bron": "Marktplaats",
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan Leaf Base 24 kWh (bj 2012, automaat)",
+   "prijs": 3999,
+   "km": 44068,
+   "jaar": 2012,
+   "brandstof": "Elektrisch",
+   "plaats": "Geesteren",
+   "verkoper": "GM Automotive",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2447737069-nissan-leaf-base-24-kwh-bj-2012-automaat",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6fb5b1a2-ac61-4b7b-82ba-dd21f7c06912?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4445,
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 28,
+   "brandstofkosten": 46,
+   "totale_kosten": 121,
+   "accu_kwh": 22,
+   "soh_schatting": 73,
+   "bereik_zomer": 95,
+   "bereik_winter": 70,
+   "score": 53.7,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 2.7,
+    "bouwjaar": 3.6,
+    "km": 14.0,
     "kosten": 8.9
    },
    "betrouwbaarheid": 7.0,
