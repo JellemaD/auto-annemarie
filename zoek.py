@@ -1,8 +1,8 @@
-"""Auto voor Annemarie: elektrisch, plug-in, hybride, benzine of waterstof, max EUR 8.000, NL.
+"""Auto voor Annemarie: elektrisch, plug-in, hybride, benzine of waterstof, max EUR 10.000, NL.
 
 Haalt aanbod op van AutoScout24.nl en Marktplaats, filtert microcars, accuhuur,
-schade, gewone (niet-plug-in) hybrides en auto's die korter zijn dan een Citroen C3 Pluriel
-(3.934 mm) eruit, geeft elke auto een score op
+schade, gewone (niet-plug-in) hybrides en auto's die kleiner zijn dan de compacte
+middenklasse (segment C) eruit, geeft elke auto een score op
 betrouwbaarheid model + bouwjaar + kilometerstand en schrijft docs/data.json.
 Draait dagelijks via GitHub Actions (zie .github/workflows/dagelijks.yml).
 """
@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 
-MAX_PRIJS = 8000
+MAX_PRIJS = 10000
 MIN_PRIJS = 1200          # lager = lease, huur, bod of nep
 MAX_KM = 260000
 MIN_JAAR = 2010
@@ -27,12 +27,16 @@ MIN_JAAR = 2010
 MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, maar wel oudere auto's
 MAX_KM_BRANDSTOF = 260000
 MIN_PRIJS_BRANDSTOF = 1200
-# Niet kleiner dan de Citroen C3 Pluriel die Annemarie nu heeft: die is 3.934 mm lang (bron:
-# Citroenet/angurten, 2004-2010). Alles wat korter is, valt af. Staat de lengte van een model niet
-# in LENGTE, dan valt de auto niet af; dan weten we het simpelweg niet.
-MIN_LENGTE = 3934
+# Minstens de compacte middenklasse: segment C (de Golf-klasse) of groter. Besluit Durk
+# 27-10-2026, in de plaats van de oude eis "niet korter dan de Citroen C3 Pluriel". Segment A
+# (stadsauto) en B (klein) vallen af; C, D, E, F en de SUV's die daarbij horen mogen wel. Staat
+# een model niet in SEGMENT, dan valt de auto niet af; dan weten we het simpelweg niet.
+SEGMENT_MIN = 'C'
+SEGMENT_ORDE = ['A', 'B', 'C', 'D', 'E', 'F']
+SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
+                'D': 'Middenklasse', 'E': 'Hogere middenklasse', 'F': 'Topklasse'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.6.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.7.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -269,11 +273,7 @@ GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700, 'Hybride': 1300
                     'Waterstof': 1850}
 
 # Lengte in mm per model, typische uitvoering (5-deurs hatchback of sedan waar dat de gangbare is).
-# Annemarie wil geen auto die kleiner is dan haar Citroen C3 Pluriel (3.934 mm), dus alles onder
-# MIN_LENGTE valt af. Daardoor doen deze modellen niet meer mee: VW up/e-up, Skoda Citigo,
-# Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto,
-# Hyundai i10, Peugeot 108 en Citroen C1. Ze staan er bewust nog in: zet MIN_LENGTE lager en ze
-# komen terug.
+# Alleen informatie op de site: er wordt niet meer op lengte gefilterd, dat doet SEGMENT.
 LENGTE = {
     'ioniq': 4470, 'niro': 4355, 'kona': 4180, 'e-golf': 4270, 'golf': 4258, 'e-up': 3600,
     'up': 3540, 'citigo': 3597, 'mii': 3557, 'soul': 4140, 'ampera-e': 4166, 'leaf': 4445,
@@ -292,11 +292,36 @@ LENGTE.update({
 })
 LENGTE.update({'mirai': 4890, 'nexo': 4670, 'ix35': 4410})   # waterstof
 
+# Segment per model volgens de Europese indeling (A stadsauto, B klein, C compacte middenklasse,
+# D middenklasse, E hogere middenklasse, F topklasse). SUV's en MPV's krijgen het segment van de
+# auto waarop ze gebouwd zijn: de Mini Countryman en de Peugeot 3008 zijn C, de Mitsubishi
+# Outlander D, de BMW X5 en de Volvo XC90 E. Grensgevallen die bewust B zijn (en dus afvallen):
+# BMW i3 (3.999 mm), Renault ZOE, Hyundai Kona, Kia Soul, Opel Ampera-e, Peugeot e-208, Toyota
+# Yaris, Honda Jazz, VW Polo en Skoda Fabia. Bewust C: Mercedes B-klasse (C-MPV) en Mazda MX-30.
+SEGMENT = {
+    'ioniq': 'C', 'niro': 'C', 'kona': 'B', 'e-golf': 'C', 'golf': 'C', 'e-up': 'A', 'up': 'A',
+    'citigo': 'A', 'mii': 'A', 'soul': 'B', 'ampera-e': 'B', 'leaf': 'C', 'i3': 'B', 'zoe': 'B',
+    'spring': 'A', '500e': 'A', 'e-208': 'B', 'b 250e': 'C', 'focus': 'C', 'model s': 'F',
+    'twingo': 'A', 'mx-30': 'C', 'prius': 'C', 'outlander': 'D', 'volt': 'C', 'ampera': 'C',
+    'c-max': 'C', 'optima': 'D', 'sonata': 'D', 'passat': 'D', 'a3': 'C', '225xe': 'C',
+    '330e': 'D', '2-serie': 'C', '3-serie': 'D', 'x5': 'E', 'countryman': 'C', 'v60': 'D',
+    'xc90': 'E', 'v90': 'E', 's90': 'E', 'c 350': 'D', 'cayenne': 'E', 'panamera': 'F',
+    '3008': 'C', '508': 'D',
+}
+SEGMENT.update({
+    'aygo': 'A', 'yaris': 'B', 'auris': 'C', 'jazz': 'B', 'civic': 'C', 'ct': 'C',
+    'swift': 'B', 'picanto': 'A', 'rio': 'B', 'ceed': 'C', "cee'd": 'C', 'i10': 'A',
+    'i20': 'B', 'i30': 'C', '3': 'C', '2': 'B', 'fabia': 'B', 'polo': 'B', 'ibiza': 'B',
+    '108': 'A', 'c1': 'A',
+})
+SEGMENT.update({'mirai': 'E', 'nexo': 'D', 'ix35': 'C'})   # waterstof
 
-def te_klein(model):
-    """Waar als we van dit model weten dat het korter is dan de C3 Pluriel."""
-    lengte = LENGTE.get(model)
-    return lengte is not None and lengte < MIN_LENGTE
+
+def onder_segment(model):
+    """Waar als we van dit model weten dat het onder segment C zit (stadsauto of klein)."""
+    segment = SEGMENT.get(model)
+    return (segment is not None
+            and SEGMENT_ORDE.index(segment) < SEGMENT_ORDE.index(SEGMENT_MIN))
 
 # Wegenbelasting per kwartaal, provincie Utrecht, 2026, uit de rekenhulp van de Belastingdienst
 # (opgehaald 12-10-2026). Klasse vanaf gewicht -> (benzine, diesel). Elektrisch = 70% van benzine
@@ -420,11 +445,11 @@ def autoscout24():
 
 
 def autoscout24_benzine():
-    """Benzine per model. De hele benzinemarkt tot EUR 8.000 is te groot om te doorzoeken, maar
+    """Benzine per model. De hele benzinemarkt tot EUR 10.000 is te groot om te doorzoeken, maar
     alleen de modellen uit ZONDER_STEKKER komen er toch doorheen. Dus vragen we er meteen om."""
     uit = []
     for pad in sorted({pad for m, (pad, _) in ZONDER_STEKKER.items()
-                       if pad and not te_klein(m)}):
+                       if pad and not onder_segment(m)}):
         basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={MAX_PRIJS}'
                  f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={MIN_JAAR_BRANDSTOF}'
                  f'&kmto={MAX_KM_BRANDSTOF}&damaged_listing=exclude&sort=age&desc=1')
@@ -537,7 +562,7 @@ def marktplaats_benzine():
     """Benzine per model, om dezelfde reden als bij AutoScout24."""
     uit = []
     for merk, model in BENZINE_PAREN:
-        if te_klein(model):
+        if onder_segment(model):
             continue
         zoekterm = requests.utils.quote(f'{merk} {model}')
         basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
@@ -703,9 +728,10 @@ def beoordeel(a):
     if not model:
         return None
     betrouwbaar, soort, uitleg, gewicht, modelwoord = model
-    if te_klein(modelwoord):
-        return None  # kleiner dan de Citroen C3 Pluriel van Annemarie
+    if onder_segment(modelwoord):
+        return None  # kleiner dan de compacte middenklasse (segment C)
     a['lengte'] = LENGTE.get(modelwoord)
+    a['segment'] = SEGMENT.get(modelwoord)
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     waterstof = 'waterstof' in norm(a['brandstof']) or bool(WATERSTOF_WOORDEN.search(titel))
     if soort == 'H2':
@@ -890,14 +916,15 @@ def main():
     DATA.write_text(json.dumps({
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'versie': VERSIE,
-        'min_lengte': MIN_LENGTE,
+        'segment_min': SEGMENT_MIN,
         # Harde eisen, zodat de site ze kan tonen zonder dat ze uit elkaar gaan lopen.
         'criteria': {
             'prijs_min': MIN_PRIJS, 'prijs_max': MAX_PRIJS,
             'jaar_min': MIN_JAAR, 'km_max': MAX_KM,
             'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
-            'lengte_min': MIN_LENGTE, 'per_soort': PER_SOORT,
+            'segment_min': SEGMENT_MIN, 'segment_naam': SEGMENT_NAAM[SEGMENT_MIN],
+            'per_soort': PER_SOORT,
             'h2_prijs': H2_PRIJS, 'h2_stations': H2_STATIONS,
         },
         'aantal_bekeken': len(ruw),

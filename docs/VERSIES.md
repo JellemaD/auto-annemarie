@@ -2,6 +2,13 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.7.0 — 27-10-2026
+
+- **Grootte-eis vervangen: minstens segment C** (besluit Durk). De eis "niet korter dan de Citroën C3 Pluriel (3.934 mm)" is eruit; in de plaats komt het Europese segment: **C – compacte middenklasse** (de Golf-klasse) of groter. Segment D, E en F mogen ook, A (stadsauto) en B (klein) niet. Nieuwe tabel `SEGMENT` per model en de functie `onder_segment()`; `MIN_LENGTE` en `te_klein()` zijn weg. Een SUV krijgt het segment van de auto waarop hij gebouwd is (Countryman en 3008 C, Outlander D, X5 en XC90 E). Grensgevallen die bewust B zijn en dus afvallen: Yaris, Jazz, Polo, Fabia, Ibiza, i20, Rio, Mazda 2, ZOE, i3 (3.999 mm), Kona, Soul, Ampera-e en e-208. Bewust C: Mercedes B-klasse (C-MPV) en Mazda MX-30. De lengte staat nog wel op de kaart, nu met het segment erachter.
+- **Prijsgrens naar € 10.000** (besluit Durk), voor alle brandstoffen. Nodig ook: de compacte middenklasse begint boven de € 8.000 pas echt (82 van de 97 auto's op de lijst kosten meer dan € 8.000).
+- **Benzine wordt per model nog maar voor zeven modellen opgehaald** (Auris, Prius, Civic, CT, Ceed, i30, Mazda 3); Aygo, Yaris, Jazz, Swift, Picanto, Rio, i10, i20, Mazda 2, Fabia, Polo, Ibiza, 108 en C1 zitten onder segment C en worden niet meer gezocht.
+- **Lijst opnieuw opgehaald**: 2.502 bekeken, 632 geschikt, 97 op de site (24 benzine, 24 elektrisch, 22 plug-in, 19 hybride, 8 waterstof). Hoogste score: Mazda 3 2015 / 315 km / € 5.200 (74,9), daarna vier Kia Ceed's.
+
 ## 1.6.0 — 27-10-2026
 
 - **Waterstofauto's doen mee** (besluit Durk). Nieuwe soort **Waterstof** met de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV. Een auto telt alleen als waterstof als de advertentie dat zelf zegt (brandstofveld of woorden als "waterstof", "FCEV", "Mirai"); een gewone benzine-ix35 valt dus gewoon af.

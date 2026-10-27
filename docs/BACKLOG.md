@@ -22,7 +22,7 @@
 
 | # | Item | Af als… |
 |---|---|---|
-| B2 | **Nieuwe modellen in de modellenlijst.** `MODELLEN` is ook de toelatingslijst: een model dat er niet in staat, krijgt een neutrale betrouwbaarheid van 5,5 en een standaard-accumaat van 24 kWh. Modellen die inmiddels onder de € 8.000 kunnen komen, staan er nog niet in (o.a. Citroën ë-C3, Opel Corsa-e, Peugeot e-2008, Mini Cooper SE, MG ZS EV, VW ID.3, Renault Captur plug-in). Per model ook de accumaat en het verbruik invullen. | Elk model dat in de uitslag voorkomt heeft een eigen betrouwbaarheidscijfer, accumaat en verbruik; geen auto in de top 20 draait meer op de standaardwaarden |
+| B2 | **Nieuwe modellen in de modellenlijst.** `MODELLEN` is ook de toelatingslijst: een model dat er niet in staat, krijgt een neutrale betrouwbaarheid van 5,5 en een standaard-accumaat van 24 kWh. Modellen die inmiddels onder de € 10.000 kunnen komen, staan er nog niet in (o.a. Citroën ë-C3, Opel Corsa-e, Peugeot e-2008, Mini Cooper SE, MG ZS EV, VW ID.3, Renault Captur plug-in). Per model ook de accumaat en het verbruik invullen. | Elk model dat in de uitslag voorkomt heeft een eigen betrouwbaarheidscijfer, accumaat en verbruik; geen auto in de top 20 draait meer op de standaardwaarden |
 
 ## Volgende (op volgorde)
 
@@ -45,12 +45,13 @@
 
 **Modellen die bewust niet op de toelatingslijst komen:** Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (koelvloeistof, distributieriem) · elke auto met een DSG- of CVT-automaat van vóór 2015. Goedkoop in aanschaf, duur in onderhoud.
 
-Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 8.000 · gewone hybrides zonder stekker.
+Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 10.000 · gewone hybrides zonder stekker.
 
 ## Af
 
 | # | Item | Datum |
 |---|---|---|
+| B12 | **Minstens segment C in de plaats van de lengte-eis, prijs naar € 10.000** (v1.7.0): tabel `SEGMENT` per model en `onder_segment()`; `MIN_LENGTE` en `te_klein()` eruit. Segment A en B vallen af (ook Yaris, Jazz, Polo, Fabia, ZOE, i3, Kona, Soul, e-208), D/E/F mogen. Prijsgrens € 8.000 → € 10.000 | 27-10-2026 |
 | B11 | **Waterstof erbij** (v1.6.0): soort Waterstof met Mirai, Nexo en ix35 FCEV, rode H2 naast de score, eigen filterknop, waterstofkosten € 15,00/kg en waarschuwing over het aantal tankstations | 27-10-2026 |
 | B10 | **Ruimere grenzen** (v1.5.0): ondergrens prijs € 1.200 voor alles; benzine en gewone hybride ook tot 260.000 km en vanaf € 1.200, alleen bouwjaar 2015+ blijft strenger | 22-10-2026 |
 | B9 | **Criteria zichtbaar op de site + bestelbussen eruit** (v1.4.1): uitklapbaar criteria-blok bovenaan, gevuld vanuit `data.json`; Partner, Berlingo, Caddy en andere bestelbussen toegevoegd aan `UITSLUITEN` | 22-10-2026 |
