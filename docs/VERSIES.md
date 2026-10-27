@@ -2,6 +2,14 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.6.0 — 27-10-2026
+
+- **Waterstofauto's doen mee** (besluit Durk). Nieuwe soort **Waterstof** met de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV. Een auto telt alleen als waterstof als de advertentie dat zelf zegt (brandstofveld of woorden als "waterstof", "FCEV", "Mirai"); een gewone benzine-ix35 valt dus gewoon af.
+- **Rode H2 naast de score** op elke kaart, zodat in één oogopslag duidelijk is dat het waterstof is. Ook een filterknop "Waterstof" en een eigen alinea in de uitleg.
+- **Rekenwerk**: € 15,00 per kilo (de pompprijs liep in 2026 uiteen van ± € 10 tot € 25) en ongeveer 1 kilo per 100 km, dus ± € 150 per maand bij 12.000 km per jaar. Wegenbelasting is 70% van het benzinetarief, net als bij elektrisch. Bereik per tank: Mirai 420 km, Nexo 550 km, ix35 380 km (zomer), met dezelfde winterkorting en dezelfde bereikschaal als elektrisch. Elke waterstofauto krijgt twee waarschuwingen op de kaart: "tanken kan op ± 20 plaatsen in Nederland" en de prijs per kilo.
+- **Ophalen**: AutoScout24 per model (Mirai, Nexo, ix35), Marktplaats in één keer op brandstof `Waterstof`.
+- **Lijst opnieuw opgehaald**: 2.131 bekeken, 965 geschikt, 70 op de site. Drie waterstofauto's: Toyota Mirai 2019 / 155.424 km / € 7.450 (score 62,1, plek 30), Hyundai ix35 FCEV 2016 / 81.694 km / € 5.950 (59,7) en Toyota Mirai 2019 / 202.114 km / € 5.445 (59,1).
+
 ## 1.5.0 — 22-10-2026
 
 - **Ondergrens prijs van € 1.500 naar € 1.200**, voor elk soort auto (besluit Durk).

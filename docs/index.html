@@ -34,6 +34,9 @@ h2{font-size:1.15rem;margin:28px 0 12px}
 .score>small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;opacity:.95}
 .score>small::after{content:" ⓘ"}
 .badges{position:absolute;top:10px;right:10px;display:flex;gap:8px;align-items:flex-start;z-index:5}
+.h2klein{background:#c81e1e;color:#fff;border-radius:6px;padding:1px 5px;font-weight:800;font-size:.8em}
+.h2{background:#c81e1e;color:#fff;border:2px solid #fff;border-radius:12px;padding:5px 10px;font-size:1.35rem;font-weight:800;line-height:1.1;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.lijst .h2{font-size:.8rem;padding:2px 6px;border-radius:8px;border-width:1.5px}
 .badges .score{position:relative;top:auto;right:auto;left:auto}
 .badges:has(.score.open),.badges:hover{z-index:20}
 .sticker{background:#111;color:#facc15;border:2px dashed #facc15;border-radius:8px;padding:5px 9px;font-weight:900;font-size:.95rem;text-transform:uppercase;letter-spacing:.03em;transform:rotate(-8deg);box-shadow:0 3px 10px rgba(0,0,0,.45);white-space:nowrap;font-family:Impact,"Arial Black",system-ui,sans-serif}
@@ -92,7 +95,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <body>
 <main>
 <h1>🔌 Auto voor Annemarie</h1>
-<p class="sub">Elektrisch, plug-in, hybride of benzine · max € 8.000 · minstens zo lang als de C3 Pluriel (393 cm) · heel Nederland<br><span id="stand">Laden…</span></p>
+<p class="sub">Elektrisch, plug-in, hybride, benzine of waterstof · max € 8.000 · minstens zo lang als de C3 Pluriel (393 cm) · heel Nederland<br><span id="stand">Laden…</span></p>
 
 <details id="criteria" class="criteria">
   <summary>Welke criteria gelden?</summary>
@@ -105,6 +108,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <button data-f="Plug-in hybride" aria-pressed="false">Plug-in hybride</button>
   <button data-f="Hybride" aria-pressed="false">Hybride</button>
   <button data-f="Benzine" aria-pressed="false">Benzine</button>
+  <button data-f="Waterstof" aria-pressed="false">Waterstof</button>
   <button data-f="nieuw" aria-pressed="false">Nieuw vandaag</button>
   <details class="merkkeuze" id="merkkeuze">
     <summary id="merklabel">Alle merken</summary>
@@ -138,9 +142,10 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Niet kleiner dan de Citroën C3 Pluriel.</b> Annemarie rijdt nu een C3 Pluriel en die is <b>3.934 mm (393 cm) lang</b>. Een auto moet even lang of langer zijn, anders komt hij niet op de site. Daardoor doen deze modellen niet mee, hoe betrouwbaar ze ook zijn: VW up en e-up, Škoda Citigo, Seat Mii, Dacia Spring, Fiat 500e, Renault Twingo, Toyota Aygo, Suzuki Swift, Kia Picanto, Hyundai i10, Peugeot 108 en Citroën C1. Staat de lengte van een model niet in de lijst, dan valt hij niet af: dan weten we het niet.</p>
   <p><b>Benzine en hybride: één strengere eis.</b> Voor benzine en gewone hybride geldt bouwjaar <b>2015 of nieuwer</b>; op prijs en kilometerstand gelden dezelfde grenzen als bij elektrisch (<b>€ 1.200 tot € 8.000</b>, hoogstens <b>260.000 km</b>). Let bij een hoge stand wel op onderhoud: distributieriem, koppeling en uitlaat zijn bij een benzineauto dure posten die een elektrische auto niet heeft. Diesel en LPG doen helemaal niet mee, en advertenties waarin een handelaar meerdere auto's tegelijk aanbiedt ("4X Toyota Aygo") ook niet.</p>
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
+  <p><b>Waterstof.</b> Een waterstofauto is herkenbaar aan de rode <b>H2</b> naast de score. Hij rijdt elektrisch, maar maakt zijn stroom zelf uit waterstof: tanken duurt vijf minuten en het bereik is groot. De keerzijde zit in de kosten en het tanken. Een kilo waterstof is goed voor ongeveer 100 km en kostte in 2026 tussen de € 10 en € 25; hier is gerekend met € 15, dus ongeveer € 150 per maand bij 12.000 km per jaar — vijf keer zoveel als thuis laden. En er zijn maar zo'n twintig openbare tankstations in heel Nederland. Alleen de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV doen mee.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.5.0</p>
+<p class="klein" id="versie">Versie 1.6.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -160,6 +165,8 @@ function bereikTekst(a) {
     return `<br>Bereik <b>± ${a.bereik_zomer} km</b> <span class="klein">per tank</span>`;
   if (a.soort === 'Plug-in hybride')
     return `<br>Elektrisch <b>± ${a.bereik_zomer} km</b> <span class="klein">(winter ± ${a.bereik_winter} km), daarna op benzine</span>`;
+  if (a.soort === 'Waterstof')
+    return `<br>Bereik <b>± ${a.bereik_zomer} km</b> <span class="klein">per tank (winter ± ${a.bereik_winter} km)</span>`;
   return `<br>Bereik <b>± ${a.bereik_zomer} km</b> <span class="klein">zomer, ± ${a.bereik_winter} km winter</span>`;
 }
 function feiten(a) {
@@ -174,6 +181,8 @@ function bereikUitleg(a) {
     return `± ${a.bereik_zomer} km per tank<br><span class="klein">overal bij te vullen: vast 8 van 10. Dat tanken duurder is dan thuis laden, zit in de kosten</span>`;
   if (a.soort === 'Plug-in hybride')
     return `± ${a.bereik_winter} km elektrisch in de winter<br><span class="klein">met benzine erbij kom je overal: ondergrens 5 van 10</span>`;
+  if (a.soort === 'Waterstof')
+    return `± ${a.bereik_winter} km in de winter<br><span class="klein">tanken duurt vijf minuten, maar kan bijna nergens: dezelfde schaal als elektrisch, 50 km = 0, 200 km = max</span>`;
   const accu = a.accu_kwh ? `${nl(a.accu_kwh)} kWh` : 'accumaat onbekend';
   const staat = a.soh ? `SoH ${a.soh}% uit de advertentie`
                       : a.soh_schatting ? `accustaat geschat op ${a.soh_schatting}% (leeftijd)` : '';
@@ -192,7 +201,7 @@ function scoreTip(a) {
   rijen += `
     <tr><td>Bouwjaar ${a.jaar}<br><span class="klein">2010 = 0, 2020 of nieuwer = max</span></td><td>${nl(p.bouwjaar)} / 18</td></tr>
     <tr><td>Kilometerstand ${km(a.km)}<br><span class="klein">0 km = max, 250.000 km = 0</span></td><td>${nl(p.km)} / 17</td></tr>`;
-  if (p.kosten !== undefined) rijen += `<tr><td>Totale kosten excl. onderhoud € ${a.totale_kosten ?? a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}${a.brandstofkosten ? ` + ${a.soort === 'Elektrisch' ? 'stroom' : 'brandstof'} € ${a.brandstofkosten}` : ''}; ≤ € 100 = max, ≥ € 300 = 0</span></td><td>${nl(p.kosten)} / 10</td></tr>`;
+  if (p.kosten !== undefined) rijen += `<tr><td>Totale kosten excl. onderhoud € ${a.totale_kosten ?? a.vaste_lasten} p/m<br><span class="klein">wegenbelasting € ${a.mrb} + verzekering € ${a.verzekering}${a.brandstofkosten ? ` + ${a.soort === 'Elektrisch' ? 'stroom' : a.soort === 'Waterstof' ? 'waterstof' : 'brandstof'} € ${a.brandstofkosten}` : ''}; ≤ € 100 = max, ≥ € 300 = 0</span></td><td>${nl(p.kosten)} / 10</td></tr>`;
   if (p.accu) rijen += `<tr><td>Versleten accu (SoH ${a.soh}%)<br><span class="klein">halve punt per % onder 80%</span></td><td>${nl(p.accu)}</td></tr>`;
   if (p.merk) rijen += `<tr><td>Merkvoorkeur</td><td>+${nl(p.merk)}</td></tr>`;
   return `<span class="tip" role="tooltip"><b>Zo is deze score berekend</b>
@@ -201,7 +210,9 @@ function scoreTip(a) {
 }
 const kleur = s => s >= 70 ? 'groen' : s >= 60 ? 'oranje' : 'rood';
 const stoer = a => /^bmw$/i.test(a.merk) && /\bi3\b/i.test(a.titel) ? '<span class="sticker">I ben stoer 😎</span>' : '';
-const badges = a => `<span class="badges">${stoer(a)}${scoreBadge(a)}</span>`;
+const h2Badge = a => a.soort === 'Waterstof'
+  ? '<span class="h2" title="Waterstofauto (brandstofcel)" aria-label="Waterstofauto">H2</span>' : '';
+const badges = a => `<span class="badges">${stoer(a)}${h2Badge(a)}${scoreBadge(a)}</span>`;
 const scoreBadge = a => `<span class="score ${kleur(a.score)}" tabindex="0" aria-label="Score ${a.score} van 100, tik voor uitleg"><small>score</small>${nl(a.score)}${scoreTip(a)}</span>`;
 
 function topKaart(a, i) {
@@ -286,12 +297,14 @@ function criteriaTonen(c) {
   const pmax = c.prijs_max ?? 8000, bjaar = c.jaar_min_brandstof ?? 2015;
   const bkm = c.km_max_brandstof ?? 150000, bprijs = c.prijs_min_brandstof ?? 3000;
   const lengte = c.lengte_min ?? 3934, per = c.per_soort ?? 25;
+  const h2p = c.h2_prijs ?? 15, h2s = c.h2_stations ?? 20;
   el.innerHTML = `<ul>
     <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
     <li><b>Lengte</b>: minstens ${lengte} mm (${Math.round(lengte / 10)} cm), de lengte van de Citro&euml;n C3 Pluriel die Annemarie nu rijdt. Kleiner komt er niet in.</li>
     <li><b>Elektrisch en plug-in hybride</b>: bouwjaar ${jaar} of nieuwer, hoogstens ${km.toLocaleString('nl-NL')} km.</li>
     <li><b>Benzine en gewone hybride</b>: bouwjaar ${bjaar} of nieuwer${bkm !== km || bprijs !== pmin ? `, hoogstens ${bkm.toLocaleString('nl-NL')} km en minstens ${eur(bprijs)}` : ' (verder dezelfde eisen als hierboven)'}.</li>
-    <li><b>Brandstof</b>: elektrisch, plug-in hybride, gewone hybride of benzine. Diesel en LPG doen niet mee.</li>
+    <li><b>Brandstof</b>: elektrisch, plug-in hybride, gewone hybride, benzine of waterstof. Diesel en LPG doen niet mee.</li>
+    <li><b>Waterstof</b> (rode <span class="h2klein">H2</span> naast de score): alleen Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV, en alleen als de advertentie zelf waterstof zegt. Gerekend met ${eur(h2p)} per kilo en ongeveer 1 kilo per 100 km; tanken kan op zo'n ${h2s} plaatsen in Nederland.</li>
     <li><b>Land</b>: heel Nederland, geen import of export.</li>
     <li><b>Model</b>: alleen modellen van de toelatingslijst, met een eigen betrouwbaarheidscijfer.</li>
     <li><b>Staat</b>: geen schade, geen opknapper, geen huuraccu, geen brommobiel, microcar of bestelbus, en geen advertentie met meerdere auto's of een halve prijs.</li>

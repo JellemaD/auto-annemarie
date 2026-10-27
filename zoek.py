@@ -1,4 +1,4 @@
-"""Auto voor Annemarie: elektrisch of plug-in hybride, max EUR 8.000, Nederland.
+"""Auto voor Annemarie: elektrisch, plug-in, hybride, benzine of waterstof, max EUR 8.000, NL.
 
 Haalt aanbod op van AutoScout24.nl en Marktplaats, filtert microcars, accuhuur,
 schade, gewone (niet-plug-in) hybrides en auto's die korter zijn dan een Citroen C3 Pluriel
@@ -32,7 +32,7 @@ MIN_PRIJS_BRANDSTOF = 1200
 # in LENGTE, dan valt de auto niet af; dan weten we het simpelweg niet.
 MIN_LENGTE = 3934
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.5.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.6.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -136,6 +136,11 @@ MODELLEN = [
     ('porsche', 'panamera', 4.0, None, 'Reparaties extreem duur'),
     ('peugeot', '3008', 6.0, None, ''),
     ('peugeot', '508', 5.0, None, ''),
+    # Waterstof (brandstofcel). Rijden op waterstof kost ongeveer vijf keer zoveel als op stroom
+    # en er zijn maar een stuk of twintig tankstations in Nederland, dus de score blijft laag.
+    ('toyota', 'mirai', 5.0, 'H2', 'Toyota-kwaliteit, maar brandstofcel en waterstoftanks: alleen dealeronderhoud'),
+    ('hyundai', 'nexo', 5.0, 'H2', 'Brandstofcel; onderdelen en kennis schaars'),
+    ('hyundai', 'ix35', 4.5, 'H2', 'Eerste generatie brandstofcel; onderdelen lastig'),
     # Benzine en gewone hybride. Alleen modellen met een bewezen reputatie; zie ZONDER_STEKKER.
     ('toyota', 'aygo', 9.0, None, 'Simpel en zuinig, er gaat vrijwel niets kapot'),
     ('toyota', 'yaris', 9.0, None, 'Toyota-betrouwbaarheid; de hybride is nog zuiniger'),
@@ -199,6 +204,18 @@ GANGBARE_MERKEN = {
 MERK_VOORKEUR = []
 MERK_BONUS = 5
 
+# Waterstof. De pompprijs liep in 2026 uiteen van ongeveer EUR 10 (Teal Mobility) tot EUR 25 per
+# kilo (ANWB-overzicht); EUR 15 is een redelijk midden. Verbruik in kilo per 100 km en een
+# realistisch zomerbereik per model (fabrieksopgaven liggen een stuk hoger).
+H2_PRIJS = 15.00
+H2_VERBRUIK = {'mirai': 1.0, 'nexo': 0.95, 'ix35': 1.05}
+H2_VERBRUIK_ONBEKEND = 1.0
+H2_BEREIK = {'mirai': 420, 'nexo': 550, 'ix35': 380}
+H2_BEREIK_ONBEKEND = 400
+H2_STATIONS = 20      # ruwweg het aantal openbare waterstofstations in Nederland (2026)
+# Een advertentie moet zelf zeggen dat het waterstof is: een gewone benzine-ix35 doet niet mee.
+WATERSTOF_WOORDEN = re.compile(r'waterstof|hydrogen|\bfcev\b|\bfcv\b|\bfuel\s?cell\b|\bmirai\b|\bnexo\b', re.I)
+
 # Woorden die een plug-in hybride verraden (nodig omdat "hybride" ook gewone hybrides bevat).
 PHEV_WOORDEN = re.compile(
     r'plug[\s-]?in|\bphev\b|\bgte\b|e-tron|\benergi\b|\b\d{3}x?e\b|\bt8\b|\bd6\b|twin engine|'
@@ -247,7 +264,9 @@ GEWICHT.update({
     'i20': 1050, 'i30': 1250, '3': 1250, '2': 1050, 'fabia': 1050, 'polo': 1100, 'ibiza': 1100,
     '108': 900, 'c1': 900,
 })
-GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700, 'Hybride': 1300, 'Benzine': 1200}
+GEWICHT.update({'mirai': 1850, 'nexo': 1890, 'ix35': 1830})   # waterstof
+GEWICHT_ONBEKEND = {'Elektrisch': 1500, 'Plug-in hybride': 1700, 'Hybride': 1300, 'Benzine': 1200,
+                    'Waterstof': 1850}
 
 # Lengte in mm per model, typische uitvoering (5-deurs hatchback of sedan waar dat de gangbare is).
 # Annemarie wil geen auto die kleiner is dan haar Citroen C3 Pluriel (3.934 mm), dus alles onder
@@ -271,6 +290,7 @@ LENGTE.update({
     'i20': 4035, 'i30': 4300, '3': 4580, '2': 4060, 'fabia': 3992, 'polo': 3972, 'ibiza': 4061,
     '108': 3475, 'c1': 3466,
 })
+LENGTE.update({'mirai': 4890, 'nexo': 4670, 'ix35': 4410})   # waterstof
 
 
 def te_klein(model):
@@ -295,7 +315,7 @@ DURE_MERKEN = {'tesla', 'porsche'}
 def wegenbelasting(gewicht, soort, diesel):
     """Wegenbelasting per maand in euro."""
     benzine, dieseltarief = next(t[1:] for t in reversed(MRB_UTRECHT) if gewicht >= t[0])
-    if soort == 'Elektrisch':
+    if soort in ('Elektrisch', 'Waterstof'):
         kwartaal = benzine * 0.7
     else:
         kwartaal = dieseltarief if diesel else benzine
@@ -314,6 +334,8 @@ def brandstofkosten(a, model):
     km = KM_PER_JAAR / 12
     if a['soort'] == 'Elektrisch':
         return round(km * VERBRUIK.get(model, VERBRUIK_ONBEKEND) / 1000 * STROOMPRIJS)
+    if a['soort'] == 'Waterstof':
+        return round(km * H2_VERBRUIK.get(model, H2_VERBRUIK_ONBEKEND) / 100 * H2_PRIJS)
     if a['soort'] == 'Plug-in hybride':
         stroom = km * PHEV_DEEL_ELEKTRISCH * VERBRUIK.get(model, VERBRUIK_ONBEKEND) / 1000 * STROOMPRIJS
         return round(stroom + km * (1 - PHEV_DEEL_ELEKTRISCH) * PHEV_BENZINEVERBRUIK / 100 * BENZINEPRIJS)
@@ -415,6 +437,23 @@ def autoscout24_benzine():
     return uit
 
 
+H2_PADEN = ['toyota/mirai', 'hyundai/nexo', 'hyundai/ix35']
+
+
+def autoscout24_waterstof():
+    """Waterstof per model. Het zijn er een handvol in heel Nederland, dus een pagina per model
+    is genoeg; de ix35 bestaat ook als benzine en diesel, die vallen bij het filteren af."""
+    uit = []
+    for pad in H2_PADEN:
+        basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&priceto={MAX_PRIJS}'
+                 f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}'
+                 f'&damaged_listing=exclude&sort=age&desc=1')
+        uit += as24_zoek(pad, basis, 1)
+        time.sleep(1)
+    print(f'AutoScout24 waterstof: {len(uit)} advertenties')
+    return uit
+
+
 # ---------------------------------------------------------------- Marktplaats
 
 MERK_SLUG = {'volkswagen': 'Volkswagen', 'mercedes-benz': 'Mercedes-Benz', 'bmw': 'BMW',
@@ -479,6 +518,18 @@ def marktplaats():
                  '&sortBy=SORT_INDEX&sortOrder=DECREASING')
         uit += mp_zoek(soort, basis, 'Elektrisch' if soort == 'Elektrisch' else 'Hybride', 1000)
     print(f'Marktplaats stekker: {len(uit)} advertenties')
+    return uit
+
+
+def marktplaats_waterstof():
+    """Marktplaats kent waterstof als eigen brandstof, dus een zoekopdracht volstaat."""
+    basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
+             f'&attributeRanges[]=PriceCents:{MIN_PRIJS * 100}:{MAX_PRIJS * 100}'
+             f'&attributeRanges[]=constructionYear:{MIN_JAAR}:null'
+             '&attributesByKey[]=fuel:Waterstof&viewOptions=list-view'
+             '&sortBy=SORT_INDEX&sortOrder=DECREASING')
+    uit = mp_zoek('Waterstof', basis, 'Waterstof', 200)
+    print(f'Marktplaats waterstof: {len(uit)} advertenties')
     return uit
 
 
@@ -600,6 +651,13 @@ def zet_bereik(a, model):
         a['bereik_zomer'] = 800 if a['soort'] == 'Hybride' else 600
         a['bereik_winter'] = a['bereik_zomer']
         return 8.0
+    if a['soort'] == 'Waterstof':
+        # Tanken duurt vijf minuten, maar kan maar op een stuk of twintig plaatsen in Nederland.
+        # Daarom dezelfde schaal als bij elektrisch en geen bodem zoals bij een plug-in.
+        zomer = H2_BEREIK.get(model, H2_BEREIK_ONBEKEND)
+        a['bereik_zomer'] = zomer
+        a['bereik_winter'] = round(zomer / WINTERFACTOR / 5) * 5
+        return max(0.0, min(10.0, (a['bereik_winter'] - 50) / 15))
     if a['soort'] == 'Plug-in hybride':
         zomer = PHEV_BEREIK.get(model, PHEV_BEREIK_ONBEKEND)
         a['bereik_zomer'] = zomer
@@ -649,7 +707,15 @@ def beoordeel(a):
         return None  # kleiner dan de Citroen C3 Pluriel van Annemarie
     a['lengte'] = LENGTE.get(modelwoord)
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
-    if elektrisch:
+    waterstof = 'waterstof' in norm(a['brandstof']) or bool(WATERSTOF_WOORDEN.search(titel))
+    if soort == 'H2':
+        # Alleen als de advertentie zelf waterstof zegt: een gewone benzine-ix35 doet niet mee.
+        if not waterstof:
+            return None
+        a['soort'] = 'Waterstof'
+    elif waterstof:
+        return None   # waterstofauto van een model dat niet op de lijst staat
+    elif elektrisch:
         a['soort'] = 'Elektrisch'
     elif soort == 'PHEV' or PHEV_WOORDEN.search(titel):
         a['soort'] = 'Plug-in hybride'
@@ -709,6 +775,9 @@ def beoordeel(a):
             let_op.append('Vraag accurapport (SoH)')
         if bevat(tekst, KOOPACCU):
             let_op.append('Koopaccu')
+    if a['soort'] == 'Waterstof':
+        let_op.append(f'Tanken kan op ± {H2_STATIONS} plaatsen in Nederland')
+        let_op.append('Waterstof ± € ' + f'{H2_PRIJS:.2f}'.replace('.', ',') + ' per kilo')
     if a['km'] > 180000:
         let_op.append('Hoge kilometerstand')
     a['let_op'] = let_op
@@ -794,7 +863,8 @@ def ontdubbel(autos):
 
 def main():
     nu = datetime.now(TZ)
-    ruw = autoscout24() + marktplaats() + autoscout24_benzine() + marktplaats_benzine()
+    ruw = (autoscout24() + marktplaats() + autoscout24_benzine() + marktplaats_benzine()
+           + autoscout24_waterstof() + marktplaats_waterstof())
     if not ruw:
         print('Geen enkele advertentie opgehaald, oude data blijft staan.')
         sys.exit(1)
@@ -828,6 +898,7 @@ def main():
             'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
             'lengte_min': MIN_LENGTE, 'per_soort': PER_SOORT,
+            'h2_prijs': H2_PRIJS, 'h2_stations': H2_STATIONS,
         },
         'aantal_bekeken': len(ruw),
         'aantal': passen,
