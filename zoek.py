@@ -35,8 +35,11 @@ SEGMENT_MIN = 'C'
 SEGMENT_ORDE = ['A', 'B', 'C', 'D', 'E', 'F']
 SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
                 'D': 'Middenklasse', 'E': 'Hogere middenklasse', 'F': 'Topklasse'}
+# Modellen die ondanks een te laag segment toch mee mogen doen (besluit Durk 28-10-2026: de
+# BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
+SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.7.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.8.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -319,6 +322,8 @@ SEGMENT.update({'mirai': 'E', 'nexo': 'D', 'ix35': 'C'})   # waterstof
 
 def onder_segment(model):
     """Waar als we van dit model weten dat het onder segment C zit (stadsauto of klein)."""
+    if model in SEGMENT_UITZONDERING:
+        return False
     segment = SEGMENT.get(model)
     return (segment is not None
             and SEGMENT_ORDE.index(segment) < SEGMENT_ORDE.index(SEGMENT_MIN))
@@ -382,7 +387,10 @@ def verzekering(gewicht, prijs, merk):
 
 # ---------------------------------------------------------------- AutoScout24
 
-MAX_PAGINAS = 20        # brede zoekopdracht op brandstof (elektrisch, plug-in)
+# Was 20 (= 400 advertenties per brandstofsoort). Met de prijsgrens op EUR 10.000 werd die
+# grens geraakt en viel alles af wat niet vers geplaatst was: de BMW 225xe en 330e kwamen
+# daardoor nooit in beeld. Besluit Durk 28-10-2026: 50, en meten of de zoekactie vanzelf stopt.
+MAX_PAGINAS = 50        # brede zoekopdracht op brandstof (elektrisch, plug-in)
 MAX_PAGINAS_MODEL = 4   # per model (benzine); gesorteerd op nieuwste, dus dit houdt de beste over
 
 
@@ -924,6 +932,7 @@ def main():
             'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
             'segment_min': SEGMENT_MIN, 'segment_naam': SEGMENT_NAAM[SEGMENT_MIN],
+            'segment_uitzondering': sorted(SEGMENT_UITZONDERING.values()),
             'per_soort': PER_SOORT,
             'h2_prijs': H2_PRIJS, 'h2_stations': H2_STATIONS,
         },

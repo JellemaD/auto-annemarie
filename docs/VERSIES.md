@@ -2,6 +2,13 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.8.0 — 28-10-2026
+
+- **BMW i3 doet weer mee, ondanks segment B** (besluit Durk). Nieuwe tabel `SEGMENT_UITZONDERING`: modellen die onder segment C zitten maar toch mogen. Voorlopig alleen de i3 (3.999 mm). Er staan er nu vier op de site, de hoogste op plek 23 met score 68,6 (2016, 114.100 km, € 9.999).
+- **Dieper zoeken: `MAX_PAGINAS` van 20 naar 50.** AutoScout24 meldt zelf hoeveel pagina's er zijn en de zoekactie stopt daar; voor plug-ins waren dat er 22, dus die laatste twee pagina's (± 40 advertenties) werden niet meer opgehaald. Nu wel: 822 in plaats van 798 advertenties bij AutoScout24. Elektrisch (18 pagina's) en diesel-hybride (3) zaten al onder de grens.
+- **Waarom er toch geen BMW 225xe of 330e op de site staat:** niet omdat ze gemist worden — ze zitten wel degelijk in de zoekopdracht (27 BMW's), maar hun score komt niet hoog genoeg. De beste 225xe haalt 54,0 en de laagste plug-in op de site staat op 59,4. Ze vallen dus af op de grens van 25 auto's per soort, niet op dekking.
+- **Lijst opnieuw opgehaald**: 2.522 bekeken, 636 geschikt, 100 op de site (24 benzine, 24 elektrisch, 24 plug-in, 20 hybride, 8 waterstof).
+
 ## 1.7.0 — 27-10-2026
 
 - **Grootte-eis vervangen: minstens segment C** (besluit Durk). De eis "niet korter dan de Citroën C3 Pluriel (3.934 mm)" is eruit; in de plaats komt het Europese segment: **C – compacte middenklasse** (de Golf-klasse) of groter. Segment D, E en F mogen ook, A (stadsauto) en B (klein) niet. Nieuwe tabel `SEGMENT` per model en de functie `onder_segment()`; `MIN_LENGTE` en `te_klein()` zijn weg. Een SUV krijgt het segment van de auto waarop hij gebouwd is (Countryman en 3008 C, Outlander D, X5 en XC90 E). Grensgevallen die bewust B zijn en dus afvallen: Yaris, Jazz, Polo, Fabia, Ibiza, i20, Rio, Mazda 2, ZOE, i3 (3.999 mm), Kona, Soul, Ampera-e en e-208. Bewust C: Mercedes B-klasse (C-MPV) en Mazda MX-30. De lengte staat nog wel op de kaart, nu met het segment erachter.
