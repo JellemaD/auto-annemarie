@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-10-27 21:26",
+ "bijgewerkt": "2026-10-28 12:33",
  "versie": "1.7.0",
  "segment_min": "C",
  "criteria": {
@@ -16,16 +16,54 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2502,
- "aantal": 632,
+ "aantal_bekeken": 2500,
+ "aantal": 628,
  "autos": [
+  {
+   "id": "mp_m2458977266",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Auris",
+   "titel": "Toyota Auris 1.8 Hybrid Dynamic",
+   "prijs": 9750,
+   "km": 100870,
+   "jaar": 2018,
+   "brandstof": "Hybride",
+   "plaats": "Boxtel",
+   "verkoper": "ZAFRAN AUTO'S",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2458977266-toyota-auris-1-8-hybrid-dynamic",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/652a4ad3-a555-48e8-8264-30459d2b7e6a?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4330,
+   "segment": "C",
+   "soort": "Hybride",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 32,
+   "brandstofkosten": 94,
+   "totale_kosten": 175,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 76.5,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
+    "bouwjaar": 14.4,
+    "km": 10.1,
+    "kosten": 6.2
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "let_op": [],
+   "eerst_gezien": "2026-10-28",
+   "nieuw": true
+  },
   {
    "id": "as24_537eef24-fabd-4426-8b7f-446881ce0505",
    "bron": "AutoScout24",
    "merk": "Mazda",
    "model": "3",
    "titel": "Mazda 3 5",
-   "prijs": 5200,
+   "prijs": 5000,
    "km": 315,
    "jaar": 2015,
    "brandstof": "Benzine",
@@ -93,7 +131,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_01214eed-86d9-40be-8a01-24cf00fd7a9e",
@@ -131,7 +169,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_6c10a67e-1569-445a-9fa2-0dc25ac7a75f",
@@ -169,7 +207,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2457353703",
@@ -209,7 +247,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_af3b27dd-b0d3-468d-8fac-00e76ed1831a",
@@ -247,7 +285,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_4e57a2aa-4a82-49b7-a9de-f012b17710f7",
@@ -285,7 +323,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453397138",
@@ -325,7 +363,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_1ee1dc9a-b760-443f-b2e0-8b3594b93ced",
@@ -363,7 +401,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449274208",
@@ -404,7 +442,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_646aecb6-c7bd-47f7-bc10-e423f1764223",
@@ -442,7 +480,7 @@
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_ac7a86da-3240-4c5e-84c6-277faa88f719",
@@ -480,7 +518,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458240207",
@@ -518,7 +556,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_082e5606-38bf-443f-a73a-fcc2d1a48dd7",
@@ -556,7 +594,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_4f6d5bec-143c-4ad8-98ef-d73adfc3dd44",
@@ -596,7 +634,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_cbceeeeb-d0fe-4992-abef-08e3ecb7cf36",
@@ -636,7 +674,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_2aa1727d-3522-4e22-ad43-16ba5fcb0b6a",
@@ -676,7 +714,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_72dc1639-ee24-460e-beca-4e7f42403aee",
@@ -716,7 +754,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_e090c75b-f1e0-4d46-87c4-7b8958d3b6fe",
@@ -754,7 +792,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_a19d87ff-fd7c-47c1-8b69-2b7309496909",
@@ -794,7 +832,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b617aa31-0827-4ffd-b6bd-fa9901de46b9",
@@ -832,7 +870,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_0f4caaac-e518-4803-ad1d-5971f4daed0b",
@@ -870,7 +908,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_c24cfecb-0ae4-47fe-a2b7-dacc6f6e0c84",
@@ -878,7 +916,7 @@
    "merk": "Kia",
    "model": "Ceed SW / cee'd SW",
    "titel": "Kia Ceed SW / cee'd SW Sportswagon 1.0 T-GDi DynamicLine | Apple Carplay/",
-   "prijs": 9430,
+   "prijs": 8930,
    "km": 146986,
    "jaar": 2018,
    "brandstof": "Benzine",
@@ -908,7 +946,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_51c974de-b466-41d9-a2e4-996a15cbb194",
@@ -946,7 +984,7 @@
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_1ae67dce-3310-458c-a09b-a2c020da7b0c",
@@ -986,7 +1024,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449443952",
@@ -1024,7 +1062,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_babb0dfa-fda7-47fa-90d0-02955e8fa2a9",
@@ -1062,7 +1100,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_2f9ecba7-ca28-468c-8a1d-dc986f9fc9c9",
@@ -1103,7 +1141,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458830239",
@@ -1145,7 +1183,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453551279",
@@ -1187,7 +1225,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_81bb6ad4-3737-4754-8146-7d49ad6b661d",
@@ -1229,7 +1267,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2450846709",
@@ -1271,7 +1309,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_e303752b-f70d-43dc-b548-88afc5e8d2d2",
@@ -1312,7 +1350,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_38810b31-d784-4991-9be9-05ea8c773d83",
@@ -1354,7 +1392,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_63d44bf3-502e-49ad-b3ea-6391bee444fe",
@@ -1396,7 +1434,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b46c6ced-8560-465f-a99b-604858ec6cc2",
@@ -1436,7 +1474,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451641461",
@@ -1476,7 +1514,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453287110",
@@ -1516,7 +1554,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_5ed5992b-1cdb-4671-8b7a-22c818a826b8",
@@ -1556,7 +1594,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458368460",
@@ -1597,7 +1635,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456119203",
@@ -1637,7 +1675,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_72c2b15e-0d57-4956-8bc2-f71a21aedf52",
@@ -1677,45 +1715,47 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
-   "id": "mp_m2457320606",
+   "id": "mp_m2390052122",
    "bron": "Marktplaats",
-   "merk": "Volkswagen",
-   "model": "Golf",
-   "titel": "Volkswagen Golf GTE 1.4TSI 204PK 2015 LimestoneGrey Metallic",
-   "prijs": 9900,
-   "km": 133788,
+   "merk": "Toyota",
+   "model": "Auris",
+   "titel": "Toyota Auris 1.8 Hybrid Touring Sports CVT 2015 Grijs",
+   "prijs": 8750,
+   "km": 216000,
    "jaar": 2015,
    "brandstof": "Hybride",
-   "plaats": "Westendorp",
-   "verkoper": "Tom",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2457320606-volkswagen-golf-gte-1-4tsi-204pk-2015-limestonegrey-metallic",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e5e51d90-02c2-4e13-89a9-1fe7564ab9ba?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4258,
+   "plaats": "Zoetermeer",
+   "verkoper": "ashraf",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2390052122-toyota-auris-1-8-hybrid-touring-sports-cvt-2015-grijs",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/913effbb-a5c7-4714-85b7-9e3559259232?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4330,
    "segment": "C",
-   "soort": "Plug-in hybride",
-   "gewicht": 1540,
-   "mrb": 77,
-   "verzekering": 35,
-   "brandstofkosten": 95,
-   "totale_kosten": 207,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 63.6,
+   "soort": "Hybride",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 31,
+   "brandstofkosten": 94,
+   "totale_kosten": 174,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 63.4,
    "punten": {
-    "betrouwbaarheid": 28.0,
-    "bereik": 14.0,
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
     "bouwjaar": 9.0,
-    "km": 7.9,
-    "kosten": 4.7
+    "km": 2.3,
+    "kosten": 6.3
    },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "",
-   "let_op": [],
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449458083",
@@ -1757,47 +1797,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2390052122",
-   "bron": "Marktplaats",
-   "merk": "Toyota",
-   "model": "Auris",
-   "titel": "Toyota Auris 1.8 Hybrid Touring Sports CVT 2015 Grijs",
-   "prijs": 9250,
-   "km": 216000,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Zoetermeer",
-   "verkoper": "ashraf",
-   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2390052122-toyota-auris-1-8-hybrid-touring-sports-cvt-2015-grijs",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/913effbb-a5c7-4714-85b7-9e3559259232?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4330,
-   "segment": "C",
-   "soort": "Hybride",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 31,
-   "brandstofkosten": 94,
-   "totale_kosten": 174,
-   "bereik_zomer": 800,
-   "bereik_winter": 800,
-   "score": 63.4,
-   "punten": {
-    "betrouwbaarheid": 29.8,
-    "bereik": 16.0,
-    "bouwjaar": 9.0,
-    "km": 2.3,
-    "kosten": 6.3
-   },
-   "betrouwbaarheid": 8.5,
-   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_70b6b1b5-c911-4def-998b-ff498e9c5120",
@@ -1839,7 +1839,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_cdda63bc-aa09-4d51-bd16-e10adfe3c080",
@@ -1879,7 +1879,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458627867",
@@ -1919,7 +1919,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_f0c257c0-96ce-41f8-a5c6-281f027b40f3",
@@ -1961,7 +1961,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2447703966",
@@ -2001,7 +2001,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456123416",
@@ -2044,7 +2044,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_926d2aa4-eb4d-42a9-bc49-b7b9a6b2b426",
@@ -2084,7 +2084,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456444303",
@@ -2124,7 +2124,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456041299",
@@ -2206,7 +2206,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_3fc0679c-5a12-4f4e-9af0-aaa123b7abb1",
@@ -2248,7 +2248,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_a90d84fb-60bc-49a2-8017-9ccea0b9ddc9",
@@ -2289,7 +2289,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_ee913150-cc86-4387-a965-c38e3f6afaf8",
@@ -2331,7 +2331,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_31dd5dfc-f689-4a26-a125-4548a7f9366e",
@@ -2369,7 +2369,7 @@
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_7392f877-0df3-4bc8-9b80-43a61413be6e",
@@ -2409,7 +2409,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2426127275",
@@ -2449,7 +2449,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_5b7b8f53-1672-4917-ba30-2f12c13f9422",
@@ -2492,7 +2492,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_4b262ccc-9b47-4c62-9d96-1306f1e3be4a",
@@ -2534,7 +2534,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_ae793753-8284-40bb-ad53-f484d61a71a9",
@@ -2574,7 +2574,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_3a592daa-a427-47a7-a255-a89a0b3c7c19",
@@ -2614,7 +2614,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_fe1162cb-82bb-46da-b916-a2660cb2f25f",
@@ -2654,7 +2654,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_ab6f02dd-8f5f-4782-bfa4-031fca3ffe42",
@@ -2694,6 +2694,48 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
+   "nieuw": false
+  },
+  {
+   "id": "as24_b2c47bca-5da5-4adf-b320-428dba8d3105",
+   "bron": "AutoScout24",
+   "merk": "Volkswagen",
+   "model": "e-Golf",
+   "titel": "Volkswagen e-Golf e-Golf Automaat (NAVIGATIE, CLIMATE, CAMERA, GETIN",
+   "prijs": 9945,
+   "km": 118292,
+   "jaar": 2015,
+   "brandstof": "Elektrisch",
+   "plaats": "Krimpen Aan De Ijssel",
+   "verkoper": "Autocentrum Krimpenerwaard",
+   "url": "https://www.autoscout24.nl/aanbod/volkswagen-e-golf-e-golf-automaat-navigatie-climate-camera-getin-elektrisch-zwart-cat_ma74mo75940-b2c47bca-5da5-4adf-b320-428dba8d3105",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/b2c47bca-5da5-4adf-b320-428dba8d3105_8ee85c9d-40f8-4ca6-8438-b1f8dcec2097.jpg/480x360.webp",
+   "lengte": 4270,
+   "segment": "C",
+   "soort": "Elektrisch",
+   "gewicht": 1510,
+   "mrb": 54,
+   "verzekering": 35,
+   "brandstofkosten": 43,
+   "totale_kosten": 132,
+   "accu_kwh": 21,
+   "soh_schatting": 87,
+   "bereik_zomer": 120,
+   "bereik_winter": 85,
+   "score": 60.8,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 4.7,
+    "bouwjaar": 9.0,
+    "km": 9.0,
+    "kosten": 8.4
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Degelijk, geen bekende accuproblemen",
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-10-28",
    "nieuw": true
   },
   {
@@ -2770,7 +2812,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_d3d3e8aa-e306-4ec6-89ff-f4f06e1ed457",
@@ -2810,7 +2852,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b5ccb3e7-9952-410f-bbe4-091a11b3801d",
@@ -2850,7 +2892,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2435455713",
@@ -2890,7 +2932,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_288e2aae-544b-4514-a1fc-ee60cb244334",
@@ -2930,7 +2972,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458323518",
@@ -2968,7 +3010,7 @@
    "toelichting": "Zelfde techniek als Chevrolet Volt",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2455623379",
@@ -3008,7 +3050,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_fc65de4f-b120-428f-84c1-45a80910b68f",
@@ -3046,7 +3088,7 @@
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2443914845",
@@ -3086,7 +3128,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456842426",
@@ -3164,7 +3206,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2450946087",
@@ -3204,7 +3246,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2448677632",
@@ -3245,7 +3287,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2439068988",
@@ -3285,7 +3327,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_8b65eb9d-21ee-421a-ab59-51ee0826244a",
@@ -3325,7 +3367,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2457437671",
@@ -3407,7 +3449,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_d8712a89-3cfd-49fe-ae8c-bbb2e25fb1a7",
@@ -3449,7 +3491,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456800351",
@@ -3531,7 +3573,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449254007",
@@ -3569,7 +3611,7 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_06aa1c44-fe62-4f4f-aaa8-4211035a72c6",
@@ -3611,7 +3653,47 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2456260802",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI GTE Zwart 2016 | Carplay | Acc | Nap",
+   "prijs": 7950,
+   "km": 227609,
+   "jaar": 2016,
+   "brandstof": "Hybride",
+   "plaats": "De Meern",
+   "verkoper": "Autobedrijf 't Hoefijzer",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2456260802-volkswagen-golf-1-4-tsi-gte-zwart-2016-carplay-acc-nap",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e8d205ab-87f8-4130-98c8-daf2d0a8bc78?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4258,
+   "segment": "C",
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 33,
+   "brandstofkosten": 95,
+   "totale_kosten": 205,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 59.1,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 10.8,
+    "km": 1.5,
+    "kosten": 4.8
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-23",
+   "nieuw": false
   },
   {
    "id": "as24_cc91d8d6-0383-4dc5-a90e-da6af06e6935",
@@ -3653,7 +3735,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_2d455e69-2a74-4514-8e08-1f76a37508e8",
@@ -3696,7 +3778,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451342379",
@@ -3780,7 +3862,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_c2cb34f3-c428-4e73-9597-5372122cc91e",
@@ -3865,49 +3947,6 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-27",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2454275346",
-   "bron": "Marktplaats",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan LEAF Visia 24 kWh",
-   "prijs": 5450,
-   "km": 68674,
-   "jaar": 2014,
-   "brandstof": "Elektrisch",
-   "plaats": "Hengelo",
-   "verkoper": "Thorsten Cars",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2454275346-nissan-leaf-visia-24-kwh",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0960bcc3-5b94-4ec7-ad82-bca02a905261?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4445,
-   "segment": "C",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 30,
-   "brandstofkosten": 46,
-   "totale_kosten": 123,
-   "accu_kwh": 22,
-   "soh_schatting": 77,
-   "bereik_zomer": 105,
-   "bereik_winter": 75,
-   "score": 56.2,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 3.3,
-    "bouwjaar": 7.2,
-    "km": 12.3,
-    "kosten": 8.8
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
-   "let_op": [
-    "Klein winterbereik (± 75 km)",
-    "Vraag accurapport (SoH)"
-   ],
-   "eerst_gezien": "2026-10-17",
    "nieuw": false
   }
  ]
