@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-10-28 21:41",
+ "bijgewerkt": "2026-10-29 12:42",
  "versie": "1.8.0",
  "segment_min": "C",
  "criteria": {
@@ -19,7 +19,7 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2522,
+ "aantal_bekeken": 2530,
  "aantal": 636,
  "autos": [
   {
@@ -58,7 +58,7 @@
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_537eef24-fabd-4426-8b7f-446881ce0505",
@@ -135,6 +135,44 @@
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
+  },
+  {
+   "id": "as24_0cceb6f0-fe02-41c7-857e-7c7dbd72a801",
+   "bron": "AutoScout24",
+   "merk": "Kia",
+   "model": "Ceed / cee'd",
+   "titel": "Kia Ceed / cee'd 1.0 T-GDI DYNAMICL. CARPLAY, CRUISE, TREKHAAK",
+   "prijs": 9400,
+   "km": 154323,
+   "jaar": 2019,
+   "brandstof": "Benzine",
+   "plaats": "Geesteren",
+   "verkoper": "Nordemeule automotive",
+   "url": "https://www.autoscout24.nl/aanbod/kia-ceed-cee-d-1-0-t-gdi-dynamicl-carplay-cruise-trekhaak-benzine-grijs-cat_ma39mo18923-0cceb6f0-fe02-41c7-857e-7c7dbd72a801",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/0cceb6f0-fe02-41c7-857e-7c7dbd72a801_450381ab-2260-410d-89ce-d584d894c0ff.jpg/480x360.webp",
+   "lengte": 4310,
+   "segment": "C",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 31,
+   "brandstofkosten": 126,
+   "totale_kosten": 206,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 69.7,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 16.2,
+    "km": 6.5,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "let_op": [],
+   "eerst_gezien": "2026-10-29",
+   "nieuw": true
   },
   {
    "id": "as24_6c10a67e-1569-445a-9fa2-0dc25ac7a75f",
@@ -251,6 +289,47 @@
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
+  },
+  {
+   "id": "mp_m2459388523",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Mirai",
+   "titel": "Toyota Mirai, FCV Executive (Waterstof) / Goed onderhouden",
+   "prijs": 8950,
+   "km": 22429,
+   "jaar": 2018,
+   "brandstof": "Waterstof",
+   "plaats": "Twello",
+   "verkoper": "Bas",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2459388523-toyota-mirai-fcv-executive-waterstof-goed-onderhouden",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9e71eca6-c489-47fd-9839-1af5a36c4de3?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4890,
+   "segment": "E",
+   "soort": "Waterstof",
+   "gewicht": 1850,
+   "mrb": 73,
+   "verzekering": 38,
+   "brandstofkosten": 150,
+   "totale_kosten": 261,
+   "bereik_zomer": 420,
+   "bereik_winter": 310,
+   "score": 69.3,
+   "punten": {
+    "betrouwbaarheid": 17.5,
+    "bereik": 20.0,
+    "bouwjaar": 14.4,
+    "km": 15.5,
+    "kosten": 1.9
+   },
+   "betrouwbaarheid": 5.0,
+   "toelichting": "Toyota-kwaliteit, maar brandstofcel en waterstoftanks: alleen dealeronderhoud",
+   "let_op": [
+    "Tanken kan op ± 20 plaatsen in Nederland",
+    "Waterstof ± € 15,00 per kilo"
+   ],
+   "eerst_gezien": "2026-10-29",
+   "nieuw": true
   },
   {
    "id": "as24_4e57a2aa-4a82-49b7-a9de-f012b17710f7",
@@ -717,7 +796,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_72dc1639-ee24-460e-beca-4e7f42403aee",
@@ -911,7 +990,7 @@
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_0f4caaac-e518-4803-ad1d-5971f4daed0b",
@@ -1098,44 +1177,6 @@
     "bouwjaar": 14.4,
     "km": 6.7,
     "kosten": 4.8
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
-   "let_op": [],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
-  },
-  {
-   "id": "as24_babb0dfa-fda7-47fa-90d0-02955e8fa2a9",
-   "bron": "AutoScout24",
-   "merk": "Kia",
-   "model": "Ceed / cee'd",
-   "titel": "Kia Ceed / cee'd Ceed / cee'd 1.0 T-GDi DynamicL.",
-   "prijs": 9950,
-   "km": 177000,
-   "jaar": 2019,
-   "brandstof": "Benzine",
-   "plaats": "Emmen",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/kia-ceed-cee-d-ceed-cee-d-1-0-t-gdi-dynamicl-benzine-zwart-cat_ma39mo18923-babb0dfa-fda7-47fa-90d0-02955e8fa2a9",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/babb0dfa-fda7-47fa-90d0-02955e8fa2a9_9fc610dd-7686-432a-afe5-3ba38b9ea936.jpg/480x360.webp",
-   "lengte": 4310,
-   "segment": "C",
-   "soort": "Benzine",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 32,
-   "brandstofkosten": 126,
-   "totale_kosten": 207,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 68.1,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 16.2,
-    "km": 5.0,
-    "kosten": 4.7
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
@@ -2005,7 +2046,7 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2447703966",
+   "id": "mp_m2459419867",
    "bron": "Marktplaats",
    "merk": "Kia",
    "model": "Optima Sportswagon",
@@ -2016,8 +2057,8 @@
    "brandstof": "Hybride",
    "plaats": "Emmen",
    "verkoper": "Autobedrijf Het Spoor B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2447703966-kia-optima-sportswagon-2-0-gdi-phev-business-dynamicline",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b179ccdd-d792-4816-8af2-65fb1afa1329?rule=ecg_mp_eps$_84.jpg",
+   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2459419867-kia-optima-sportswagon-2-0-gdi-phev-business-dynamicline",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/66627bb4-6e9a-472c-aaf8-3fdb2c939237?rule=ecg_mp_eps$_84.jpg",
    "lengte": 4855,
    "segment": "D",
    "soort": "Plug-in hybride",
@@ -2041,8 +2082,8 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
+   "eerst_gezien": "2026-10-29",
+   "nieuw": true
   },
   {
    "id": "as24_69ab2306-dfdb-4c12-82f3-626aac980d27",
@@ -2080,7 +2121,7 @@
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456123416",
@@ -2323,7 +2364,7 @@
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_3fc0679c-5a12-4f4e-9af0-aaa123b7abb1",
@@ -2853,7 +2894,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_f7b9c0ea-5948-4d5d-9d15-cd0446ca4cd0",
@@ -3129,7 +3170,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458323518",
@@ -3287,46 +3328,6 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2443914845",
-   "bron": "Marktplaats",
-   "merk": "Volkswagen",
-   "model": "Golf",
-   "titel": "Volkswagen Golf 1.4 TSI Phev 204pk 5D DSG 2015 Wit",
-   "prijs": 10000,
-   "km": 187200,
-   "jaar": 2015,
-   "brandstof": "Hybride",
-   "plaats": "Nieuw-Lekkerland",
-   "verkoper": "jordy voetee",
-   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2443914845-volkswagen-golf-1-4-tsi-phev-204pk-5d-dsg-2015-wit",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/eb3e213c-76fc-416e-9d90-679fcc416f79?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4258,
-   "segment": "C",
-   "soort": "Plug-in hybride",
-   "gewicht": 1540,
-   "mrb": 77,
-   "verzekering": 35,
-   "brandstofkosten": 95,
-   "totale_kosten": 207,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 59.9,
-   "punten": {
-    "betrouwbaarheid": 28.0,
-    "bereik": 14.0,
-    "bouwjaar": 9.0,
-    "km": 4.3,
-    "kosten": 4.7
-   },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
   {
@@ -3403,7 +3404,7 @@
    "toelichting": "Zelfde techniek als Chevrolet Volt",
    "let_op": [],
    "eerst_gezien": "2026-10-28",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2448048261",
@@ -3689,6 +3690,46 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2448081897",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI GTE LEER SFEERV CAMERA CARPLAY",
+   "prijs": 9499,
+   "km": 194785,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Tilburg",
+   "verkoper": "Carstore Tilburg B.V.",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2448081897-volkswagen-golf-1-4-tsi-gte-leer-sfeerv-camera-carplay",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6baba183-0199-49cf-a1e9-54b08ee40149?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4258,
+   "segment": "C",
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 35,
+   "brandstofkosten": 95,
+   "totale_kosten": 207,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 59.4,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 3.8,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-29",
+   "nieuw": true
+  },
+  {
    "id": "as24_d8712a89-3cfd-49fe-ae8c-bbb2e25fb1a7",
    "bron": "AutoScout24",
    "merk": "Nissan",
@@ -3701,7 +3742,7 @@
    "plaats": "Hilversum",
    "verkoper": "Autobedrijf Tielen",
    "url": "https://www.autoscout24.nl/aanbod/nissan-leaf-tekna-30-kwh-68-soh-elektrisch-grijs-cat_ma52mo19733-d8712a89-3cfd-49fe-ae8c-bbb2e25fb1a7",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/d8712a89-3cfd-49fe-ae8c-bbb2e25fb1a7_d9006f95-6988-4717-bb53-0e34d1a9a5d2.jpg/480x360.webp",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/d8712a89-3cfd-49fe-ae8c-bbb2e25fb1a7_d03d3c93-301a-4ebc-a12c-36db657ab431.jpg/480x360.webp",
    "lengte": 4445,
    "segment": "C",
    "soort": "Elektrisch",
