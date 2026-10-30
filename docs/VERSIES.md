@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.9.0 — 30-10-2026
+
+- **Mazda eruit** (verzoek Durk). De Mazda 2, Mazda 3 en MX-30 zijn van de toelatingslijst gehaald en het merk zelf is uit `GANGBARE_MERKEN`, zodat ook een Mazda-model dat niet op de lijst staat niet meer met een neutrale betrouwbaarheid binnenkomt. De maten blijven in `GEWICHT`, `LENGTE` en `SEGMENT` staan: terugzetten kost alleen die paar regels in `MODELLEN` en `ZONDER_STEKKER`.
+- Benzine wordt daardoor nog voor zes modellen per model opgehaald (Auris, Prius, Civic, CT, Ceed, i30).
+- **Lijst opnieuw opgehaald**: 2.521 bekeken, 614 geschikt, 101 op de site (24 benzine, 24 elektrisch, 24 plug-in, 20 hybride, 9 waterstof). De Mazda 3 die op plek 2 stond is weg; hoogste blijft de Toyota Auris 1.8 Hybrid uit 2018 (100.870 km, € 9.750, score 76,5).
+
 ## 1.8.0 — 28-10-2026
 
 - **BMW i3 doet weer mee, ondanks segment B** (besluit Durk). Nieuwe tabel `SEGMENT_UITZONDERING`: modellen die onder segment C zitten maar toch mogen. Voorlopig alleen de i3 (3.999 mm). Er staan er nu vier op de site, de hoogste op plek 23 met score 68,6 (2016, 114.100 km, € 9.999).

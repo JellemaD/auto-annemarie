@@ -1,6 +1,6 @@
 # Backlog — Auto voor Annemarie
 
-*Bijgewerkt 28-10-2026*
+*Bijgewerkt 30-10-2026*
 
 > **Nog door Durk te bevestigen:** de verdeling over Nu / Volgende / Later hieronder is een voorstel.
 > Wat er op "Nu" staat, bepaalt Durk.
@@ -51,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B14 | **Mazda van de toelatingslijst** (v1.9.0): Mazda 2, 3 en MX-30 uit `MODELLEN` en `ZONDER_STEKKER`, merk uit `GANGBARE_MERKEN` | 30-10-2026 |
 | B13 | **BMW i3 als uitzondering op segment C, en dieper zoeken** (v1.8.0): `SEGMENT_UITZONDERING` met de i3 (segment B, 3.999 mm); `MAX_PAGINAS` van 20 naar 50, waardoor de laatste twee pagina's plug-ins ook worden opgehaald | 28-10-2026 |
 | B12 | **Minstens segment C in de plaats van de lengte-eis, prijs naar € 10.000** (v1.7.0): tabel `SEGMENT` per model en `onder_segment()`; `MIN_LENGTE` en `te_klein()` eruit. Segment A en B vallen af (ook Yaris, Jazz, Polo, Fabia, ZOE, i3, Kona, Soul, e-208), D/E/F mogen. Prijsgrens € 8.000 → € 10.000 | 27-10-2026 |
 | B11 | **Waterstof erbij** (v1.6.0): soort Waterstof met Mirai, Nexo en ix35 FCEV, rode H2 naast de score, eigen filterknop, waterstofkosten € 15,00/kg en waarschuwing over het aantal tankstations | 27-10-2026 |

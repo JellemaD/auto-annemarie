@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.8.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.9.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -116,7 +116,6 @@ MODELLEN = [
     ('ford', 'focus', 5.5, None, 'Weinig verkocht, onderdelen lastig'),
     ('tesla', 'model s', 5.0, 'EV', 'Prachtig, maar reparaties (scherm, aandrijving) zeer duur'),
     ('renault', 'twingo', 6.5, 'EV', ''),
-    ('mazda', 'mx-30', 7.5, 'EV', ''),
     # Plug-in hybride
     ('toyota', 'prius', 9.5, None, 'Toyota-hybride: de betrouwbaarste techniek die er is'),
     ('mitsubishi', 'outlander', 7.0, 'PHEV', 'Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt'),
@@ -163,8 +162,8 @@ MODELLEN = [
     ('hyundai', 'i10', 8.0, None, 'Zelfde techniek als de Kia Picanto'),
     ('hyundai', 'i20', 7.5, None, ''),
     ('hyundai', 'i30', 7.5, None, ''),
-    ('mazda', '3', 8.0, None, 'Geen turbo, geen distributieriem: weinig dure verrassingen'),
-    ('mazda', '2', 8.0, None, 'Geen turbo, geen distributieriem: weinig dure verrassingen'),
+    # Mazda staat er bewust niet in (verzoek Durk 30-10-2026). De maten van de 2, 3 en MX-30
+    # blijven in GEWICHT, LENGTE en SEGMENT staan, zodat terugzetten alleen deze regels kost.
     ('skoda', 'fabia', 7.5, None, ''),
     ('volkswagen', 'polo', 7.5, None, ''),
     ('seat', 'ibiza', 7.0, None, 'Zelfde techniek als de VW Polo'),
@@ -183,7 +182,7 @@ ZONDER_STEKKER = {
     'ct': ('lexus/ct', 4.6), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
     'rio': ('kia/rio', 5.5), 'ceed': ('kia/ceed', 6.0), "cee'd": (None, 6.0),
     'i10': ('hyundai/i10', 5.0), 'i20': ('hyundai/i20', 5.5), 'i30': ('hyundai/i30', 6.2),
-    '3': ('mazda/3', 6.0), '2': ('mazda/2', 5.2), 'fabia': ('skoda/fabia', 5.3),
+    'fabia': ('skoda/fabia', 5.3),
     'polo': ('volkswagen/polo', 5.4), 'ibiza': ('seat/ibiza', 5.5), '108': ('peugeot/108', 4.8),
     'c1': ('citroen/c1', 4.8),
 }
@@ -201,7 +200,7 @@ for _merk, _model, *_rest in MODELLEN:
 GANGBARE_MERKEN = {
     'alfa romeo', 'audi', 'bmw', 'byd', 'chevrolet', 'citroen', 'citroën', 'cupra', 'dacia', 'ds',
     'fiat', 'ford', 'honda', 'hyundai', 'jaguar', 'jeep', 'kia', 'land rover', 'lexus', 'lynk & co',
-    'mazda', 'mercedes', 'mercedes-benz', 'mg', 'mini', 'mitsubishi', 'nissan', 'opel', 'peugeot',
+    'mercedes', 'mercedes-benz', 'mg', 'mini', 'mitsubishi', 'nissan', 'opel', 'peugeot',
     'polestar', 'porsche', 'renault', 'seat', 'skoda', 'subaru', 'suzuki', 'tesla',
     'toyota', 'volkswagen', 'volvo',
 }
