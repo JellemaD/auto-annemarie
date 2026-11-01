@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.10.0 — 01-11-2026
+
+- **Mitsubishi ASX erbij** (besluit Durk). Betrouwbaarheid 7,5: de 1.6 MIVEC is atmosferisch, heeft een distributieketting en is handgeschakeld. 1.310 kg, 4.365 mm, segment C, 7,0 l/100 km. Benzine wordt nu voor zeven modellen per model opgehaald.
+- **Maar hij haalt de site nog niet.** Acht ASX'en komen door alle filters, met scores van 60,7 tot 65,5. De grens van 25 auto's per soort ligt bij benzine op 68,6, dus ze vallen er net buiten. Oorzaak: van de 24 benzineplekken zijn er **18 bezet door een Kia Ceed**.
+- **Lijst opnieuw opgehaald**: 2.486 bekeken, 621 geschikt, 95 op de site (24 benzine, 23 plug-in, 22 elektrisch, 19 hybride, 7 waterstof).
+
 ## 1.9.0 — 30-10-2026
 
 - **Mazda eruit** (verzoek Durk). De Mazda 2, Mazda 3 en MX-30 zijn van de toelatingslijst gehaald en het merk zelf is uit `GANGBARE_MERKEN`, zodat ook een Mazda-model dat niet op de lijst staat niet meer met een neutrale betrouwbaarheid binnenkomt. De maten blijven in `GEWICHT`, `LENGTE` en `SEGMENT` staan: terugzetten kost alleen die paar regels in `MODELLEN` en `ZONDER_STEKKER`.

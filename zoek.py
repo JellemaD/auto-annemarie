@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.9.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.10.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -153,6 +153,7 @@ MODELLEN = [
     ('toyota', 'auris', 8.5, None, 'Ruimer dan de Yaris, zelfde techniek'),
     ('honda', 'jazz', 8.5, None, 'Ruim, hoge instap, zeer betrouwbaar'),
     ('honda', 'civic', 8.0, None, ''),
+    ('mitsubishi', 'asx', 7.5, None, '1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek'),
     ('lexus', 'ct', 8.5, None, 'Prius-techniek in een nettere jas'),
     ('suzuki', 'swift', 8.0, None, 'Licht en eenvoudig'),
     ('kia', 'picanto', 8.0, None, 'Goedkoop in onderhoud, 7 jaar fabrieksgarantie'),
@@ -179,7 +180,7 @@ MODELLEN = [
 ZONDER_STEKKER = {
     'aygo': ('toyota/aygo', 4.8), 'yaris': ('toyota/yaris', 5.3), 'auris': ('toyota/auris', 6.0),
     'prius': ('toyota/prius', 4.5), 'jazz': ('honda/jazz', 5.6), 'civic': ('honda/civic', 6.2),
-    'ct': ('lexus/ct', 4.6), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
+    'asx': ('mitsubishi/asx', 7.0), 'ct': ('lexus/ct', 4.6), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
     'rio': ('kia/rio', 5.5), 'ceed': ('kia/ceed', 6.0), "cee'd": (None, 6.0),
     'i10': ('hyundai/i10', 5.0), 'i20': ('hyundai/i20', 5.5), 'i30': ('hyundai/i30', 6.2),
     'fabia': ('skoda/fabia', 5.3),
@@ -266,7 +267,7 @@ GEWICHT = {
 }
 GEWICHT.update({
     'aygo': 900, 'yaris': 1050, 'auris': 1250, 'jazz': 1100, 'civic': 1300, 'ct': 1400,
-    'swift': 950, 'picanto': 900, 'rio': 1100, 'ceed': 1250, "cee'd": 1250, 'i10': 950,
+    'asx': 1310, 'swift': 950, 'picanto': 900, 'rio': 1100, 'ceed': 1250, "cee'd": 1250, 'i10': 950,
     'i20': 1050, 'i30': 1250, '3': 1250, '2': 1050, 'fabia': 1050, 'polo': 1100, 'ibiza': 1100,
     '108': 900, 'c1': 900,
 })
@@ -288,7 +289,7 @@ LENGTE = {
 }
 LENGTE.update({
     'aygo': 3465, 'yaris': 3945, 'auris': 4330, 'jazz': 3955, 'civic': 4300, 'ct': 4350,
-    'swift': 3850, 'picanto': 3595, 'rio': 4045, 'ceed': 4310, "cee'd": 4310, 'i10': 3665,
+    'asx': 4365, 'swift': 3850, 'picanto': 3595, 'rio': 4045, 'ceed': 4310, "cee'd": 4310, 'i10': 3665,
     'i20': 4035, 'i30': 4300, '3': 4580, '2': 4060, 'fabia': 3992, 'polo': 3972, 'ibiza': 4061,
     '108': 3475, 'c1': 3466,
 })
@@ -312,7 +313,7 @@ SEGMENT = {
 }
 SEGMENT.update({
     'aygo': 'A', 'yaris': 'B', 'auris': 'C', 'jazz': 'B', 'civic': 'C', 'ct': 'C',
-    'swift': 'B', 'picanto': 'A', 'rio': 'B', 'ceed': 'C', "cee'd": 'C', 'i10': 'A',
+    'asx': 'C', 'swift': 'B', 'picanto': 'A', 'rio': 'B', 'ceed': 'C', "cee'd": 'C', 'i10': 'A',
     'i20': 'B', 'i30': 'C', '3': 'C', '2': 'B', 'fabia': 'B', 'polo': 'B', 'ibiza': 'B',
     '108': 'A', 'c1': 'A',
 })
