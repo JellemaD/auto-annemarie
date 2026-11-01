@@ -2,6 +2,14 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.11.0 — 01-11-2026
+
+- **Hoogstens 4 van hetzelfde model per soort** (besluit Durk), nieuwe grens `PER_MODEL` naast `PER_SOORT`. Zonder die grens vulde één model met veel aanbod de hele categorie: 18 van de 24 benzineplekken was een Kia Ceed, waardoor nieuwe modellen er nooit doorheen kwamen. `cee'd` en `ceed` tellen als één model (`MODEL_ALIAS`); auto's waarvan het model niet op de lijst staat worden niet op één hoop gegooid. Een model dat in twee soorten voorkomt mag in allebei vier (de Auris staat er nu 4× als hybride en 3× als benzine).
+- **Drie modellen erbij** (besluit Durk): Kia Sportage en Hyundai Tucson (beide 1.6 GDI zonder turbo, betrouwbaarheid 7,5, segment C) en Toyota Avensis (1.8 Valvematic, betrouwbaarheid 8,5, segment D).
+- **Ioniq en Niro mogen nu ook zonder stekker.** Ze stonden wel in `MODELLEN` maar niet in `ZONDER_STEKKER`, waardoor de gewone hybride eruit viel terwijl de stekkerversie wel mocht. Dat was geen keuze maar een gat in de regel. Ze komen binnen via de brede zoekopdracht op brandstof, dus zonder eigen benzinezoekactie (pad `None`).
+- **Lijst opnieuw opgehaald**: 2.537 bekeken, 669 geschikt, 80 op de site (23 benzine, 22 plug-in, 19 elektrisch, 10 hybride, 6 waterstof). Korter dan de 95 van gisteren, en dat is de bedoeling: de dubbele Ceed's zijn eruit en er staan nu 12 verschillende modellen in plaats van 5 bij benzine.
+- Nieuw in de top 10: Hyundai Ioniq Hybrid op plek 2 (73,8) en Kia Niro Hybrid op plek 8 (69,6). De ASX staat op 31, 34, 39 en 41; de Sportage op 43, 48, 52 en 54; de Avensis op 25. De Tucson haalt het nog niet.
+
 ## 1.10.0 — 01-11-2026
 
 - **Mitsubishi ASX erbij** (besluit Durk). Betrouwbaarheid 7,5: de 1.6 MIVEC is atmosferisch, heeft een distributieketting en is handgeschakeld. 1.310 kg, 4.365 mm, segment C, 7,0 l/100 km. Benzine wordt nu voor zeven modellen per model opgehaald.

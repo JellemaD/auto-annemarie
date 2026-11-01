@@ -145,7 +145,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Waterstof.</b> Een waterstofauto is herkenbaar aan de rode <b>H2</b> naast de score. Hij rijdt elektrisch, maar maakt zijn stroom zelf uit waterstof: tanken duurt vijf minuten en het bereik is groot. De keerzijde zit in de kosten en het tanken. Een kilo waterstof is goed voor ongeveer 100 km en kostte in 2026 tussen de € 10 en € 25; hier is gerekend met € 15, dus ongeveer € 150 per maand bij 12.000 km per jaar — vijf keer zoveel als thuis laden. En er zijn maar zo'n twintig openbare tankstations in heel Nederland. Alleen de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV doen mee.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.10.0</p>
+<p class="klein" id="versie">Versie 1.11.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -301,7 +301,7 @@ function criteriaTonen(c) {
   const bkm = c.km_max_brandstof ?? 150000, bprijs = c.prijs_min_brandstof ?? 3000;
   const seg = c.segment_min ?? 'C', segnaam = c.segment_naam ?? 'Compacte middenklasse';
   const uitz = (c.segment_uitzondering ?? ['BMW i3']).map(esc);
-  const per = c.per_soort ?? 25;
+  const per = c.per_soort ?? 25, perModel = c.per_model ?? 4;
   const h2p = c.h2_prijs ?? 15, h2s = c.h2_stations ?? 20;
   el.innerHTML = `<ul>
     <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
@@ -313,7 +313,7 @@ function criteriaTonen(c) {
     <li><b>Land</b>: heel Nederland, geen import of export.</li>
     <li><b>Model</b>: alleen modellen van de toelatingslijst, met een eigen betrouwbaarheidscijfer.</li>
     <li><b>Staat</b>: geen schade, geen opknapper, geen huuraccu, geen brommobiel, microcar of bestelbus, en geen advertentie met meerdere auto's of een halve prijs.</li>
-    <li><b>Op de site</b>: hoogstens ${per} auto's per soort, de hoogste scores eerst.</li>
+    <li><b>Op de site</b>: hoogstens ${per} auto's per soort en hoogstens ${perModel} van hetzelfde model, de hoogste scores eerst. Die tweede grens zorgt dat één model met veel aanbod niet de hele lijst vult.</li>
   </ul>`;
 }
 criteriaTonen({});   // meteen zichtbaar; de echte waarden komen uit data.json

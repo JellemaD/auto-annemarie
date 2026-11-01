@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.10.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.11.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -153,6 +153,9 @@ MODELLEN = [
     ('toyota', 'auris', 8.5, None, 'Ruimer dan de Yaris, zelfde techniek'),
     ('honda', 'jazz', 8.5, None, 'Ruim, hoge instap, zeer betrouwbaar'),
     ('honda', 'civic', 8.0, None, ''),
+    ('kia', 'sportage', 7.5, None, '1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw'),
+    ('hyundai', 'tucson', 7.5, None, 'Zelfde 1.6 GDI en platform als de Kia Sportage'),
+    ('toyota', 'avensis', 8.5, None, 'Toyota-degelijkheid en veel ruimte; 1.8 Valvematic zonder turbo'),
     ('mitsubishi', 'asx', 7.5, None, '1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek'),
     ('lexus', 'ct', 8.5, None, 'Prius-techniek in een nettere jas'),
     ('suzuki', 'swift', 8.0, None, 'Licht en eenvoudig'),
@@ -180,7 +183,10 @@ MODELLEN = [
 ZONDER_STEKKER = {
     'aygo': ('toyota/aygo', 4.8), 'yaris': ('toyota/yaris', 5.3), 'auris': ('toyota/auris', 6.0),
     'prius': ('toyota/prius', 4.5), 'jazz': ('honda/jazz', 5.6), 'civic': ('honda/civic', 6.2),
-    'asx': ('mitsubishi/asx', 7.0), 'ct': ('lexus/ct', 4.6), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
+    'asx': ('mitsubishi/asx', 7.0), 'ct': ('lexus/ct', 4.6),
+    'ioniq': (None, 4.5), 'niro': (None, 4.7),
+    'sportage': ('kia/sportage', 8.0), 'tucson': ('hyundai/tucson', 8.0),
+    'avensis': ('toyota/avensis', 7.0), 'swift': ('suzuki/swift', 5.2), 'picanto': ('kia/picanto', 5.0),
     'rio': ('kia/rio', 5.5), 'ceed': ('kia/ceed', 6.0), "cee'd": (None, 6.0),
     'i10': ('hyundai/i10', 5.0), 'i20': ('hyundai/i20', 5.5), 'i30': ('hyundai/i30', 6.2),
     'fabia': ('skoda/fabia', 5.3),
@@ -188,7 +194,8 @@ ZONDER_STEKKER = {
     'c1': ('citroen/c1', 4.8),
 }
 # Zuiniger als het een hybride is (dezelfde auto, andere aandrijving).
-HYBRIDE_VERBRUIK = {'yaris': 4.2, 'auris': 4.5, 'jazz': 4.8, 'prius': 4.5, 'ct': 4.6}
+HYBRIDE_VERBRUIK = {'yaris': 4.2, 'auris': 4.5, 'jazz': 4.8, 'prius': 4.5, 'ct': 4.6,
+                    'ioniq': 4.5, 'niro': 4.7}
 
 # (merk, modelwoord) voor de zoekopdrachten per model op Marktplaats.
 BENZINE_PAREN = []
@@ -267,7 +274,7 @@ GEWICHT = {
 }
 GEWICHT.update({
     'aygo': 900, 'yaris': 1050, 'auris': 1250, 'jazz': 1100, 'civic': 1300, 'ct': 1400,
-    'asx': 1310, 'swift': 950, 'picanto': 900, 'rio': 1100, 'ceed': 1250, "cee'd": 1250, 'i10': 950,
+    'asx': 1310, 'sportage': 1450, 'tucson': 1480, 'avensis': 1450, 'swift': 950, 'picanto': 900, 'rio': 1100, 'ceed': 1250, "cee'd": 1250, 'i10': 950,
     'i20': 1050, 'i30': 1250, '3': 1250, '2': 1050, 'fabia': 1050, 'polo': 1100, 'ibiza': 1100,
     '108': 900, 'c1': 900,
 })
@@ -289,7 +296,7 @@ LENGTE = {
 }
 LENGTE.update({
     'aygo': 3465, 'yaris': 3945, 'auris': 4330, 'jazz': 3955, 'civic': 4300, 'ct': 4350,
-    'asx': 4365, 'swift': 3850, 'picanto': 3595, 'rio': 4045, 'ceed': 4310, "cee'd": 4310, 'i10': 3665,
+    'asx': 4365, 'sportage': 4480, 'tucson': 4475, 'avensis': 4820, 'swift': 3850, 'picanto': 3595, 'rio': 4045, 'ceed': 4310, "cee'd": 4310, 'i10': 3665,
     'i20': 4035, 'i30': 4300, '3': 4580, '2': 4060, 'fabia': 3992, 'polo': 3972, 'ibiza': 4061,
     '108': 3475, 'c1': 3466,
 })
@@ -313,7 +320,7 @@ SEGMENT = {
 }
 SEGMENT.update({
     'aygo': 'A', 'yaris': 'B', 'auris': 'C', 'jazz': 'B', 'civic': 'C', 'ct': 'C',
-    'asx': 'C', 'swift': 'B', 'picanto': 'A', 'rio': 'B', 'ceed': 'C', "cee'd": 'C', 'i10': 'A',
+    'asx': 'C', 'sportage': 'C', 'tucson': 'C', 'avensis': 'D', 'swift': 'B', 'picanto': 'A', 'rio': 'B', 'ceed': 'C', "cee'd": 'C', 'i10': 'A',
     'i20': 'B', 'i30': 'C', '3': 'C', '2': 'B', 'fabia': 'B', 'polo': 'B', 'ibiza': 'B',
     '108': 'A', 'c1': 'A',
 })
@@ -740,6 +747,7 @@ def beoordeel(a):
         return None  # kleiner dan de compacte middenklasse (segment C)
     a['lengte'] = LENGTE.get(modelwoord)
     a['segment'] = SEGMENT.get(modelwoord)
+    a['modelwoord'] = modelwoord
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     waterstof = 'waterstof' in norm(a['brandstof']) or bool(WATERSTOF_WOORDEN.search(titel))
     if soort == 'H2':
@@ -831,16 +839,27 @@ DETAIL_SCHADE = [
 ]
 DETAIL_AANTAL = 100
 PER_SOORT = 25        # hoeveel kandidaten per soort de detailcontrole in gaan en op de site komen
+# Hoogstens zoveel van hetzelfde model per soort (besluit Durk 01-11-2026). Zonder deze grens
+# vulde een model met veel aanbod de hele categorie: 18 van de 24 benzineplekken was een Kia
+# Ceed, waardoor de ASX, Sportage en Tucson er nooit doorheen kwamen.
+PER_MODEL = 4
+# Hetzelfde model onder twee schrijfwijzen telt als een model.
+MODEL_ALIAS = {"cee'd": 'ceed'}
 
 
-def beste_per_soort(autos, per_soort=PER_SOORT):
-    """Per soort de beste kandidaten. Zonder dit verdringt een soort met veel jong aanbod
-    (benzine) alle andere, en is er op de site geen elektrische auto meer te zien."""
-    geteld, uit = {}, []
+def beste_per_soort(autos, per_soort=PER_SOORT, per_model=PER_MODEL):
+    """Per soort de beste kandidaten, en hoogstens per_model van hetzelfde model. Zonder de
+    grens per soort verdringt een soort met veel jong aanbod (benzine) alle andere; zonder de
+    grens per model verdringt een model met veel aanbod (Kia Ceed) alle andere modellen."""
+    per_s, per_m, uit = {}, {}, []
     for a in autos:                       # al op score gesorteerd
-        if geteld.get(a['soort'], 0) < per_soort:
-            geteld[a['soort']] = geteld.get(a['soort'], 0) + 1
-            uit.append(a)
+        model = a.get('modelwoord')
+        sleutel = (a['soort'], MODEL_ALIAS.get(model, model) if model else a['id'])
+        if per_s.get(a['soort'], 0) >= per_soort or per_m.get(sleutel, 0) >= per_model:
+            continue
+        per_s[a['soort']] = per_s.get(a['soort'], 0) + 1
+        per_m[sleutel] = per_m.get(sleutel, 0) + 1
+        uit.append(a)
     return uit
 
 
@@ -933,7 +952,7 @@ def main():
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
             'segment_min': SEGMENT_MIN, 'segment_naam': SEGMENT_NAAM[SEGMENT_MIN],
             'segment_uitzondering': sorted(SEGMENT_UITZONDERING.values()),
-            'per_soort': PER_SOORT,
+            'per_soort': PER_SOORT, 'per_model': PER_MODEL,
             'h2_prijs': H2_PRIJS, 'h2_stations': H2_STATIONS,
         },
         'aantal_bekeken': len(ruw),
