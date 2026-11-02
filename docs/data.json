@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-01 13:12",
+ "bijgewerkt": "2026-11-02 14:47",
  "versie": "1.11.0",
  "segment_min": "C",
  "criteria": {
@@ -20,8 +20,8 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2537,
- "aantal": 669,
+ "aantal_bekeken": 2618,
+ "aantal": 674,
  "autos": [
   {
    "id": "mp_m2458977266",
@@ -101,7 +101,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_5ba416d2-b0d7-46b2-8e00-8d2ccd82f8dc",
@@ -140,6 +140,45 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2459754971",
+   "bron": "Marktplaats",
+   "merk": "Kia",
+   "model": "(Pro) Cee d",
+   "titel": "Kia Cee'd Sportswagon 1.0 T-GDi Design Edition | Trekhaak |",
+   "prijs": 9975,
+   "km": 102301,
+   "jaar": 2018,
+   "brandstof": "Benzine",
+   "plaats": "Sneek",
+   "verkoper": "Boersma occasions",
+   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2459754971-kia-cee-d-sportswagon-1-0-t-gdi-design-edition-trekhaak",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/396328bf-9499-48e9-8d49-97f2949aedc2?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4310,
+   "segment": "C",
+   "modelwoord": "cee'd",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 32,
+   "brandstofkosten": 126,
+   "totale_kosten": 207,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 71.3,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 14.4,
+    "km": 10.0,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "let_op": [],
+   "eerst_gezien": "2026-11-02",
    "nieuw": true
   },
   {
@@ -179,7 +218,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2460189555",
@@ -218,7 +257,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2460168454",
@@ -257,46 +296,46 @@
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
-   "id": "as24_01214eed-86d9-40be-8a01-24cf00fd7a9e",
+   "id": "as24_5bac3813-a806-46d6-8be1-157bd61dd62c",
    "bron": "AutoScout24",
    "merk": "Kia",
-   "model": "Ceed SW / cee'd SW",
-   "titel": "Kia Ceed SW / cee'd SW Sportswagon 1.0 T-GDi DynamicLine BJ2019 Lmv 16\" |",
-   "prijs": 9750,
-   "km": 152004,
-   "jaar": 2019,
-   "brandstof": "Benzine",
-   "plaats": "Damwoude",
-   "verkoper": "Minnema auto's B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/kia-ceed-sw-cee-d-sw-sportswagon-1-0-t-gdi-dynamicline-bj2019-lmv-16-benzine-zwart-cat_ma39mo19239-01214eed-86d9-40be-8a01-24cf00fd7a9e",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/01214eed-86d9-40be-8a01-24cf00fd7a9e_b482de45-9c85-436b-aa33-4c7985614431.jpg/480x360.webp",
-   "lengte": 4310,
+   "model": "Niro",
+   "titel": "Kia Niro 1.6 GDi PHEV BusinessLine | Camera | Cruise | Clim",
+   "prijs": 8350,
+   "km": 137501,
+   "jaar": 2018,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Eindhoven",
+   "verkoper": "Autobedrijf Vlashuizen B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/kia-niro-1-6-gdi-phev-businessline-camera-cruise-clim-elektro-benzine-wit-cat_ma39mo74327-5bac3813-a806-46d6-8be1-157bd61dd62c",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/5bac3813-a806-46d6-8be1-157bd61dd62c_104ae63b-2273-471e-8964-209bbe974ab9.jpg/480x360.webp",
+   "lengte": 4355,
    "segment": "C",
-   "modelwoord": "ceed",
-   "soort": "Benzine",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 32,
-   "brandstofkosten": 126,
-   "totale_kosten": 207,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 69.8,
+   "modelwoord": "niro",
+   "soort": "Plug-in hybride",
+   "gewicht": 1600,
+   "mrb": 86,
+   "verzekering": 35,
+   "brandstofkosten": 97,
+   "totale_kosten": 218,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 69.9,
    "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 16.2,
-    "km": 6.7,
-    "kosten": 4.7
+    "betrouwbaarheid": 29.8,
+    "bereik": 14.0,
+    "bouwjaar": 14.4,
+    "km": 7.6,
+    "kosten": 4.1
    },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
    "let_op": [],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
+   "eerst_gezien": "2026-11-02",
+   "nieuw": true
   },
   {
    "id": "as24_de624723-3ba2-437c-82a1-f3ab378b31ef",
@@ -337,7 +376,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2449274208",
@@ -693,7 +732,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_6543f788-ebb9-442a-9c4b-3fb8d8bfd1c3",
@@ -737,7 +776,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_6b9a1345-8e60-4ae9-ba95-a51482e88a2f",
@@ -778,7 +817,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_0e8cfad9-9114-4fb9-b9bf-2f6b60754aae",
@@ -817,46 +856,7 @@
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2457938968",
-   "bron": "Marktplaats",
-   "merk": "Kia",
-   "model": "Niro",
-   "titel": "Kia Niro 1.6 GDi Hybrid DynamicLine",
-   "prijs": 9999,
-   "km": 178317,
-   "jaar": 2017,
-   "brandstof": "Hybride",
-   "plaats": "Roosendaal",
-   "verkoper": "Borchwerf Auto's",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2457938968-kia-niro-1-6-gdi-hybrid-dynamicline",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/daa8cb6e-a31f-4ff5-a7ea-aacb1c77b974?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4355,
-   "segment": "C",
-   "modelwoord": "niro",
-   "soort": "Hybride",
-   "gewicht": 1600,
-   "mrb": 86,
-   "verzekering": 36,
-   "brandstofkosten": 99,
-   "totale_kosten": 221,
-   "bereik_zomer": 800,
-   "bereik_winter": 800,
-   "score": 67.2,
-   "punten": {
-    "betrouwbaarheid": 29.8,
-    "bereik": 16.0,
-    "bouwjaar": 12.6,
-    "km": 4.9,
-    "kosten": 4.0
-   },
-   "betrouwbaarheid": 8.5,
-   "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_bb6e8094-2bd0-4257-b22e-5d3458a52819",
@@ -897,7 +897,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_2f9ecba7-ca28-468c-8a1d-dc986f9fc9c9",
@@ -1021,7 +1021,7 @@
    "toelichting": "Toyota-degelijkheid en veel ruimte; 1.8 Valvematic zonder turbo",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_1b0df80d-c8c7-48db-9520-b893c6effc1d",
@@ -1106,6 +1106,47 @@
    ],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
+  },
+  {
+   "id": "as24_92a22f6c-ca33-4f6b-95bc-fffe4865ccc2",
+   "bron": "AutoScout24",
+   "merk": "Kia",
+   "model": "Niro",
+   "titel": "Kia Niro 1.6 Comfortline | 3MND GAR | EXPORTPRIJS € 8400,-",
+   "prijs": 8900,
+   "km": 250920,
+   "jaar": 2019,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Veldhoven",
+   "verkoper": "John van Hest Auto's",
+   "url": "https://www.autoscout24.nl/aanbod/kia-niro-1-6-comfortline-3mnd-gar-exportprijs-e-8400-elektro-benzine-blauw-cat_ma39mo74327-92a22f6c-ca33-4f6b-95bc-fffe4865ccc2",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/92a22f6c-ca33-4f6b-95bc-fffe4865ccc2_6f09ef18-e971-40b2-9697-dbd863d37f65.jpg/480x360.webp",
+   "lengte": 4355,
+   "segment": "C",
+   "modelwoord": "niro",
+   "soort": "Hybride",
+   "gewicht": 1600,
+   "mrb": 86,
+   "verzekering": 35,
+   "brandstofkosten": 99,
+   "totale_kosten": 220,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 66.0,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
+    "bouwjaar": 16.2,
+    "km": 0.0,
+    "kosten": 4.0
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-11-02",
+   "nieuw": true
   },
   {
    "id": "mp_m2450846709",
@@ -1193,6 +1234,49 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2460977421",
+   "bron": "Marktplaats",
+   "merk": "Nissan",
+   "model": "Leaf",
+   "titel": "Nissan Leaf N-Connecta  Bj 2020 Marge 360 Camera Navi",
+   "prijs": 8499,
+   "km": 115445,
+   "jaar": 2020,
+   "brandstof": "Elektrisch",
+   "plaats": "Alphen aan den Rijn",
+   "verkoper": "Autobedrijf  Van Alphen",
+   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2460977421-nissan-leaf-n-connecta-bj-2020-marge-360-camera-navi",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1123f990-6d18-4d88-b79b-2d8362554f7c?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4445,
+   "segment": "C",
+   "modelwoord": "leaf",
+   "soort": "Elektrisch",
+   "gewicht": 1450,
+   "mrb": 47,
+   "verzekering": 33,
+   "brandstofkosten": 46,
+   "totale_kosten": 126,
+   "accu_kwh": 22,
+   "soh_schatting": 89,
+   "bereik_zomer": 120,
+   "bereik_winter": 90,
+   "score": 65.7,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 5.3,
+    "bouwjaar": 18.0,
+    "km": 9.1,
+    "kosten": 8.7
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-11-02",
+   "nieuw": true
+  },
+  {
    "id": "as24_38810b31-d784-4991-9be9-05ea8c773d83",
    "bron": "AutoScout24",
    "merk": "Volkswagen",
@@ -1274,7 +1358,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_7b647f15-3c87-49c9-85de-c2b82aa44b3a",
@@ -1315,7 +1399,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_63d44bf3-502e-49ad-b3ea-6391bee444fe",
@@ -1397,7 +1481,7 @@
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b46c6ced-8560-465f-a99b-604858ec6cc2",
@@ -1482,45 +1566,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_e573acaa-e641-4f4f-9321-ac642d7018b5",
-   "bron": "AutoScout24",
-   "merk": "Honda",
-   "model": "Civic",
-   "titel": "Honda Civic 1.4 Comfort Silverstone | Cruise | Sensoren | Airc",
-   "prijs": 9950,
-   "km": 136537,
-   "jaar": 2015,
-   "brandstof": "Benzine",
-   "plaats": "Wergea",
-   "verkoper": "Vakgarage van de Zweep",
-   "url": "https://www.autoscout24.nl/aanbod/honda-civic-1-4-comfort-silverstone-cruise-sensoren-airc-benzine-blauw-cat_ma31mo1775-e573acaa-e641-4f4f-9321-ac642d7018b5",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/e573acaa-e641-4f4f-9321-ac642d7018b5_f75cd543-52d1-44b8-bb6a-686acbe62cb5.jpg/480x360.webp",
-   "lengte": 4300,
-   "segment": "C",
-   "modelwoord": "civic",
-   "soort": "Benzine",
-   "gewicht": 1300,
-   "mrb": 58,
-   "verzekering": 33,
-   "brandstofkosten": 130,
-   "totale_kosten": 221,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 64.7,
-   "punten": {
-    "betrouwbaarheid": 28.0,
-    "bereik": 16.0,
-    "bouwjaar": 9.0,
-    "km": 7.7,
-    "kosten": 4.0
-   },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "",
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": true
-  },
-  {
    "id": "as24_8bc96c99-8efb-45f9-8b1d-dcba07f12c67",
    "bron": "AutoScout24",
    "merk": "BMW",
@@ -1557,7 +1602,7 @@
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_5de9c9d7-9114-4bd1-868f-5272c5c1034b",
@@ -1596,7 +1641,7 @@
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2458368460",
@@ -1677,7 +1722,7 @@
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2451366621",
@@ -1716,7 +1761,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2459711261",
@@ -1755,7 +1800,7 @@
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2459419867",
@@ -1842,50 +1887,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2456123416",
-   "bron": "Marktplaats",
-   "merk": "Nissan",
-   "model": "Leaf",
-   "titel": "Nissan Leaf N-Connecta 40 kWh (INCL-BTW) Aut. *HEATPUMP | NA",
-   "prijs": 8645,
-   "km": 248306,
-   "jaar": 2019,
-   "brandstof": "Elektrisch",
-   "plaats": "Teuge",
-   "verkoper": "Haverkamp Auto's B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/nissan/m2456123416-nissan-leaf-n-connecta-40-kwh-incl-btw-aut-heatpump-na",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e278bc2b-46d3-4af9-ba6d-b3acd4851d80?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4445,
-   "segment": "C",
-   "modelwoord": "leaf",
-   "soort": "Elektrisch",
-   "gewicht": 1450,
-   "mrb": 47,
-   "verzekering": 33,
-   "brandstofkosten": 46,
-   "totale_kosten": 126,
-   "accu_kwh": 39,
-   "soh_schatting": 87,
-   "bereik_zomer": 205,
-   "bereik_winter": 150,
-   "score": 62.8,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 13.3,
-    "bouwjaar": 16.2,
-    "km": 0.1,
-    "kosten": 8.7
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
-  },
-  {
    "id": "as24_7884dcf9-a919-44cb-a790-eec75c14c254",
    "bron": "AutoScout24",
    "merk": "BMW",
@@ -1961,45 +1962,6 @@
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
-  },
-  {
-   "id": "as24_31dd5dfc-f689-4a26-a125-4548a7f9366e",
-   "bron": "AutoScout24",
-   "merk": "Toyota",
-   "model": "Prius",
-   "titel": "Toyota Prius 1.8 Plug-in Executive Business",
-   "prijs": 9750,
-   "km": 177025,
-   "jaar": 2013,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Almere",
-   "verkoper": "Rimons Car Center",
-   "url": "https://www.autoscout24.nl/aanbod/toyota-prius-1-8-plug-in-executive-business-elektro-benzine-grijs-cat_ma70mo16516-31dd5dfc-f689-4a26-a125-4548a7f9366e",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/31dd5dfc-f689-4a26-a125-4548a7f9366e_584eaf4d-24a1-4d1b-9ea5-b8a1691b1a19.jpg/480x360.webp",
-   "lengte": 4460,
-   "segment": "C",
-   "modelwoord": "prius",
-   "soort": "Plug-in hybride",
-   "gewicht": 1450,
-   "mrb": 68,
-   "verzekering": 34,
-   "brandstofkosten": 97,
-   "totale_kosten": 199,
-   "bereik_zomer": 20,
-   "bereik_winter": 15,
-   "score": 61.7,
-   "punten": {
-    "betrouwbaarheid": 33.2,
-    "bereik": 13.0,
-    "bouwjaar": 5.4,
-    "km": 5.0,
-    "kosten": 5.0
-   },
-   "betrouwbaarheid": 9.5,
-   "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
-   "let_op": [],
-   "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
   {
@@ -2041,7 +2003,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2426127275",
@@ -2121,7 +2083,7 @@
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_4b262ccc-9b47-4c62-9d96-1306f1e3be4a",
@@ -2203,6 +2165,47 @@
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
+   "nieuw": false
+  },
+  {
+   "id": "as24_fa85349a-b3a5-452a-b4fd-fc1f945c5b7e",
+   "bron": "AutoScout24",
+   "merk": "Honda",
+   "model": "Civic",
+   "titel": "Honda Civic Honda Civic 1.4 i-VTEC Comfort Business Edition, B",
+   "prijs": 7150,
+   "km": 191874,
+   "jaar": 2015,
+   "brandstof": "Benzine",
+   "plaats": "Hedel",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/honda-civic-honda-civic-1-4-i-vtec-comfort-business-edition-b-benzine-bruin-cat_ma31mo1775-fa85349a-b3a5-452a-b4fd-fc1f945c5b7e",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/fa85349a-b3a5-452a-b4fd-fc1f945c5b7e_a31970a3-b622-417d-b667-12f7bb023342.jpg/480x360.webp",
+   "lengte": 4300,
+   "segment": "C",
+   "modelwoord": "civic",
+   "soort": "Benzine",
+   "gewicht": 1300,
+   "mrb": 58,
+   "verzekering": 30,
+   "brandstofkosten": 130,
+   "totale_kosten": 218,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 61.1,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 16.0,
+    "bouwjaar": 9.0,
+    "km": 4.0,
+    "kosten": 4.1
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-11-02",
    "nieuw": true
   },
   {
@@ -2245,19 +2248,19 @@
    "nieuw": false
   },
   {
-   "id": "as24_24b73ad7-795d-42b8-ab14-e65de2cde397",
+   "id": "as24_b5ccb3e7-9952-410f-bbe4-091a11b3801d",
    "bron": "AutoScout24",
    "merk": "Volkswagen",
-   "model": "Golf GTE",
-   "titel": "Volkswagen Golf GTE 1.4 TSI |NL AUTO|KM NAP|VOL ONDERHOUD",
-   "prijs": 9950,
-   "km": 177020,
+   "model": "Golf",
+   "titel": "Volkswagen Golf Golf 7 GTE 204 PK hybride",
+   "prijs": 9900,
+   "km": 180005,
    "jaar": 2015,
    "brandstof": "Elektro/Benzine",
-   "plaats": "Enschede",
-   "verkoper": "Salland Automotive",
-   "url": "https://www.autoscout24.nl/aanbod/volkswagen-golf-gte-1-4-tsi-nl-auto-km-nap-vol-onderhoud-elektro-benzine-blauw-cat_ma74mo75655-24b73ad7-795d-42b8-ab14-e65de2cde397",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/24b73ad7-795d-42b8-ab14-e65de2cde397_ad511ba5-6e7c-4533-939a-544a7a8012cd.jpg/480x360.webp",
+   "plaats": "Stein",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/volkswagen-golf-golf-7-gte-204-pk-hybride-elektro-benzine-grijs-cat_ma74mo2084-b5ccb3e7-9952-410f-bbe4-091a11b3801d",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/b5ccb3e7-9952-410f-bbe4-091a11b3801d_992cd856-8347-4ce6-b349-82e65307510b.jpg/480x360.webp",
    "lengte": 4258,
    "segment": "C",
    "modelwoord": "golf",
@@ -2269,17 +2272,19 @@
    "totale_kosten": 207,
    "bereik_zomer": 30,
    "bereik_winter": 20,
-   "score": 60.6,
+   "score": 60.4,
    "punten": {
     "betrouwbaarheid": 28.0,
     "bereik": 14.0,
     "bouwjaar": 9.0,
-    "km": 5.0,
+    "km": 4.8,
     "kosten": 4.7
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
-   "let_op": [],
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -2520,7 +2525,7 @@
     "Waterstof ± € 15,00 per kilo"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2456215727",
@@ -2639,7 +2644,7 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_31d95569-b11c-4fec-b6b9-1c60d0c60ae5",
@@ -2678,6 +2683,49 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2459848483",
+   "bron": "Marktplaats",
+   "merk": "BMW",
+   "model": "I3",
+   "titel": "BMW i3 2016 Wit 22kwh",
+   "prijs": 9750,
+   "km": 87692,
+   "jaar": 2016,
+   "brandstof": "Elektrisch",
+   "plaats": "Zevenbergen",
+   "verkoper": "Kim Knottnerus",
+   "url": "https://www.marktplaats.nl/v/auto-s/bmw/m2459848483-bmw-i3-2016-wit-22kwh",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/22fd8041-6027-4543-9faa-a7a7914f4e45?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 3999,
+   "segment": "B",
+   "modelwoord": "i3",
+   "soort": "Elektrisch",
+   "gewicht": 1250,
+   "mrb": 35,
+   "verzekering": 40,
+   "brandstofkosten": 41,
+   "totale_kosten": 116,
+   "accu_kwh": 19,
+   "soh_schatting": 88,
+   "bereik_zomer": 115,
+   "bereik_winter": 85,
+   "score": 58.5,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 4.7,
+    "bouwjaar": 10.8,
+    "km": 11.0,
+    "kosten": 9.2
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-11-02",
    "nieuw": true
   },
   {
@@ -2756,45 +2804,6 @@
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2451519634",
-   "bron": "Marktplaats",
-   "merk": "Mitsubishi",
-   "model": "Outlander",
-   "titel": "Mitsubishi Outlander 2.0 PHEV Business Edition",
-   "prijs": 7950,
-   "km": 150703,
-   "jaar": 2014,
-   "brandstof": "Hybride",
-   "plaats": "Bunnik",
-   "verkoper": "Auto's van Engel",
-   "url": "https://www.marktplaats.nl/v/auto-s/mitsubishi/m2451519634-mitsubishi-outlander-2-0-phev-business-edition",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/883095ef-7d8f-4392-b973-70a1247e02a6?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4695,
-   "segment": "D",
-   "modelwoord": "outlander",
-   "soort": "Plug-in hybride",
-   "gewicht": 1810,
-   "mrb": 104,
-   "verzekering": 37,
-   "brandstofkosten": 97,
-   "totale_kosten": 238,
-   "bereik_zomer": 35,
-   "bereik_winter": 25,
-   "score": 56.6,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 15.0,
-    "bouwjaar": 7.2,
-    "km": 6.8,
-    "kosten": 3.1
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
-   "let_op": [],
-   "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
   {
@@ -2882,7 +2891,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b0edcc4b-fefd-48e1-a6aa-49995a01e7f5",
@@ -2925,7 +2934,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2397321994",
@@ -2968,7 +2977,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_ffe7b0d1-fb91-40c7-a234-0ce4b88ca9a0",
@@ -3011,7 +3020,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_7058f9f5-9ed5-46e9-84db-8b0776777718",
@@ -3019,7 +3028,7 @@
    "merk": "BMW",
    "model": "i3",
    "titel": "BMW i3 Basis 22 kWh CRUISE/CLIMA/NAVI/LMV/PDC",
-   "prijs": 9450,
+   "prijs": 8950,
    "km": 133320,
    "jaar": 2015,
    "brandstof": "Elektrisch",
@@ -3054,7 +3063,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_961e8005-14d4-4ec4-997e-f783f05cdae9",
@@ -3097,7 +3106,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_81925231-1ca1-4eda-9969-90e188d256ac",
@@ -3140,7 +3149,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_f0c50898-551a-4887-826a-e6e556f9f0ee",
@@ -3183,7 +3192,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453628399",
@@ -3226,7 +3235,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-01",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_c118fd71-9e46-4fb0-b0f1-cbd4d05a423e",
