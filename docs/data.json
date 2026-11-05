@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-04 14:14",
+ "bijgewerkt": "2026-11-05 14:28",
  "versie": "1.11.0",
  "segment_min": "C",
  "criteria": {
@@ -20,8 +20,8 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2604,
- "aantal": 665,
+ "aantal_bekeken": 2611,
+ "aantal": 670,
  "autos": [
   {
    "id": "mp_m2458977266",
@@ -140,46 +140,7 @@
    "toelichting": "",
    "let_op": [],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
-  },
-  {
-   "id": "mp_m2460207543",
-   "bron": "Marktplaats",
-   "merk": "Kia",
-   "model": "(Pro) Cee d",
-   "titel": "Kia Ceed Sportswagon 1.0 T-GDi DynamicLine | Navi | Camera",
-   "prijs": 9000,
-   "km": 129000,
-   "jaar": 2019,
-   "brandstof": "Benzine",
-   "plaats": "Schiedam",
-   "verkoper": "Kareem",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2460207543-kia-ceed-sportswagon-1-0-t-gdi-dynamicline-navi-camera",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2b17cbff-0106-4ae8-a184-c944c0e4f7c5?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4310,
-   "segment": "C",
-   "modelwoord": "ceed",
-   "soort": "Benzine",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 31,
-   "brandstofkosten": 126,
-   "totale_kosten": 206,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 71.4,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 16.2,
-    "km": 8.2,
-    "kosten": 4.7
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
-   "let_op": [],
-   "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_5ba416d2-b0d7-46b2-8e00-8d2ccd82f8dc",
@@ -260,6 +221,45 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2459767318",
+   "bron": "Marktplaats",
+   "merk": "Kia",
+   "model": "(Pro) Cee d",
+   "titel": "Kia Ceed Sportswagon 1.0 T-GDi , Camera, Clima netjes !",
+   "prijs": 8895,
+   "km": 157799,
+   "jaar": 2021,
+   "brandstof": "Benzine",
+   "plaats": "Tynaarlo",
+   "verkoper": "Mijnduurzameauto. NL",
+   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2459767318-kia-ceed-sportswagon-1-0-t-gdi-camera-clima-netjes",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0368b260-d832-477f-9f6e-cc391f7e2a63?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4310,
+   "segment": "C",
+   "modelwoord": "ceed",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 31,
+   "brandstofkosten": 126,
+   "totale_kosten": 206,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 71.2,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 6.3,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "let_op": [],
+   "eerst_gezien": "2026-11-01",
+   "nieuw": false
+  },
+  {
    "id": "mp_m2460168454",
    "bron": "Marktplaats",
    "merk": "Toyota",
@@ -297,6 +297,45 @@
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
+  },
+  {
+   "id": "as24_eaeb8aae-ec2c-4a67-ad9a-c6c6e8f1d49d",
+   "bron": "AutoScout24",
+   "merk": "Toyota",
+   "model": "Auris",
+   "titel": "Toyota Auris 1.2T Dynamic|NAVIGATIE/CAMERA|ECC AIRCO|CRUISE",
+   "prijs": 9950,
+   "km": 119849,
+   "jaar": 2016,
+   "brandstof": "Benzine",
+   "plaats": "Katwijk",
+   "verkoper": "J & F Auto's B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/toyota-auris-1-2t-dynamic-navigatie-camera-ecc-airco-cruise-benzine-grijs-cat_ma70mo18992-eaeb8aae-ec2c-4a67-ad9a-c6c6e8f1d49d",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/eaeb8aae-ec2c-4a67-ad9a-c6c6e8f1d49d_8d4ada31-5625-4ab8-99a7-9874f4da2594.jpg/480x360.webp",
+   "lengte": 4330,
+   "segment": "C",
+   "modelwoord": "auris",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 32,
+   "brandstofkosten": 126,
+   "totale_kosten": 207,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 70.1,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
+    "bouwjaar": 10.8,
+    "km": 8.9,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "let_op": [],
+   "eerst_gezien": "2026-11-05",
+   "nieuw": true
   },
   {
    "id": "as24_de624723-3ba2-437c-82a1-f3ab378b31ef",
@@ -780,7 +819,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_6b9a1345-8e60-4ae9-ba95-a51482e88a2f",
@@ -820,45 +859,6 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
-   "id": "as24_0e8cfad9-9114-4fb9-b9bf-2f6b60754aae",
-   "bron": "AutoScout24",
-   "merk": "Toyota",
-   "model": "Auris",
-   "titel": "Toyota Auris Auris 1.2T Trend",
-   "prijs": 9500,
-   "km": 160000,
-   "jaar": 2016,
-   "brandstof": "Benzine",
-   "plaats": "Breda",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/toyota-auris-auris-1-2t-trend-benzine-grijs-cat_ma70mo18992-0e8cfad9-9114-4fb9-b9bf-2f6b60754aae",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/0e8cfad9-9114-4fb9-b9bf-2f6b60754aae_0d82b427-39f4-4bde-8a3c-9f185d47d8a5.jpg/480x360.webp",
-   "lengte": 4330,
-   "segment": "C",
-   "modelwoord": "auris",
-   "soort": "Benzine",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 32,
-   "brandstofkosten": 126,
-   "totale_kosten": 207,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 67.3,
-   "punten": {
-    "betrouwbaarheid": 29.8,
-    "bereik": 16.0,
-    "bouwjaar": 10.8,
-    "km": 6.1,
-    "kosten": 4.7
-   },
-   "betrouwbaarheid": 8.5,
-   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
-   "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -1040,7 +1040,7 @@
    "plaats": "Mariahout",
    "verkoper": "Auto Corsten B.V.",
    "url": "https://www.autoscout24.nl/aanbod/kia-niro-1-6gdi-phev-hybrid-automaat-trekhaak-dab-cruise-na-elektro-benzine-wit-cat_ma39mo74327-1b0df80d-c8c7-48db-9520-b893c6effc1d",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/1b0df80d-c8c7-48db-9520-b893c6effc1d_3e8d26fa-a6a3-465a-b0e7-54bfc66ed5bb.jpg/480x360.webp",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/1b0df80d-c8c7-48db-9520-b893c6effc1d_b20285c7-75d9-49cc-b882-d8f829d09b16.jpg/480x360.webp",
    "lengte": 4355,
    "segment": "C",
    "modelwoord": "niro",
@@ -1441,6 +1441,47 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2453287110",
+   "bron": "Marktplaats",
+   "merk": "Toyota",
+   "model": "Auris",
+   "titel": "Toyota Auris 1.8 Hybrid Aspiration",
+   "prijs": 9395,
+   "km": 198612,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Nieuwleusen",
+   "verkoper": "Autobedrijf P.W.Y. Zantingh",
+   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2453287110-toyota-auris-1-8-hybrid-aspiration",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/94e0ab12-93a4-4ea1-ac00-a886a4b912ec?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4330,
+   "segment": "C",
+   "modelwoord": "auris",
+   "soort": "Hybride",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 31,
+   "brandstofkosten": 94,
+   "totale_kosten": 174,
+   "bereik_zomer": 800,
+   "bereik_winter": 800,
+   "score": 64.5,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
+    "bouwjaar": 9.0,
+    "km": 3.5,
+    "kosten": 6.3
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-27",
+   "nieuw": false
+  },
+  {
    "id": "as24_8bc96c99-8efb-45f9-8b1d-dcba07f12c67",
    "bron": "AutoScout24",
    "merk": "BMW",
@@ -1679,7 +1720,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2459711261",
@@ -2205,7 +2246,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b5ccb3e7-9952-410f-bbe4-091a11b3801d",
@@ -2287,7 +2328,48 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2435455713",
+   "bron": "Marktplaats",
+   "merk": "Volkswagen",
+   "model": "Golf",
+   "titel": "Volkswagen Golf 1.4 TSI GTE 204pk - pano | stoelverwarming",
+   "prijs": 9750,
+   "km": 180984,
+   "jaar": 2015,
+   "brandstof": "Hybride",
+   "plaats": "Barendrecht",
+   "verkoper": "Rohan",
+   "url": "https://www.marktplaats.nl/v/auto-s/volkswagen/m2435455713-volkswagen-golf-1-4-tsi-gte-204pk-pano-stoelverwarming",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d1dbdbb3-c59e-453d-8c98-04f3cf9bcabd?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4258,
+   "segment": "C",
+   "modelwoord": "golf",
+   "soort": "Plug-in hybride",
+   "gewicht": 1540,
+   "mrb": 77,
+   "verzekering": 35,
+   "brandstofkosten": 95,
+   "totale_kosten": 207,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 60.3,
+   "punten": {
+    "betrouwbaarheid": 28.0,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 4.7,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 8.0,
+   "toelichting": "",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-10-27",
+   "nieuw": false
   },
   {
    "id": "as24_288e2aae-544b-4514-a1fc-ee60cb244334",
@@ -2529,45 +2611,43 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2456215727",
+   "id": "mp_m2461904480",
    "bron": "Marktplaats",
-   "merk": "Toyota",
-   "model": "Prius",
-   "titel": "Toyota Prius 1.8 Plug-in Aspiration NAVI CAMERA LEER NAP",
-   "prijs": 9195,
-   "km": 210691,
-   "jaar": 2013,
+   "merk": "Ford",
+   "model": "C-Max",
+   "titel": "Ford C-Max 2.0 Plug-in Hybrid Titanium Plus Automaat Pano Le",
+   "prijs": 8950,
+   "km": 129930,
+   "jaar": 2015,
    "brandstof": "Hybride",
-   "plaats": "Aalsmeer",
-   "verkoper": "Autohandel Anwari",
-   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2456215727-toyota-prius-1-8-plug-in-aspiration-navi-camera-leer-nap",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0a7bcf19-2175-47fb-a181-c79c0e23abd4?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4460,
+   "plaats": "Lelystad",
+   "verkoper": "Auto Crown",
+   "url": "https://www.marktplaats.nl/v/auto-s/ford/m2461904480-ford-c-max-2-0-plug-in-hybrid-titanium-plus-automaat-pano-le",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/41a7267a-b040-4ca9-8002-370021e9b270?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4380,
    "segment": "C",
-   "modelwoord": "prius",
+   "modelwoord": "c-max",
    "soort": "Plug-in hybride",
-   "gewicht": 1450,
-   "mrb": 68,
-   "verzekering": 34,
+   "gewicht": 1720,
+   "mrb": 95,
+   "verzekering": 37,
    "brandstofkosten": 97,
-   "totale_kosten": 199,
-   "bereik_zomer": 20,
-   "bereik_winter": 15,
-   "score": 59.4,
+   "totale_kosten": 229,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 59.2,
    "punten": {
-    "betrouwbaarheid": 33.2,
-    "bereik": 13.0,
-    "bouwjaar": 5.4,
-    "km": 2.7,
-    "kosten": 5.0
+    "betrouwbaarheid": 24.5,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 8.2,
+    "kosten": 3.5
    },
-   "betrouwbaarheid": 9.5,
-   "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
-   "let_op": [
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "let_op": [],
+   "eerst_gezien": "2026-11-05",
+   "nieuw": true
   },
   {
    "id": "as24_069928c2-9dd9-46d2-93f6-44b8df4cd286",
@@ -2769,45 +2849,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_cc0cb566-b2bd-429a-845b-d7006f5d0e08",
-   "bron": "AutoScout24",
-   "merk": "Ford",
-   "model": "C-Max",
-   "titel": "Ford C-Max C-Max 2.0 Plug-in H.TitPl.",
-   "prijs": 9500,
-   "km": 145374,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Alphen Aan Den Rijn",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/ford-c-max-c-max-2-0-plug-in-h-titpl-elektro-benzine-grijs-cat_ma29mo19089-cc0cb566-b2bd-429a-845b-d7006f5d0e08",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/cc0cb566-b2bd-429a-845b-d7006f5d0e08_e3d226c6-8fe0-4e0c-bcba-e2da524d97cd.jpg/480x360.webp",
-   "lengte": 4380,
-   "segment": "C",
-   "modelwoord": "c-max",
-   "soort": "Plug-in hybride",
-   "gewicht": 1720,
-   "mrb": 95,
-   "verzekering": 37,
-   "brandstofkosten": 97,
-   "totale_kosten": 229,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 58.2,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 14.0,
-    "bouwjaar": 9.0,
-    "km": 7.1,
-    "kosten": 3.5
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
-   "let_op": [],
-   "eerst_gezien": "2026-11-03",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2451519634",
    "bron": "Marktplaats",
    "merk": "Mitsubishi",
@@ -2890,48 +2931,46 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2458608852",
+   "id": "mp_m2461934304",
    "bron": "Marktplaats",
-   "merk": "Fiat",
-   "model": "500",
-   "titel": "Fiat 500 42kWh 118pk Aut 2021 MatGrijs",
-   "prijs": 9500,
-   "km": 199200,
-   "jaar": 2021,
+   "merk": "Mercedes-Benz",
+   "model": "B-Klasse",
+   "titel": "✅️ Mercedes-Benz B250e 2017 ✅️ Electric Drive ✅️ PROJECT ✅️",
+   "prijs": 4999,
+   "km": 113000,
+   "jaar": 2017,
    "brandstof": "Elektrisch",
-   "plaats": "Emmeloord",
-   "verkoper": "van A.",
-   "url": "https://www.marktplaats.nl/v/auto-s/fiat/m2458608852-fiat-500-42kwh-118pk-aut-2021-matgrijs",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5afbb41a-6fdc-4235-b425-e4652aa5e364?rule=ecg_mp_eps$_84.jpg",
+   "plaats": "Hengelo",
+   "verkoper": "MijnAuto24",
+   "url": "https://www.marktplaats.nl/v/auto-s/mercedes-benz/m2461934304-mercedes-benz-b250e-2017-electric-drive-project",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9a4ab29f-f4ca-4d88-9a08-30a617583195?rule=ecg_mp_eps$_84.jpg",
    "lengte": null,
    "segment": null,
    "modelwoord": null,
    "soort": "Elektrisch",
    "gewicht": 1500,
    "mrb": 54,
-   "verzekering": 34,
+   "verzekering": 37,
    "brandstofkosten": 48,
-   "totale_kosten": 136,
+   "totale_kosten": 139,
+   "soh": 97,
    "accu_kwh": 24,
-   "soh_schatting": 94,
+   "soh_schatting": null,
    "bereik_zomer": 135,
    "bereik_winter": 100,
-   "score": 55.6,
+   "score": 55.9,
    "punten": {
     "betrouwbaarheid": 19.2,
     "bereik": 6.7,
-    "bouwjaar": 18.0,
-    "km": 3.5,
-    "kosten": 8.2
+    "bouwjaar": 12.6,
+    "km": 9.3,
+    "kosten": 8.1
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
-   "let_op": [
-    "Vraag accurapport (SoH)",
-    "Hoge kilometerstand"
-   ],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": false
+   "let_op": [],
+   "eerst_gezien": "2026-11-05",
+   "nieuw": true
   },
   {
    "id": "as24_b0edcc4b-fefd-48e1-a6aa-49995a01e7f5",
@@ -3104,6 +3143,49 @@
    ],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
+  },
+  {
+   "id": "mp_m2462079568",
+   "bron": "Marktplaats",
+   "merk": "Fiat",
+   "model": "500",
+   "titel": "Fiat 500",
+   "prijs": 6250,
+   "km": 108955,
+   "jaar": 2016,
+   "brandstof": "Elektrisch",
+   "plaats": "Tilburg",
+   "verkoper": "Kelsey",
+   "url": "https://www.marktplaats.nl/v/auto-s/fiat/m2462079568-fiat-500",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/55430c3f-d849-4f50-8978-09f4ef9d42f1?rule=ecg_mp_eps$_84.jpg",
+   "lengte": null,
+   "segment": null,
+   "modelwoord": null,
+   "soort": "Elektrisch",
+   "gewicht": 1500,
+   "mrb": 54,
+   "verzekering": 31,
+   "brandstofkosten": 48,
+   "totale_kosten": 133,
+   "accu_kwh": 24,
+   "soh_schatting": 88,
+   "bereik_zomer": 125,
+   "bereik_winter": 90,
+   "score": 53.3,
+   "punten": {
+    "betrouwbaarheid": 19.2,
+    "bereik": 5.3,
+    "bouwjaar": 10.8,
+    "km": 9.6,
+    "kosten": 8.3
+   },
+   "betrouwbaarheid": 5.5,
+   "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "eerst_gezien": "2026-11-05",
+   "nieuw": true
   },
   {
    "id": "as24_961e8005-14d4-4ec4-997e-f783f05cdae9",
@@ -3290,7 +3372,7 @@
    "plaats": "Scheemda",
    "verkoper": "Hofman Cars B.V.",
    "url": "https://www.autoscout24.nl/aanbod/bmw-i3-basis-comfort-22-kwh-soh-79-moba-152-348-elektrisch-wit-cat_ma13mo20319-c118fd71-9e46-4fb0-b0f1-cbd4d05a423e",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/c118fd71-9e46-4fb0-b0f1-cbd4d05a423e_bce4bc44-deb7-4f58-918c-228930a8667a.jpg/480x360.webp",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/c118fd71-9e46-4fb0-b0f1-cbd4d05a423e_afcb82bf-3c58-4504-bd0a-fc69ede9a465.jpg/480x360.webp",
    "lengte": 3999,
    "segment": "B",
    "modelwoord": "i3",
@@ -3365,7 +3447,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-04",
-   "nieuw": true
+   "nieuw": false
   }
  ]
 }
