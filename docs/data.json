@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-07 12:54",
+ "bijgewerkt": "2026-11-08 13:08",
  "versie": "1.11.0",
  "segment_min": "C",
  "criteria": {
@@ -20,8 +20,8 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2609,
- "aantal": 670,
+ "aantal_bekeken": 2611,
+ "aantal": 679,
  "autos": [
   {
    "id": "mp_m2458977266",
@@ -340,46 +340,47 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2449274208",
-   "bron": "Marktplaats",
-   "merk": "Hyundai",
-   "model": "NEXO",
-   "titel": "Hyundai NEXO Fcev 163pk FWD 2020 Grijs  Plus Pack",
-   "prijs": 9300,
-   "km": 81500,
-   "jaar": 2020,
-   "brandstof": "Waterstof",
-   "plaats": "Hoogeveen",
-   "verkoper": "Kuiper",
-   "url": "https://www.marktplaats.nl/v/auto-s/hyundai/m2449274208-hyundai-nexo-fcev-163pk-fwd-2020-grijs-plus-pack",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/62b87789-4c49-419f-b7f1-65b4ba4c460a?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4670,
-   "segment": "D",
-   "modelwoord": "nexo",
-   "soort": "Waterstof",
-   "gewicht": 1890,
-   "mrb": 79,
+   "id": "as24_6f801a2e-bc6d-4a57-b97b-0eabae7dbfeb",
+   "bron": "AutoScout24",
+   "merk": "BMW",
+   "model": "",
+   "titel": "BMW None Bromscooter CE 02 | Handvatverwarming | 914KM",
+   "prijs": 5950,
+   "km": 914,
+   "jaar": 2026,
+   "brandstof": "Elektrisch",
+   "plaats": "Alphen Aan De Rijn",
+   "verkoper": "Baak Autocenter B.V.",
+   "url": "https://www.autoscout24.nl/aanbod/bmw-overig-bromscooter-ce-02-handvatverwarming-914km-elektrisch-zwart-cat_ma13mo21073-6f801a2e-bc6d-4a57-b97b-0eabae7dbfeb",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/6f801a2e-bc6d-4a57-b97b-0eabae7dbfeb_5a44b889-38ad-48e5-bc7d-149d79616b77.jpg/480x360.webp",
+   "lengte": null,
+   "segment": null,
+   "modelwoord": null,
+   "soort": "Elektrisch",
+   "gewicht": 1500,
+   "mrb": 54,
    "verzekering": 39,
-   "brandstofkosten": 142,
-   "totale_kosten": 260,
-   "bereik_zomer": 550,
-   "bereik_winter": 405,
-   "score": 69.0,
+   "brandstofkosten": 48,
+   "totale_kosten": 141,
+   "accu_kwh": 24,
+   "soh_schatting": 100,
+   "bereik_zomer": 140,
+   "bereik_winter": 105,
+   "score": 69.5,
    "punten": {
-    "betrouwbaarheid": 17.5,
-    "bereik": 20.0,
+    "betrouwbaarheid": 19.2,
+    "bereik": 7.3,
     "bouwjaar": 18.0,
-    "km": 11.5,
-    "kosten": 2.0
+    "km": 16.9,
+    "kosten": 8.0
    },
-   "betrouwbaarheid": 5.0,
-   "toelichting": "Brandstofcel; onderdelen en kennis schaars",
+   "betrouwbaarheid": 5.5,
+   "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
    "let_op": [
-    "Tanken kan op ± 20 plaatsen in Nederland",
-    "Waterstof ± € 15,00 per kilo"
+    "Vraag accurapport (SoH)"
    ],
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
+   "eerst_gezien": "2026-11-08",
+   "nieuw": true
   },
   {
    "id": "as24_646aecb6-c7bd-47f7-bc10-e423f1764223",
@@ -459,7 +460,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_13254e33-e7b9-4bce-bccc-3694e8abf39a",
@@ -825,7 +826,7 @@
     "Vraag accurapport (SoH)"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_bcf6991b-ffd5-4a5d-b6a6-0e701dcef22f",
@@ -1196,7 +1197,7 @@
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
    "let_op": [],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_672aceb6-ef10-4873-8eed-306552e0bdd9",
@@ -1237,7 +1238,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_38810b31-d784-4991-9be9-05ea8c773d83",
@@ -1408,45 +1409,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_b595e893-3175-41f9-beb2-0aea319ff110",
-   "bron": "AutoScout24",
-   "merk": "Mitsubishi",
-   "model": "ASX",
-   "titel": "Mitsubishi ASX 1.6 CLEARTEC BRIGHT | CLIMA| CRUISE | PDC | NAP",
-   "prijs": 9950,
-   "km": 88623,
-   "jaar": 2015,
-   "brandstof": "Benzine",
-   "plaats": "Ermelo",
-   "verkoper": "Auto Bronkhorst",
-   "url": "https://www.autoscout24.nl/aanbod/mitsubishi-asx-1-6-cleartec-bright-clima-cruise-pdc-nap-benzine-bruin-cat_ma50mo19268-b595e893-3175-41f9-beb2-0aea319ff110",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/b595e893-3175-41f9-beb2-0aea319ff110_f8a32731-f03a-4ac3-9098-eee9f7654e04.jpg/480x360.webp",
-   "lengte": 4365,
-   "segment": "C",
-   "modelwoord": "asx",
-   "soort": "Benzine",
-   "gewicht": 1310,
-   "mrb": 58,
-   "verzekering": 33,
-   "brandstofkosten": 147,
-   "totale_kosten": 238,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 65.3,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 9.0,
-    "km": 11.0,
-    "kosten": 3.1
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
    "id": "as24_b46c6ced-8560-465f-a99b-604858ec6cc2",
    "bron": "AutoScout24",
    "merk": "Toyota",
@@ -1526,7 +1488,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2453287110",
@@ -1729,40 +1691,40 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2451366621",
-   "bron": "Marktplaats",
-   "merk": "Honda",
-   "model": "Civic",
-   "titel": "Honda Civic 1.4 S",
-   "prijs": 9450,
-   "km": 152697,
+   "id": "as24_6ff98775-9ff1-403b-a97e-6479821daa89",
+   "bron": "AutoScout24",
+   "merk": "Mitsubishi",
+   "model": "ASX",
+   "titel": "Mitsubishi ASX 1.6 2WD Comfort Edition",
+   "prijs": 10000,
+   "km": 113000,
    "jaar": 2015,
    "brandstof": "Benzine",
-   "plaats": "Coevorden",
-   "verkoper": "AutoPieper B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/honda/m2451366621-honda-civic-1-4-s",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3f359a56-d1f7-46f6-a58e-8a87eb640e75?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4300,
+   "plaats": "Breda",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/mitsubishi-asx-1-6-2wd-comfort-edition-benzine-cat_ma50mo19268-6ff98775-9ff1-403b-a97e-6479821daa89",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/6ff98775-9ff1-403b-a97e-6479821daa89_1b276c25-5615-4286-9bb7-9abccb16d089.jpg/480x360.webp",
+   "lengte": 4365,
    "segment": "C",
-   "modelwoord": "civic",
+   "modelwoord": "asx",
    "soort": "Benzine",
-   "gewicht": 1300,
+   "gewicht": 1310,
    "mrb": 58,
-   "verzekering": 32,
-   "brandstofkosten": 130,
-   "totale_kosten": 220,
+   "verzekering": 33,
+   "brandstofkosten": 147,
+   "totale_kosten": 238,
    "bereik_zomer": 600,
    "bereik_winter": 600,
-   "score": 63.6,
+   "score": 63.7,
    "punten": {
-    "betrouwbaarheid": 28.0,
+    "betrouwbaarheid": 26.2,
     "bereik": 16.0,
     "bouwjaar": 9.0,
-    "km": 6.6,
-    "kosten": 4.0
+    "km": 9.3,
+    "kosten": 3.1
    },
-   "betrouwbaarheid": 8.0,
-   "toelichting": "",
+   "betrouwbaarheid": 7.5,
+   "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -1846,6 +1808,45 @@
    ],
    "eerst_gezien": "2026-10-30",
    "nieuw": false
+  },
+  {
+   "id": "as24_f97ffa53-c988-4cbe-ab12-631a3cc8be4c",
+   "bron": "AutoScout24",
+   "merk": "BMW",
+   "model": "i3",
+   "titel": "BMW i3 i Range Extender",
+   "prijs": 9950,
+   "km": 171975,
+   "jaar": 2015,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Ter Aar",
+   "verkoper": "Outlet4Cars",
+   "url": "https://www.autoscout24.nl/aanbod/bmw-i3-i-range-extender-elektro-benzine-wit-cat_ma13mo20319-f97ffa53-c988-4cbe-ab12-631a3cc8be4c",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/f97ffa53-c988-4cbe-ab12-631a3cc8be4c_1ee1f64a-7e0d-4fa1-8f5d-ad7dd7c3a0a2.jpg/480x360.webp",
+   "lengte": 3999,
+   "segment": "B",
+   "modelwoord": "i3",
+   "soort": "Plug-in hybride",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 40,
+   "brandstofkosten": 94,
+   "totale_kosten": 183,
+   "bereik_zomer": 90,
+   "bereik_winter": 65,
+   "score": 62.9,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 20.0,
+    "bouwjaar": 9.0,
+    "km": 5.3,
+    "kosten": 5.8
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "let_op": [],
+   "eerst_gezien": "2026-11-08",
+   "nieuw": true
   },
   {
    "id": "as24_9f05335a-f80b-42a2-87dc-f95b06cfc680",
@@ -2052,45 +2053,6 @@
    "nieuw": false
   },
   {
-   "id": "mp_m2456296835",
-   "bron": "Marktplaats",
-   "merk": "Kia",
-   "model": "Sportage",
-   "titel": "Kia Sportage 1.6 GDI |X-treme| |ComfortLine| |Navi| |Camera|",
-   "prijs": 8950,
-   "km": 126370,
-   "jaar": 2015,
-   "brandstof": "Benzine",
-   "plaats": "Venlo",
-   "verkoper": "Next Cars Venlo",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2456296835-kia-sportage-1-6-gdi-x-treme-comfortline-navi-camera",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d6b103a5-ea03-4879-b5ef-75b90c6cbfb0?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4480,
-   "segment": "C",
-   "modelwoord": "sportage",
-   "soort": "Benzine",
-   "gewicht": 1450,
-   "mrb": 68,
-   "verzekering": 33,
-   "brandstofkosten": 168,
-   "totale_kosten": 269,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 61.2,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 9.0,
-    "km": 8.4,
-    "kosten": 1.6
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
    "id": "as24_4b262ccc-9b47-4c62-9d96-1306f1e3be4a",
    "bron": "AutoScout24",
    "merk": "Hyundai",
@@ -2253,6 +2215,86 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2454002127",
+   "bron": "Marktplaats",
+   "merk": "Kia",
+   "model": "Sportage",
+   "titel": "Kia Sportage 1.6 GDI BusinessLine N.A.P AANWEZIG/TREKHAAK",
+   "prijs": 9944,
+   "km": 132933,
+   "jaar": 2015,
+   "brandstof": "Benzine",
+   "plaats": "'s-Gravenhage",
+   "verkoper": "Autobedrijf Thomas",
+   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2454002127-kia-sportage-1-6-gdi-businessline-n-a-p-aanwezig-trekhaak",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9f5f61c6-9ebf-487f-8a5a-eccb629cfd68?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4480,
+   "segment": "C",
+   "modelwoord": "sportage",
+   "soort": "Benzine",
+   "gewicht": 1450,
+   "mrb": 68,
+   "verzekering": 34,
+   "brandstofkosten": 168,
+   "totale_kosten": 270,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 60.7,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 9.0,
+    "km": 8.0,
+    "kosten": 1.5
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
+   "let_op": [],
+   "eerst_gezien": "2026-11-08",
+   "nieuw": true
+  },
+  {
+   "id": "as24_0f369ddd-13ef-45e9-8698-14310b757565",
+   "bron": "AutoScout24",
+   "merk": "Lexus",
+   "model": "CT 200h",
+   "titel": "Lexus CT 200h CT 200h 200h 25th Edition",
+   "prijs": 9800,
+   "km": 232850,
+   "jaar": 2015,
+   "brandstof": "Benzine",
+   "plaats": "Westerkwartier",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/lexus-ct-200h-ct-200h-200h-25th-edition-benzine-zwart-cat_ma43mo19717-0f369ddd-13ef-45e9-8698-14310b757565",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/0f369ddd-13ef-45e9-8698-14310b757565_3d6d8738-0c81-45dc-a6a4-9d6569d20633.jpg/480x360.webp",
+   "lengte": 4350,
+   "segment": "C",
+   "modelwoord": "ct",
+   "soort": "Benzine",
+   "gewicht": 1400,
+   "mrb": 68,
+   "verzekering": 42,
+   "brandstofkosten": 97,
+   "totale_kosten": 207,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 60.6,
+   "punten": {
+    "betrouwbaarheid": 29.8,
+    "bereik": 16.0,
+    "bouwjaar": 9.0,
+    "km": 1.2,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 8.5,
+   "toelichting": "Prius-techniek in een nettere jas",
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "eerst_gezien": "2026-11-04",
+   "nieuw": false
+  },
+  {
    "id": "as24_7d75e7c0-9bd5-4554-aef8-cda69a5af5d1",
    "bron": "AutoScout24",
    "merk": "Toyota",
@@ -2291,7 +2333,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_cd7f380c-5aba-4329-9246-51b44a534fda",
@@ -2695,6 +2737,45 @@
    "nieuw": false
   },
   {
+   "id": "as24_41e31b3c-dde9-4cd9-8e3e-de046871178a",
+   "bron": "AutoScout24",
+   "merk": "Ford",
+   "model": "C-Max",
+   "titel": "Ford C-Max 2.0 Plug-in Hybrid Titanium Plus|PANO|STOELVERWARM",
+   "prijs": 9245,
+   "km": 123027,
+   "jaar": 2015,
+   "brandstof": "Elektro/Benzine",
+   "plaats": "Epe",
+   "verkoper": "AutoBuitenhuis",
+   "url": "https://www.autoscout24.nl/aanbod/ford-c-max-2-0-plug-in-hybrid-titanium-plus-pano-stoelverwarm-elektro-benzine-grijs-cat_ma29mo19089-41e31b3c-dde9-4cd9-8e3e-de046871178a",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/41e31b3c-dde9-4cd9-8e3e-de046871178a_a0bec32f-c62f-49c2-9db6-1449e731f9b5.jpg/480x360.webp",
+   "lengte": 4380,
+   "segment": "C",
+   "modelwoord": "c-max",
+   "soort": "Plug-in hybride",
+   "gewicht": 1720,
+   "mrb": 95,
+   "verzekering": 37,
+   "brandstofkosten": 97,
+   "totale_kosten": 229,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 59.7,
+   "punten": {
+    "betrouwbaarheid": 24.5,
+    "bereik": 14.0,
+    "bouwjaar": 9.0,
+    "km": 8.6,
+    "kosten": 3.5
+   },
+   "betrouwbaarheid": 7.0,
+   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "let_op": [],
+   "eerst_gezien": "2026-11-08",
+   "nieuw": true
+  },
+  {
    "id": "mp_m2461904480",
    "bron": "Marktplaats",
    "merk": "Ford",
@@ -2894,45 +2975,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_b0ae2b8d-a483-4ef9-a774-f1b83a178532",
-   "bron": "AutoScout24",
-   "merk": "Ford",
-   "model": "C-Max",
-   "titel": "Ford C-Max 2.0 Plug-in Hybrid Titanium Plus, Aut, Pano, Cam,",
-   "prijs": 9350,
-   "km": 143792,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Andelst",
-   "verkoper": "Autocenter Andelst B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/ford-c-max-2-0-plug-in-hybrid-titanium-plus-aut-pano-cam-elektro-benzine-zwart-cat_ma29mo19089-b0ae2b8d-a483-4ef9-a774-f1b83a178532",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/b0ae2b8d-a483-4ef9-a774-f1b83a178532_581173cb-0834-423b-9f52-dd691bce3a36.jpg/480x360.webp",
-   "lengte": 4380,
-   "segment": "C",
-   "modelwoord": "c-max",
-   "soort": "Plug-in hybride",
-   "gewicht": 1720,
-   "mrb": 95,
-   "verzekering": 37,
-   "brandstofkosten": 97,
-   "totale_kosten": 229,
-   "bereik_zomer": 30,
-   "bereik_winter": 20,
-   "score": 58.3,
-   "punten": {
-    "betrouwbaarheid": 24.5,
-    "bereik": 14.0,
-    "bouwjaar": 9.0,
-    "km": 7.2,
-    "kosten": 3.5
-   },
-   "betrouwbaarheid": 7.0,
-   "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2451519634",
    "bron": "Marktplaats",
    "merk": "Mitsubishi",
@@ -3097,7 +3139,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2397321994",
@@ -3270,7 +3312,7 @@
     "Hoge kilometerstand"
    ],
    "eerst_gezien": "2026-11-07",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_961e8005-14d4-4ec4-997e-f783f05cdae9",
