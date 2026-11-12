@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.12.0 — 12-11-2026
+
+- **Resterende levensduur per auto** (ANWB-tip uit de Kampioen, besluit Durk: alleen als extra regel, telt niet mee in de score). Elke kaart toont "Gaat nog ± X jaar mee". Grove schatting op de betrouwbaarheid van het model: 150.000 km + 20.000 km per punt en 12 jaar + 1 jaar per punt (betrouwbaarheid 8 = ± 310.000 km of 20 jaar). Wat het eerst op is telt, bij 12.000 km per jaar. Nieuwe velden `rest_jaar` en `levensduur_km` in `data.json`.
+- **Knop "Check richtprijs bij ANWB" per auto** (besluit Durk: alleen een knop, niet automatisch ophalen; dat blijft op de Nee-lijst). De knop opent de ANWB Koerslijst; daar vul je zelf het kenteken uit de advertentie in. De link staat als `ANWB_KOERSLIJST` in `zoek.py` en gaat mee in `data.json`.
+- Uitleg van beide onder "Hoe wordt de top 5 bepaald?". De score zelf is niet veranderd.
+
 ## 1.11.0 — 01-11-2026
 
 - **Hoogstens 4 van hetzelfde model per soort** (besluit Durk), nieuwe grens `PER_MODEL` naast `PER_SOORT`. Zonder die grens vulde één model met veel aanbod de hele categorie: 18 van de 24 benzineplekken was een Kia Ceed, waardoor nieuwe modellen er nooit doorheen kwamen. `cee'd` en `ceed` tellen als één model (`MODEL_ALIAS`); auto's waarvan het model niet op de lijst staat worden niet op één hoop gegooid. Een model dat in twee soorten voorkomt mag in allebei vier (de Auris staat er nu 4× als hybride en 3× als benzine).

@@ -90,6 +90,8 @@ details{background:var(--card);border:1px solid var(--line);border-radius:14px;p
 summary{font-weight:600;cursor:pointer}
 details p,details li{color:var(--muted);font-size:.92rem}
 .leeg{color:var(--muted)}
+.anwb{display:inline-block;margin-top:10px;border:1px solid var(--accent);color:var(--accent);background:var(--card);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:600;cursor:pointer}
+.lijst .anwb{margin-top:8px;padding:4px 10px;font-size:.8rem}
 </style>
 </head>
 <body>
@@ -143,9 +145,11 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Benzine en hybride: één strengere eis.</b> Voor benzine en gewone hybride geldt bouwjaar <b>2015 of nieuwer</b>; op prijs en kilometerstand gelden dezelfde grenzen als bij elektrisch (<b>€ 1.200 tot € 10.000</b>, hoogstens <b>260.000 km</b>). Let bij een hoge stand wel op onderhoud: distributieriem, koppeling en uitlaat zijn bij een benzineauto dure posten die een elektrische auto niet heeft. Diesel en LPG doen helemaal niet mee, en advertenties waarin een handelaar meerdere auto's tegelijk aanbiedt ("4X Toyota Aygo") ook niet.</p>
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
   <p><b>Waterstof.</b> Een waterstofauto is herkenbaar aan de rode <b>H2</b> naast de score. Hij rijdt elektrisch, maar maakt zijn stroom zelf uit waterstof: tanken duurt vijf minuten en het bereik is groot. De keerzijde zit in de kosten en het tanken. Een kilo waterstof is goed voor ongeveer 100 km en kostte in 2026 tussen de € 10 en € 25; hier is gerekend met € 15, dus ongeveer € 150 per maand bij 12.000 km per jaar — vijf keer zoveel als thuis laden. En er zijn maar zo'n twintig openbare tankstations in heel Nederland. Alleen de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV doen mee.</p>
+  <p><b>Resterende levensduur</b> (tip van de ANWB: kijk niet alleen naar bouwjaar en kilometerstand, maar naar hoe lang de auto nog meegaat). Een grove schatting die <b>niet meetelt in de score</b>. Hoe betrouwbaarder het model, hoe langer hij meegaat: bij betrouwbaarheid 8 is dat ± 310.000 km of 20 jaar, bij 5 ± 250.000 km of 17 jaar. Wat het eerst op is telt, met 12.000 km per jaar. Onderhoud en de staat van de auto maken in de praktijk veel verschil.</p>
+  <p><b>Richtprijs:</b> de knop <b>Check richtprijs bij ANWB</b> opent de ANWB Koerslijst. Vul daar het kenteken uit de advertentie in (of merk, model en bouwjaar) en je ziet wat de auto ongeveer waard is en wat hij per maand kost. Zo zie je of de vraagprijs redelijk is.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.11.0</p>
+<p class="klein" id="versie">Versie 1.12.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -176,8 +180,17 @@ function feiten(a) {
   const lasten = kosten ? `<br>Totale kosten excl. onderhoud <b>± € ${kosten} p/m</b> <span class="klein">bij 12.000 km/jaar</span>` : '';
   const lang = a.lengte ? ` · ${Math.round(a.lengte / 10)} cm lang` : '';
   const seg = a.segment ? ` · ${SEGMENTNAAM[a.segment] || ('segment ' + a.segment)}` : '';
-  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')}${lang}${seg} · ${esc(a.bron)}${bereikTekst(a)}${lasten}`;
+  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')}${lang}${seg} · ${esc(a.bron)}${bereikTekst(a)}${lasten}${levensduur(a)}`;
 }
+function levensduur(a) {
+  if (a.rest_jaar === undefined) return '';
+  const tot = `<span class="klein">(schatting, model gaat ± ${km(a.levensduur_km)} mee)</span>`;
+  if (a.rest_jaar < 1) return `<br>Resterende levensduur <b>minder dan een jaar</b> ${tot}`;
+  return `<br>Gaat nog <b>± ${a.rest_jaar} jaar</b> mee ${tot}`;
+}
+let anwbUrl = 'https://www.anwb.nl/auto/koerslijst';
+// De kaart is zelf al een link; daarom een span die met een klik de ANWB opent.
+const anwbKnop = () => `<span class="anwb" role="link" tabindex="0" title="Vul bij de ANWB het kenteken uit de advertentie in">Check richtprijs bij ANWB ↗</span>`;
 const nl = n => n.toLocaleString('nl-NL', {maximumFractionDigits: 1});
 function bereikUitleg(a) {
   if (a.soort === 'Benzine' || a.soort === 'Hybride')
@@ -227,6 +240,7 @@ function topKaart(a, i) {
       <div class="feiten">${feiten(a)}</div>
       <div class="chips">${chips(a)}</div>
       ${a.toelichting ? `<p class="uitleg">${esc(a.toelichting)}</p>` : ''}
+      ${anwbKnop()}
     </div></a>`;
 }
 function lijstKaart(a) {
@@ -236,6 +250,7 @@ function lijstKaart(a) {
       <div class="rij"><p class="titel">${esc(a.titel)}</p><span class="prijs">${eur(a.prijs)}</span></div>
       <div class="feiten">${feiten(a)}</div>
       <div class="chips">${chips(a)}</div>
+      ${anwbKnop()}
     </div></a>`;
 }
 let soortFilter = 'alle';
@@ -288,6 +303,15 @@ document.addEventListener('click', e => {
   document.querySelectorAll('.score.open').forEach(b => { if (b !== badge) b.classList.remove('open'); });
   if (badge) { e.preventDefault(); e.stopPropagation(); if (!e.target.closest('.tip')) badge.classList.toggle('open'); }
 });
+// ANWB-knop: opent de koerslijst in plaats van de advertentie.
+function openAnwb(e) {
+  if (!e.target.closest('.anwb')) return;
+  if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
+  e.preventDefault(); e.stopPropagation();
+  window.open(anwbUrl, '_blank', 'noopener');
+}
+document.addEventListener('click', openAnwb);
+document.addEventListener('keydown', openAnwb);
 document.querySelectorAll('.filters button[data-f]').forEach(b => b.onclick = () => {
   document.querySelectorAll('.filters button[data-f]').forEach(x => x.setAttribute('aria-pressed', x === b));
   soortFilter = b.dataset.f;
@@ -325,6 +349,7 @@ fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   document.getElementById('stand').textContent =
     `Bijgewerkt ${datum} om ${tijd} · ${d.aantal_bekeken} advertenties bekeken, ${d.aantal} geschikt` + (nieuw ? ` · ${nieuw} nieuw` : '');
   if (d.versie) document.getElementById('versie').textContent = `Versie ${d.versie}`;
+  if (d.anwb_koerslijst) anwbUrl = d.anwb_koerslijst;
   criteriaTonen(d.criteria || {});
   try {
     const bekend = new Set(autos.map(merkVan));

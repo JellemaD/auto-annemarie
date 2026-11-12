@@ -1,6 +1,6 @@
 # Backlog — Auto voor Annemarie
 
-*Bijgewerkt 01-11-2026*
+*Bijgewerkt 12-11-2026*
 
 > **Nog door Durk te bevestigen:** de verdeling over Nu / Volgende / Later hieronder is een voorstel.
 > Wat er op "Nu" staat, bepaalt Durk.
@@ -51,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B17 | **ANWB-tips: resterende levensduur en richtprijs** (v1.12.0): regel "Gaat nog ± X jaar mee" per auto (schatting op betrouwbaarheid, niet in de score) en een knop naar de ANWB Koerslijst | 12-11-2026 |
 | B16 | **Hoogstens 4 per model per soort + vijf modellen erbij** (v1.11.0): `PER_MODEL = 4` met `MODEL_ALIAS` voor cee'd/ceed; Kia Sportage, Hyundai Tucson en Toyota Avensis op de toelatingslijst; Ioniq en Niro mogen ook zonder stekker | 01-11-2026 |
 | B15 | **Mitsubishi ASX op de toelatingslijst** (v1.10.0): betrouwbaarheid 7,5, 1.310 kg, 4.365 mm, segment C, 7,0 l/100 km. Komt door de filters maar haalt de top 25 benzine nog niet (grens 68,6, ASX 60,7-65,5) | 01-11-2026 |
 | B14 | **Mazda van de toelatingslijst** (v1.9.0): Mazda 2, 3 en MX-30 uit `MODELLEN` en `ZONDER_STEKKER`, merk uit `GANGBARE_MERKEN` | 30-10-2026 |

@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.11.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.12.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -217,6 +217,18 @@ GANGBARE_MERKEN = {
 # een bonus van MERK_BONUS punten; ze blijven ook met andere merken vergeleken.
 MERK_VOORKEUR = []
 MERK_BONUS = 5
+
+# Resterende levensduur (ANWB-tip "kijk naar de resterende levensduur"). Alleen informatie, telt
+# niet mee in de score (besluit Durk 12-11-2026). Grove schatting op basis van de betrouwbaarheid
+# van het model: betrouwbaarheid 8 geeft 310.000 km en 20 jaar, betrouwbaarheid 5 geeft 250.000 km
+# en 17 jaar. Wat het eerst op is (jaren of km bij KM_PER_JAAR), bepaalt de uitkomst.
+LEVENSDUUR_KM_BASIS, LEVENSDUUR_KM_PER_PUNT = 150000, 20000
+LEVENSDUUR_JAAR_BASIS, LEVENSDUUR_JAAR_PER_PUNT = 12, 1
+KM_PER_JAAR = 12000
+
+# ANWB Koerslijst: richtprijs op kenteken of merk/model/bouwjaar. Alleen een knop per auto,
+# geen automatisch ophalen (staat op de Nee-lijst; besluit Durk 12-11-2026).
+ANWB_KOERSLIJST = 'https://www.anwb.nl/auto/koerslijst'
 
 # Waterstof. De pompprijs liep in 2026 uiteen van ongeveer EUR 10 (Teal Mobility) tot EUR 25 per
 # kilo (ANWB-overzicht); EUR 15 is een redelijk midden. Verbruik in kilo per 100 km en een
@@ -715,6 +727,16 @@ def zet_bereik(a, model):
     return max(0.0, min(10.0, (a['bereik_winter'] - 50) / 15))
 
 
+def zet_levensduur(a, betrouwbaar):
+    """Schat hoeveel jaar en km de auto nog meegaat. Alleen informatie, niet in de score."""
+    tot_km = LEVENSDUUR_KM_BASIS + LEVENSDUUR_KM_PER_PUNT * betrouwbaar
+    tot_jaar = LEVENSDUUR_JAAR_BASIS + LEVENSDUUR_JAAR_PER_PUNT * betrouwbaar
+    leeftijd = datetime.now(ZoneInfo('Europe/Amsterdam')).year - a['jaar']
+    rest_jaar = min(tot_jaar - leeftijd, (tot_km - a['km']) / KM_PER_JAAR)
+    a['levensduur_km'] = int(round(tot_km, -4))
+    a['rest_jaar'] = max(0, int(rest_jaar))
+
+
 # ---------------------------------------------------------------- filter en score
 
 def beoordeel(a):
@@ -800,6 +822,7 @@ def beoordeel(a):
                    'kosten': round(1.0 * kosten_s, 1)}
     a['betrouwbaarheid'] = betrouwbaar
     a['toelichting'] = uitleg
+    zet_levensduur(a, betrouwbaar)
 
     if norm(a['merk']) in {norm(m) for m in MERK_VOORKEUR}:
         a['score'] += MERK_BONUS
@@ -943,6 +966,8 @@ def main():
     DATA.write_text(json.dumps({
         'bijgewerkt': nu.strftime('%Y-%m-%d %H:%M'),
         'versie': VERSIE,
+        'anwb_koerslijst': ANWB_KOERSLIJST,
+        'km_per_jaar': KM_PER_JAAR,
         'segment_min': SEGMENT_MIN,
         # Harde eisen, zodat de site ze kan tonen zonder dat ze uit elkaar gaan lopen.
         'criteria': {

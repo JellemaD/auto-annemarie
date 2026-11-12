@@ -1,6 +1,8 @@
 {
- "bijgewerkt": "2026-11-12 14:14",
- "versie": "1.11.0",
+ "bijgewerkt": "2026-11-12 14:22",
+ "versie": "1.12.0",
+ "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
+ "km_per_jaar": 12000,
  "segment_min": "C",
  "criteria": {
   "prijs_min": 1200,
@@ -20,7 +22,7 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2588,
+ "aantal_bekeken": 2585,
  "aantal": 699,
  "autos": [
   {
@@ -58,6 +60,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 12,
    "let_op": [],
    "eerst_gezien": "2026-10-28",
    "nieuw": false
@@ -97,6 +101,8 @@
    },
    "betrouwbaarheid": 9.0,
    "toelichting": "Zeer betrouwbaar, zuinig, accu houdt goed stand",
+   "levensduur_km": 330000,
+   "rest_jaar": 10,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -138,6 +144,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
+   "levensduur_km": 320000,
+   "rest_jaar": 13,
    "let_op": [],
    "eerst_gezien": "2026-11-10",
    "nieuw": false
@@ -177,6 +185,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 12,
    "let_op": [],
    "eerst_gezien": "2026-11-04",
    "nieuw": false
@@ -216,6 +226,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 12,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -255,6 +267,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-11-10",
    "nieuw": false
@@ -294,6 +308,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -333,6 +349,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -372,6 +390,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [],
    "eerst_gezien": "2026-11-05",
    "nieuw": false
@@ -413,6 +433,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 17,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -454,6 +476,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
@@ -493,6 +517,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -534,6 +560,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-10-28",
    "nieuw": false
@@ -573,6 +601,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-11-11",
    "nieuw": false
@@ -612,6 +642,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -653,6 +685,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 11,
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
@@ -692,6 +726,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 10,
    "let_op": [],
    "eerst_gezien": "2026-11-11",
    "nieuw": false
@@ -731,6 +767,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
@@ -772,6 +810,8 @@
    },
    "betrouwbaarheid": 9.0,
    "toelichting": "Zeer betrouwbaar, zuinig, accu houdt goed stand",
+   "levensduur_km": 330000,
+   "rest_jaar": 11,
    "let_op": [
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
@@ -816,6 +856,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "levensduur_km": 290000,
+   "rest_jaar": 11,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -857,6 +899,8 @@
    },
    "betrouwbaarheid": 9.0,
    "toelichting": "Zeer betrouwbaar, zuinig, accu houdt goed stand",
+   "levensduur_km": 330000,
+   "rest_jaar": 11,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -898,6 +942,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-11",
    "nieuw": false
@@ -937,6 +983,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
+   "levensduur_km": 320000,
+   "rest_jaar": 7,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -978,6 +1026,8 @@
    },
    "betrouwbaarheid": 5.0,
    "toelichting": "Toyota-kwaliteit, maar brandstofcel en waterstoftanks: alleen dealeronderhoud",
+   "levensduur_km": 250000,
+   "rest_jaar": 8,
    "let_op": [
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
@@ -1020,6 +1070,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
+   "levensduur_km": 320000,
+   "rest_jaar": 7,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1061,6 +1113,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Betrouwbaar, ruim, 7 jaar fabrieksgarantie (check overdraagbaar)",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [],
    "eerst_gezien": "2026-11-09",
    "nieuw": false
@@ -1102,6 +1156,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Degelijk, geen bekende accuproblemen",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -1143,6 +1199,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1184,6 +1242,8 @@
    },
    "betrouwbaarheid": 9.0,
    "toelichting": "Zeer betrouwbaar, zuinig, accu houdt goed stand",
+   "levensduur_km": 330000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1227,6 +1287,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Degelijk, geen bekende accuproblemen",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -1268,6 +1330,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-12",
    "nieuw": true
@@ -1307,6 +1371,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
+   "levensduur_km": 300000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-12",
    "nieuw": true
@@ -1346,6 +1412,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1387,6 +1455,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1428,6 +1498,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Ruimer dan de Yaris, zelfde techniek",
+   "levensduur_km": 320000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1469,6 +1541,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
+   "levensduur_km": 300000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-06",
    "nieuw": false
@@ -1508,6 +1582,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 zonder turbo met distributieketting, handgeschakeld: eenvoudige techniek",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -1547,6 +1623,8 @@
    },
    "betrouwbaarheid": 5.0,
    "toelichting": "Toyota-kwaliteit, maar brandstofcel en waterstoftanks: alleen dealeronderhoud",
+   "levensduur_km": 250000,
+   "rest_jaar": 8,
    "let_op": [
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
@@ -1589,6 +1667,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-11",
    "nieuw": false
@@ -1630,6 +1710,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Degelijk, geen bekende accuproblemen",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -1671,6 +1753,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -1712,6 +1796,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Degelijk, geen bekende accuproblemen",
+   "levensduur_km": 320000,
+   "rest_jaar": 10,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -1753,6 +1839,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 7,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1794,6 +1882,8 @@
    },
    "betrouwbaarheid": 6.5,
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "levensduur_km": 280000,
+   "rest_jaar": 7,
    "let_op": [],
    "eerst_gezien": "2026-11-08",
    "nieuw": false
@@ -1835,6 +1925,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "levensduur_km": 290000,
+   "rest_jaar": 3,
    "let_op": [
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
@@ -1877,6 +1969,8 @@
    },
    "betrouwbaarheid": 6.5,
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "levensduur_km": 280000,
+   "rest_jaar": 6,
    "let_op": [],
    "eerst_gezien": "2026-10-28",
    "nieuw": false
@@ -1916,6 +2010,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-09",
    "nieuw": false
@@ -1955,6 +2051,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 10,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -1996,6 +2094,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
+   "levensduur_km": 300000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-12",
    "nieuw": true
@@ -2035,6 +2135,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Prius-techniek in een nettere jas",
+   "levensduur_km": 320000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2076,6 +2178,8 @@
    },
    "betrouwbaarheid": 5.0,
    "toelichting": "Brandstofcel; onderdelen en kennis schaars",
+   "levensduur_km": 250000,
+   "rest_jaar": 4,
    "let_op": [
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo",
@@ -2119,6 +2223,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2162,6 +2268,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "levensduur_km": 290000,
+   "rest_jaar": 9,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -2203,6 +2311,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "levensduur_km": 300000,
+   "rest_jaar": 6,
    "let_op": [],
    "eerst_gezien": "2026-10-12",
    "nieuw": false
@@ -2242,6 +2352,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Prius-techniek in een nettere jas",
+   "levensduur_km": 320000,
+   "rest_jaar": 7,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2283,6 +2395,8 @@
    },
    "betrouwbaarheid": 9.5,
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
+   "levensduur_km": 340000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2324,6 +2438,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 9,
    "let_op": [],
    "eerst_gezien": "2026-11-06",
    "nieuw": false
@@ -2363,6 +2479,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2404,6 +2522,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "levensduur_km": 300000,
+   "rest_jaar": 6,
    "let_op": [],
    "eerst_gezien": "2026-11-11",
    "nieuw": false
@@ -2443,6 +2563,8 @@
    },
    "betrouwbaarheid": 9.5,
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
+   "levensduur_km": 340000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2484,6 +2606,8 @@
    },
    "betrouwbaarheid": 8.0,
    "toelichting": "",
+   "levensduur_km": 310000,
+   "rest_jaar": 9,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2525,6 +2649,8 @@
    },
    "betrouwbaarheid": 9.5,
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
+   "levensduur_km": 340000,
+   "rest_jaar": 8,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2566,6 +2692,8 @@
    },
    "betrouwbaarheid": 9.5,
    "toelichting": "Toyota-hybride: de betrouwbaarste techniek die er is",
+   "levensduur_km": 340000,
+   "rest_jaar": 7,
    "let_op": [],
    "eerst_gezien": "2026-10-27",
    "nieuw": false
@@ -2605,6 +2733,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "levensduur_km": 300000,
+   "rest_jaar": 5,
    "let_op": [],
    "eerst_gezien": "2026-10-30",
    "nieuw": false
@@ -2644,6 +2774,8 @@
    },
    "betrouwbaarheid": 8.5,
    "toelichting": "Prius-techniek in een nettere jas",
+   "levensduur_km": 320000,
+   "rest_jaar": 6,
    "let_op": [
     "Hoge kilometerstand"
    ],
@@ -2685,6 +2817,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Zelfde techniek als Chevrolet Volt",
+   "levensduur_km": 300000,
+   "rest_jaar": 6,
    "let_op": [],
    "eerst_gezien": "2026-10-23",
    "nieuw": false
@@ -2724,6 +2858,8 @@
    },
    "betrouwbaarheid": 4.5,
    "toelichting": "Eerste generatie brandstofcel; onderdelen lastig",
+   "levensduur_km": 240000,
+   "rest_jaar": 6,
    "let_op": [
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
@@ -2766,6 +2902,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "levensduur_km": 290000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-12",
    "nieuw": true
@@ -2805,6 +2943,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "levensduur_km": 290000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-08",
    "nieuw": false
@@ -2846,6 +2986,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Simpele techniek; accu zonder koeling, check SoH (accustaat)",
+   "levensduur_km": 290000,
+   "rest_jaar": 9,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -2887,6 +3029,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "levensduur_km": 290000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-05",
    "nieuw": false
@@ -2926,6 +3070,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Ford-hybridesysteem met e-CVT, degelijk",
+   "levensduur_km": 290000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-01",
    "nieuw": false
@@ -2965,6 +3111,8 @@
    },
    "betrouwbaarheid": 6.0,
    "toelichting": "",
+   "levensduur_km": 270000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-10",
    "nieuw": false
@@ -3004,6 +3152,8 @@
    },
    "betrouwbaarheid": 7.5,
    "toelichting": "Aandrijving zeer betrouwbaar, accu houdt goed stand",
+   "levensduur_km": 300000,
+   "rest_jaar": 6,
    "let_op": [],
    "eerst_gezien": "2026-10-12",
    "nieuw": false
@@ -3043,6 +3193,8 @@
    },
    "betrouwbaarheid": 7.0,
    "toelichting": "Robuuste techniek, ruime SUV; verbruik hoog als je niet laadt",
+   "levensduur_km": 290000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-10",
    "nieuw": false
@@ -3082,6 +3234,8 @@
    },
    "betrouwbaarheid": 6.0,
    "toelichting": "",
+   "levensduur_km": 270000,
+   "rest_jaar": 7,
    "let_op": [],
    "eerst_gezien": "2026-11-09",
    "nieuw": false
@@ -3123,6 +3277,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 8,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3166,6 +3322,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 9,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3210,6 +3368,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 8,
    "let_op": [],
    "eerst_gezien": "2026-11-05",
    "nieuw": false
@@ -3249,6 +3409,8 @@
    },
    "betrouwbaarheid": 5.0,
    "toelichting": "Brandstofcel; onderdelen en kennis schaars",
+   "levensduur_km": 250000,
+   "rest_jaar": 0,
    "let_op": [
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo",
@@ -3294,6 +3456,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 7,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3337,6 +3501,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 6,
    "let_op": [
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
@@ -3381,6 +3547,8 @@
    },
    "betrouwbaarheid": 6.5,
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "levensduur_km": 280000,
+   "rest_jaar": 7,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3424,6 +3592,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 6,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3467,6 +3637,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Weinig verkocht, onderdelen lastig",
+   "levensduur_km": 260000,
+   "rest_jaar": 4,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3510,6 +3682,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 6,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3553,6 +3727,8 @@
    },
    "betrouwbaarheid": 6.5,
    "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "levensduur_km": 280000,
+   "rest_jaar": 6,
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
@@ -3596,6 +3772,8 @@
    },
    "betrouwbaarheid": 5.5,
    "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
+   "levensduur_km": 260000,
+   "rest_jaar": 5,
    "let_op": [
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
