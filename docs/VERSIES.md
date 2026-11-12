@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.13.0 — 12-11-2026
+
+- **Wekker op Cloudflare: de update start nu echt om 08:00** (besluit Durk). GitHub startte de geplande run op het gratis plan uren te laat: de afgelopen week tussen 12:54 en 15:16 Nederlandse tijd in plaats van 08:00. De Worker `auto-annemarie-wekker` (map `wekker/`) draait om 06:00 en 07:00 UTC, kijkt of het in Amsterdam 8 uur is en start dan de workflow "Dagelijkse update" via `workflow_dispatch`. Geheim `GITHUB_TOKEN`: fine-grained token, alleen deze repo, Actions read/write.
+- De GitHub-cron blijft als reserve. Komt die later alsnog, dan ziet hij "Vandaag al bijgewerkt" en doet niets.
+- Online zetten: `tools\wekker-deploy.ps1`; token zetten of vernieuwen: `tools\wekker-token.ps1` (zie `tools/LEESMIJ.md`).
+
 ## 1.12.0 — 12-11-2026
 
 - **Resterende levensduur per auto** (ANWB-tip uit de Kampioen, besluit Durk: alleen als extra regel, telt niet mee in de score). Elke kaart toont "Gaat nog ± X jaar mee". Grove schatting op de betrouwbaarheid van het model: 150.000 km + 20.000 km per punt en 12 jaar + 1 jaar per punt (betrouwbaarheid 8 = ± 310.000 km of 20 jaar). Wat het eerst op is telt, bij 12.000 km per jaar. Nieuwe velden `rest_jaar` en `levensduur_km` in `data.json`.

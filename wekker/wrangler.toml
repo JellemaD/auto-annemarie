@@ -1,0 +1,8 @@
+name = "auto-annemarie-wekker"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# UTC: 06:00 = 08:00 zomertijd, 07:00 = 08:00 wintertijd. De Worker kiest zelf de juiste.
+[triggers]
+crons = ["0 6 * * *", "0 7 * * *"]
