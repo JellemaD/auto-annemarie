@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.15.0 — 14-11-2026
+
+- **Knop "Kopieer km" naast de ANWB-knop** (wens Durk: het kenteken plakken werkte goed, nu ook de kilometerstand). Een tik zet de kilometerstand als kale cijfers op het klembord (bijv. `128000`) en opent verder niets; plak hem bij de ANWB in het veld "Huidige kilometerstand". Volgorde: eerst de ANWB-knop (kenteken plakken), dan terug naar de site, "Kopieer km", en plakken.
+
 ## 1.14.0 — 14-11-2026
 
 - **Kenteken bij de ANWB-knop** (wens Durk). De scraper leest het kenteken uit de advertentiepagina die hij voor de schadecontrole al ophaalt (veld `licensePlate` bij Marktplaats en AutoScout24; niet elke verkoper vult het in). Nieuw veld `kenteken` in `data.json`. De knop toont het kenteken op een geel plaatje; een klik zet het op het klembord en opent de ANWB Koerslijst. Zelf invullen via de link kan niet: de ANWB-pagina leest geen kenteken uit de link (getest 14-11-2026), dus plakken in het kentekenveld.
