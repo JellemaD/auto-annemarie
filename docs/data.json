@@ -1,6 +1,6 @@
 {
- "bijgewerkt": "2026-11-14 13:27",
- "versie": "1.13.0",
+ "bijgewerkt": "2026-11-14 15:30",
+ "versie": "1.14.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
  "segment_min": "C",
@@ -22,8 +22,8 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2588,
- "aantal": 705,
+ "aantal_bekeken": 2579,
+ "aantal": 704,
  "autos": [
   {
    "id": "mp_m2458977266",
@@ -63,6 +63,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 12,
    "let_op": [],
+   "kenteken": "JVK-13-N",
    "eerst_gezien": "2026-10-28",
    "nieuw": false
   },
@@ -106,6 +107,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "N-242-NS",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -147,6 +149,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 13,
    "let_op": [],
+   "kenteken": "X-667-TS",
    "eerst_gezien": "2026-11-10",
    "nieuw": false
   },
@@ -188,6 +191,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 12,
    "let_op": [],
+   "kenteken": "",
    "eerst_gezien": "2026-11-04",
    "nieuw": false
   },
@@ -229,6 +233,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 12,
    "let_op": [],
+   "kenteken": "ZJ759K",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -270,6 +275,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "H-686-TR",
    "eerst_gezien": "2026-11-10",
    "nieuw": false
   },
@@ -311,6 +317,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "J-329-FR",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -352,6 +359,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "HH-953-R",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -393,6 +401,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 10,
    "let_op": [],
+   "kenteken": "XD-111-K",
    "eerst_gezien": "2026-11-05",
    "nieuw": false
   },
@@ -438,6 +447,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "FVZ-90-L",
    "eerst_gezien": "2026-11-08",
    "nieuw": false
   },
@@ -479,6 +489,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "NF467V",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -522,6 +533,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "",
    "eerst_gezien": "2026-11-07",
    "nieuw": false
   },
@@ -563,6 +575,7 @@
    "levensduur_km": 310000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "X-524-ZX",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -606,6 +619,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "L-094-ZV",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -647,6 +661,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "T-006-KL",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -688,6 +703,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 10,
    "let_op": [],
+   "kenteken": "NS-330-D",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -729,6 +745,7 @@
    "levensduur_km": 320000,
    "rest_jaar": 10,
    "let_op": [],
+   "kenteken": "JT-202-Z",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -775,6 +792,7 @@
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
    ],
+   "kenteken": "PG352B",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -820,6 +838,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "TS-209-R",
    "eerst_gezien": "2026-11-07",
    "nieuw": false
   },
@@ -861,6 +880,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "N-100-TR",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -902,6 +922,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "JF-043-S",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -945,6 +966,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "XT515P",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -988,6 +1010,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "SP-075-N",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -1032,6 +1055,7 @@
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
    ],
+   "kenteken": "KTG-91-J",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1075,6 +1099,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "XD-217-P",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -1120,6 +1145,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "G-976-HD",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1163,6 +1189,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "L-560-FF",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -1206,6 +1233,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -1251,6 +1279,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "JN-778-J",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1292,6 +1321,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "HB-171-V",
    "eerst_gezien": "2026-11-12",
    "nieuw": false
   },
@@ -1333,6 +1363,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "L-725-DL",
    "eerst_gezien": "2026-11-12",
    "nieuw": false
   },
@@ -1376,6 +1407,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "HV-894-G",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1419,6 +1451,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "SK-821-X",
    "eerst_gezien": "2026-11-07",
    "nieuw": false
   },
@@ -1463,6 +1496,7 @@
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
    ],
+   "kenteken": "TN-628-R",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -1506,6 +1540,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "HF-950-B",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -1547,6 +1582,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "HX-921-N",
    "eerst_gezien": "2026-11-06",
    "nieuw": false
   },
@@ -1588,6 +1624,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "GJ002X",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -1632,6 +1669,7 @@
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
    ],
+   "kenteken": "PF-284-H",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1673,6 +1711,7 @@
    "levensduur_km": 310000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "9-ZTN-05",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -1714,6 +1753,7 @@
    "levensduur_km": 280000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -1759,48 +1799,8 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "KP-241-P",
    "eerst_gezien": "2026-11-04",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2459711261",
-   "bron": "Marktplaats",
-   "merk": "Kia",
-   "model": "Sportage",
-   "titel": "Kia Sportage 1.6 GDI ComfortLine Zeer Laag Kilometers Goed O",
-   "prijs": 8950,
-   "km": 96934,
-   "jaar": 2015,
-   "brandstof": "Benzine",
-   "plaats": "Berkel en Rodenrijs",
-   "verkoper": "Groen Automotive B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2459711261-kia-sportage-1-6-gdi-comfortline-zeer-laag-kilometers-goed-o",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8251cc1a-f983-42e0-8809-3fe51808aed4?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4480,
-   "segment": "C",
-   "modelwoord": "sportage",
-   "soort": "Benzine",
-   "gewicht": 1450,
-   "mrb": 68,
-   "verzekering": 33,
-   "brandstofkosten": 168,
-   "totale_kosten": 269,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 63.2,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 9.0,
-    "km": 10.4,
-    "kosten": 1.6
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "1.6 GDI zonder turbo, 7 jaar fabrieksgarantie vanaf nieuw",
-   "levensduur_km": 300000,
-   "rest_jaar": 8,
-   "let_op": [],
-   "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
   {
@@ -1845,6 +1845,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "H-403-VD",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -1888,48 +1889,8 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "X-610-TL",
    "eerst_gezien": "2026-10-30",
-   "nieuw": false
-  },
-  {
-   "id": "as24_f97ffa53-c988-4cbe-ab12-631a3cc8be4c",
-   "bron": "AutoScout24",
-   "merk": "BMW",
-   "model": "i3",
-   "titel": "BMW i3 i Range Extender",
-   "prijs": 9950,
-   "km": 171975,
-   "jaar": 2015,
-   "brandstof": "Elektro/Benzine",
-   "plaats": "Ter Aar",
-   "verkoper": "Outlet4Cars",
-   "url": "https://www.autoscout24.nl/aanbod/bmw-i3-i-range-extender-elektro-benzine-wit-cat_ma13mo20319-f97ffa53-c988-4cbe-ab12-631a3cc8be4c",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/f97ffa53-c988-4cbe-ab12-631a3cc8be4c_1ee1f64a-7e0d-4fa1-8f5d-ad7dd7c3a0a2.jpg/480x360.webp",
-   "lengte": 3999,
-   "segment": "B",
-   "modelwoord": "i3",
-   "soort": "Plug-in hybride",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 40,
-   "brandstofkosten": 94,
-   "totale_kosten": 183,
-   "bereik_zomer": 90,
-   "bereik_winter": 65,
-   "score": 62.9,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 20.0,
-    "bouwjaar": 9.0,
-    "km": 5.3,
-    "kosten": 5.8
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
-   "levensduur_km": 280000,
-   "rest_jaar": 7,
-   "let_op": [],
-   "eerst_gezien": "2026-11-08",
    "nieuw": false
   },
   {
@@ -1975,6 +1936,7 @@
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
    ],
+   "kenteken": "XJ-157-T",
    "eerst_gezien": "2026-11-06",
    "nieuw": false
   },
@@ -2016,6 +1978,7 @@
    "levensduur_km": 280000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "",
    "eerst_gezien": "2026-10-28",
    "nieuw": false
   },
@@ -2057,6 +2020,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "GB-830-L",
    "eerst_gezien": "2026-11-09",
    "nieuw": false
   },
@@ -2098,6 +2062,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "KN-623-N",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -2141,6 +2106,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "ND-127-N",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -2184,6 +2150,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "GK-062-X",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -2229,6 +2196,7 @@
     "Waterstof ± € 15,00 per kilo",
     "Hoge kilometerstand"
    ],
+   "kenteken": "",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -2272,6 +2240,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "HN-326-B",
    "eerst_gezien": "2026-11-02",
    "nieuw": false
   },
@@ -2317,6 +2286,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "JJ-293-F",
    "eerst_gezien": "2026-11-12",
    "nieuw": false
   },
@@ -2358,6 +2328,7 @@
    "levensduur_km": 310000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "HT-949-J",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -2401,6 +2372,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "KX-696-P",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -2442,6 +2414,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "02-ZVV-1",
    "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
@@ -2485,6 +2458,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "HG-026-T",
    "eerst_gezien": "2026-11-04",
    "nieuw": false
   },
@@ -2493,14 +2467,14 @@
    "bron": "AutoScout24",
    "merk": "Toyota",
    "model": "Prius",
-   "titel": "Toyota Prius 1.8 PHEV ASPIRATION STOEL VERW. | TREKHAAK",
+   "titel": "Toyota Prius 1.8 PHEV ASPIRATION HALF-LEDER CAMERA CLIMA TREKHA",
    "prijs": 9900,
    "km": 193263,
    "jaar": 2013,
    "brandstof": "Elektro/Benzine",
    "plaats": "Deventer",
    "verkoper": "Van Leussen Deventer",
-   "url": "https://www.autoscout24.nl/aanbod/toyota-prius-1-8-phev-aspiration-stoel-verw-trekhaak-elektro-benzine-grijs-cat_ma70mo16516-01ff5ebe-47b2-4891-9a0e-88a0304efc71",
+   "url": "https://www.autoscout24.nl/aanbod/toyota-prius-1-8-phev-aspiration-half-leder-camera-clima-trekha-elektro-benzine-grijs-cat_ma70mo16516-01ff5ebe-47b2-4891-9a0e-88a0304efc71",
    "foto": "https://prod.pictures.autoscout24.net/listing-images/01ff5ebe-47b2-4891-9a0e-88a0304efc71_d2b868a2-2895-45d7-9902-a619784fe409.jpg/480x360.webp",
    "lengte": 4460,
    "segment": "C",
@@ -2528,6 +2502,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "8-STS-24",
    "eerst_gezien": "2026-11-10",
    "nieuw": false
   },
@@ -2569,6 +2544,7 @@
    "levensduur_km": 310000,
    "rest_jaar": 9,
    "let_op": [],
+   "kenteken": "HT-619-T",
    "eerst_gezien": "2026-11-06",
    "nieuw": false
   },
@@ -2610,6 +2586,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "7-SLR-54",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -2653,6 +2630,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "6-SXH-39",
    "eerst_gezien": "2026-11-04",
    "nieuw": false
   },
@@ -2696,6 +2674,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "1-SKJ-86",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -2737,6 +2716,7 @@
    "levensduur_km": 340000,
    "rest_jaar": 7,
    "let_op": [],
+   "kenteken": "07-XRV-1",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -2778,6 +2758,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 5,
    "let_op": [],
+   "kenteken": "97-XZB-4",
    "eerst_gezien": "2026-10-30",
    "nieuw": false
   },
@@ -2821,6 +2802,7 @@
    "let_op": [
     "Hoge kilometerstand"
    ],
+   "kenteken": "GR-626-T",
    "eerst_gezien": "2026-11-06",
    "nieuw": false
   },
@@ -2862,6 +2844,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "1-SXJ-25",
    "eerst_gezien": "2026-10-23",
    "nieuw": false
   },
@@ -2907,6 +2890,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "SG-653-S",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -2951,6 +2935,7 @@
     "Tanken kan op ± 20 plaatsen in Nederland",
     "Waterstof ± € 15,00 per kilo"
    ],
+   "kenteken": "KL-635-X",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -2992,6 +2977,7 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "3-ZNT-39",
    "eerst_gezien": "2026-11-12",
    "nieuw": false
   },
@@ -3033,6 +3019,7 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "HJ-693-G",
    "eerst_gezien": "2026-11-08",
    "nieuw": false
   },
@@ -3074,6 +3061,7 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "GZ-658-J",
    "eerst_gezien": "2026-11-05",
    "nieuw": false
   },
@@ -3115,6 +3103,7 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "GV-952-P",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3156,6 +3145,7 @@
    "levensduur_km": 270000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "NFZ-23-P",
    "eerst_gezien": "2026-11-10",
    "nieuw": false
   },
@@ -3197,6 +3187,7 @@
    "levensduur_km": 300000,
    "rest_jaar": 6,
    "let_op": [],
+   "kenteken": "8-KZB-56",
    "eerst_gezien": "2026-10-12",
    "nieuw": false
   },
@@ -3238,6 +3229,7 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "HN-246-F",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -3279,7 +3271,50 @@
    "levensduur_km": 290000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "GD975F",
    "eerst_gezien": "2026-11-10",
+   "nieuw": false
+  },
+  {
+   "id": "mp_m2444870217",
+   "bron": "Marktplaats",
+   "merk": "BMW",
+   "model": "2-Serie Active Tourer",
+   "titel": "BMW 225xe Active Tour Hybrid Automaat leder stoelverwarming",
+   "prijs": 9700,
+   "km": 175000,
+   "jaar": 2018,
+   "brandstof": "Hybride",
+   "plaats": "Avenhorn",
+   "verkoper": "Aman",
+   "url": "https://www.marktplaats.nl/v/auto-s/bmw/m2444870217-bmw-225xe-active-tour-hybrid-automaat-leder-stoelverwarming",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/759cdc38-90ff-48e3-b663-44d028fe286b?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4342,
+   "segment": "C",
+   "modelwoord": "225xe",
+   "soort": "Plug-in hybride",
+   "gewicht": 1660,
+   "mrb": 95,
+   "verzekering": 46,
+   "brandstofkosten": 97,
+   "totale_kosten": 238,
+   "bereik_zomer": 30,
+   "bereik_winter": 20,
+   "score": 57.6,
+   "punten": {
+    "betrouwbaarheid": 21.0,
+    "bereik": 14.0,
+    "bouwjaar": 14.4,
+    "km": 5.1,
+    "kosten": 3.1
+   },
+   "betrouwbaarheid": 6.0,
+   "toelichting": "",
+   "levensduur_km": 270000,
+   "rest_jaar": 7,
+   "let_op": [],
+   "kenteken": "N-408-BT",
+   "eerst_gezien": "2026-11-09",
    "nieuw": false
   },
   {
@@ -3324,6 +3359,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "L246FX",
    "eerst_gezien": "2026-11-09",
    "nieuw": false
   },
@@ -3369,6 +3405,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
@@ -3413,6 +3450,7 @@
    "levensduur_km": 260000,
    "rest_jaar": 8,
    "let_op": [],
+   "kenteken": "KZ-410-L",
    "eerst_gezien": "2026-11-05",
    "nieuw": false
   },
@@ -3458,6 +3496,7 @@
     "Waterstof ± € 15,00 per kilo",
     "Hoge kilometerstand"
    ],
+   "kenteken": "ZS-514-N",
    "eerst_gezien": "2026-11-07",
    "nieuw": false
   },
@@ -3503,6 +3542,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "KH-020-Z",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3548,6 +3588,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "JT-914-L",
    "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
@@ -3594,6 +3635,7 @@
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
    ],
+   "kenteken": "H-786-BK",
    "eerst_gezien": "2026-11-12",
    "nieuw": false
   },
@@ -3639,6 +3681,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "TG-118-R",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3684,6 +3727,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "K-688-ZT",
    "eerst_gezien": "2026-11-14",
    "nieuw": true
   },
@@ -3729,6 +3773,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3774,6 +3819,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "L-311-RV",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3819,6 +3865,7 @@
    "let_op": [
     "Vraag accurapport (SoH)"
    ],
+   "kenteken": "N203PZ",
    "eerst_gezien": "2026-11-01",
    "nieuw": false
   },
@@ -3865,6 +3912,7 @@
     "Vraag accurapport (SoH)",
     "Hoge kilometerstand"
    ],
+   "kenteken": "JK-345-B",
    "eerst_gezien": "2026-11-04",
    "nieuw": false
   }
