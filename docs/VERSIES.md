@@ -2,6 +2,11 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.14.0 — 14-11-2026
+
+- **Kenteken bij de ANWB-knop** (wens Durk). De scraper leest het kenteken uit de advertentiepagina die hij voor de schadecontrole al ophaalt (veld `licensePlate` bij Marktplaats en AutoScout24; niet elke verkoper vult het in). Nieuw veld `kenteken` in `data.json`. De knop toont het kenteken op een geel plaatje; een klik zet het op het klembord en opent de ANWB Koerslijst. Zelf invullen via de link kan niet: de ANWB-pagina leest geen kenteken uit de link (getest 14-11-2026), dus plakken in het kentekenveld.
+- **Resterende levensduur beter zichtbaar.** Stond als vierde grijze regel ("Gaat nog ± X jaar mee") en viel weg. Nu: "⏳ **Resterende levensduur: nog ± X jaar**" in vet en gewone tekstkleur. Berekening ongewijzigd.
+
 ## 1.13.0 — 12-11-2026
 
 - **Wekker op Cloudflare: de update start nu echt om 08:00** (besluit Durk). GitHub startte de geplande run op het gratis plan uren te laat: de afgelopen week tussen 12:54 en 15:16 Nederlandse tijd in plaats van 08:00. De Worker `auto-annemarie-wekker` (map `wekker/`) draait om 06:00 en 07:00 UTC, kijkt of het in Amsterdam 8 uur is en start dan de workflow "Dagelijkse update" via `workflow_dispatch`. Geheim `GITHUB_TOKEN`: fine-grained token, alleen deze repo, Actions read/write.

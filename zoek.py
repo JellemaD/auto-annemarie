@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.13.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.14.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -886,9 +886,19 @@ def beste_per_soort(autos, per_soort=PER_SOORT, per_model=PER_MODEL):
     return uit
 
 
+def kenteken(html):
+    """Kenteken uit de advertentiepagina (Marktplaats en AutoScout24 hebben allebei een veld
+    licensePlate; niet elke verkoper vult het in). Voor de ANWB-knop."""
+    m = re.search(r'"licensePlate"\s*:\s*"([A-Za-z0-9-]{6,10})"', html)
+    if not m or len(m.group(1).replace('-', '')) != 6:
+        return ''
+    return m.group(1).upper()
+
+
 def detail_tekst(a):
     r = requests.get(a['url'], headers=HEADERS, timeout=30)
     r.raise_for_status()
+    a['kenteken'] = kenteken(r.text)
     soup = BeautifulSoup(r.text, 'html.parser')
     if a['bron'] == 'AutoScout24':
         L = json.loads(soup.find('script', id='__NEXT_DATA__').string)['props']['pageProps']['listingDetails']
