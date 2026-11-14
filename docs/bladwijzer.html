@@ -15,6 +15,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-app
 main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
 h1{font-size:1.45rem;margin:0 0 6px}
 h2{font-size:1.1rem;margin:26px 0 8px}
+h3{font-size:1rem;margin:18px 0 4px}
 .sub{color:var(--muted);margin:0 0 18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
 ol{padding-left:22px;margin:6px 0}
@@ -37,21 +38,30 @@ textarea{width:100%;height:70px;font:12px/1.3 ui-monospace,Consolas,monospace;bo
 <h2 style="margin-top:0">Zo werkt het straks</h2>
 <ol>
   <li>Tik bij een auto op <b>Check richtprijs bij ANWB</b>. De ANWB Koerslijst opent.</li>
-  <li>Tik bovenin op de adresbalk en kies bij Favorieten <b>Vul in ANWB</b>.</li>
+  <li>Open de bladwijzer <b>Vul in ANWB</b> (hoe, staat hieronder bij jouw telefoon).</li>
   <li>Kenteken en kilometerstand staan erin en de ANWB gaat door naar de volgende stap. Kies de uitvoering en je ziet de waarde.</li>
 </ol>
 </div>
 
 <div class="card">
-<h2 style="margin-top:0">Instellen op de iPhone (Safari)</h2>
+<h2 style="margin-top:0">Instellen in Brave</h2>
+<p>Eerst de code kopiëren: <button id="kopieer">Kopieer code</button><span class="ok" id="ok" hidden>Gekopieerd ✓</span></p>
+<h3>Brave op de iPhone</h3>
 <ol>
-  <li>Tik op deze knop: <button id="kopieer">Kopieer code</button><span class="ok" id="ok" hidden>Gekopieerd ✓</span></li>
-  <li>Tik onderin op het deelicoon (vierkantje met pijl omhoog) en kies <b>Voeg bladwijzer toe</b>.</li>
-  <li>Maak de naam <b>Vul in ANWB</b>, kies als plek <b>Favorieten</b> en tik op <b>Bewaar</b>.</li>
-  <li>Tik op het boekje (bladwijzers), open <b>Favorieten</b>, tik onderin op <b>Wijzig</b> en daarna op <b>Vul in ANWB</b>.</li>
-  <li>Wis het adres (het kruisje in het veld), houd je vinger in het lege veld en kies <b>Plak</b>. Tik op <b>Gereed</b>.</li>
+  <li>Tik rechtsonder op de drie puntjes <b>⋯</b> en kies <b>Bladwijzer toevoegen</b> (of <b>Add Bookmark</b>).</li>
+  <li>Maak de naam <b>Vul in ANWB</b> en bewaar.</li>
+  <li>Tik weer op <b>⋯</b> → <b>Bladwijzers</b>, tik onderin op <b>Wijzig</b> en tik op <b>Vul in ANWB</b>.</li>
+  <li>Wis het adres, houd je vinger in het lege veld, kies <b>Plak</b> en bewaar.</li>
 </ol>
-<p class="klein">Klaar. Werkt de knop een keer niet, dan is de ANWB-pagina misschien nog aan het laden: tik dan nog eens op de bladwijzer.</p>
+<p><b>Gebruiken:</b> op de ANWB-pagina <b>⋯</b> → <b>Bladwijzers</b> → <b>Vul in ANWB</b>.</p>
+<h3>Brave op Android</h3>
+<ol>
+  <li>Tik op de drie puntjes <b>⋮</b> en dan op het sterretje <b>☆</b>. Onderin verschijnt "Bladwijzer toegevoegd": tik op <b>Bewerken</b>.</li>
+  <li>Maak de naam <b>Vul in ANWB</b>.</li>
+  <li>Wis het adres (URL), houd je vinger in het lege veld, kies <b>Plakken</b> en ga terug.</li>
+</ol>
+<p><b>Gebruiken:</b> op de ANWB-pagina tik je in de adresbalk, typ je <b>Vul in</b> en tik je op de bladwijzer <b>Vul in ANWB</b> in de suggesties. Let op: op Android werkt hij <i>niet</i> vanuit de bladwijzerlijst, alleen via de adresbalk.</p>
+<p class="klein">Werkt het een keer niet, dan is de ANWB-pagina misschien nog aan het laden: open de bladwijzer dan nog eens. Lukt het helemaal niet, dan kan het altijd nog met plakken: de ANWB-knop zet het kenteken op het klembord, <b>Kopieer km</b> de kilometerstand.</p>
 </div>
 
 <div class="card">

@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.16.1 — 14-11-2026
+
+- **Handleiding bladwijzer voor Brave in plaats van Safari** (wens Durk). `bladwijzer.html` heeft nu de stappen voor Brave op de iPhone en Brave op Android. Op Android werkt een bladwijzer met code alleen via de adresbalk (typ "Vul in" en kies hem uit de suggesties), niet vanuit de bladwijzerlijst.
+
 ## 1.16.0 — 14-11-2026
 
 - **Bladwijzer "Vul in ANWB": kenteken en km automatisch invullen** (keuze Durk: optie A). De ANWB-knop zet kenteken en km achter # in de link (`koerslijst#kenteken=X667TS&km=162188`); de ANWB doet daar zelf niets mee. De bladwijzer leest ze uit, vult het formulier (velden `licensePlate` en `currentMileage`) en klikt op "Volgende stap"; Annemarie kiest dan alleen nog de uitvoering. Toont de ANWB nog de vorige auto (dat onthoudt hij), dan gaat de bladwijzer eerst een stap terug.
