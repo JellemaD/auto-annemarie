@@ -112,7 +112,9 @@ function vulIn() {
     if (verder) verder.click();
   })();
 }
-const code = 'javascript:(' + vulIn.toString().replace(/\s*\n\s*/g, ' ') + ')();';
+// Gecodeerd (%20 enz.): Brave op de iPhone weigert een adres met spaties, haakjes en
+// aanhalingstekens ("Bewaar" blijft grijs). De browser decodeert het weer voor het draaien.
+const code = 'javascript:' + encodeURIComponent('(' + vulIn.toString().replace(/\s*\n\s*/g, ' ') + ')();');
 document.getElementById('code').value = code;
 document.getElementById('sleep').href = code;
 document.getElementById('sleep').onclick = e => { e.preventDefault(); alert('Sleep deze knop naar je bladwijzerbalk.'); };

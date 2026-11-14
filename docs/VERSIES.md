@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.16.2 — 14-11-2026
+
+- **Bladwijzercode is nu een geldig webadres.** In Brave op de iPhone bleef "Bewaar" grijs na het plakken: Brave weigert een adres met spaties, accolades en aanhalingstekens. De code wordt nu gecodeerd (`%20` enz.); de browser decodeert hem weer bij het uitvoeren. Wie de oude code al had: opnieuw kopiëren en plakken.
+
 ## 1.16.1 — 14-11-2026
 
 - **Handleiding bladwijzer voor Brave in plaats van Safari** (wens Durk). `bladwijzer.html` heeft nu de stappen voor Brave op de iPhone en Brave op Android. Op Android werkt een bladwijzer met code alleen via de adresbalk (typ "Vul in" en kies hem uit de suggesties), niet vanuit de bladwijzerlijst.
