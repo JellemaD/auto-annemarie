@@ -100,7 +100,7 @@ details p,details li{color:var(--muted);font-size:.92rem}
 <body>
 <main>
 <h1>🔌 Auto voor Annemarie</h1>
-<p class="sub">Elektrisch, plug-in, hybride, benzine of waterstof · max € 10.000 · minstens de compacte middenklasse (segment C) · heel Nederland<br><span id="stand">Laden…</span></p>
+<p class="sub">Elektrisch, plug-in, hybride, benzine of waterstof · max € 10.000 · minstens de compacte middenklasse (segment C) · heel Nederland<br><span id="stand">Laden…</span><br><a href="bladwijzer.html">Kenteken en km automatisch invullen bij de ANWB? Zet eenmalig de bladwijzer.</a></p>
 
 <details id="criteria" class="criteria">
   <summary>Welke criteria gelden?</summary>
@@ -149,10 +149,10 @@ details p,details li{color:var(--muted);font-size:.92rem}
   <p><b>Welke modellen wel en niet:</b> alleen modellen die op de lijst staan, komen op de site. Bewust <b>niet</b> op die lijst: Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (bekende problemen met koelvloeistof en distributieriem) · en elke auto met een DSG- of CVT-automaat van vóór 2015. Die auto's zijn goedkoop in aanschaf en duur in onderhoud, en dat verschil is groter dan wat je op de aanschafprijs wint.</p>
   <p><b>Waterstof.</b> Een waterstofauto is herkenbaar aan de rode <b>H2</b> naast de score. Hij rijdt elektrisch, maar maakt zijn stroom zelf uit waterstof: tanken duurt vijf minuten en het bereik is groot. De keerzijde zit in de kosten en het tanken. Een kilo waterstof is goed voor ongeveer 100 km en kostte in 2026 tussen de € 10 en € 25; hier is gerekend met € 15, dus ongeveer € 150 per maand bij 12.000 km per jaar — vijf keer zoveel als thuis laden. En er zijn maar zo'n twintig openbare tankstations in heel Nederland. Alleen de Toyota Mirai, Hyundai Nexo en Hyundai ix35 FCEV doen mee.</p>
   <p><b>Resterende levensduur</b> (tip van de ANWB: kijk niet alleen naar bouwjaar en kilometerstand, maar naar hoe lang de auto nog meegaat). Een grove schatting die <b>niet meetelt in de score</b>. Hoe betrouwbaarder het model, hoe langer hij meegaat: bij betrouwbaarheid 8 is dat ± 310.000 km of 20 jaar, bij 5 ± 250.000 km of 17 jaar. Wat het eerst op is telt, met 12.000 km per jaar. Onderhoud en de staat van de auto maken in de praktijk veel verschil.</p>
-  <p><b>Richtprijs:</b> de knop <b>Check richtprijs bij ANWB</b> opent de ANWB Koerslijst. Staat het kenteken op de knop, dan zet een klik het op het klembord: plak het daar in het kentekenveld. Daarna zet <b>Kopieer km</b> de kilometerstand op het klembord voor het km-veld. Zonder kenteken vul je het zelf in uit de advertentie (of merk, model en bouwjaar) en je ziet wat de auto ongeveer waard is en wat hij per maand kost. Zo zie je of de vraagprijs redelijk is.</p>
+  <p><b>Richtprijs:</b> de knop <b>Check richtprijs bij ANWB</b> opent de ANWB Koerslijst. Staat het kenteken op de knop, tik daar dan op de bladwijzer <b>Vul in ANWB</b>: die vult kenteken en kilometerstand in en gaat door naar de volgende stap. Eenmalig instellen: <a href="bladwijzer.html">zo zet je de bladwijzer op je telefoon</a>. Zonder bladwijzer kan het ook met plakken: een tik op de ANWB-knop zet het kenteken op het klembord, <b>Kopieer km</b> de kilometerstand. Zonder kenteken vul je het zelf in uit de advertentie (of merk, model en bouwjaar) en je ziet wat de auto ongeveer waard is en wat hij per maand kost. Zo zie je of de vraagprijs redelijk is.</p>
   <p><b>Tip bij een elektrische auto:</b> vraag altijd om een accurapport (SoH, de "gezondheid" van de accu). Boven 85% is prima, onder 75% is de actieradius flink minder.</p>
 </details>
-<p class="klein" id="versie">Versie 1.15.0</p>
+<p class="klein" id="versie">Versie 1.16.0</p>
 </main>
 <script>
 const eur = n => '€ ' + n.toLocaleString('nl-NL');
@@ -196,8 +196,11 @@ let anwbUrl = 'https://www.anwb.nl/auto/koerslijst';
 // Met kenteken: de knop toont het en zet het bij een klik op het klembord (de ANWB-pagina kan
 // het niet zelf uit de link halen). Zonder kenteken: zelf invullen uit de advertentie.
 const anwbKnop = a => a.kenteken
-  ? `<span class="anwb" role="link" tabindex="0" data-kenteken="${esc(a.kenteken)}" data-melding=" — kenteken gekopieerd, plak het bij de ANWB" title="Het kenteken gaat mee op het klembord: plak het bij de ANWB in het kentekenveld">Check richtprijs bij ANWB · <b class="kenteken">${esc(a.kenteken)}</b> ↗</span>${kmKnop(a)}`
+  ? `<span class="anwb" role="link" tabindex="0" data-kenteken="${esc(a.kenteken)}" data-hash="${esc(anwbHash(a))}" data-melding=" — kenteken gekopieerd, plak het bij de ANWB" title="Het kenteken gaat mee op het klembord: plak het bij de ANWB in het kentekenveld">Check richtprijs bij ANWB · <b class="kenteken">${esc(a.kenteken)}</b> ↗</span>${kmKnop(a)}`
   : `<span class="anwb" role="link" tabindex="0" title="Vul bij de ANWB het kenteken uit de advertentie in">Check richtprijs bij ANWB ↗</span>${kmKnop(a)}`;
+// Kenteken en km gaan achter # mee in de ANWB-link. De ANWB doet er zelf niets mee, maar de
+// bladwijzer "Vul in ANWB" (zie bladwijzer.html) leest ze daar uit en vult het formulier.
+const anwbHash = a => '#' + new URLSearchParams({kenteken: a.kenteken.replace(/-/g, ''), ...(a.km ? {km: a.km} : {})});
 // Tweede knop: kilometerstand op het klembord (alleen cijfers), voor het km-veld bij de ANWB.
 const kmKnop = a => a.km
   ? ` <span class="anwb" role="button" tabindex="0" data-km="${a.km}" data-melding=" — gekopieerd, plak bij de ANWB" title="Zet de kilometerstand op het klembord">Kopieer km · <b>${km(a.km)}</b></span>` : '';
@@ -327,7 +330,7 @@ function openAnwb(e) {
     }).catch(() => {});
   }
   // De km-knop kopieert alleen; Annemarie staat dan al op de ANWB-pagina.
-  if (!knop.dataset.km) window.open(anwbUrl, '_blank', 'noopener');
+  if (!knop.dataset.km) window.open(anwbUrl + (knop.dataset.hash || ''), '_blank', 'noopener');
 }
 document.addEventListener('click', openAnwb);
 document.addEventListener('keydown', openAnwb);

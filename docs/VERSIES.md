@@ -2,6 +2,12 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.16.0 — 14-11-2026
+
+- **Bladwijzer "Vul in ANWB": kenteken en km automatisch invullen** (keuze Durk: optie A). De ANWB-knop zet kenteken en km achter # in de link (`koerslijst#kenteken=X667TS&km=162188`); de ANWB doet daar zelf niets mee. De bladwijzer leest ze uit, vult het formulier (velden `licensePlate` en `currentMileage`) en klikt op "Volgende stap"; Annemarie kiest dan alleen nog de uitvoering. Toont de ANWB nog de vorige auto (dat onthoudt hij), dan gaat de bladwijzer eerst een stap terug.
+- **Uitlegpagina `bladwijzer.html`** met knop "Kopieer code" en de stappen voor Safari op de iPhone, plus een sleepknop voor de computer. Link bovenaan de site en in de uitleg.
+- Getest op anwb.nl op 14-11-2026 met drie echte kentekens, ook vanaf de "vorige auto"-stand. Breekbaar als de ANWB het formulier verandert; dan blijven plakken en "Kopieer km" werken.
+
 ## 1.15.0 — 14-11-2026
 
 - **Knop "Kopieer km" naast de ANWB-knop** (wens Durk: het kenteken plakken werkte goed, nu ook de kilometerstand). Een tik zet de kilometerstand als kale cijfers op het klembord (bijv. `128000`) en opent verder niets; plak hem bij de ANWB in het veld "Huidige kilometerstand". Volgorde: eerst de ANWB-knop (kenteken plakken), dan terug naar de site, "Kopieer km", en plakken.

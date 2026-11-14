@@ -51,6 +51,7 @@ Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet h
 
 | # | Item | Datum |
 |---|---|---|
+| B20 | **Bladwijzer vult kenteken en km in bij de ANWB** (v1.16.0): ANWB-link met `#kenteken=…&km=…`, bladwijzer vult in en klikt door; uitleg op `bladwijzer.html` | 14-11-2026 |
 | B19 | **Kilometerstand kopiëren voor de ANWB** (v1.15.0): knop "Kopieer km" per auto zet de km-stand op het klembord | 14-11-2026 |
 | B18 | **Kenteken bij de ANWB-knop en levensduur beter zichtbaar** (v1.14.0): kenteken uit de advertentie op de knop, bij een klik op het klembord; regel "⏳ Resterende levensduur: nog ± X jaar" vet en in gewone tekstkleur | 14-11-2026 |
 | B17 | **ANWB-tips: resterende levensduur en richtprijs** (v1.12.0): regel "Gaat nog ± X jaar mee" per auto (schatting op betrouwbaarheid, niet in de score) en een knop naar de ANWB Koerslijst | 12-11-2026 |
