@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-17 15:49",
+ "bijgewerkt": "2026-11-18 15:29",
  "versie": "1.16.2",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
@@ -22,8 +22,8 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2618,
- "aantal": 719,
+ "aantal_bekeken": 2587,
+ "aantal": 704,
  "autos": [
   {
    "id": "mp_m2458977266",
@@ -533,6 +533,7 @@
    "levensduur_km": 310000,
    "rest_jaar": 11,
    "let_op": [],
+   "kenteken": "X-524-ZX",
    "eerst_gezien": "2026-11-11",
    "nieuw": false
   },
@@ -1061,52 +1062,6 @@
    "kenteken": "KTG-91-J",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
-  },
-  {
-   "id": "as24_5df385cf-de4b-44c9-acf1-eb056cd5e3ff",
-   "bron": "AutoScout24",
-   "merk": "Porsche",
-   "model": "Taycan",
-   "titel": "Porsche Taycan 89 kWh",
-   "prijs": 1300,
-   "km": 38000,
-   "jaar": 2024,
-   "brandstof": "Elektrisch",
-   "plaats": "Breda",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/porsche-taycan-89-kwh-elektrisch-grijs-cat_ma57mo75273-5df385cf-de4b-44c9-acf1-eb056cd5e3ff",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/5df385cf-de4b-44c9-acf1-eb056cd5e3ff_3ce47be3-fb4e-40ea-a36c-4f28c252f676.jpg/480x360.webp",
-   "lengte": null,
-   "segment": null,
-   "modelwoord": null,
-   "soort": "Elektrisch",
-   "gewicht": 1500,
-   "mrb": 54,
-   "verzekering": 39,
-   "brandstofkosten": 48,
-   "totale_kosten": 141,
-   "accu_kwh": 24,
-   "soh_schatting": 98,
-   "bereik_zomer": 140,
-   "bereik_winter": 100,
-   "score": 66.3,
-   "punten": {
-    "betrouwbaarheid": 19.2,
-    "bereik": 6.7,
-    "bouwjaar": 18.0,
-    "km": 14.4,
-    "kosten": 8.0
-   },
-   "betrouwbaarheid": 5.5,
-   "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
-   "levensduur_km": 260000,
-   "rest_jaar": 15,
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "kenteken": "",
-   "eerst_gezien": "2026-11-17",
-   "nieuw": true
   },
   {
    "id": "mp_m2461497737",
@@ -1675,51 +1630,6 @@
    "let_op": [],
    "kenteken": "GJ002X",
    "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2458368460",
-   "bron": "Marktplaats",
-   "merk": "Toyota",
-   "model": "Mirai",
-   "titel": "Toyota Mirai FCV Executive [ HYDROGEN ] (INCL-BTW) Aut. *LEA",
-   "prijs": 9945,
-   "km": 75040,
-   "jaar": 2017,
-   "brandstof": "Waterstof",
-   "plaats": "Teuge",
-   "verkoper": "Haverkamp Auto's B.V.",
-   "url": "https://www.marktplaats.nl/v/auto-s/toyota/m2458368460-toyota-mirai-fcv-executive-hydrogen-incl-btw-aut-lea",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/10853252-3745-4ddb-8d27-e22d349b7b1c?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 4890,
-   "segment": "E",
-   "modelwoord": "mirai",
-   "soort": "Waterstof",
-   "gewicht": 1850,
-   "mrb": 73,
-   "verzekering": 39,
-   "brandstofkosten": 150,
-   "totale_kosten": 262,
-   "bereik_zomer": 420,
-   "bereik_winter": 310,
-   "score": 63.9,
-   "punten": {
-    "betrouwbaarheid": 17.5,
-    "bereik": 20.0,
-    "bouwjaar": 12.6,
-    "km": 11.9,
-    "kosten": 1.9
-   },
-   "betrouwbaarheid": 5.0,
-   "toelichting": "Toyota-kwaliteit, maar brandstofcel en waterstoftanks: alleen dealeronderhoud",
-   "levensduur_km": 250000,
-   "rest_jaar": 8,
-   "let_op": [
-    "Tanken kan op ± 20 plaatsen in Nederland",
-    "Waterstof ± € 15,00 per kilo"
-   ],
-   "kenteken": "PF-284-H",
-   "eerst_gezien": "2026-10-27",
    "nieuw": false
   },
   {
@@ -2379,7 +2289,7 @@
    ],
    "kenteken": "7-KDB-57",
    "eerst_gezien": "2026-11-17",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_0f369ddd-13ef-45e9-8698-14310b757565",
@@ -2639,7 +2549,7 @@
    ],
    "kenteken": "HS-134-K",
    "eerst_gezien": "2026-11-17",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_288e2aae-544b-4514-a1fc-ee60cb244334",
@@ -3329,52 +3239,6 @@
    "nieuw": false
   },
   {
-   "id": "as24_43198259-ece7-4c09-8eda-12bcde31e327",
-   "bron": "AutoScout24",
-   "merk": "MG",
-   "model": "",
-   "titel": "MG None ZS elektrisch 2019",
-   "prijs": 10000,
-   "km": 148989,
-   "jaar": 2019,
-   "brandstof": "Elektrisch",
-   "plaats": "Dordrecht",
-   "verkoper": "Particulier",
-   "url": "https://www.autoscout24.nl/aanbod/mg-overig-zs-elektrisch-2019-elektrisch-zwart-cat_ma48mo21024-43198259-ece7-4c09-8eda-12bcde31e327",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/43198259-ece7-4c09-8eda-12bcde31e327_5057c250-2f8e-4dec-bebf-e6bcba4273b7.jpg/480x360.webp",
-   "lengte": null,
-   "segment": null,
-   "modelwoord": null,
-   "soort": "Elektrisch",
-   "gewicht": 1500,
-   "mrb": 54,
-   "verzekering": 35,
-   "brandstofkosten": 48,
-   "totale_kosten": 137,
-   "accu_kwh": 24,
-   "soh_schatting": 92,
-   "bereik_zomer": 130,
-   "bereik_winter": 95,
-   "score": 56.5,
-   "punten": {
-    "betrouwbaarheid": 19.2,
-    "bereik": 6.0,
-    "bouwjaar": 16.2,
-    "km": 6.9,
-    "kosten": 8.2
-   },
-   "betrouwbaarheid": 5.5,
-   "toelichting": "Model niet in de lijst: neutrale betrouwbaarheid",
-   "levensduur_km": 260000,
-   "rest_jaar": 9,
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "kenteken": "",
-   "eerst_gezien": "2026-10-27",
-   "nieuw": false
-  },
-  {
    "id": "mp_m2461934304",
    "bron": "Marktplaats",
    "merk": "Mercedes-Benz",
@@ -3463,52 +3327,6 @@
    ],
    "kenteken": "KH-020-Z",
    "eerst_gezien": "2026-11-01",
-   "nieuw": false
-  },
-  {
-   "id": "mp_m2465309621",
-   "bron": "Marktplaats",
-   "merk": "BMW",
-   "model": "I3",
-   "titel": "BMW i3 2016 Zwart comfort 22kWh",
-   "prijs": 8950,
-   "km": 148660,
-   "jaar": 2016,
-   "brandstof": "Elektrisch",
-   "plaats": "Bennekom",
-   "verkoper": "Fietsliefhebber",
-   "url": "https://www.marktplaats.nl/v/auto-s/bmw/m2465309621-bmw-i3-2016-zwart-comfort-22kwh",
-   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9bc4810f-dea9-4ea2-a1f5-4a5104aff10d?rule=ecg_mp_eps$_84.jpg",
-   "lengte": 3999,
-   "segment": "B",
-   "modelwoord": "i3",
-   "soort": "Elektrisch",
-   "gewicht": 1250,
-   "mrb": 35,
-   "verzekering": 39,
-   "brandstofkosten": 41,
-   "totale_kosten": 115,
-   "accu_kwh": 19,
-   "soh_schatting": 88,
-   "bereik_zomer": 115,
-   "bereik_winter": 85,
-   "score": 54.4,
-   "punten": {
-    "betrouwbaarheid": 22.8,
-    "bereik": 4.7,
-    "bouwjaar": 10.8,
-    "km": 6.9,
-    "kosten": 9.2
-   },
-   "betrouwbaarheid": 6.5,
-   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
-   "levensduur_km": 280000,
-   "rest_jaar": 8,
-   "let_op": [
-    "Vraag accurapport (SoH)"
-   ],
-   "kenteken": "JT-914-L",
-   "eerst_gezien": "2026-11-13",
    "nieuw": false
   },
   {
@@ -3786,6 +3604,52 @@
    "kenteken": "9-ZDH-80",
    "eerst_gezien": "2026-11-15",
    "nieuw": false
+  },
+  {
+   "id": "as24_acd8057f-9ab0-4d0b-96cd-f86dcbf8e768",
+   "bron": "AutoScout24",
+   "merk": "BMW",
+   "model": "i3",
+   "titel": "BMW i3 60 Ah",
+   "prijs": 7500,
+   "km": 148900,
+   "jaar": 2013,
+   "brandstof": "Elektrisch",
+   "plaats": "Rotterdam",
+   "verkoper": "Particulier",
+   "url": "https://www.autoscout24.nl/aanbod/bmw-i3-60-ah-elektrisch-cat_ma13mo20319-acd8057f-9ab0-4d0b-96cd-f86dcbf8e768",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/acd8057f-9ab0-4d0b-96cd-f86dcbf8e768_cb167b43-91b9-4147-abd5-b06e42686559.jpg/480x360.webp",
+   "lengte": 3999,
+   "segment": "B",
+   "modelwoord": "i3",
+   "soort": "Elektrisch",
+   "gewicht": 1250,
+   "mrb": 35,
+   "verzekering": 37,
+   "brandstofkosten": 41,
+   "totale_kosten": 113,
+   "accu_kwh": 19,
+   "soh_schatting": 84,
+   "bereik_zomer": 110,
+   "bereik_winter": 80,
+   "score": 48.4,
+   "punten": {
+    "betrouwbaarheid": 22.8,
+    "bereik": 4.0,
+    "bouwjaar": 5.4,
+    "km": 6.9,
+    "kosten": 9.3
+   },
+   "betrouwbaarheid": 6.5,
+   "toelichting": "Licht en sterk (carbon); onderhoud bij BMW duur",
+   "levensduur_km": 280000,
+   "rest_jaar": 5,
+   "let_op": [
+    "Vraag accurapport (SoH)"
+   ],
+   "kenteken": "",
+   "eerst_gezien": "2026-11-18",
+   "nieuw": true
   },
   {
    "id": "as24_ea500f9f-868c-42f9-9363-3331075d445e",
