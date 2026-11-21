@@ -2,6 +2,11 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.17.0 — 21-11-2026
+
+- **Alleen nog Kia Ceed en Toyota Auris** (besluit Durk). Nieuwe instelling `ALLEEN_MODELLEN` in `zoek.py`; alle andere modellen vallen af. Overige eisen (prijs, km, bouwjaar, benzine/hybride) blijven gelijk.
+- Terug: `ALLEEN_MODELLEN = set()`, of `git checkout v1.16.2 -- zoek.py` (tag van de laatste versie met alle modellen).
+
 ## 1.16.2 — 14-11-2026
 
 - **Bladwijzercode is nu een geldig webadres.** In Brave op de iPhone bleef "Bewaar" grijs na het plakken: Brave weigert een adres met spaties, accolades en aanhalingstekens. De code wordt nu gecodeerd (`%20` enz.); de browser decodeert hem weer bij het uitvoeren. Wie de oude code al had: opnieuw kopiëren en plakken.

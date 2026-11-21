@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.16.2'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.17.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -216,6 +216,11 @@ GANGBARE_MERKEN = {
 # Merkvoorkeur van Annemarie (leeg = alle merken). Bijv. ['Toyota', 'Kia'] geeft die merken
 # een bonus van MERK_BONUS punten; ze blijven ook met andere merken vergeleken.
 MERK_VOORKEUR = []
+
+# Alleen deze modellen op de site (besluit Durk 21-11-2026: Kia Ceed en Toyota Auris).
+# Leeg = alle modellen uit MODELLEN. Terug naar de oude situatie: zet dit op set(), of
+# git checkout v1.16.2 (tag van de laatste versie met alle modellen).
+ALLEEN_MODELLEN = {'ceed', "cee'd", 'auris'}
 MERK_BONUS = 5
 
 # Resterende levensduur (ANWB-tip "kijk naar de resterende levensduur"). Alleen informatie, telt
@@ -765,6 +770,8 @@ def beoordeel(a):
     if not model:
         return None
     betrouwbaar, soort, uitleg, gewicht, modelwoord = model
+    if ALLEEN_MODELLEN and modelwoord not in ALLEEN_MODELLEN:
+        return None
     if onder_segment(modelwoord):
         return None  # kleiner dan de compacte middenklasse (segment C)
     a['lengte'] = LENGTE.get(modelwoord)
