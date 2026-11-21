@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.17.1 — 21-11-2026
+
+- **Top 10 per model** (besluit Durk): `PER_MODEL` van 4 naar 10. Zolang `ALLEEN_MODELLEN` gevuld is, telt de grens per model over benzine en hybride samen, dus hoogstens 10 Ceeds en 10 Aurissen. Terug: `PER_MODEL = 4`.
+
 ## 1.17.0 — 21-11-2026
 
 - **Alleen nog Kia Ceed en Toyota Auris** (besluit Durk). Nieuwe instelling `ALLEEN_MODELLEN` in `zoek.py`; alle andere modellen vallen af. Overige eisen (prijs, km, bouwjaar, benzine/hybride) blijven gelijk.

@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.17.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.17.1'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -872,7 +872,9 @@ PER_SOORT = 25        # hoeveel kandidaten per soort de detailcontrole in gaan e
 # Hoogstens zoveel van hetzelfde model per soort (besluit Durk 01-11-2026). Zonder deze grens
 # vulde een model met veel aanbod de hele categorie: 18 van de 24 benzineplekken was een Kia
 # Ceed, waardoor de ASX, Sportage en Tucson er nooit doorheen kwamen.
-PER_MODEL = 4
+# Besluit Durk 21-11-2026: nu alleen Ceed en Auris meedoen, de top 10 per model (benzine en
+# hybride samen). Was 4 per model per soort; terug: PER_MODEL = 4.
+PER_MODEL = 10
 # Hetzelfde model onder twee schrijfwijzen telt als een model.
 MODEL_ALIAS = {"cee'd": 'ceed'}
 
@@ -885,6 +887,8 @@ def beste_per_soort(autos, per_soort=PER_SOORT, per_model=PER_MODEL):
     for a in autos:                       # al op score gesorteerd
         model = a.get('modelwoord')
         sleutel = (a['soort'], MODEL_ALIAS.get(model, model) if model else a['id'])
+        if ALLEEN_MODELLEN:               # dan telt het model over alle soorten heen
+            sleutel = sleutel[1]
         if per_s.get(a['soort'], 0) >= per_soort or per_m.get(sleutel, 0) >= per_model:
             continue
         per_s[a['soort']] = per_s.get(a['soort'], 0) + 1
