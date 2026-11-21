@@ -124,12 +124,15 @@ details p,details li{color:var(--muted);font-size:.92rem}
   </details>
 </div>
 
+<div id="permodel"></div>
+<div id="persoort">
 <h2 id="topkop">Top 5 van vandaag</h2>
 <div class="legenda"><span><i style="background:#15803d"></i>70+ goed</span><span><i style="background:#ea7a0c"></i>60–70 redelijk</span><span><i style="background:#c81e1e"></i>onder 60 matig</span></div>
 <div id="top" class="top"></div>
 
 <h2>Alle andere kandidaten</h2>
 <div id="lijst" class="lijst"></div>
+</div>
 
 <details>
   <summary>Hoe wordt de top 5 bepaald?</summary>
@@ -267,6 +270,8 @@ function lijstKaart(a) {
     </div></a>`;
 }
 let soortFilter = 'alle';
+let groepen = [];                // gevuld = per model indelen (uit data.json)
+const modelAlias = {"cee'd": 'ceed'};
 let merken = new Set();          // leeg = alle merken
 const merkVan = a => {
   const m = (a.merk || 'Overig').trim();
@@ -277,6 +282,16 @@ function toon() {
     (soortFilter === 'alle' || (soortFilter === 'nieuw' ? a.nieuw : a.soort === soortFilter)) &&
     (!merken.size || merken.has(merkVan(a))));
   const gefilterd = soortFilter !== 'alle' || merken.size;
+  document.getElementById('persoort').hidden = groepen.length > 0;
+  if (groepen.length) {
+    document.getElementById('permodel').innerHTML = groepen.map(g => {
+      const van = sel.filter(a => (modelAlias[a.modelwoord] || a.modelwoord) === g.woord);
+      return `<h2>${esc(g.naam)} · top ${van.length}</h2>` + (van.length
+        ? `<div class="top">${van.slice(0, 3).map(topKaart).join('')}</div>` +
+          (van.length > 3 ? `<div class="lijst">${van.slice(3).map(lijstKaart).join('')}</div>` : '')
+        : '<p class="leeg">Geen auto’s in deze selectie.</p>');
+    }).join('');
+  }
   document.getElementById('topkop').textContent = gefilterd ? 'Top 5 in jouw selectie' : 'Top 5 van vandaag';
   document.getElementById('top').innerHTML = sel.length ? sel.slice(0, 5).map(topKaart).join('') : '<p class="leeg">Geen auto’s in deze selectie.</p>';
   const rest = sel.slice(5);
@@ -365,6 +380,7 @@ function criteriaTonen(c) {
 criteriaTonen({});   // meteen zichtbaar; de echte waarden komen uit data.json
 fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
   autos = d.autos;
+  groepen = d.modelgroepen || [];
   const [dag, tijd] = d.bijgewerkt.split(' ');
   const datum = new Date(dag).toLocaleDateString('nl-NL', {weekday: 'long', day: 'numeric', month: 'long'});
   const nieuw = autos.filter(a => a.nieuw).length;

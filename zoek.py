@@ -39,7 +39,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.17.1'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.18.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -220,7 +220,8 @@ MERK_VOORKEUR = []
 # Alleen deze modellen op de site (besluit Durk 21-11-2026: Kia Ceed en Toyota Auris).
 # Leeg = alle modellen uit MODELLEN. Terug naar de oude situatie: zet dit op set(), of
 # git checkout v1.16.2 (tag van de laatste versie met alle modellen).
-ALLEEN_MODELLEN = {'ceed', "cee'd", 'auris'}
+# Modelwoord -> naam; de site deelt de auto's dan per model in (keuze Durk 21-11-2026).
+ALLEEN_MODELLEN = {'ceed': 'Kia Ceed', "cee'd": 'Kia Ceed', 'auris': 'Toyota Auris'}
 MERK_BONUS = 5
 
 # Resterende levensduur (ANWB-tip "kijk naar de resterende levensduur"). Alleen informatie, telt
@@ -1001,6 +1002,9 @@ def main():
             'per_soort': PER_SOORT, 'per_model': PER_MODEL,
             'h2_prijs': H2_PRIJS, 'h2_stations': H2_STATIONS,
         },
+        # Leeg = de site deelt in naar soort; gevuld = een blok per model.
+        'modelgroepen': [{'woord': w, 'naam': n} for w, n in ALLEEN_MODELLEN.items()
+                         if MODEL_ALIAS.get(w, w) == w],
         'aantal_bekeken': len(ruw),
         'aantal': passen,
         'autos': autos,

@@ -2,6 +2,10 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.18.0 — 21-11-2026
+
+- **Site per model ingedeeld** (keuze Durk): een blok "Kia Ceed" en een blok "Toyota Auris", elk met de top 10 op score; de beste 3 groot, de rest als lijst. De filters (soort, merk, nieuw vandaag) werken binnen de blokken. Nieuw veld `modelgroepen` in `data.json`; is `ALLEEN_MODELLEN` leeg, dan komt de oude indeling (top 5 + alle andere) vanzelf terug.
+
 ## 1.17.1 — 21-11-2026
 
 - **Top 10 per model** (besluit Durk): `PER_MODEL` van 4 naar 10. Zolang `ALLEEN_MODELLEN` gevuld is, telt de grens per model over benzine en hybride samen, dus hoogstens 10 Ceeds en 10 Aurissen. Terug: `PER_MODEL = 4`.

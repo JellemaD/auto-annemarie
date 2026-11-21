@@ -1,6 +1,6 @@
 {
  "bijgewerkt": "2026-11-21 20:56",
- "versie": "1.17.1",
+ "versie": "1.18.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
  "segment_min": "C",
@@ -826,6 +826,16 @@
    "kenteken": "GN-307-D",
    "eerst_gezien": "2026-11-21",
    "nieuw": true
+  }
+ ],
+ "modelgroepen": [
+  {
+   "woord": "ceed",
+   "naam": "Kia Ceed"
+  },
+  {
+   "woord": "auris",
+   "naam": "Toyota Auris"
   }
  ]
 }
