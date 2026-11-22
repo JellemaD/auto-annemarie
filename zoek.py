@@ -1,4 +1,5 @@
-"""Auto voor Annemarie: elektrisch, plug-in, hybride, benzine of waterstof, max EUR 10.000, NL.
+"""Auto voor Annemarie: elektrisch, plug-in, hybride of benzine, max EUR 10.000, NL.
+Alleen automaten van bedrijven (geen particulieren), geen stationwagens, geen diesel en geen waterstof.
 
 Haalt aanbod op van AutoScout24.nl en Marktplaats, filtert microcars, accuhuur,
 schade, gewone (niet-plug-in) hybrides en auto's die kleiner zijn dan de compacte
@@ -39,7 +40,15 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.18.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.20.0'       # ophogen bij elke release, zie docs/VERSIES.md
+
+# Besluit Durk 22-11-2026: alleen aanbod van bedrijven, geen stationwagens, geen diesel, geen waterstof.
+ALLEEN_BEDRIJVEN = True
+ALLEEN_AUTOMAAT = True    # besluit Durk 22-11-2026: Annemarie wil automaat rijden
+STATIONWAGEN = re.compile(
+    r'stationwagon|\bstation\b|sportswagon|sporty\s?wagon|\bwagon\b|touring\s?sports?|\bts\b|\bsw\b'
+    r'|estate|kombi|\bcombi\b|tourer|sportbrake|shooting\s?brake|\bbreak\b|\bavant\b|\bvariant\b'
+    r'|\bclubman\b', re.I)
 
 ROOT = Path(__file__).parent
 DATA = ROOT / 'docs' / 'data.json'
@@ -75,7 +84,7 @@ ELLENDE = [
 # LATER" staat voor 7.950 in de lijst terwijl de auto 16.000 kost. Altijd weg.
 # Handelaren die meerdere auto's in een advertentie zetten ("4X TOYOTA AYGO"): de prijs en de
 # kilometerstand horen dan bij geen enkele auto in het bijzonder.
-PARTIJ = re.compile(r'^\s*\d{1,2}\s*x', re.I)
+PARTIJ = re.compile(r'^\s*\d{1,2}\s*x\b', re.I)
 
 PRIJS_TRUC = re.compile(
     r'betaal\w*\s*(je\s*|u\s*)?(nu\s*)?(de\s*helft|\d{1,2}\s*%)|\d{1,2}\s*%\s*(aan|voor)?betal|'
@@ -435,6 +444,8 @@ def as24_auto(L):
         'brandstof': v.get('fuel') or '',
         'plaats': (L.get('location') or {}).get('city', '').title(),
         'verkoper': (L.get('seller') or {}).get('companyName') or 'Particulier',
+        'bedrijf': (L.get('seller') or {}).get('type') == 'Dealer',
+        'bak': v.get('transmission') or '',
         'url': 'https://www.autoscout24.nl' + L.get('url', ''),
         'foto': imgs[0].replace('/250x188.webp', '/480x360.webp') if imgs else '',
     }
@@ -450,6 +461,10 @@ def as24_pagina(url):
 
 
 def as24_zoek(naam, basis, maxpaginas):
+    if ALLEEN_BEDRIJVEN:
+        basis += '&custtype=D'   # alleen autobedrijven
+    if ALLEEN_AUTOMAAT:
+        basis += '&gear=A'
     uit = []
     for pagina in range(1, maxpaginas + 1):
         try:
@@ -468,7 +483,7 @@ def autoscout24():
     """Elektrisch en plug-in: in een keer op brandstof. E = elektrisch, 2 = elektro/benzine,
     3 = elektro/diesel. Dat zijn kleine markten, dus de hele lijst past in een paar pagina's."""
     uit = []
-    for fuel in ['E', '2', '3']:
+    for fuel in ['E', '2']:   # 3 = elektro/diesel doet niet mee
         basis = (f'https://www.autoscout24.nl/lst?atype=C&cy=NL&fuel={fuel}&priceto={MAX_PRIJS}'
                  f'&pricefrom={MIN_PRIJS}&fregfrom={MIN_JAAR}&kmto={MAX_KM}'
                  f'&damaged_listing=exclude&sort=age&desc=1')
@@ -542,12 +557,19 @@ def mp_auto(x, brandstof):
         'brandstof': brandstof,
         'plaats': (x.get('location') or {}).get('cityName', ''),
         'verkoper': (x.get('sellerInformation') or {}).get('sellerName', ''),
+        'carrosserie': attr.get('body') or '',
+        'bak': attr.get('transmission') or '',
+        'bedrijf': 'DEALER_ACCESS' in (x.get('traits') or []) or None,
         'url': 'https://www.marktplaats.nl' + vip if vip.startswith('/') else vip,
         'foto': ('https:' + imgs[0].replace('$_82', '$_84')) if imgs else '',
     }
 
 
 def mp_zoek(naam, basis, brandstof, maxoffset):
+    if ALLEEN_BEDRIJVEN:
+        basis += '&attributesByKey[]=advertiser:Bedrijf'   # alleen bedrijven
+    if ALLEEN_AUTOMAAT:
+        basis += '&attributesByKey[]=transmission:Automaat'
     uit, offset = [], 0
     while offset < maxoffset:
         try:
@@ -568,7 +590,7 @@ def mp_zoek(naam, basis, brandstof, maxoffset):
 def marktplaats():
     """Elektrisch en plug-in: in een keer op brandstof."""
     uit = []
-    for soort in ['Elektrisch', 'Hybride ElektrischBenzine', 'Hybride ElektrischDiesel']:
+    for soort in ['Elektrisch', 'Hybride ElektrischBenzine']:   # dieselhybride doet niet mee
         basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
                  f'&attributeRanges[]=PriceCents:{MIN_PRIJS * 100}:{MAX_PRIJS * 100}'
                  f'&attributeRanges[]=constructionYear:{MIN_JAAR}:null'
@@ -763,6 +785,16 @@ def beoordeel(a):
         return None  # de genoemde prijs is maar een deel van de prijs
     if any(w in norm(a.get('verkoper')) for w in SCHADE_VERKOPERS):
         return None
+    if ALLEEN_BEDRIJVEN and a.get('bron') == 'AutoScout24' and not a.get('bedrijf'):
+        return None   # particulier (Marktplaats filtert al bij het zoeken op advertiser:Bedrijf)
+    if ALLEEN_AUTOMAAT and 'auto' not in norm(a.get('bak')):
+        return None   # handgeschakeld of onbekend
+    if 'stationwagon' in norm(a.get('carrosserie')) or STATIONWAGEN.search(a['titel']):
+        return None   # geen stationwagens
+    if 'diesel' in norm(a['brandstof']) or re.search(r'\bd6\b|\bcrdi\b|\btdi\b|\bd-4d\b|\bdci\b|\bdiesel\b', titel):
+        return None   # geen diesel, ook geen dieselhybride
+    if 'waterstof' in norm(a['brandstof']) or WATERSTOF_WOORDEN.search(titel):
+        return None   # geen waterstof
 
     # Goedkope ZOE's hebben bijna altijd een huuraccu ("ex accu", "(ex)"): alleen met koopaccu.
     if re.search(r'\bzoe\b', titel) and not bevat(tekst, KOOPACCU):
@@ -780,13 +812,8 @@ def beoordeel(a):
     a['modelwoord'] = modelwoord
     elektrisch = 'elektrisch' in norm(a['brandstof']) and '/' not in a['brandstof']
     waterstof = 'waterstof' in norm(a['brandstof']) or bool(WATERSTOF_WOORDEN.search(titel))
-    if soort == 'H2':
-        # Alleen als de advertentie zelf waterstof zegt: een gewone benzine-ix35 doet niet mee.
-        if not waterstof:
-            return None
-        a['soort'] = 'Waterstof'
-    elif waterstof:
-        return None   # waterstofauto van een model dat niet op de lijst staat
+    if soort == 'H2' or waterstof:
+        return None   # waterstof doet niet meer mee (besluit Durk 22-11-2026)
     elif elektrisch:
         a['soort'] = 'Elektrisch'
     elif soort == 'PHEV' or PHEV_WOORDEN.search(titel):
@@ -961,8 +988,7 @@ def ontdubbel(autos):
 
 def main():
     nu = datetime.now(TZ)
-    ruw = (autoscout24() + marktplaats() + autoscout24_benzine() + marktplaats_benzine()
-           + autoscout24_waterstof() + marktplaats_waterstof())
+    ruw = autoscout24() + marktplaats() + autoscout24_benzine() + marktplaats_benzine()
     if not ruw:
         print('Geen enkele advertentie opgehaald, oude data blijft staan.')
         sys.exit(1)

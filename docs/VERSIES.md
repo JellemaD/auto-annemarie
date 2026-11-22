@@ -2,6 +2,21 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.20.0 — 22-11-2026
+
+- **Alleen nog automaten** (besluit Durk): AutoScout24 zoekt met `gear=A`, Marktplaats met `transmission:Automaat`; handgeschakeld of onbekend valt daarna ook nog af. Instelling `ALLEEN_AUTOMAAT` in `zoek.py`. Terug: `ALLEEN_AUTOMAAT = False`.
+- Mitsubishi ASX blijft buiten beschouwing (besluit Durk).
+- Proefrun 22-11-2026: 1.441 bekeken, 4 passen, alle 4 een Toyota Auris automaat (3 hybride, 1 benzine). Geen enkele Kia Ceed: de enige automaat tot EUR 10.000 was een Sportswagon, en stationwagens doen niet mee.
+
+## 1.19.0 — 22-11-2026
+
+- **Alleen auto's van bedrijven** (besluit Durk): AutoScout24 zoekt met `custtype=D`, Marktplaats met `advertiser:Bedrijf`; een AutoScout24-advertentie zonder `seller.type = Dealer` valt daarnaast ook nog af. Instelling `ALLEEN_BEDRIJVEN` in `zoek.py`.
+- **Geen stationwagens**: weg op carrosserie (Marktplaats `body = Stationwagon`) en op de titel (Sportswagon, Sporty Wagon, SW, Touring Sports, TS, Estate, Combi, Tourer …), regex `STATIONWAGEN`.
+- **Geen diesel en geen waterstof**: dieselhybride (AutoScout24 `fuel=3`, Marktplaats `Hybride ElektrischDiesel`) en de waterstofzoekopdrachten worden niet meer opgehaald; wat toch binnenkomt valt af. Waterstofknop en -uitleg van de site gehaald.
+- Fix: regex `PARTIJ` ("4X Toyota Aygo") bevatte een backspace-teken in plaats van `\b` en werkte daardoor niet.
+- Proefrun 22-11-2026: 1.921 bekeken, 44 passen, 19 op de site, allemaal van een bedrijf, geen stationwagen.
+- Terug: `ALLEEN_BEDRIJVEN = False`, of `git checkout 80482c9 -- zoek.py docs/index.html` (laatste commit van 1.18.0).
+
 ## 1.18.0 — 21-11-2026
 
 - **Site per model ingedeeld** (keuze Durk): een blok "Kia Ceed" en een blok "Toyota Auris", elk met de top 10 op score; de beste 3 groot, de rest als lijst. De filters (soort, merk, nieuw vandaag) werken binnen de blokken. Nieuw veld `modelgroepen` in `data.json`; is `ALLEEN_MODELLEN` leeg, dan komt de oude indeling (top 5 + alle andere) vanzelf terug.

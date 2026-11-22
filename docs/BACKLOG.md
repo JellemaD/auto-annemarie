@@ -45,12 +45,14 @@
 
 **Modellen die bewust niet op de toelatingslijst komen:** Renault, Fiat en Alfa Romeo met benzinemotor · de Opel 1.4 Turbo · de Ford 1.0 EcoBoost (koelvloeistof, distributieriem) · elke auto met een DSG- of CVT-automaat van vóór 2015. Goedkoop in aanschaf, duur in onderhoud.
 
-Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 10.000 · gewone hybrides zonder stekker.
+Specificaties per advertentie scrapen (fragiel en langzaam; de modeltabel doet hetzelfde werk één keer) · prijs of taxatie voorspellen · onderhandelen of contact opnemen met verkopers · accounts bij de marktplaatsen · auto's boven € 10.000 · gewone hybrides zonder stekker · particuliere verkopers · stationwagens · diesel · waterstof · handgeschakeld · Mitsubishi ASX (besluit Durk 22-11-2026).
 
 ## Af
 
 | # | Item | Datum |
 |---|---|---|
+| B22 | **Alleen automaten** (v1.20.0, besluit Durk): `gear=A` (AutoScout24) en `transmission:Automaat` (Marktplaats), plus controle op de versnellingsbak per auto | 22-11-2026 |
+| B21 | **Alleen bedrijven, geen stationwagens, geen diesel, geen waterstof** (v1.19.0, besluit Durk): zoeken met `custtype=D` (AutoScout24) en `advertiser:Bedrijf` (Marktplaats); stationwagens weg op carrosserie en titel (Sportswagon, SW, Touring Sports …); dieselhybride en waterstof niet meer gezocht en weggefilterd | 22-11-2026 |
 | B20 | **Bladwijzer vult kenteken en km in bij de ANWB** (v1.16.0): ANWB-link met `#kenteken=…&km=…`, bladwijzer vult in en klikt door; uitleg op `bladwijzer.html` | 14-11-2026 |
 | B19 | **Kilometerstand kopiëren voor de ANWB** (v1.15.0): knop "Kopieer km" per auto zet de km-stand op het klembord | 14-11-2026 |
 | B18 | **Kenteken bij de ANWB-knop en levensduur beter zichtbaar** (v1.14.0): kenteken uit de advertentie op de knop, bij een klik op het klembord; regel "⏳ Resterende levensduur: nog ± X jaar" vet en in gewone tekstkleur | 14-11-2026 |
