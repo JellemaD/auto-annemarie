@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-21 20:56",
+ "bijgewerkt": "2026-11-22 14:33",
  "versie": "1.18.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
@@ -22,8 +22,18 @@
   "h2_prijs": 15.0,
   "h2_stations": 20
  },
- "aantal_bekeken": 2511,
- "aantal": 137,
+ "modelgroepen": [
+  {
+   "woord": "ceed",
+   "naam": "Kia Ceed"
+  },
+  {
+   "woord": "auris",
+   "naam": "Toyota Auris"
+  }
+ ],
+ "aantal_bekeken": 2650,
+ "aantal": 138,
  "autos": [
   {
    "id": "as24_22de4896-d914-4dc5-bd04-a367e91964ed",
@@ -152,6 +162,48 @@
    "nieuw": false
   },
   {
+   "id": "mp_m2468707847",
+   "bron": "Marktplaats",
+   "merk": "Kia",
+   "model": "(Pro) Cee d",
+   "titel": "Kia Ceed Sportswagon 1.0 T-GDi, Nieuwstaat !, Top onderhoud",
+   "prijs": 8895,
+   "km": 157843,
+   "jaar": 2021,
+   "brandstof": "Benzine",
+   "plaats": "Tynaarlo",
+   "verkoper": "Mijnduurzameauto. NL",
+   "url": "https://www.marktplaats.nl/v/auto-s/kia/m2468707847-kia-ceed-sportswagon-1-0-t-gdi-nieuwstaat-top-onderhoud",
+   "foto": "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2473f1d1-fe1b-4b59-b3fe-4d79385376b8?rule=ecg_mp_eps$_84.jpg",
+   "lengte": 4310,
+   "segment": "C",
+   "modelwoord": "ceed",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 31,
+   "brandstofkosten": 126,
+   "totale_kosten": 206,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 71.2,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 6.3,
+    "kosten": 4.7
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 11,
+   "let_op": [],
+   "kenteken": "L-326-LK",
+   "eerst_gezien": "2026-11-22",
+   "nieuw": true
+  },
+  {
    "id": "as24_044dec0e-a17e-4594-b762-d4375cb605ac",
    "bron": "AutoScout24",
    "merk": "Kia",
@@ -275,7 +327,7 @@
    "let_op": [],
    "kenteken": "XS459R",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "mp_m2460168454",
@@ -401,7 +453,7 @@
    "let_op": [],
    "kenteken": "NF-605-V",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_01214eed-86d9-40be-8a01-24cf00fd7a9e",
@@ -443,48 +495,6 @@
    "let_op": [],
    "kenteken": "XZ-065-F",
    "eerst_gezien": "2026-10-27",
-   "nieuw": false
-  },
-  {
-   "id": "as24_79ada7ca-b5f1-4be9-bcba-4b1d99c976d5",
-   "bron": "AutoScout24",
-   "merk": "Kia",
-   "model": "Ceed / cee'd",
-   "titel": "Kia Ceed / cee'd 1.0 T-GDi ComfortLine Airco Trekh. Bluetooth Winte",
-   "prijs": 9950,
-   "km": 98772,
-   "jaar": 2017,
-   "brandstof": "Benzine",
-   "plaats": "Beringe",
-   "verkoper": "Autobedrijf Westerman B.V.",
-   "url": "https://www.autoscout24.nl/aanbod/kia-ceed-cee-d-1-0-t-gdi-comfortline-airco-trekh-bluetooth-winte-benzine-bruin-cat_ma39mo18923-79ada7ca-b5f1-4be9-bcba-4b1d99c976d5",
-   "foto": "https://prod.pictures.autoscout24.net/listing-images/79ada7ca-b5f1-4be9-bcba-4b1d99c976d5_7477d024-ec7e-4f87-ad24-f0e94839e38c.jpg/480x360.webp",
-   "lengte": 4310,
-   "segment": "C",
-   "modelwoord": "ceed",
-   "soort": "Benzine",
-   "gewicht": 1250,
-   "mrb": 49,
-   "verzekering": 32,
-   "brandstofkosten": 126,
-   "totale_kosten": 207,
-   "bereik_zomer": 600,
-   "bereik_winter": 600,
-   "score": 69.8,
-   "punten": {
-    "betrouwbaarheid": 26.2,
-    "bereik": 16.0,
-    "bouwjaar": 12.6,
-    "km": 10.3,
-    "kosten": 4.7
-   },
-   "betrouwbaarheid": 7.5,
-   "toelichting": "",
-   "levensduur_km": 300000,
-   "rest_jaar": 10,
-   "let_op": [],
-   "kenteken": "",
-   "eerst_gezien": "2026-10-30",
    "nieuw": false
   },
   {
@@ -653,7 +663,7 @@
    "let_op": [],
    "kenteken": "HS-827-S",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_344e4f4c-2848-464e-8763-e536dfc49905",
@@ -695,7 +705,7 @@
    "let_op": [],
    "kenteken": "JS-319-P",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_9b6812ff-ff0f-4a61-9770-65e033b4b523",
@@ -739,7 +749,7 @@
    ],
    "kenteken": "JB-767-L",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_b46c6ced-8560-465f-a99b-604858ec6cc2",
@@ -825,17 +835,7 @@
    "let_op": [],
    "kenteken": "GN-307-D",
    "eerst_gezien": "2026-11-21",
-   "nieuw": true
-  }
- ],
- "modelgroepen": [
-  {
-   "woord": "ceed",
-   "naam": "Kia Ceed"
-  },
-  {
-   "woord": "auris",
-   "naam": "Toyota Auris"
+   "nieuw": false
   }
  ]
 }
