@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-25 16:58",
+ "bijgewerkt": "2026-11-26 16:33",
  "versie": "1.20.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
@@ -32,8 +32,8 @@
    "naam": "Toyota Auris"
   }
  ],
- "aantal_bekeken": 1455,
- "aantal": 5,
+ "aantal_bekeken": 1456,
+ "aantal": 6,
  "autos": [
   {
    "id": "mp_m2465300103",
@@ -78,7 +78,7 @@
    "let_op": [],
    "kenteken": "G-636-XD",
    "eerst_gezien": "2026-11-25",
-   "nieuw": true
+   "nieuw": false
   },
   {
    "id": "as24_9b6812ff-ff0f-4a61-9770-65e033b4b523",
