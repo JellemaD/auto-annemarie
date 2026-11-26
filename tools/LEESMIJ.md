@@ -17,7 +17,8 @@ cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - P
 
 1. Maak op https://github.com/settings/personal-access-tokens/new een *fine-grained* token:
    naam `auto-annemarie-wekker`, repository `JellemaD/auto-annemarie`, permissie **Actions: Read and write**.
-2. Draai en plak het token als wrangler erom vraagt:
+2. Kopieer het token (Ctrl+C) en draai dan het script. Het leest het token van het klembord (plakken in
+   wrangler lukt niet altijd) en maakt het klembord daarna leeg:
 
 ```powershell
 cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - Premium auto zoeken\auto-annemarie"; powershell -ExecutionPolicy Bypass -File .\tools\wekker-token.ps1
