@@ -10,7 +10,7 @@ Nodig omdat GitHub geplande runs op het gratis plan uren te laat start.
 **Online zetten (na een wijziging in `wekker/`):**
 
 ```powershell
-cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - Premium auto zoeken\auto-annemarie"; .\tools\wekker-deploy.ps1
+cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - Premium auto zoeken\auto-annemarie"; powershell -ExecutionPolicy Bypass -File .\tools\wekker-deploy.ps1
 ```
 
 **GitHub-token zetten of vernieuwen** (verloopt na de looptijd die je bij het maken kiest):
@@ -20,7 +20,7 @@ cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - P
 2. Draai en plak het token als wrangler erom vraagt:
 
 ```powershell
-cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - Premium auto zoeken\auto-annemarie"; .\tools\wekker-token.ps1
+cd "G:\Mijn Drive\DATA70 - Programming en Bots\20 - Claude Code\Projecten\05 - Premium auto zoeken\auto-annemarie"; powershell -ExecutionPolicy Bypass -File .\tools\wekker-token.ps1
 ```
 
 **Controleren of hij liep:** GitHub → Actions → "Dagelijkse update": een run met event `workflow_dispatch` rond 08:00.

@@ -2,6 +2,13 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.21.0 — 26-11-2026
+
+- **Kia Ceed vanaf bouwjaar 2014** (besluit Durk): uitzondering op de grens van 2015 voor benzine en gewone hybride, omdat een Ceed met automaat van 2015 of later bijna altijd boven EUR 10.000 zit. Nieuwe tabel `MIN_JAAR_MODEL` en functie `min_jaar_brandstof()` in `zoek.py`; zowel de zoekopdrachten (AutoScout24 `fregfrom`, Marktplaats `constructionYear`) als het filter gebruiken hem. De criteria op de site tonen de uitzondering ("Kia Ceed: 2014 of nieuwer").
+- Proefrun 26-11-2026: 1.386 bekeken, 6 passen, 5 op de site (alle 5 Toyota Auris). **Nog steeds geen Ceed:** de enige automaat van 2014 tot EUR 10.000 bij een bedrijf is een Sportswagon (stationwagen); de rest is diesel. Met 2013 zou er één bijkomen (1.6 GDI, 2013, 141.297 km, EUR 9.950), met 2012 nog één (2012, 105.655 km, EUR 8.980).
+- Wekker: het GitHub-token ontbrak bij de Cloudflare Worker, daardoor startte de update nooit om 08:00 maar pas als GitHub zelf zo laat was. Token gezet op 26-11-2026. De commando's in `tools/LEESMIJ.md` draaien nu met `-ExecutionPolicy Bypass` (scripts op de Drive-schijf zijn niet ondertekend).
+- Terug: `MIN_JAAR_MODEL = {}`.
+
 ## 1.20.0 — 22-11-2026
 
 - **Alleen nog automaten** (besluit Durk): AutoScout24 zoekt met `gear=A`, Marktplaats met `transmission:Automaat`; handgeschakeld of onbekend valt daarna ook nog af. Instelling `ALLEEN_AUTOMAAT` in `zoek.py`. Terug: `ALLEEN_AUTOMAAT = False`.

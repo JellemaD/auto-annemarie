@@ -27,6 +27,15 @@ MIN_JAAR = 2010
 # vielen goedkope maar prima auto's buiten beeld).
 MIN_JAAR_BRANDSTOF = 2015   # 2013 maakt er ook Auris, Civic, Jazz en i30 bij, maar wel oudere auto's
 MAX_KM_BRANDSTOF = 260000
+# Uitzondering per model op MIN_JAAR_BRANDSTOF (besluit Durk 26-11-2026): een Ceed met automaat
+# van 2015 of later kost bijna altijd meer dan EUR 10.000, dus voor de Ceed eerst 2014.
+MIN_JAAR_MODEL = {'ceed': 2014, "cee'd": 2014}
+
+
+def min_jaar_brandstof(modelwoord):
+    return MIN_JAAR_MODEL.get(modelwoord, MIN_JAAR_BRANDSTOF)
+
+
 MIN_PRIJS_BRANDSTOF = 1200
 # Minstens de compacte middenklasse: segment C (de Golf-klasse) of groter. Besluit Durk
 # 27-10-2026, in de plaats van de oude eis "niet korter dan de Citroen C3 Pluriel". Segment A
@@ -40,7 +49,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.20.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.21.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 # Besluit Durk 22-11-2026: alleen aanbod van bedrijven, geen stationwagens, geen diesel, geen waterstof.
 ALLEEN_BEDRIJVEN = True
@@ -496,10 +505,13 @@ def autoscout24_benzine():
     """Benzine per model. De hele benzinemarkt tot EUR 10.000 is te groot om te doorzoeken, maar
     alleen de modellen uit ZONDER_STEKKER komen er toch doorheen. Dus vragen we er meteen om."""
     uit = []
-    for pad in sorted({pad for m, (pad, _) in ZONDER_STEKKER.items()
-                       if pad and not onder_segment(m)}):
+    paden = {}
+    for m, (pad, _) in ZONDER_STEKKER.items():
+        if pad and not onder_segment(m):
+            paden[pad] = min(paden.get(pad, 9999), min_jaar_brandstof(m))
+    for pad, vanaf in sorted(paden.items()):
         basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={MAX_PRIJS}'
-                 f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={MIN_JAAR_BRANDSTOF}'
+                 f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={vanaf}'
                  f'&kmto={MAX_KM_BRANDSTOF}&damaged_listing=exclude&sort=age&desc=1')
         gevonden = as24_zoek(pad, basis, MAX_PAGINAS_MODEL)
         if not gevonden:
@@ -623,7 +635,7 @@ def marktplaats_benzine():
         basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
                  f'&query={zoekterm}'
                  f'&attributeRanges[]=PriceCents:{MIN_PRIJS_BRANDSTOF * 100}:{MAX_PRIJS * 100}'
-                 f'&attributeRanges[]=constructionYear:{MIN_JAAR_BRANDSTOF}:null'
+                 f'&attributeRanges[]=constructionYear:{min_jaar_brandstof(model)}:null'
                  f'&attributeRanges[]=mileage:null:{MAX_KM_BRANDSTOF}'
                  '&attributesByKey[]=fuel:Benzine&viewOptions=list-view'
                  '&sortBy=SORT_INDEX&sortOrder=DECREASING')
@@ -826,7 +838,7 @@ def beoordeel(a):
             a['soort'] = 'Benzine'
         else:
             return None  # diesel, lpg of onbekend
-        if (a['jaar'] < MIN_JAAR_BRANDSTOF or a['km'] > MAX_KM_BRANDSTOF
+        if (a['jaar'] < min_jaar_brandstof(modelwoord) or a['km'] > MAX_KM_BRANDSTOF
                 or a['prijs'] < MIN_PRIJS_BRANDSTOF):
             return None
     else:
@@ -1023,6 +1035,7 @@ def main():
             'jaar_min': MIN_JAAR, 'km_max': MAX_KM,
             'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
+            'jaar_min_model': {ALLEEN_MODELLEN.get(m, m): j for m, j in MIN_JAAR_MODEL.items()},
             'segment_min': SEGMENT_MIN, 'segment_naam': SEGMENT_NAAM[SEGMENT_MIN],
             'segment_uitzondering': sorted(SEGMENT_UITZONDERING.values()),
             'per_soort': PER_SOORT, 'per_model': PER_MODEL,

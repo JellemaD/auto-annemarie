@@ -1,6 +1,6 @@
 {
- "bijgewerkt": "2026-11-26 16:33",
- "versie": "1.20.0",
+ "bijgewerkt": "2026-11-26 17:04",
+ "versie": "1.21.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
  "segment_min": "C",
@@ -12,6 +12,9 @@
   "jaar_min_brandstof": 2015,
   "km_max_brandstof": 260000,
   "prijs_min_brandstof": 1200,
+  "jaar_min_model": {
+   "Kia Ceed": 2014
+  },
   "segment_min": "C",
   "segment_naam": "Compacte middenklasse",
   "segment_uitzondering": [
@@ -32,7 +35,7 @@
    "naam": "Toyota Auris"
   }
  ],
- "aantal_bekeken": 1456,
+ "aantal_bekeken": 1386,
  "aantal": 6,
  "autos": [
   {
