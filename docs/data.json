@@ -1,6 +1,6 @@
 {
- "bijgewerkt": "2026-11-27 08:00",
- "versie": "1.21.0",
+ "bijgewerkt": "2026-11-27 10:08",
+ "versie": "1.23.0",
  "anwb_koerslijst": "https://www.anwb.nl/auto/koerslijst",
  "km_per_jaar": 12000,
  "segment_min": "C",
@@ -14,6 +14,9 @@
   "prijs_min_brandstof": 1200,
   "jaar_min_model": {
    "Kia Ceed": 2014
+  },
+  "prijs_max_model": {
+   "Kia Ceed": 11000
   },
   "segment_min": "C",
   "segment_naam": "Compacte middenklasse",
@@ -35,9 +38,56 @@
    "naam": "Toyota Auris"
   }
  ],
- "aantal_bekeken": 1457,
- "aantal": 6,
+ "aantal_bekeken": 1461,
+ "aantal": 7,
  "autos": [
+  {
+   "id": "as24_5bd1a55d-a937-46cd-9b7d-cd6ea4be866a",
+   "bron": "AutoScout24",
+   "merk": "Kia",
+   "model": "Ceed / cee'd",
+   "titel": "Kia Ceed / cee'd 1.0 T-GDI MHEV DYN+L. TREKHAAK, ACC, STOEL+STUURVW",
+   "prijs": 10900,
+   "km": 209610,
+   "jaar": 2021,
+   "brandstof": "Benzine",
+   "plaats": "Geesteren",
+   "verkoper": "Nordemeule automotive",
+   "bedrijf": true,
+   "bak": "Automatisch",
+   "url": "https://www.autoscout24.nl/aanbod/kia-ceed-cee-d-1-0-t-gdi-mhev-dyn+l-trekhaak-acc-stoel+stuurvw-benzine-wit-cat_ma39mo18923-5bd1a55d-a937-46cd-9b7d-cd6ea4be866a",
+   "foto": "https://prod.pictures.autoscout24.net/listing-images/5bd1a55d-a937-46cd-9b7d-cd6ea4be866a_6bb072ce-0072-447f-a7d4-394b3b72862d.jpg/480x360.webp",
+   "lengte": 4310,
+   "segment": "C",
+   "modelwoord": "ceed",
+   "soort": "Benzine",
+   "gewicht": 1250,
+   "mrb": 49,
+   "verzekering": 33,
+   "brandstofkosten": 126,
+   "totale_kosten": 208,
+   "bereik_zomer": 600,
+   "bereik_winter": 600,
+   "score": 67.6,
+   "punten": {
+    "betrouwbaarheid": 26.2,
+    "bereik": 16.0,
+    "bouwjaar": 18.0,
+    "km": 2.7,
+    "kosten": 4.6
+   },
+   "betrouwbaarheid": 7.5,
+   "toelichting": "",
+   "levensduur_km": 300000,
+   "rest_jaar": 7,
+   "let_op": [
+    "Hoge kilometerstand"
+   ],
+   "kenteken": "L819KJ",
+   "geplaatst": "2026-06-20",
+   "eerst_gezien": "2026-11-27",
+   "nieuw": true
+  },
   {
    "id": "mp_m2465300103",
    "bron": "Marktplaats",
@@ -80,6 +130,7 @@
    "rest_jaar": 9,
    "let_op": [],
    "kenteken": "G-636-XD",
+   "geplaatst": "2026-11-13",
    "eerst_gezien": "2026-11-25",
    "nieuw": false
   },
@@ -126,6 +177,7 @@
     "Hoge kilometerstand"
    ],
    "kenteken": "JB-767-L",
+   "geplaatst": "2026-11-05",
    "eerst_gezien": "2026-11-21",
    "nieuw": false
   },
@@ -172,6 +224,7 @@
     "Hoge kilometerstand"
    ],
    "kenteken": "SK-821-X",
+   "geplaatst": "2026-11-06",
    "eerst_gezien": "2026-11-07",
    "nieuw": false
   },
@@ -219,6 +272,7 @@
     "Hoge kilometerstand"
    ],
    "kenteken": "HF-950-B",
+   "geplaatst": "2026-11-13",
    "eerst_gezien": "2026-11-14",
    "nieuw": false
   },
@@ -265,6 +319,7 @@
     "Hoge kilometerstand"
    ],
    "kenteken": "KN-624-G",
+   "geplaatst": "2026-09-05",
    "eerst_gezien": "2026-10-27",
    "nieuw": false
   }

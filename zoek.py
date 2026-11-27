@@ -36,6 +36,16 @@ def min_jaar_brandstof(modelwoord):
     return MIN_JAAR_MODEL.get(modelwoord, MIN_JAAR_BRANDSTOF)
 
 
+# Uitzondering per model op MAX_PRIJS (besluit Durk 27-11-2026): de Ceed mag tot EUR 11.000,
+# want er is meestal nog wat af te praten en tot EUR 10.000 was er geen enkele Ceed.
+# Terug: MAX_PRIJS_MODEL = {}.
+MAX_PRIJS_MODEL = {'ceed': 11000, "cee'd": 11000}
+
+
+def max_prijs(modelwoord):
+    return MAX_PRIJS_MODEL.get(modelwoord, MAX_PRIJS)
+
+
 MIN_PRIJS_BRANDSTOF = 1200
 # Minstens de compacte middenklasse: segment C (de Golf-klasse) of groter. Besluit Durk
 # 27-10-2026, in de plaats van de oude eis "niet korter dan de Citroen C3 Pluriel". Segment A
@@ -49,7 +59,7 @@ SEGMENT_NAAM = {'A': 'Stadsauto', 'B': 'Klein', 'C': 'Compacte middenklasse',
 # BMW i3 is weliswaar segment B, maar met 3.999 mm en vier zitplaatsen wil Durk hem zien).
 SEGMENT_UITZONDERING = {'i3': 'BMW i3'}
 TZ = ZoneInfo('Europe/Amsterdam')
-VERSIE = '1.21.0'       # ophogen bij elke release, zie docs/VERSIES.md
+VERSIE = '1.23.0'       # ophogen bij elke release, zie docs/VERSIES.md
 
 # Besluit Durk 22-11-2026: alleen aanbod van bedrijven, geen stationwagens, geen diesel, geen waterstof.
 ALLEEN_BEDRIJVEN = True
@@ -508,9 +518,10 @@ def autoscout24_benzine():
     paden = {}
     for m, (pad, _) in ZONDER_STEKKER.items():
         if pad and not onder_segment(m):
-            paden[pad] = min(paden.get(pad, 9999), min_jaar_brandstof(m))
-    for pad, vanaf in sorted(paden.items()):
-        basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={MAX_PRIJS}'
+            jaar, prijs = paden.get(pad, (9999, 0))
+            paden[pad] = (min(jaar, min_jaar_brandstof(m)), max(prijs, max_prijs(m)))
+    for pad, (vanaf, tot) in sorted(paden.items()):
+        basis = (f'https://www.autoscout24.nl/lst/{pad}?atype=C&cy=NL&fuel=B&priceto={tot}'
                  f'&pricefrom={MIN_PRIJS_BRANDSTOF}&fregfrom={vanaf}'
                  f'&kmto={MAX_KM_BRANDSTOF}&damaged_listing=exclude&sort=age&desc=1')
         gevonden = as24_zoek(pad, basis, MAX_PAGINAS_MODEL)
@@ -634,7 +645,7 @@ def marktplaats_benzine():
         zoekterm = requests.utils.quote(f'{merk} {model}')
         basis = ('https://www.marktplaats.nl/lrp/api/search?l1CategoryId=91&limit=100'
                  f'&query={zoekterm}'
-                 f'&attributeRanges[]=PriceCents:{MIN_PRIJS_BRANDSTOF * 100}:{MAX_PRIJS * 100}'
+                 f'&attributeRanges[]=PriceCents:{MIN_PRIJS_BRANDSTOF * 100}:{max_prijs(model) * 100}'
                  f'&attributeRanges[]=constructionYear:{min_jaar_brandstof(model)}:null'
                  f'&attributeRanges[]=mileage:null:{MAX_KM_BRANDSTOF}'
                  '&attributesByKey[]=fuel:Benzine&viewOptions=list-view'
@@ -783,8 +794,8 @@ def beoordeel(a):
     """Geeft de auto terug met score, of None als hij afvalt."""
     tekst = norm(f"{a['merk']} {a['model']} {a['titel']} {a.get('beschrijving', '')}")
     titel = norm(f"{a['merk']} {a['model']} {a['titel']}")
-    if not (MIN_PRIJS <= a['prijs'] <= MAX_PRIJS):
-        return None
+    if not (MIN_PRIJS <= a['prijs'] <= max(MAX_PRIJS, *MAX_PRIJS_MODEL.values())):
+        return None   # de grens per model volgt hieronder, als het model bekend is
     if not a['jaar'] or a['jaar'] < MIN_JAAR or a['km'] is None or a['km'] > MAX_KM:
         return None
     if bevat(titel, UITSLUITEN) or bevat(tekst, ELLENDE):
@@ -816,6 +827,8 @@ def beoordeel(a):
         return None
     betrouwbaar, soort, uitleg, gewicht, modelwoord = model
     if ALLEEN_MODELLEN and modelwoord not in ALLEEN_MODELLEN:
+        return None
+    if a['prijs'] > max_prijs(modelwoord):
         return None
     if onder_segment(modelwoord):
         return None  # kleiner dan de compacte middenklasse (segment C)
@@ -946,10 +959,18 @@ def kenteken(html):
     return m.group(1).upper()
 
 
+def geplaatst(html):
+    """Datum waarop de advertentie online kwam (jjjj-mm-dd). Marktplaats: stats.since (op de site
+    "Sinds 13 nov."); AutoScout24: createdTimestampWithOffset. Leeg als hij er niet staat."""
+    m = re.search(r'"(?:since|createdTimestampWithOffset)"\s*:\s*"(\d{4}-\d\d-\d\d)', html)
+    return m.group(1) if m else ''
+
+
 def detail_tekst(a):
     r = requests.get(a['url'], headers=HEADERS, timeout=30)
     r.raise_for_status()
     a['kenteken'] = kenteken(r.text)
+    a['geplaatst'] = geplaatst(r.text)
     soup = BeautifulSoup(r.text, 'html.parser')
     if a['bron'] == 'AutoScout24':
         L = json.loads(soup.find('script', id='__NEXT_DATA__').string)['props']['pageProps']['listingDetails']
@@ -1036,6 +1057,7 @@ def main():
             'jaar_min_brandstof': MIN_JAAR_BRANDSTOF, 'km_max_brandstof': MAX_KM_BRANDSTOF,
             'prijs_min_brandstof': MIN_PRIJS_BRANDSTOF,
             'jaar_min_model': {ALLEEN_MODELLEN.get(m, m): j for m, j in MIN_JAAR_MODEL.items()},
+            'prijs_max_model': {ALLEEN_MODELLEN.get(m, m): j for m, j in MAX_PRIJS_MODEL.items()},
             'segment_min': SEGMENT_MIN, 'segment_naam': SEGMENT_NAAM[SEGMENT_MIN],
             'segment_uitzondering': sorted(SEGMENT_UITZONDERING.values()),
             'per_soort': PER_SOORT, 'per_model': PER_MODEL,

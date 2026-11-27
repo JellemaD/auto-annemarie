@@ -2,6 +2,17 @@
 
 Versienummer: `groot.klein.fix`. Bij elke release ophogen op **twee plekken**: `VERSIE` in `zoek.py` en hier. Het nummer gaat mee in `docs/data.json` en staat onderaan de site. Code-geschiedenis staat in git.
 
+## 1.23.0 — 27-11-2026
+
+- **Kia Ceed tot EUR 11.000** (besluit Durk: er is meestal nog wat af te praten). Nieuwe tabel `MAX_PRIJS_MODEL` en functie `max_prijs()` in `zoek.py`; de zoekopdrachten voor benzine (AutoScout24 `priceto`, Marktplaats `PriceCents`) en het filter gebruiken hem. De criteria op de site tonen de uitzondering ("Kia Ceed: tot € 11.000"). Andere modellen blijven op EUR 10.000.
+- Proefrun 27-11-2026: 1.461 bekeken, 7 passen, 6 op de site: 1 Kia Ceed (1.0 T-GDI mild hybrid, 2021, 209.610 km, EUR 10.900, online sinds 20-06-2026) en 5 Toyota Auris.
+- Terug: `MAX_PRIJS_MODEL = {}`.
+
+## 1.22.0 — 27-11-2026
+
+- **Datum van de advertentie op de site** (wens Durk): "Advertentie van 13-11-2026 (14 dagen online)" bij elke auto. Komt uit de advertentiepagina die de schadecontrole al ophaalt: Marktplaats `stats.since` (wat Marktplaats zelf "Sinds 13 nov." noemt), AutoScout24 `createdTimestampWithOffset`. Nieuw veld `geplaatst` in `data.json`, functie `geplaatst()` in `zoek.py`. Let op: zet een verkoper zijn advertentie opnieuw online, dan begint de datum opnieuw.
+- Top 10 per model stond al aan (1.17.1, `PER_MODEL = 10`). Dat er maar 5 auto's staan komt door de eisen samen: proefrun 27-11-2026 1.457 bekeken, 6 passen, 5 op de site, alle 5 Toyota Auris, geen Kia Ceed.
+
 ## 1.21.0 — 26-11-2026
 
 - **Kia Ceed vanaf bouwjaar 2014** (besluit Durk): uitzondering op de grens van 2015 voor benzine en gewone hybride, omdat een Ceed met automaat van 2015 of later bijna altijd boven EUR 10.000 zit. Nieuwe tabel `MIN_JAAR_MODEL` en functie `min_jaar_brandstof()` in `zoek.py`; zowel de zoekopdrachten (AutoScout24 `fregfrom`, Marktplaats `constructionYear`) als het filter gebruiken hem. De criteria op de site tonen de uitzondering ("Kia Ceed: 2014 of nieuwer").

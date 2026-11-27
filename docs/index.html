@@ -185,7 +185,15 @@ function feiten(a) {
   const lasten = kosten ? `<br>Totale kosten excl. onderhoud <b>± € ${kosten} p/m</b> <span class="klein">bij 12.000 km/jaar</span>` : '';
   const lang = a.lengte ? ` · ${Math.round(a.lengte / 10)} cm lang` : '';
   const seg = a.segment ? ` · ${SEGMENTNAAM[a.segment] || ('segment ' + a.segment)}` : '';
-  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')}${lang}${seg} · ${esc(a.bron)}${bereikTekst(a)}${lasten}${levensduur(a)}`;
+  return `${a.jaar} · ${km(a.km)} · ${esc(a.plaats || 'Nederland')}${lang}${seg} · ${esc(a.bron)}${online(a)}${bereikTekst(a)}${lasten}${levensduur(a)}`;
+}
+// Datum van de advertentie (uit de advertentiepagina) en hoe lang hij al online staat.
+function online(a) {
+  if (!a.geplaatst) return '';
+  const [j, m, d] = a.geplaatst.split('-');
+  const dagen = Math.max(0, Math.round((new Date().setHours(0, 0, 0, 0) - new Date(+j, m - 1, +d)) / 864e5));
+  const oud = dagen === 0 ? 'vandaag' : dagen === 1 ? '1 dag' : `${dagen} dagen`;
+  return `<br>Advertentie van <b>${d}-${m}-${j}</b> <span class="klein">(${oud} online)</span>`;
 }
 function levensduur(a) {
   if (a.rest_jaar === undefined) return '';
@@ -364,7 +372,7 @@ function criteriaTonen(c) {
   const per = c.per_soort ?? 25, perModel = c.per_model ?? 4;
   const h2p = c.h2_prijs ?? 15, h2s = c.h2_stations ?? 20;
   el.innerHTML = `<ul>
-    <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
+    <li><b>Prijs</b>: ${eur(pmin)} tot ${eur(pmax)}${Object.entries(c.prijs_max_model ?? {}).map(([n, p]) => ` (${esc(n)}: tot ${eur(p)})`).join('')}. Onder ${eur(pmin)} is het lease, huur, een bod of nep.</li>
     <li><b>Grootte</b>: minstens <b>${seg} &ndash; ${segnaam}</b>, de Golf-klasse. Segment D, E en F (groter) mogen ook; segment A (stadsauto) en B (klein) komen er niet in. Een SUV krijgt het segment van de auto waarop hij gebouwd is.${uitz.length ? ` Uitzondering: ${uitz.join(', ')} ${uitz.length > 1 ? 'doen' : 'doet'} toch mee.` : ''}</li>
     <li><b>Elektrisch en plug-in hybride</b>: bouwjaar ${jaar} of nieuwer, hoogstens ${km.toLocaleString('nl-NL')} km.</li>
     <li><b>Benzine en gewone hybride</b>: bouwjaar ${bjaar} of nieuwer${Object.entries(c.jaar_min_model ?? {}).map(([n, j]) => ` (${esc(n)}: ${j} of nieuwer)`).join('')}${bkm !== km || bprijs !== pmin ? `, hoogstens ${bkm.toLocaleString('nl-NL')} km en minstens ${eur(bprijs)}` : ' (verder dezelfde eisen als hierboven)'}.</li>
